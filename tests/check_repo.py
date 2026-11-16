@@ -63,7 +63,7 @@ if not (ROOT / "NOTICE").exists() or "Apache License" not in (ROOT / "LICENSE").
 ok(f"manifests agree (version {cm['version']}, licence Apache-2.0)")
 
 # ---------------------------------------------------------------- 3. Agent Skills rules
-skills = sorted(p for p in (ROOT / "skills").iterdir() if p.is_dir())
+skills = sorted(p for p in (ROOT / "skills").iterdir() if p.is_dir() and not p.name.startswith("."))
 for d in skills:
     sm = d / "SKILL.md"
     if not sm.exists():

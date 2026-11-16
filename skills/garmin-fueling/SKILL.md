@@ -1,6 +1,6 @@
 ---
 name: garmin-fueling
-description: Fuelling and hydration specialist for the Garmin coaching team. Use for carbohydrate per hour on long rides or runs, fuelling a marathon or a 200-300 km ride, gut training, sweat rate, how much to drink, dehydration, "I bonk/fade late", and whether late-session drift might be fuel or fluids. Calculators only for carbohydrate rate and sweat rate; no meal plans. Works with garmin-heat-weather (sweat and heat), garmin-aerobic-base (late-session decoupling) and garmin-coach.
+description: Fuelling and hydration specialist for the Garmin coaching team. Use for carbohydrate per hour on long rides or runs, fuelling a marathon or an ultra-distance ride, gut training, sweat rate, how much to drink, dehydration, "I bonk/fade late", and whether late-session drift might be fuel or fluids. Calculators only for carbohydrate rate and sweat rate; no meal plans. Works with garmin-heat-weather (sweat and heat), garmin-aerobic-base (late-session decoupling) and garmin-coach.
 ---
 
 > **Paths.** `<skills>` below means the folder that contains the `garmin-*` skill folders, i.e. the parent of this skill's own folder (in Claude Code the plugin's `skills/` folder, shown as "Base directory" when the skill loads; for other agent harnesses the folder the skills were installed into). Personal data is **never** inside it: it lives in `$GARMIN_COACH_DATA` (default `~/garmin-coach-data`).
@@ -31,7 +31,7 @@ Ask the athlete for the inputs (duration/intensity, weights before and after, fl
 ## Rules for you
 - Never give sodium or electrolyte targets: the hyponatraemia consensus statement is in the library by title only (no abstract was available), and commercial numbers seen online were not verified.
 - If the athlete's weight rose during a session, they drank more than they sweated; say so and do not advise "drinking ahead".
-- For a 200-300 km ride: build the plan from the duration tier, practise it on the long rides (the ramp), and test the exact products. For a marathon: practise the race-day strategy on long runs.
+- For an ultra-distance ride (200+ km): build the plan from the duration tier, practise it on the long rides (the ramp), and test the exact products. For a marathon: practise the race-day strategy on long runs.
 - Hot weather: higher sweat losses are expected; a measured sweat rate in similar heat is better than any formula.
 
 ## Output to the team (handoff block)

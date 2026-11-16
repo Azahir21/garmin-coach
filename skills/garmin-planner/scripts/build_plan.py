@@ -263,6 +263,28 @@ def ensure_hr(athlete, g, today, from_trend):
     return "HR bands are an ESTIMATE from activity trend (not zones, not shared by the athlete): " + "; ".join(notes) + ". Ask the athlete to confirm or share their zones."
 
 
+def setup_hr(athlete):
+    """The user's heart-rate bands and quality settings, resolved once (also used by garmin-adapt). Fills the module-level HR targets."""
+    prefs, hr = athlete["preferences"], athlete["hr"]
+    quality_pref = prefs.get("quality", {"requires_gate": False})
+    tempo_cfg = {"warmup_min": 10, "block_min": 20, "cooldown_min": 10, **quality_pref.get("tempo", {})}      # hr_low / hr_high only if the athlete has a tempo band
+    maf = (athlete.get("tests") or {}).get("maf")
+    climb = prefs.get("climb")
+    eb = hr.get("easy_band") or {}                                          # the athlete's own easy band [low, high] per sport (practice decision, athlete.json)
+    run_b = eb.get("run") or [hr["run_zone_floors"][1], hr["run_easy_max"]]
+    bike_b = eb.get("bike") or [run_b[0], hr.get("bike_easy_max", run_b[1])]
+    floor, ceil_r = run_b
+    floor_b, ceil_b = bike_b
+    hb, t_lo, t_hi = hr.get("hard_band") or {}, tempo_cfg.get("hr_low"), tempo_cfg.get("hr_high")
+    # Zone first, custom bpm second (workout.hr_band); no band known -> open target, "by feel".
+    HR.update(floor_b=floor_b,
+              hard_run=wk.hr_band(*hb["run"], "running") if hb.get("run") else wk.OPEN,
+              hard_bike=wk.hr_band(*hb["bike"], "cycling") if hb.get("bike") else wk.OPEN,
+              tempo=wk.hr_band(t_lo, t_hi, "running") if t_lo and t_hi else wk.OPEN,
+              climb=tuple(climb["hr_band"]) if climb and climb.get("hr_band") else None)
+    return {"quality_pref": quality_pref, "tempo_cfg": tempo_cfg, "maf": maf, "climb": climb, "floor": floor, "ceil_r": ceil_r, "floor_b": floor_b, "ceil_b": ceil_b, "t_lo": t_lo, "t_hi": t_hi}
+
+
 def plan(a, g_hist, athlete, today):
     prefs, hr = athlete["preferences"], athlete["hr"]
     str_prefs = prefs.get("strength") or {}
@@ -284,22 +306,9 @@ def plan(a, g_hist, athlete, today):
     ep = prefs.get("easy_ride", {"warmup_min": 10, "cooldown_min": 5, "long_cooldown_min": 10})
     std, short_min, warm_r, cool_r = er["total_min"], er["short_min"], er["warmup_min"], er["cooldown_min"]
     lr_std = er.get("long_min", std)
-    quality_pref = prefs.get("quality", {"requires_gate": False})
-    tempo_cfg = {"warmup_min": 10, "block_min": 20, "cooldown_min": 10, **quality_pref.get("tempo", {})}      # hr_low / hr_high only if the athlete has a tempo band
-    maf = (athlete.get("tests") or {}).get("maf")
-    climb = prefs.get("climb")
-    eb = hr.get("easy_band") or {}                                          # the athlete's own easy band [low, high] per sport (practice decision, athlete.json)
-    run_b = eb.get("run") or [hr["run_zone_floors"][1], hr["run_easy_max"]]
-    bike_b = eb.get("bike") or [run_b[0], hr.get("bike_easy_max", run_b[1])]
-    floor, ceil_r = run_b
-    floor_b, ceil_b = bike_b
-    hb, t_lo, t_hi = hr.get("hard_band") or {}, tempo_cfg.get("hr_low"), tempo_cfg.get("hr_high")
-    # Zone first, custom bpm second (workout.hr_band); no band known -> open target, "by feel".
-    HR.update(floor_b=floor_b,
-              hard_run=wk.hr_band(*hb["run"], "running") if hb.get("run") else wk.OPEN,
-              hard_bike=wk.hr_band(*hb["bike"], "cycling") if hb.get("bike") else wk.OPEN,
-              tempo=wk.hr_band(t_lo, t_hi, "running") if t_lo and t_hi else wk.OPEN,
-              climb=tuple(climb["hr_band"]) if climb and climb.get("hr_band") else None)
+    B = setup_hr(athlete)
+    quality_pref, tempo_cfg, maf, climb = B["quality_pref"], B["tempo_cfg"], B["maf"], B["climb"]
+    floor, ceil_r, floor_b, ceil_b, t_lo, t_hi = B["floor"], B["ceil_r"], B["floor_b"], B["ceil_b"], B["t_lo"], B["t_hi"]
     gate = gc.goal_by(athlete, "run-gate", "criteria") or {}
     has_gate = bool(gate.get("criteria"))
     gate_passed = a.gate == "passed" or (a.gate == "auto" and bool(gate.get("passed")))

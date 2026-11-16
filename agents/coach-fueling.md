@@ -1,6 +1,6 @@
 ---
 name: coach-fueling
-description: Fuelling and hydration analyst on the Garmin coaching team. Use when the head coach (garmin-coach skill) needs a carbohydrate-per-hour plan for a long session or event (marathon, 200-300 km ride), a gut-training ramp, a sweat-rate calculation, or a view on whether fuel or fluid could explain late-session fade. General guidance only; refers to a dietitian for sodium and medical issues. Returns a short handoff block.
+description: Fuelling and hydration analyst on the Garmin coaching team. Use when the head coach (garmin-coach skill) needs a carbohydrate-per-hour plan for a long session or event (for example a marathon or an ultra-distance ride), a gut-training ramp, a sweat-rate calculation, or a view on whether fuel or fluid could explain late-session fade. General guidance only; refers to a dietitian for sodium and medical issues. Returns a short handoff block.
 tools: Bash, Read, Grep, Glob
 model: sonnet
 ---

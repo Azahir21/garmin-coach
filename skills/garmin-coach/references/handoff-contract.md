@@ -4,7 +4,7 @@ Specialists return a **short block**, never raw JSON dumps. The head coach keeps
 
 ## Block format (every specialist)
 ```
-SPECIALIST: recovery | aerobic-base | heat-weather | load-injury | strength | fueling | planner
+SPECIALIST: recovery | aerobic-base | heat-weather | load-injury | strength | fueling | planner | analyze | adapt
 STATUS: ok | partial | no-data | no-consent | error
 SIGNAL: <domain signal, see below>
 KEY: 3-6 short facts with numbers and dates (source script named)
@@ -14,7 +14,7 @@ EVIDENCE: strong | mixed | practice  (one line naming the evidence-map row or pa
 FOR_<OTHER>: what another specialist needs from this one
 NEEDS: what this specialist still needs (data from the athlete or from another specialist)
 ```
-Domain signals: recovery GREEN/AMBER/RED; load OK/CAUTION; heat none/caution/high; aerobic improving/flat/worse/not-readable; strength ok/adjust; fueling ok/needs-inputs; planner plan-ready/needs-inputs (also reports the run gate: passed/open).
+Domain signals: recovery GREEN/AMBER/RED; load OK/CAUTION; heat none/caution/high; aerobic improving/flat/worse/not-readable; strength ok/adjust; fueling ok/needs-inputs; planner plan-ready/needs-inputs (also reports the run gate: passed/open); analyze injury watch GREEN/AMBER/RED; adapt keep/progress/easy_swap/reduce/recovery/rest.
 
 ## Data flow
 ```
@@ -22,6 +22,7 @@ Stage 1 (parallel, independent)         Stage 2 (parallel, receives Stage 1 bloc
   coach-recovery  -> SIGNAL, FOR_STRENGTH ------------------> coach-strength  \
   coach-load      -> FLAGS, FOR_STRENGTH, NEXT_MAX ---------> coach-strength   >-> head coach verdict
   coach-heat      -> PER_SESSION conditions, bins ----------> coach-aerobic   /
+  coach-analyze   -> INJURY_WATCH, FLAGS ---------------------> coach-adapt (also reads recovery) -> calendar payloads for the head coach
                   -> RISK, sweat context -------------------> coach-fueling  /
 ```
 - `coach-aerobic` must receive the heat blocks for the sessions it analyses, so it can mark sessions comparable or not.
@@ -38,6 +39,8 @@ Stage 2 (include the relevant Stage 1 blocks verbatim in the prompt):
 - `coach-aerobic`: "Analyse activity ids <...> and the 8-week trend. Heat blocks: <...>. Recovery block: <...>. Return a handoff block."
 - `coach-strength`: "Recovery block: <...>. Load block: <...>. Next key session: <...>. Return a handoff block with tonight's recommendation."
 - `coach-planner`: "Date: <YYYY-MM-DD>. Readiness: <GREEN|AMBER|RED or unknown>. Recovery block: <...>. Load block: <...>. Strength block: <...>. Draft the next 4 weeks starting <date>, check the run gate and the cycling gap, save the plan, and return a handoff block with the plan file path. Time-trial result if any: <3 km time or none>."
+- `coach-analyze`: "Date: <YYYY-MM-DD>. Run the week-over-week comparison and the injury-risk watch (add the latest-activity comparison if a session happened in the last 3 days). Recovery block: <...>. Return a handoff block."
+- `coach-adapt`: "Date: <YYYY-MM-DD>. Adapt the next <1-3> planned day(s) to today's state. Recovery block: <...>. Analyze block: <...>. Return a handoff block with the decisions and the calendar payloads; do not touch the calendar."
 - `coach-fueling`: "Session or event: <duration, intensity>. Heat block: <...>. Inputs from athlete: <...>. Return a handoff block."
 
 ## Athlete memory

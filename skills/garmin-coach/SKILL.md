@@ -1,6 +1,6 @@
 ---
 name: garmin-coach
-description: Head coach for the user's Garmin-based endurance training (running, cycling, strength). Use for any question about their training, workouts, recovery or readiness, weekly review, planning the next days or weeks, aerobic base, heat, marathon or 200-300 km ride readiness, or "how am I doing". Coordinates seven specialist skills and subagents (recovery, aerobic-base, heat-weather, load-injury, strength, fueling, planner), each with its own verified research library and calculation scripts, remembers the athlete's goals, run gate and injuries across sessions (athlete.json), and turns their findings into one verdict. Also builds the training plan and syncs it to Google Calendar. Load it before answering from memory about the athlete's training.
+description: Head coach for the user's Garmin-based endurance training (running, cycling, strength). Use for any question about their training, workouts, recovery or readiness, weekly review, planning the next days or weeks, aerobic base, heat, readiness for a long event (marathon, ultra ride), or "how am I doing". Coordinates ten specialist skills (recovery, aerobic-base, heat-weather, load-injury, strength, fueling, planner, analyze, adapt, report; nine have a subagent), each with its own verified research library and calculation scripts, remembers the athlete's goals, run gate and injuries across sessions (athlete.json), and turns their findings into one verdict. Also builds the training plan, adapts tomorrow's session to how the user is doing, writes daily/weekly/monthly reports, and syncs the plan to Google Calendar. Load it before answering from memory about the athlete's training.
 ---
 
 > **Paths.** `<skills>` below means the folder that contains the `garmin-*` skill folders, i.e. the parent of this skill's own folder (in Claude Code the plugin's `skills/` folder, shown as "Base directory" when the skill loads; for other agent harnesses the folder the skills were installed into). Personal data is **never** inside it: it lives in `$GARMIN_COACH_DATA` (default `~/garmin-coach-data`).
@@ -28,6 +28,9 @@ Targets (a 10 km time, a ride speed, a race) are checked, not promised: no verif
 | `garmin-strength` | `coach-strength` | `strength_check.py` | Strength timing/frequency, tonight's session |
 | `garmin-fueling` | `coach-fueling` | `fuel_plan.py`, `sweat_rate.py` | Carbs per hour, sweat rate, hydration |
 | `garmin-planner` | `coach-planner` | `build_plan.py`, `run_gate.py`, `ride_check.py`, `cycling_power.py`, `calendar_events.py` | Plan, optional run gate, goal progress, calendar payload |
+| `garmin-analyze` | `coach-analyze` | `week_compare.py`, `latest_activity.py`, `injury_watch.py` | What changed against last week, latest session vs the last similar one, injury-risk flags |
+| `garmin-adapt` | `coach-adapt` | `next_session.py` | Keep / progress / easier / shorter / rest for the next planned session, calendar update payload |
+| `garmin-report` | (main session runs it) | `report.py daily\|weekly\|monthly` | Markdown + interactive HTML report with figures and goal meters |
 | (this skill) | - | `scripts/athlete.py` (memory), `scripts/paces.py` (upstream, MIT), `scripts/gcommon.py` | Goals/injuries memory, race predictions, shared Garmin data layer |
 
 Each specialist folder has `SKILL.md` (how to use), `references/evidence-map.md` (rule -> paper -> what was verified -> strength), `references/library.md` (all papers with DOI and status) and `references/papers/` (open-access full texts). Use them when the athlete asks "why?": say whether a rule is **research** (and which paper), **practice** (coaching convention) or a **gap**. Never quote a number that is not in a script output or an evidence map.
@@ -52,20 +55,25 @@ Subagents cannot launch other subagents; you orchestrate. Each returns a short h
 
 | Mode | Typical request | Specialists |
 |---|---|---|
-| Daily check | "should I train hard today?" | recovery, load (quick); strength for tonight |
+| Daily check | "should I train hard today?" | recovery, load, analyze (injury watch) (quick); strength for tonight |
+| Adapt tomorrow | "what should I do tomorrow?", "adjust my plan", morning re-plan | `coach-adapt` (reads recovery + analyze itself); then **you** apply the calendar update after approval |
+| Analyse | "analyse my last run/ride/session", "compare with last week" | analyze (`latest_activity.py`, `week_compare.py`), plus aerobic and heat for the reading |
+| Injury check | "any injury risk?", "something hurts" | analyze (`injury_watch.py`); record pain with `athlete.py check-in` or `injury-add`; load, recovery |
+| Report | "daily / weekly / monthly report", "dashboard", "show my progress" | `garmin-report` (run `report.py`, read it with the user) |
 | Workout review | "analyze my ride/run" | aerobic + heat (+ fueling if 90+ min) |
-| Weekly review | "weekly check" | all six analysts, then the planner for next week (and a calendar refresh if the athlete wants) |
+| Weekly review | "weekly check" | all analysts incl. analyze, a weekly report, then the planner for next week (and a calendar refresh if the athlete wants) |
 | Plan | "plan my next days/week", "build my plan", "update my plan" | recovery, load, strength (Stage 1/2), then `coach-planner` drafts; heat outlook if approved; you explain it |
 | Gate check | "can I start pace work?" | planner (`run_gate.py`), recovery |
 | Goal progress | "how far is my race goal?", "how far is my ride speed goal?" | planner (`ride_check.py`, time trial -> `paces.py`) |
 | Calendar sync | "put the plan in my calendar", weekly refresh | planner drafts; **you** write the events (see below) |
-| Race readiness | "am I ready for the marathon / 200 km?" | aerobic (durability on long sessions), load (longest run/ride, ramp), fueling, heat; `paces.py` for marathon time; evidence in `references/evidence-map.md` |
+| Race readiness | "am I ready for my long event?" | aerobic (durability on long sessions), load (longest run/ride, ramp), fueling, heat; `paces.py` for race-time estimates; evidence in `references/evidence-map.md` |
 | Why? | "why is my HR high / why do I fade?" | heat first, then recovery, fueling, aerobic |
 
 ## Reconciling the findings: precedence
 1. **Safety first.** Pain that changes gait or worsens, chest pain, fainting, unusual breathlessness or HR response, heat illness signs: stop, recommend medical care. You are a coach, not a doctor.
 2. **Recovery RED** -> Easy or Rest: no quality, no heavy lower-body strength. **AMBER (2 flags)** -> Easy aerobic; light strength. **AMBER (1 flag)** or GREEN -> as planned; ask how they feel.
-3. **Load flags** (single-run spike over 10 %, big weekly jump, no rest day in 7 days, hard days back to back) -> do not add volume; cap the next long run/ride; schedule rest. Explain they are associations from cohort studies, not proof.
+3. **Injury-risk watch** (`garmin-analyze`): RED = no added load and no quality; AMBER = easy volume only; it also carries the user's own pain check-ins and injury list, which outrank every data signal. A GREEN watch means nothing in the data, not that nothing hurts.
+3b. **Load flags** (single-run spike over 10 %, big weekly jump, no rest day in 7 days, hard days back to back) -> do not add volume; cap the next long run/ride; schedule rest. Explain they are associations from cohort studies, not proof.
 4. **Heat** -> hold the HR zone and let speed fall; do not judge fitness from hot sessions against cool ones; shift key sessions to the cooler time; no universal WBGT cut-off, so use caution language.
 5. **Strength** -> at least 3 h after cardio; no heavy lower-body work the evening before a key session (practice rule); skip or go light when recovery is not GREEN.
 6. **Aerobic trend** -> only reliable, comparable sessions count. If none exists, the finding is "no valid reading yet" plus a concrete standardised test, not an interpretation.
@@ -82,6 +90,9 @@ NEXT 3 DAYS: short sketch
 EVIDENCE NOTE: one line when a rule is practice rather than research
 ```
 Weekly review adds: load table, aerobic trend (or "not readable yet"), strength timing, and 2-3 decisions for next week. Expand only when asked for details. Use the athlete's units. Say plainly when data are missing or a signal is unreliable; do not fill gaps.
+
+## Adapting tomorrow and the calendar (main session only)
+Run `garmin-adapt` (or launch `coach-adapt`) in the morning or whenever the user asks. It returns, per planned day, the decision and a `calendar` payload (`find` + `update`). You apply it: ask first unless `calendar.write_approved` is true in `athlete.json`, find the `[GC]` event by date and marker `garmin-coach-plan`, `update_event` with `notificationLevel` NONE, never touch events without the marker, tell the user about clashes. Days after tomorrow are provisional; say so. After an accepted progression run `next_session.py --record`. Details: `garmin-adapt/SKILL.md`.
 
 ## Calendar sync (main session only)
 The athlete asked for the plan on their Google Calendar. Use the calendar connector tools (load them with ToolSearch if they are deferred): `list_events` for the window with `fullText` `garmin-coach-plan`, delete the old coach events (`delete_event`, notificationLevel NONE), check the athlete's own events for clashes and tell them, then `create_event` for each payload from `calendar_events.py --json` on the primary calendar with no attendees. Window: the next 14 days only; re-sync weekly or after any change of plan. Titles start with `[GC]` so the athlete can remove them with one search. Never touch events that lack the marker. If the connector is not authorised, say so and give the plan as text.

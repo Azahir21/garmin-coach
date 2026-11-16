@@ -10,6 +10,7 @@ preferences are never forgotten between sessions. State lives in $GARMIN_COACH_D
   athlete.py injury-none                   record that the athlete reported no injury history
   athlete.py note --text "..."             dated note (feeling, constraint, decision)
   athlete.py set PATH VALUE_JSON           e.g. set preferences.days_per_week 5 ; set goals.ride-100k-25.date '"2027-03-01"'
+  athlete.py check-in --pain 0-10 [--area "left calf"] [--gait] [--note ..]   daily soreness/pain report (0 = none); --gait = it changes how you walk or run
   athlete.py goal-add --id ID --title T [--rank N] [--date YYYY-MM-DD] [--detail D]
   athlete.py goal-done ID                  mark a goal reached
 """
@@ -92,6 +93,9 @@ def show(d):
         print(f"HR EASY CEILINGS: run <= {run_c}, bike <= {bike_c} ({h.get('source') or 'source not recorded'})")
     else:
         print("HR: NOT RECORDED. Ask the user for their watch zones (max HR, LTHR, resting HR, method) or what heart rate they call easy; never assume.")
+    cis = [c for c in (d.get("checkins") or []) if (date.today() - date.fromisoformat(c["date"])).days <= 7]
+    if cis:
+        print("RECENT PAIN CHECK-INS (7 days): " + "; ".join(f"{c['date']} {c.get('area') or '-'} {c['pain']}/10" + (" gait" if c.get("gait_change") else "") for c in cis))
     if d.get("notes"):
         print("RECENT NOTES:")
         for n in d["notes"][-5:]:
@@ -110,6 +114,7 @@ def main():
     a = sub.add_parser("injury-add"); a.add_argument("--area", required=True); a.add_argument("--note", default=""); a.add_argument("--restrict", default=""); a.add_argument("--started", default=str(date.today()))
     u = sub.add_parser("injury-update"); u.add_argument("id", type=int); u.add_argument("--note"); u.add_argument("--restrict"); u.add_argument("--status", choices=["active", "monitoring", "resolved"])
     sub.add_parser("injury-none")
+    ci = sub.add_parser("check-in"); ci.add_argument("--pain", type=int, required=True); ci.add_argument("--area", default=""); ci.add_argument("--gait", action="store_true"); ci.add_argument("--note", default="")
     n = sub.add_parser("note"); n.add_argument("--text", required=True)
     s = sub.add_parser("set"); s.add_argument("path"); s.add_argument("value")
     g = sub.add_parser("goal-add"); g.add_argument("--id", required=True); g.add_argument("--title", required=True); g.add_argument("--rank", type=int, default=3); g.add_argument("--date"); g.add_argument("--detail", default="")
@@ -147,6 +152,12 @@ def main():
     elif args.cmd == "injury-none":
         d["injury_history_known"] = True
         print("recorded: no injury history reported")
+    elif args.cmd == "check-in":
+        if not 0 <= args.pain <= 10:
+            raise SystemExit("--pain must be 0-10")
+        d.setdefault("checkins", []).append({"date": str(date.today()), "area": args.area, "pain": args.pain, "gait_change": bool(args.gait), "note": args.note})
+        d["checkins"] = d["checkins"][-60:]
+        print("check-in saved" + ("; pain that changes how you move is a stop sign: rest and see a clinician if it lasts" if args.gait or args.pain >= 6 else ""))
     elif args.cmd == "note":
         d["notes"].append({"date": str(date.today()), "text": args.text})
         print("note saved")

@@ -27,6 +27,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 DATA_DIR = Path(os.environ.get("GARMIN_COACH_DATA", Path.home() / "garmin-coach-data"))
+ATHLETE_PATH = DATA_DIR / "athlete.json"
 FIT_SUBDIR = "coach"                      # the server only accepts folders inside ~/Downloads/garmin
 SERVER_TIMEOUT_S = 180
 

@@ -1,6 +1,6 @@
 ---
 name: garmin-load-injury
-description: Training-load and injury-risk specialist for the Garmin coaching team. Use for "am I doing too much", weekly volume, ramp rate, longest run/ride, load spikes, rest days, training streaks, hard-day spacing, injury risk, "can I add a long run/ride", marathon or 200-300 km build-up pacing, and before adding volume. Runs a script on the user's real Garmin activity history. Works with garmin-recovery (can the body absorb it), garmin-strength (what else is on the plate) and garmin-coach (final verdict).
+description: Training-load and injury-risk specialist for the Garmin coaching team. Use for "am I doing too much", weekly volume, ramp rate, longest run/ride, load spikes, rest days, training streaks, hard-day spacing, injury risk, "can I add a long run/ride", build-up pacing for a long event, and before adding volume. Runs a script on the user's real Garmin activity history. Works with garmin-recovery (can the body absorb it), garmin-strength (what else is on the plate) and garmin-coach (final verdict).
 ---
 
 > **Paths.** `<skills>` below means the folder that contains the `garmin-*` skill folders, i.e. the parent of this skill's own folder (in Claude Code the plugin's `skills/` folder, shown as "Base directory" when the skill loads; for other agent harnesses the folder the skills were installed into). Personal data is **never** inside it: it lives in `$GARMIN_COACH_DATA` (default `~/garmin-coach-data`).
@@ -8,7 +8,7 @@ description: Training-load and injury-risk specialist for the Garmin coaching te
 # Garmin Load and Injury (load specialist)
 
 Question you answer: **is the training load progressing in a way the evidence associates with fewer overuse injuries, and where are the spikes?**
-The athlete wants to train 5-6 days a week with double sessions and stay injury-free, with a marathon and a 200-300 km ride as longer goals.
+The user's own goals and weekly schedule (from `athlete.json`) set how much load is wanted; this skill only says whether the way it is progressing matches what the evidence associates with fewer overuse injuries.
 
 ## Run
 
@@ -25,7 +25,7 @@ Pulls the activities itself. Output: weekly table (run/bike km and minutes, stre
 4. **Training hard is not the enemy**: well-developed chronic load and gradual progression seem protective, while excessive, rapid increases are the likely culprit (Gabbett 2016 model; full text in `papers/`). Under-training can raise risk too.
 5. **Marathon preparation**: in 997 recreational (half-)marathoners higher weekly volume and longer endurance runs went with faster finishes and were **not** related to more injuries (Fokkema 2020; specific cut-offs in the full text). Do not use this to justify jumps.
 6. **Rest days and streaks, hard-day spacing**: practice-level checks (no study in this library). Garmin's own aerobic training effect >= 4.0 is used as the "hard" marker.
-7. **Cycling**: no study in this library tests a spike rule for rides. The script shows the same arithmetic as an extrapolation only; for an ultra build-up, long rides must grow, so judge them with recovery data and fuelling readiness.
+7. **Cycling**: no study in this library tests a spike rule for rides. The script shows the same arithmetic as an extrapolation only; for a long-distance build-up, long rides must grow, so judge them with recovery data and fuelling readiness.
 
 ## How to talk about it
 - Quote the observed numbers, say whether the source is a cohort, a trial or practice, and keep language to "was associated with", never "causes".

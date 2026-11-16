@@ -25,6 +25,13 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Lafrenz AJ, Wingo JE, Ganio MS, Cureton KJ. Effect of ambient temperature on cardiovascular drift and maximal oxygen uptake. *Med Sci Sports Exerc* 2008 https://doi.org/10.1249/mss.0b013e3181666ed7 (PMID 18461000; abstract verified (paywalled))
 - Buchheit M. Monitoring training status with HR measures: do all roads lead to Rome? *Front Physiol* 2014 https://doi.org/10.3389/fphys.2014.00073 (PMID 24578692; full text in `garmin-recovery`: `<skills>/garmin-recovery/references/papers/Buchheit_2014_monitoring-training-status-HR-measures.md`)
 
+## garmin-analyze
+
+- Johnston R et al. The associations between training load and baseline characteristics on musculoskeletal injury and pain in endurance sport populations: A systematic review. *Journal of science and medicine in sport* 2018 https://doi.org/10.1016/j.jsams.2018.03.001 (PMID 29559317; abstract verified)
+- von Rosen P et al. Too little sleep and an unhealthy diet could increase the risk of sustaining a new injury in adolescent elite athletes. *Scandinavian journal of medicine & science in sports* 2017 https://doi.org/10.1111/sms.12735 (PMID 27539373; abstract verified)
+- Silbernagel KG et al. Continued sports activity, using a pain-monitoring model, during rehabilitation in patients with Achilles tendinopathy: a randomized controlled study. *The American journal of sports medicine* 2007 https://doi.org/10.1177/0363546506298279 (PMID 17307888; abstract verified)
+- The other papers behind this skill (Frandsen 2025, Nielsen 2014, Damsted 2019, Buist 2008, Buchheit 2014, Craven 2022) are listed under `garmin-load-injury` and `garmin-recovery`.
+
 ## garmin-coach
 
 - Bosquet L et al. Effects of tapering on performance: a meta-analysis. *Medicine and science in sports and exercise* 2007;39(8):1358-1365 https://doi.org/10.1249/mss.0b013e31806010e0 (PMID 17762369; abstract verified (paywalled))

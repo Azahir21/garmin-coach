@@ -47,6 +47,10 @@
       "version": "short",
       "variety": "rotate",
       "max_minutes": 35
+    },
+    "units": {
+      "run": "pace",
+      "bike": "kmh"
     }
   },
   "hr": {},
@@ -77,5 +81,6 @@
     "other_bikes": {}
   },
   "workouts": {},
-  "tests": {}
+  "tests": {},
+  "checkins": []
 }

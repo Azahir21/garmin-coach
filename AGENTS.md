@@ -3,7 +3,7 @@
 This repository is a set of **Agent Skills** (`skills/<name>/SKILL.md`) plus subagent prompts (`agents/*.md`) and Python scripts that coach a runner and cyclist from their own Garmin data.
 
 ## How to work here
-- Start with the **`garmin-coach`** skill (head coach). It tells you which specialist skill to load and which script to run. Specialists: `garmin-recovery`, `garmin-aerobic-base`, `garmin-heat-weather`, `garmin-load-injury`, `garmin-strength`, `garmin-fueling`, `garmin-planner`.
+- Start with the **`garmin-coach`** skill (head coach). It tells you which specialist skill to load and which script to run. Specialists: `garmin-recovery`, `garmin-aerobic-base`, `garmin-heat-weather`, `garmin-load-injury`, `garmin-strength`, `garmin-fueling`, `garmin-planner`, `garmin-analyze` (week comparison, injury-risk watch), `garmin-adapt` (adapt tomorrow's session, calendar payload), `garmin-report` (daily/weekly/monthly reports).
 - Scripts are Python 3.10+ and are run from the command line: `python -X utf8 <skills>/<skill>/scripts/<file>.py`. `<skills>` is the folder holding the `garmin-*` skill folders. Numbers must come from the scripts, rules from each skill's `references/evidence-map.md`. Never invent a number, a paper or a timeline.
 - Garmin data comes from the `garmin-personal-mcp` server (`.mcp.json`; `garmin-personal-mcp auth` stores the key once). The scripts start it themselves.
 - Personal data lives in `$GARMIN_COACH_DATA` (default `~/garmin-coach-data`). First run: `athlete.py init`, then interview the user.

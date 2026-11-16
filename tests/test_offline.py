@@ -123,6 +123,90 @@ except ValueError:
     ev = []
 check("calendar payload has events with titles and the marker", len(ev) >= 8 and all(e["summary"].startswith("[GC]") for e in ev) and all("garmin-coach-plan" in e["description"] for e in ev), r.stderr[-200:])
 
+# ---------------------------------------------------------------- analyze, adapt, report (pure functions on synthetic data)
+import xml.dom.minidom
+from datetime import timedelta
+for sub in ("garmin-analyze", "garmin-adapt", "garmin-report"):
+    sys.path.insert(0, str(SK / sub / "scripts"))
+import analysis as an
+import adapt_logic as al
+import charts as chx
+import report as rp
+
+T0 = date(2026, 11, 16)
+
+
+def mk(i, d, sport, km, mins, hr=140, te=2.5, gain=20):
+    return {"id": i, "name": f"{sport} {i}", "sport": sport, "date": d, "start": f"{d}T07:00:00", "km": km, "min": mins, "moving_min": mins, "avg_hr": hr, "gain_m": gain, "te_aerobic": te}
+
+
+acts, n = [], 0
+for k in range(1, 15):                              # 14 consecutive days: a rest-free streak
+    n += 1
+    acts.append(mk(n, T0 - timedelta(days=k), "run" if k % 2 else "bike", 8 if k % 2 else 25, 45 if k % 2 else 70))
+acts.append(mk(99, T0, "run", 14, 90))             # a long run: much longer than any run in the 30 days before
+cmpd = an.compare(acts, T0)
+check("compare: rolling windows are the last 7 days and the 7 before", cmpd["rolling"]["this"]["from"] == "2026-11-10" and cmpd["rolling"]["before"]["to"] == "2026-11-09")
+check("compare works without an activity today", an.compare([a for a in acts if a["date"] != T0], T0)["rolling"]["this"]["sessions"] > 0)
+rows = [{"date": str(T0 - timedelta(days=k)), "hrv": 60, "rhr": 52, "sleep_h": 5.0} for k in range(10)]
+inj = an.injury_flags(acts, rows, {"injuries": [], "checkins": []}, T0, {"verdict": "RED", "flags": [["x", "HRV low"]]})
+ids = {f["id"] for f in inj["flags"]}
+check("injury flags: run spike, no-rest streak, recovery and short sleep are raised", {"run_spike", "no_rest", "recovery_low", "short_sleep"} <= ids, str(ids))
+check("injury flags carry an evidence label and the level is RED", inj["level"] == "RED" and all(f["evidence"] and f["action"] for f in inj["flags"]))
+calm = [mk(i, T0 - timedelta(days=2 * i), "run", 6, 40) for i in range(1, 16)]
+check("a calm history gives GREEN", an.injury_flags(calm, [], {"injuries": [], "checkins": []}, T0)["level"] == "GREEN")
+pain = an.injury_flags(calm, [], {"injuries": [], "checkins": [{"date": str(T0), "area": "knee", "pain": 2, "gait_change": True}]}, T0)
+check("a pain check-in that changes gait is RED", pain["level"] == "RED" and any(f["id"] == "pain_checkin" for f in pain["flags"]))
+check("an active injury is RED", an.injury_flags(calm, [], {"injuries": [{"area": "calf", "status": "active"}], "checkins": []}, T0)["level"] == "RED")
+
+easy = {"sport": "run", "kind": "runE", "title": "Easy run", "minutes": 40, "date": str(T0), "week_tag": "BUILD"}
+tempo = {"sport": "run", "kind": "runQ", "title": "Tempo run", "minutes": 45, "date": str(T0), "week_tag": "BUILD", "workout": {"name": "Tempo run"}}
+lng = {"sport": "bike", "kind": "rideL", "title": "Long ride", "minutes": 120, "date": str(T0), "week_tag": "BUILD"}
+stre = {"sport": "strength", "kind": "str", "title": "Strength", "minutes": 40, "date": str(T0)}
+g = {"readiness": "GREEN", "injury_level": "GREEN", "flag_ids": set(), "adherence": 0.9, "week_change_pct": 3, "days_since_progress": None}
+check("adapt: RED readiness gives a recovery spin (or rest), never a quality session", al.decide(tempo, {**g, "readiness": "RED"})["decision"] in ("recovery", "rest"))
+check("adapt: AMBER turns tempo into an easy swap and shortens a long ride", al.decide(tempo, {**g, "readiness": "AMBER"})["decision"] == "easy_swap" and al.decide(lng, {**g, "readiness": "AMBER"})["decision"] == "reduce")
+check("adapt: an active injury means rest", al.decide(easy, {**g, "flag_ids": {"injury_active"}, "injury_level": "RED"})["decision"] == "rest")
+check("adapt: all green and good adherence allows a small progression", al.decide(tempo, g)["decision"] == "progress")
+check("adapt: no progression with low adherence, a recent progression or a big week", all(al.decide(tempo, {**g, **o})["decision"] == "keep" for o in ({"adherence": 0.5}, {"days_since_progress": 3}, {"week_change_pct": 25}, {"adherence": None})))
+check("adapt: strength is reduced when readiness is low", al.decide(stre, {**g, "readiness": "RED"})["decision"] == "reduce")
+plan_s = [{"date": str(T0 - timedelta(days=k)), "sport": "run", "minutes": 40} for k in range(1, 8)]
+done = [mk(i, T0 - timedelta(days=i), "run", 6, 40) for i in range(1, 8)]
+check("adherence: all planned sessions done = 1.0, none done = 0.0", al.adherence(plan_s, done, T0) == 1.0 and al.adherence(plan_s, [], T0) == 0.0)
+
+svgs = [chx.bars(["a", "b", "c"], [("Run", [10, 20, 0], "s1"), ("Ride", [5, 0, 30], "s2")], "t", "min"), chx.bars(["a", "b"], [("S", [1, 3], "s3")], "t", "sessions"),
+        chx.lines(["a", "b", "c"], [("x", [1.0, None, 3.0], "s1")], "t", "u", band=(1, 2)), chx.lines(["a"], [("x", [None], "s1")], "t"),
+        chx.meter("goal", 10, 12, 20, lambda v: f"{v:.0f}", "higher", "note"), chx.meter("goal", None, None, 20, lambda v: f"{v:.0f}"),
+        chx.heatmap([T0 - timedelta(days=k) for k in range(20)], [30] * 20, "t")]
+bad_svg = []
+for sv in svgs:
+    try:
+        xml.dom.minidom.parseString(sv)
+    except Exception as e:
+        bad_svg.append(str(e)[:60])
+check("charts are valid SVG, also with empty data", not bad_svg, str(bad_svg))
+
+rrows = [{"date": str(T0 - timedelta(days=k)), "hrv": 60 + k % 5, "rhr": 52, "sleep_h": 7.0} for k in range(100)]
+plan_f = {"sessions": [{"date": str(T0 + timedelta(days=k)), "sport": "run", "title": "Easy run", "minutes": 40} for k in range(1, 5)]}
+athr = {"goals": [{"title": "Ride 25 km/h", "target_speed_kmh": 25.0}, {"title": "Weekly minutes", "track": {"metric": "weekly_minutes", "target": 300, "unit": "min"}}], "preferences": {"units": {"run": "pace", "bike": "kmh"}}}
+big = []
+for k in range(1, 100, 2):
+    n += 1
+    big.append(mk(n, T0 - timedelta(days=k), "run" if k % 4 == 1 else "bike", 7 if k % 4 == 1 else 40, 45 if k % 4 == 1 else 90, gain=10))
+rdy = {"verdict": "GREEN", "flags": [], "hrv": 61, "hrv7": 61, "band_lo": 55, "band_hi": 70, "hrv_state": "inside", "rhr": 52, "rhr7": 52, "sleep_h": 7.0}
+injr = an.injury_flags(big, rrows, athr, T0, rdy)
+cmpr = an.compare(big, T0)
+for mode in ("daily", "weekly", "monthly"):
+    R = rp.build(mode, T0, big, rrows, athr, plan_f, None, rdy, injr, cmpr, None, None)
+    out = TMP / "reports" / mode
+    rp.write_report(R, out, "both")
+    md, html = (out / "report.md").read_text(encoding="utf-8"), (out / "report.html").read_text(encoding="utf-8")
+    figs = list((out / "figures").glob("*.svg"))
+    check(f"report {mode}: md, html and figures are written", "Not medical advice" in md and "<details" in html and len(figs) >= 4)
+    check(f"report {mode}: html is self-contained (no script, no external URL)", "<script" not in html and "http://" not in html.replace("http://www.w3.org/2000/svg", "") and "https://" not in html)
+    check(f"report {mode}: every figure parses as SVG", all(xml.dom.minidom.parse(str(f)) for f in figs))
+check("report: goals without data are explained, not faked", "No reading in this period" in (TMP / "reports" / "weekly" / "report.html").read_text(encoding="utf-8") or "goal" in (TMP / "reports" / "weekly" / "report.html").read_text(encoding="utf-8").lower())
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

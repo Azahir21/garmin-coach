@@ -1,6 +1,6 @@
 # Garmin coaching team
 
-One head coach, seven specialists (skill + subagent each, the seventh is the planner), calculation scripts that read your own Garmin data, and a verified research library per specialist.
+One head coach, ten specialist skills (nine have a subagent), calculation scripts that read your own Garmin data, and a verified research library per specialist.
 
 ```
 <skills>/
@@ -12,7 +12,10 @@ One head coach, seven specialists (skill + subagent each, the seventh is the pla
   garmin-strength/       strength timing/frequency next to cardio            (strength_check.py)
   garmin-fueling/        carbs per hour, sweat rate                          (fuel_plan.py, sweat_rate.py)
   garmin-planner/        plan, optional run gate, goal tracking, calendar (build_plan.py, run_gate.py, ride_check.py, cycling_power.py, calendar_events.py)
-the agents folder/        coach-recovery, coach-aerobic, coach-heat, coach-load, coach-strength, coach-fueling, coach-planner
+  garmin-analyze/        week-over-week, latest activity vs last similar, injury-risk watch (week_compare.py, latest_activity.py, injury_watch.py)
+  garmin-adapt/          adapt the next session to today's state, calendar payload (next_session.py)
+  garmin-report/         daily/weekly/monthly reports, Markdown + interactive HTML (report.py)
+the agents folder/        coach-recovery, coach-aerobic, coach-heat, coach-load, coach-strength, coach-fueling, coach-planner, coach-analyze, coach-adapt
 ```
 Each skill folder: `SKILL.md` (use), `references/evidence-map.md` (rule -> paper -> what was verified -> strength), `references/library.md` (every paper with DOI/PMID and status), `references/papers/` (open-access full texts with license and DOI at the top).
 
