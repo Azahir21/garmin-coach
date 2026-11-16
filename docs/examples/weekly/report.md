@@ -2,7 +2,7 @@
 
 SAMPLE with synthetic data (random numbers, nobody's health data). Real reports are made on your own computer from your own Garmin data.
 
-Generated 2026-11-16 23:42 from your own Garmin data. Units: running pace (min/km), cycling km/h.
+Generated 2026-11-17 00:06 from your own Garmin data. Units: running pace (min/km), cycling km/h.
 
 
 ## What stands out

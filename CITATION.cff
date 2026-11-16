@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use Rampwise in research or write about it, please cite it as below."
+title: "Rampwise: an AI endurance coach for Garmin data"
+type: software
+authors:
+  - alias: "Kei"
+repository-code: "https://github.com/Azahir21/rampwise"
+url: "https://azahir21.github.io/rampwise/"
+license: Apache-2.0
+version: 0.3.1
+date-released: 2026-11-17
+abstract: "Free, open-source AI agent skills that coach a runner or cyclist from their own Garmin data, with evidence-labelled training rules, daily adaptation, an injury-risk watch and reports. Experimental; not medical advice."
+keywords:
+  - endurance training
+  - running
+  - cycling
+  - heart rate variability
+  - training load
+  - injury prevention
+  - agent skills

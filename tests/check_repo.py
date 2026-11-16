@@ -56,6 +56,11 @@ if not re.match(r"^\d+\.\d+\.\d+$", cm["version"]):
 top = re.search(r"^## (\d+\.\d+\.\d+)", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"), re.M)
 if not top or top.group(1) != cm["version"]:
     bad("CHANGELOG.md top entry does not match the plugin version")
+cit = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+if f"version: {cm['version']}" not in cit:
+    bad("CITATION.cff version differs from the plugin version")
+if f'"softwareVersion": "{cm["version"]}"' not in (ROOT / "docs" / "index.html").read_text(encoding="utf-8"):
+    bad("docs/index.html softwareVersion differs from the plugin version")
 if cm.get("license") != "Apache-2.0" or px.get("license") != "Apache-2.0":
     bad("manifest license must be Apache-2.0")
 if not (ROOT / "NOTICE").exists() or "Apache License" not in (ROOT / "LICENSE").read_text(encoding="utf-8"):

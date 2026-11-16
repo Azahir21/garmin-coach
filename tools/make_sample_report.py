@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the public sample report (docs/index.html and docs/examples/) from SYNTHETIC data, so the demo contains nobody's health data.
+"""Build the public sample report (docs/sample/index.html and docs/examples/) from SYNTHETIC data, so the demo contains nobody's health data.
 
   python tools/make_sample_report.py
 """
@@ -52,9 +52,10 @@ html = (out / "report.html").read_text(encoding="utf-8")
 import re
 html = re.sub(r"<title>.*?</title>", "<title>Rampwise: sample weekly report (AI endurance coach for Garmin data)</title>"
               '<meta name="description" content="A sample weekly report from Rampwise, a free open-source AI endurance coach that reads your own Garmin data: recovery, week-over-week comparison, injury-risk watch, plan adherence and goal meters. Synthetic data.">', html, count=1, flags=re.S)
-html = html.replace("<main>", '<main><p><a href="https://github.com/Azahir21/rampwise">Rampwise on GitHub</a> (free, Apache-2.0). Independent project, not affiliated with Garmin Ltd.</p>', 1)
-(ROOT / "docs" / "index.html").write_text(html, encoding="utf-8")
+html = html.replace("<main>", '<main><p><a href="../">Rampwise home</a> | <a href="https://github.com/Azahir21/rampwise">Rampwise on GitHub</a> (free, Apache-2.0). Independent project, not affiliated with Garmin Ltd.</p>', 1)
+(ROOT / "docs" / "sample").mkdir(exist_ok=True)
+(ROOT / "docs" / "sample" / "index.html").write_text(html, encoding="utf-8")
 latest = out.parent / "latest-weekly.html"
 if latest.exists():
     latest.unlink()
-print("wrote", ROOT / "docs" / "index.html", "and", out)
+print("wrote", ROOT / "docs" / "sample" / "index.html", "and", out)

@@ -8,8 +8,8 @@ Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training p
 
 > **Status: v0.3.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
-[![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/)
-*A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/).*
+[![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
+*A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*
 
 ## What it does
 - **Plans**: rolling 4-week plans (easy, long, tempo, strides, intervals, climb and MAF-test sessions; rides; strength) from your last weeks of training, with reset and deload weeks and a +10 % step cap.
@@ -62,6 +62,24 @@ Ask your agent: *"Set up my Rampwise coach."* The head coach creates your `athle
 
 **A day with it:** morning, *"Daily report"* (readiness, injury watch, yesterday's session against the last similar one, tomorrow adapted) and *"adjust tomorrow"* (updates your `[GC]` calendar event after you agree). Sunday, *"Weekly report"*. First of the month, *"Monthly report"*. Reports land in `~/rampwise-data/reports/` (override with `RAMPWISE_DATA`); `latest-weekly.html` is always the newest.
 
+## FAQ
+**What is Rampwise?** A free, open-source set of AI agent skills that coaches a runner or cyclist from their own Garmin data: training plans, daily adaptation of the next session, an injury-risk watch, and daily/weekly/monthly reports.
+
+**Is it free?** Yes (Apache-2.0). You need your own Garmin account with Personal API access and an AI agent client such as Claude Code, which has its own terms and costs.
+
+**Is it affiliated with Garmin?** No. It is independent; Garmin is a trademark of Garmin Ltd.
+
+**Does my data leave my computer?** Your athlete file, plans and reports stay on your machine. The AI model you use sees what the coach prints in a session. Weather lookups are optional and need your consent. See [PRIVACY.md](PRIVACY.md).
+
+**Does it replace a coach or a doctor?** No. It is experimental and not medical advice; injury flags are prompts, not a diagnosis.
+
+**How are its rules chosen?** Each rule is labelled *research*, *practice* or *gap* in an evidence map, and the papers are listed in [docs/PAPERS.md](docs/PAPERS.md).
+
+**Which watches and AI tools work?** Built and tested on one person's Garmin data with Claude Code; other watches, Codex and other clients are untested.
+
+## Help it grow
+If it helps you, star the repo, tell a training partner, or open an issue with what worked and what did not. Anonymous field reports (no raw health data) are welcome and feed the three-month field test in [docs/FIELD-TEST.md](docs/FIELD-TEST.md). Cite it with [CITATION.cff](CITATION.cff).
+
 ## Upgrading from "Garmin Coach" (before v0.3.0)
 The project was renamed to Rampwise so it does not use another company's trademark. Skills are now `rampwise-*` and the plugin is `rampwise` (`/plugin marketplace add Azahir21/rampwise`, then `/plugin install rampwise@rampwise`). Your data keeps working: `RAMPWISE_DATA` falls back to the older `GARMIN_COACH_DATA`, and `~/garmin-coach-data` is still used if it is the only folder that exists. Calendar events made earlier (marker `garmin-coach-plan`) are still found. GitHub redirects the old repository address.
 
@@ -78,7 +96,7 @@ skills/                eleven Agent Skills (SKILL.md + scripts + references)
 agents/                nine subagent prompts (Claude Code)
 tools/                 install, owner placeholders, paper fetcher
 tests/                 repo checks and offline tests (no Garmin account needed)
-docs/index.html        the public sample report (made by tools/make_sample_report.py from synthetic data)
+docs/index.html        project page (SEO, FAQ, structured data); docs/sample/ is the sample report (tools/make_sample_report.py, synthetic data)
 docs/                  papers, field-test protocol, harness notes
 ```
 
