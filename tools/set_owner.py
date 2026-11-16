@@ -17,7 +17,7 @@ n = 0
 for p in ROOT.rglob("*"):
     if p.is_file() and p.suffix in EXT and ".git" not in p.parts and p.name not in ("set_owner.py", "check_repo.py"):
         t = p.read_text(encoding="utf-8")
-        u = t.replace("{{GITHUB_OWNER}}", a.owner).replace("{{AUTHOR_NAME}}", a.name).replace("OWNER/garmin-coach", f"{a.owner}/garmin-coach")
+        u = t.replace("{{GITHUB_OWNER}}", a.owner).replace("{{AUTHOR_NAME}}", a.name).replace("OWNER/rampwise", f"{a.owner}/rampwise")
         if u != t:
             p.write_text(u, encoding="utf-8")
             n += 1

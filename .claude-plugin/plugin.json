@@ -1,13 +1,13 @@
 {
-  "name": "garmin-coach",
-  "displayName": "Garmin Coach",
-  "version": "0.2.0",
-  "description": "Evidence-labelled endurance coaching for AI agents: running, cycling and strength plans built from your own Garmin data, with recovery, load, heat, fueling and heart-rate specialists. Every rule is labelled research or practice. Experimental.",
+  "name": "rampwise",
+  "displayName": "Rampwise",
+  "version": "0.3.0",
+  "description": "Rampwise: an AI endurance coach for your Garmin data. Evidence-labelled running, cycling and strength plans, daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
   "author": {
     "name": "Kei"
   },
-  "homepage": "https://github.com/Azahir21/garmin-coach",
-  "repository": "https://github.com/Azahir21/garmin-coach",
+  "homepage": "https://github.com/Azahir21/rampwise",
+  "repository": "https://github.com/Azahir21/rampwise",
   "license": "Apache-2.0",
   "keywords": [
     "garmin",
@@ -18,6 +18,9 @@
     "training-plan",
     "heart-rate",
     "hrv",
-    "coach"
+    "coach",
+    "ai-coach",
+    "injury-prevention",
+    "agent-skills"
   ]
 }

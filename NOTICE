@@ -1,11 +1,11 @@
-Garmin Coach
-Copyright 2026 Kei (https://github.com/Azahir21) and Garmin Coach contributors
+Rampwise
+Copyright 2026 Kei (https://github.com/Azahir21) and Rampwise contributors
 
 This product is licensed under the Apache License, Version 2.0 (see LICENSE).
 
 It includes or depends on third-party work under its own licences:
   - running-coach by Tomas Stankovic (MIT): readiness.py, weather.py and paces.py are unmodified
-    copies; see skills/garmin-coach/third_party/ for the licence text and commit.
+    copies; see skills/rampwise/third_party/ for the licence text and commit.
   - garmin-personal-mcp by Mason Levy (MIT), fitdecode by Jean-Charles Lefebvre (MIT): used as
     dependencies, not redistributed here.
   - Weather lookups use Open-Meteo (data CC BY 4.0).

@@ -13,7 +13,7 @@ By submitting a contribution you agree it is licensed under the Apache License 2
 5. **Safety wording** stays: pain is a stop sign; not medical advice.
 
 ## Add a strength goal or exercise
-Edit `skills/garmin-strength/references/goal_profiles.json` or `exercise_library.json` (plain JSON), list the evidence in the profile's `basis` lines (research vs practice), run the checks, open a pull request.
+Edit `skills/rampwise-strength/references/goal_profiles.json` or `exercise_library.json` (plain JSON), list the evidence in the profile's `basis` lines (research vs practice), run the checks, open a pull request.
 
 ## Checks
 ```text

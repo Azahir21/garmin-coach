@@ -1,0 +1,24 @@
+# Evidence map: rampwise-recovery
+
+Source numbers refer to `library.md` in this folder. "Verified" = read in the abstract or full text (2026-11-16).
+Strength labels: **research** = a trial/meta-analysis/consensus says it; **practice** = coaching convention or heuristic with no study in this library; **gap** = not supported.
+
+| Rule used by the script | What the source says (verified) | Strength | Notes |
+|---|---|---|---|
+| Judge HRV against the athlete's own recent baseline; use a rolling mean, not one night | Buchheit 2014 (review): apparent contradictions in the literature come mostly from methodological inconsistency and misinterpretation; measures should be interpreted within the athlete, against the error of measurement and the smallest important change, in the context of training phase and load. Plews 2013 (review in elite endurance athletes): increases and decreases in HRV have both been linked to negative adaptation; recommends proper averaging techniques. | research (reviews) | Full text of Buchheit is in `papers/` |
+| HRV-guided training works slightly better than a fixed plan | Vesterinen 2016 (RCT, 40 recreational runners, 8 weeks): HRV-guided group did fewer moderate/high-intensity sessions (13.2 vs 17.7) and improved 3000 m time 2.1 % vs 1.1 % (not significant in the control), a small between-group effect (0.42); VO2max improved in both. Kiviniemi 2007 (RCT, 26 males, 4 weeks): HRV-guided group improved maximal running speed and VO2peak more than the predefined group; rule used: low-intensity or rest if HRV fell below the 10-day mean - SD or trended down 2 days. | research (small RCTs) | Both small; short |
+| Pooled effect of HRV guidance | Granero-Gallegos 2020 (meta-analysis of RCTs): small positive effect on VO2max (ES 0.402), better in amateurs and female subgroup. Manresa-Rocamora 2021 (meta-analysis): better for vagal-related HRV indices (SMD 0.50), no better for resting HR; small non-significant gains in aerobic capacity and endurance performance (SMD about 0.2); "only by a small margin", baseline-method choice (fixed vs rolling) needs more study. | research (meta-analyses) | Treat as a small, uncertain benefit |
+| Baseline band = mean +/- 0.5 SD over 28-60 days; below band for 4+ days = cut volume ~25 % | Implemented from the upstream repo, which cites Vesterinen 2016 and Nuuttila 2022. The 25 % / 4-day rule and the 0.5 SD width are not stated in the abstracts read here (Nuuttila 2022 was not found in Europe PMC by title, so it is not in this library). | practice | Upstream labels it moderate; here it is **unverified in the library** |
+| Resting HR flags (+8 bpm single day; 7-day mean above baseline + 1 SD) | No paper in this library gives these cut-offs. | practice | Upstream says "not research-based; kept as heuristics" |
+| Sleep under 6 h is a flag | Craven 2022 (meta-analysis, 69 studies): sleep loss (6 h or less in 24 h) lowered exercise performance by a mean of 7.56 % (95 % CI -11.9 to -3.13), significant for all exercise categories incl. endurance; consistent for tasks done in the afternoon/evening, largely unaffected in the morning; about 0.4 % lower for every hour awake before the task (deprivation and late restriction protocols). Walsh 2021 consensus: elite athletes often sleep under 7 h with poor quality; habitual under 7 h raises respiratory-infection susceptibility in the general population; advises an **individual** approach, not a fixed 7-9 h. | research (meta-analysis + consensus) | The 6 h line matches Craven's definition of sleep loss; it is not a personal need |
+| Several short nights = sleep debt flag | No study in this library defines "3 of 4 nights under 6 h". | practice | |
+| Overreaching vs illness vs energy deficit | Meeusen 2013 (ECSS/ACSM consensus): distinguishing non-functional overreaching from overtraining syndrome is very difficult; diagnosis is by exclusion of illness/infection, energy or carbohydrate/protein deficiency, iron deficiency etc.; key idea "prolonged maladaptation". Kellmann 2018 consensus: systematic monitoring of recovery and the stress-recovery balance helps avoid underrecovery, overreaching, injury, illness. | research (consensus) | Basis for "refer, don't coach around" |
+
+## Not supported (do not claim)
+- That HRV guidance prevents injury (no study in this library tests it).
+- That HRV baselines from a wrist device are interchangeable with chest-strap or lab values (not examined).
+- Any fixed HRV number as "good" or "bad" across people.
+- Cycle-phase based training changes (not covered).
+
+## Papers without a full-text copy
+Paywalled papers are cited by DOI in `library.md`; only abstract-level claims above are used.

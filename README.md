@@ -1,8 +1,15 @@
-# Garmin Coach
+# Rampwise: an AI endurance coach for your Garmin data
 
-**Evidence-labelled endurance coaching for AI agents.** Running, cycling and strength plans built from *your own* Garmin data, with specialists for recovery, load, heat, fueling and heart-rate zones. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
+**Evidence-labelled running, cycling and strength coaching for AI agents (Claude Code, Codex and other Agent Skills clients).** Plans, daily adaptation, an injury-risk watch and daily/weekly/monthly reports built from *your own* Garmin data, with specialists for recovery, load, heat, fueling and heart-rate zones. Free and open source (Apache-2.0).
 
-> **Status: v0.2.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+> Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. and is used here only to say which data the tool reads.
+
+Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
+
+> **Status: v0.3.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+
+[![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/)
+*A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/).*
 
 ## What it does
 - **Plans**: rolling 4-week plans (easy, long, tempo, strides, intervals, climb and MAF-test sessions; rides; strength) from your last weeks of training, with reset and deload weeks and a +10 % step cap.
@@ -25,35 +32,38 @@
 
 **Claude Code** (plugin marketplace):
 ```text
-/plugin marketplace add Azahir21/garmin-coach
-/plugin install garmin-coach@garmin-coach
+/plugin marketplace add Azahir21/rampwise
+/plugin install rampwise@rampwise
 ```
-Skills appear as `/garmin-coach:garmin-coach`, `/garmin-coach:garmin-planner` and so on; subagents as `garmin-coach:coach-recovery`, etc.
+Skills appear as `/rampwise:rampwise`, `/rampwise:rampwise-planner` and so on; subagents as `rampwise:coach-recovery`, etc.
 
 **Codex** (per OpenAI's plugin docs; **not tested by us**):
 ```text
-codex plugin marketplace add Azahir21/garmin-coach
+codex plugin marketplace add Azahir21/rampwise
 ```
-then open `/plugins` and install *garmin-coach*. Codex plugins do not ship subagents: the skills work without them.
+then open `/plugins` and install *rampwise*. Codex plugins do not ship subagents: the skills work without them.
 
 **Any other harness that supports Agent Skills**, or if you prefer plain files:
 ```text
-git clone https://github.com/Azahir21/garmin-coach
-python garmin-coach/install.py --target agents      # copies skills to ~/.agents/skills
-python garmin-coach/install.py --target claude      # copies skills and subagents to ~/.claude
+git clone https://github.com/Azahir21/rampwise
+python rampwise/install.py --target agents      # copies skills to ~/.agents/skills
+python rampwise/install.py --target claude      # copies skills and subagents to ~/.claude
 ```
 
 ## Updates (auto-update)
-- **Claude Code:** third-party marketplaces do **not** auto-update by default. Turn it on: `/plugin` -> *Marketplaces* -> *garmin-coach* -> *Enable auto-update*. A plugin updates when its `version` changes, and this repository bumps the version on every release. Manual: `claude plugin update garmin-coach@garmin-coach`, then `/reload-plugins`.
+- **Claude Code:** third-party marketplaces do **not** auto-update by default. Turn it on: `/plugin` -> *Marketplaces* -> *rampwise* -> *Enable auto-update*. A plugin updates when its `version` changes, and this repository bumps the version on every release. Manual: `claude plugin update rampwise@rampwise`, then `/reload-plugins`.
 - **Claude Code, always on:** per Anthropic's docs the marketplace entry in your settings can carry `autoUpdate` (`extraKnownMarketplaces`); check the current docs for the exact shape, and note that updates apply after `/reload-plugins` or the next launch.
-- **Codex:** `codex plugin marketplace upgrade garmin-coach` (the docs do not describe automatic plugin updates).
+- **Codex:** `codex plugin marketplace upgrade rampwise` (the docs do not describe automatic plugin updates).
 - **install.py users:** `python install.py --update` runs `git pull --ff-only` and reinstalls.
 - Your personal data is **not** in the plugin folder, so updates never overwrite it.
 
 ## First run
-Ask your agent: *"Set up my Garmin coach."* The head coach creates your `athlete.json` (`athlete.py init`), interviews you (goals, injuries and how you feel today, equipment, exercises you cannot do, schedule, and whether you want to share your watch's heart-rate zones), checks the Garmin connection, then builds your first plan. After that: *"How am I today?"*, *"Plan the next two weeks"*, *"Build my workouts"*, *"Why did my heart rate drift?"*.
+Ask your agent: *"Set up my Rampwise coach."* The head coach creates your `athlete.json` (`athlete.py init`), interviews you (goals, injuries and how you feel today, equipment, exercises you cannot do, schedule, and whether you want to share your watch's heart-rate zones), checks the Garmin connection, then builds your first plan. After that: *"How am I today?"*, *"Plan the next two weeks"*, *"Build my workouts"*, *"Why did my heart rate drift?"*.
 
-**A day with it:** morning, *"Daily report"* (readiness, injury watch, yesterday's session against the last similar one, tomorrow adapted) and *"adjust tomorrow"* (updates your `[GC]` calendar event after you agree). Sunday, *"Weekly report"*. First of the month, *"Monthly report"*. Reports land in `~/garmin-coach-data/reports/` (override with `GARMIN_COACH_DATA`); `latest-weekly.html` is always the newest.
+**A day with it:** morning, *"Daily report"* (readiness, injury watch, yesterday's session against the last similar one, tomorrow adapted) and *"adjust tomorrow"* (updates your `[GC]` calendar event after you agree). Sunday, *"Weekly report"*. First of the month, *"Monthly report"*. Reports land in `~/rampwise-data/reports/` (override with `RAMPWISE_DATA`); `latest-weekly.html` is always the newest.
+
+## Upgrading from "Garmin Coach" (before v0.3.0)
+The project was renamed to Rampwise so it does not use another company's trademark. Skills are now `rampwise-*` and the plugin is `rampwise` (`/plugin marketplace add Azahir21/rampwise`, then `/plugin install rampwise@rampwise`). Your data keeps working: `RAMPWISE_DATA` falls back to the older `GARMIN_COACH_DATA`, and `~/garmin-coach-data` is still used if it is the only folder that exists. Calendar events made earlier (marker `garmin-coach-plan`) are still found. GitHub redirects the old repository address.
 
 ## Safety and evidence
 Not medical advice. See [DISCLAIMER.md](DISCLAIMER.md). The planner never promises a date for a goal; targets are checked against your data. See [PRIVACY.md](PRIVACY.md) for what stays on your machine.
@@ -68,6 +78,7 @@ skills/                eleven Agent Skills (SKILL.md + scripts + references)
 agents/                nine subagent prompts (Claude Code)
 tools/                 install, owner placeholders, paper fetcher
 tests/                 repo checks and offline tests (no Garmin account needed)
+docs/index.html        the public sample report (made by tools/make_sample_report.py from synthetic data)
 docs/                  papers, field-test protocol, harness notes
 ```
 

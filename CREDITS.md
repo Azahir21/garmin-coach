@@ -5,7 +5,7 @@ This project stands on other people's work. Thank you.
 ## Code and services
 | What | By | Licence | How it is used |
 |---|---|---|---|
-| [running-coach](https://github.com/tomasstankovic/running-coach) | Tomas Stankovic | MIT (kept as is; compatible with Apache-2.0) | `readiness.py`, `weather.py` and `paces.py` are unmodified copies (commit and licence in `skills/garmin-coach/third_party/`); the activity-analysis formulas in `analyze_activity.py` are adapted from it |
+| [running-coach](https://github.com/tomasstankovic/running-coach) | Tomas Stankovic | MIT (kept as is; compatible with Apache-2.0) | `readiness.py`, `weather.py` and `paces.py` are unmodified copies (commit and licence in `skills/rampwise/third_party/`); the activity-analysis formulas in `analyze_activity.py` are adapted from it |
 | [garmin-personal-mcp](https://github.com/Mason-Levyy/garmin-personal-mcp) | Mason Levy | MIT | The MCP server that reads your data from Garmin's official Personal API; started by the scripts and by `.mcp.json` |
 | [fitdecode](https://github.com/polyvertex/fitdecode) | Jean-Charles Lefebvre | MIT | Reads Garmin FIT files; its bundled FIT profile was used to check the workout-file encoder |
 | Garmin FIT file format | Garmin Ltd. | Garmin FIT SDK terms | The workout writer follows the published format and Garmin's "Workout Files" article; verified only by decoding our own files, not on every watch |

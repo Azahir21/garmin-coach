@@ -15,10 +15,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SK = ROOT / "skills"
 TMP = Path(tempfile.mkdtemp(prefix="gc-test-"))
-os.environ["GARMIN_COACH_DATA"] = str(TMP)
-sys.path.insert(0, str(SK / "garmin-coach" / "scripts"))
-sys.path.insert(0, str(SK / "garmin-planner" / "scripts"))
-sys.path.insert(0, str(SK / "garmin-strength" / "scripts"))
+os.environ["RAMPWISE_DATA"] = str(TMP)
+sys.path.insert(0, str(SK / "rampwise" / "scripts"))
+sys.path.insert(0, str(SK / "rampwise-planner" / "scripts"))
+sys.path.insert(0, str(SK / "rampwise-strength" / "scripts"))
 failed = []
 
 
@@ -33,20 +33,20 @@ def run(*args, env=None):
 
 
 # ---------------------------------------------------------------- memory file
-r = run(SK / "garmin-coach" / "scripts" / "athlete.py", "show")
+r = run(SK / "rampwise" / "scripts" / "athlete.py", "show")
 check("show without a file says to run init", r.returncode != 0 and "init" in (r.stdout + r.stderr))
-r = run(SK / "garmin-coach" / "scripts" / "athlete.py", "init")
+r = run(SK / "rampwise" / "scripts" / "athlete.py", "init")
 check("init creates athlete.json outside the plugin", r.returncode == 0 and (TMP / "athlete.json").exists())
-r = run(SK / "garmin-coach" / "scripts" / "athlete.py", "init")
+r = run(SK / "rampwise" / "scripts" / "athlete.py", "init")
 check("init never overwrites", r.returncode != 0)
-r = run(SK / "garmin-coach" / "scripts" / "athlete.py", "show")
+r = run(SK / "rampwise" / "scripts" / "athlete.py", "show")
 check("show on a blank file asks for heart-rate data", "NOT RECORDED" in r.stdout and "never assume" in r.stdout)
-run(SK / "garmin-coach" / "scripts" / "athlete.py", "goal-add", "--id", "run-5k", "--title", "5 km in 25:00", "--rank", "1")
+run(SK / "rampwise" / "scripts" / "athlete.py", "goal-add", "--id", "run-5k", "--title", "5 km in 25:00", "--rank", "1")
 ath = json.loads((TMP / "athlete.json").read_text(encoding="utf-8"))
 check("goal-add writes the goal", any(g["id"] == "run-5k" for g in ath["goals"]))
 
 # ---------------------------------------------------------------- ask-first: strength equipment
-r = run(SK / "garmin-strength" / "scripts" / "strength_plan.py", "--no-history", "--weeks", "1")
+r = run(SK / "rampwise-strength" / "scripts" / "strength_plan.py", "--no-history", "--weeks", "1")
 check("strength planner stops and asks without an equipment list", r.returncode == 2 and "NO EQUIPMENT LIST" in r.stdout)
 
 # ---------------------------------------------------------------- strength generator: every profile, every size, banned exercises
@@ -75,7 +75,7 @@ check("a user who can do pull-ups and push-ups may get them", any("pull-up" in l
 
 # ---------------------------------------------------------------- workouts and heart-rate targets
 import workout as wk  # noqa: E402
-r = run(SK / "garmin-planner" / "scripts" / "workout.py", "--selftest")
+r = run(SK / "rampwise-planner" / "scripts" / "workout.py", "--selftest")
 check("workout.py self test (FIT encode, decode, CRC)", r.returncode == 0 and "selftest ok" in r.stdout, r.stdout[-200:] + r.stderr[-200:])
 wk.set_zones({"running": {"floors": [105, 126, 147, 168, 189], "top": 210, "label": "test set"}})
 check("a zone that covers the band is used", wk.hr_band(126, 146, "running")["type"] == "hr_zone")
@@ -113,20 +113,20 @@ check("an ACTIVE injury locks quality sessions for that user only", not any(s.ge
 # ---------------------------------------------------------------- files from the plan
 plan_file = TMP / "plan.json"
 plan_file.write_text(json.dumps({"meta": meta, "sessions": sess}, default=str), encoding="utf-8")
-r = run(SK / "garmin-planner" / "scripts" / "export_workouts.py", plan_file, "--from", "2026-12-07", "--days", "14")
+r = run(SK / "rampwise-planner" / "scripts" / "export_workouts.py", plan_file, "--from", "2026-12-07", "--days", "14")
 fits = list((TMP / "workouts").glob("*.fit"))
 check("export writes decodable .fit files", r.returncode == 0 and len(fits) >= 8, r.stdout[-200:] + r.stderr[-200:])
-r = run(SK / "garmin-planner" / "scripts" / "calendar_events.py", plan_file, "--from", "2026-12-07", "--json")
+r = run(SK / "rampwise-planner" / "scripts" / "calendar_events.py", plan_file, "--from", "2026-12-07", "--json")
 try:
     ev = json.loads(r.stdout)["events"]
 except ValueError:
     ev = []
-check("calendar payload has events with titles and the marker", len(ev) >= 8 and all(e["summary"].startswith("[GC]") for e in ev) and all("garmin-coach-plan" in e["description"] for e in ev), r.stderr[-200:])
+check("calendar payload has events with titles and the marker", len(ev) >= 8 and all(e["summary"].startswith("[GC]") for e in ev) and all("rampwise-plan" in e["description"] for e in ev), r.stderr[-200:])
 
 # ---------------------------------------------------------------- analyze, adapt, report (pure functions on synthetic data)
 import xml.dom.minidom
 from datetime import timedelta
-for sub in ("garmin-analyze", "garmin-adapt", "garmin-report"):
+for sub in ("rampwise-analyze", "rampwise-adapt", "rampwise-report"):
     sys.path.insert(0, str(SK / sub / "scripts"))
 import analysis as an
 import adapt_logic as al
@@ -206,6 +206,12 @@ for mode in ("daily", "weekly", "monthly"):
     check(f"report {mode}: html is self-contained (no script, no external URL)", "<script" not in html and "http://" not in html.replace("http://www.w3.org/2000/svg", "") and "https://" not in html)
     check(f"report {mode}: every figure parses as SVG", all(xml.dom.minidom.parse(str(f)) for f in figs))
 check("report: goals without data are explained, not faked", "No reading in this period" in (TMP / "reports" / "weekly" / "report.html").read_text(encoding="utf-8") or "goal" in (TMP / "reports" / "weekly" / "report.html").read_text(encoding="utf-8").lower())
+
+# ---------------------------------------------------------------- data folder: new variable, old variable, defaults
+probe = "import sys; sys.path.insert(0, sys.argv[1]); import gcommon; print(gcommon.DATA_DIR)"
+for env, want, label in (({"RAMPWISE_DATA": str(TMP / "a"), "GARMIN_COACH_DATA": str(TMP / "b")}, TMP / "a", "RAMPWISE_DATA wins"), ({"RAMPWISE_DATA": "", "GARMIN_COACH_DATA": str(TMP / "b")}, TMP / "b", "the older GARMIN_COACH_DATA still works")):
+    r = subprocess.run([sys.executable, "-X", "utf8", "-c", probe, str(SK / "rampwise" / "scripts")], capture_output=True, text=True, encoding="utf-8", env={**os.environ, **env})
+    check(f"data folder: {label}", Path(r.stdout.strip()) == want, r.stdout + r.stderr[-200:])
 
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")

@@ -1,0 +1,26 @@
+# Evidence map: rampwise-heat-weather
+
+Source names refer to `library.md` in this folder. "Verified" = read in the abstract or full text (2026-11-16).
+Strength: **research** = study/meta-analysis/consensus; **practice** = convention without a study in this library; **gap** = unsupported.
+
+| Rule or output | What the source says (verified) | Strength | Notes |
+|---|---|---|---|
+| Air temperature dominates the weather effect on endurance running | El Helou 2012 (full text; 6 marathons, 2001-2010, 1,791,972 finishers, 60 races): temperature and performance related by a quadratic model; optimal temperature depends on performance level; above the optimum speed falls and withdrawal rates rise; ozone mattered but was linked to temperature; humidity, dew point and pressure had no significant impact; "major influence of air temperature above all other climatic parameter". | research (large observational, marathon) | Contradicts the common claim that dew point is the key variable; population-level, road marathons |
+| Progressive slowing with heat; slower runners affected more | Ely 2007 (7 marathons, up to 36 years of data, WBGT quartiles 5.1-10, 10.1-15, 15.1-20, 20.1-25 C): top men were slower than course record by 1.7, 2.5, 3.3 and 4.5 % in Q1-Q4; "progressive slowing as WBGT increases from 5 to 25 C", true for men and women of wide ability, more negative for slower runners. Ely 2008 (3 Japanese women's marathons): winners kept even pace; lesser-ability runners slowed after 20-25 km; faster runners' pace was affected more by warm air than slower runners' (their slowing is from lower speed from the start). | research (observational) | |
+| Heat lowers cycling power | Tatterson 2000 (11 elite road cyclists, 30-min time trials at 32 C/60 % RH vs 23 C/60 %): power output 6.5 % lower in heat; rectal temperature similar; the reduction was linked to body-temperature-related factors, not metabolic capacity. | research (small, cycling, lab) | Only cycling data point in the library |
+| Script heat adjustment: above 15 C, 1-2 % slower per 5 C | Implemented from the upstream repo (`weather.py`, MIT), which cites Ely 2007/2008 and El Helou 2012. The slope is of the same order as Ely 2007 (about 0.9 % per 5 C WBGT for top men, from the quartile figures above) but is not a published formula. | practice (calibrated to research) | Pace cost for explanation only; HR-led training holds the zone |
+| Extra step "dew point >= 15 C shows the upper end" | Not supported by El Helou 2012 (no significant dew-point or humidity effect once temperature is in the model). | practice / **contradicted in that dataset** | Printed with that caveat |
+| Heat acclimatisation is the key intervention | Racinais 2015 consensus: acclimatise with repeated exercise-heat exposures over 1-2 weeks; start euhydrated and limit dehydration. Periard 2015 review: adaptations (sweating, skin blood flow, lower body temperature, reduced cardiovascular strain, fluid balance) depend on intensity, duration, frequency and number of exposures. Tyler 2016 (96 articles): common duration 7-14 days; moderate benefit on performance in the heat regardless of regimen; longer regimens more effective than shorter. | research (consensus + meta-analysis) | |
+| Acclimation fades without exposure | Daanen 2018 (full text, 12 studies; HA at least 5 days, decay at least 7 days): end-exercise HR adaptation decays 2.3 % per day of decay (P < 0.001), core temperature 2.6 % per day (P < 0.01); core-temperature adaptation lasted longer after longer, less intense daily exposures; earlier literature: 1 day of HA lost per 2 days of decay. | research (meta-analysis) | `acclimation_decay.py` applies it linearly (simplification) |
+| Heat illness is serious but preventable; there is no single WBGT cut-off | Racinais 2023 IOC consensus (full text): exertional heat stroke is among the leading life-threatening conditions for athletes but is preventable and treatable; includes athlete-level guidance (acclimation, hydration, clothing, warm-up). It notes that the same WBGT (30.6 C) was orange, red or black in different governing bodies' systems. Casa 2015 NATA statement (abstract): best-practice prevention, recognition and treatment of exertional heat illness. | research (consensus) | Basis for "no universal threshold; qualitative risk" |
+| Heat, fluid and sodium shifts affect HR-speed decoupling | Wang 2026 (see aerobic-base evidence map). | research (small) | |
+
+## Not supported (do not claim)
+- A precise "+X bpm per degree" heart-rate rule (none verified; a secondary claim about 10 bpm per degree of core temperature was seen on a news site and **not** verified).
+- A dew-point-based pace table as validated (coaching tables exist; the main dataset read did not support dew point).
+- Cycling pace-vs-temperature formulas beyond the single Tatterson data point.
+- Any WBGT threshold as universal.
+- Humid-heat acclimation specifics (dry vs humid) beyond what the consensus text states.
+
+## Practical consequence for this athlete
+Hot sessions: hold HR zone, accept slower speed, do not compare against cool sessions; heat can inflate decoupling; hydrate; train in the cooler part of the day; use acclimatisation before hot events.

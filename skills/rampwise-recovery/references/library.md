@@ -1,0 +1,18 @@
+# Library: rampwise-recovery
+
+Every paper below was looked up in Europe PMC (PubMed index) on 2026-11-16: title, authors, journal, DOI and PMID come from that record, and the abstract was read before any rule was written from it.
+
+**Status column**: `full text` = open-access paper saved in `papers/` (license shown); `abstract verified` = paywalled, only the abstract was read, so only claims visible in the abstract are used; `title only` = no abstract available, not used for any rule.
+
+| # | Citation | DOI | PMID | Status |
+|---|---|---|---|---|
+| 1 | Granero-Gallegos A et al. HRV-Based Training for Improving VO<sub>2max</sub> in Endurance Athletes. A Systematic Review with Meta-Analysis. *International journal of environmental research and public health* 2020;17(21):E7999 | https://doi.org/10.3390/ijerph17217999 | 33143175 | full text (cc by): `references/papers/GraneroGallegos_2020_HRV-guided-training-VO2max-meta-analysis.md` |
+| 2 | Manresa-Rocamora A et al. Heart Rate Variability-Guided Training for Enhancing Cardiac-Vagal Modulation, Aerobic Fitness, and Endurance Performance: A Methodological Systematic Review with Meta-Analysis. *International journal of environmental research and public health* 2021;18(19):10299 | https://doi.org/10.3390/ijerph181910299 | 34639599 | full text (cc by): `references/papers/ManresaRocamora_2021_HRV-guided-training-meta-analysis.md` |
+| 3 | Plews DJ et al. Training adaptation and heart rate variability in elite endurance athletes: opening the door to effective monitoring. *Sports medicine (Auckland, N.Z.)* 2013;43(9):773-781 | https://doi.org/10.1007/s40279-013-0071-8 | 23852425 | abstract verified (paywalled) |
+| 4 | Kiviniemi AM et al. Endurance training guided individually by daily heart rate variability measurements. *European journal of applied physiology* 2007;101(6):743-751 | https://doi.org/10.1007/s00421-007-0552-2 | 17849143 | abstract verified (paywalled) |
+| 5 | Vesterinen V et al. Individual Endurance Training Prescription with Heart Rate Variability. *Medicine and science in sports and exercise* 2016;48(7):1347-1354 | https://doi.org/10.1249/mss.0000000000000910 | 26909534 | abstract verified (paywalled) |
+| 6 | Buchheit M Monitoring training status with HR measures: do all roads lead to Rome?. *Frontiers in physiology* 2014;5:73 | https://doi.org/10.3389/fphys.2014.00073 | 24578692 | full text (cc by): `references/papers/Buchheit_2014_monitoring-training-status-HR-measures.md` |
+| 7 | Walsh NP et al. Sleep and the athlete: narrative review and 2021 expert consensus recommendations. *British journal of sports medicine* 2020;:bjsports-2020-102025 | https://doi.org/10.1136/bjsports-2020-102025 | 33144349 | abstract verified (paywalled) |
+| 8 | Craven J et al. Effects of Acute Sleep Loss on Physical Performance: A Systematic and Meta-Analytical Review. *Sports medicine (Auckland, N.Z.)* 2022;52(11):2669-2690 | https://doi.org/10.1007/s40279-022-01706-y | 35708888 | full text (cc by): `references/papers/Craven_2022_acute-sleep-loss-physical-performance-meta-analysis.md` |
+| 9 | Meeusen R et al. Prevention, diagnosis, and treatment of the overtraining syndrome: joint consensus statement of the European College of Sport Science and the American College of Sports Medicine. *Medicine and science in sports and exercise* 2013;45(1):186-205 | https://doi.org/10.1249/mss.0b013e318279a10a | 23247672 | abstract verified (paywalled) |
+| 10 | Kellmann M et al. Recovery and Performance in Sport: Consensus Statement. *International journal of sports physiology and performance* 2018;13(2):240-245 | https://doi.org/10.1123/ijspp.2017-0759 | 29345524 | abstract verified (paywalled) |

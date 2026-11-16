@@ -105,7 +105,7 @@ for p in files(["*.py"]):
 ok("python files compile")
 
 # ---------------------------------------------------------------- 5. strength library and profiles are consistent
-ref = ROOT / "skills" / "garmin-strength" / "references"
+ref = ROOT / "skills" / "rampwise-strength" / "references"
 lib = json.loads((ref / "exercise_library.json").read_text(encoding="utf-8"))
 prof = json.loads((ref / "goal_profiles.json").read_text(encoding="utf-8"))
 ids = [e["id"] for e in lib["exercises"]]

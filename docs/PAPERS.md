@@ -3,7 +3,7 @@
 Generated from `skills/*/references/library.md`. A paper listed here was looked up in Europe PMC (title, authors, journal, DOI, PMID) and its abstract or full text was read; the evidence maps state only what was read. 'abstract verified' = paywalled, only the abstract was read. Full texts are not included in this repository.
 
 
-## garmin-aerobic-base
+## rampwise-aerobic-base
 
 - Seiler S What is best practice for training intensity and duration distribution in endurance athletes?. *International journal of sports physiology and performance* 2010;5(3):276-291 https://doi.org/10.1123/ijspp.5.3.276 (PMID 20861519; abstract verified (paywalled))
 - Stöggl T et al. Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training. *Frontiers in physiology* 2014;5:33 https://doi.org/10.3389/fphys.2014.00033 (PMID 24550842; full text (cc by))
@@ -23,23 +23,23 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Vesterinen V, Nummela A, Laine T, Hynynen E, Mikkola J, Hakkinen K. A submaximal running test with postexercise cardiac autonomic and neuromuscular function in monitoring endurance training adaptation. *J Strength Cond Res* 2017 https://doi.org/10.1519/jsc.0000000000001458 (PMID 27100319; abstract verified (paywalled))
 - Ten Haaf T, Foster C, Meeusen R, Roelands B, Piacentini MF. Submaximal heart rate seems inadequate to prescribe and monitor intensified training. *Eur J Sport Sci* 2019 https://doi.org/10.1080/17461391.2019.1571112 (PMID 30763148; abstract verified)
 - Lafrenz AJ, Wingo JE, Ganio MS, Cureton KJ. Effect of ambient temperature on cardiovascular drift and maximal oxygen uptake. *Med Sci Sports Exerc* 2008 https://doi.org/10.1249/mss.0b013e3181666ed7 (PMID 18461000; abstract verified (paywalled))
-- Buchheit M. Monitoring training status with HR measures: do all roads lead to Rome? *Front Physiol* 2014 https://doi.org/10.3389/fphys.2014.00073 (PMID 24578692; full text in `garmin-recovery`: `<skills>/garmin-recovery/references/papers/Buchheit_2014_monitoring-training-status-HR-measures.md`)
+- Buchheit M. Monitoring training status with HR measures: do all roads lead to Rome? *Front Physiol* 2014 https://doi.org/10.3389/fphys.2014.00073 (PMID 24578692; full text in `rampwise-recovery`: `<skills>/rampwise-recovery/references/papers/Buchheit_2014_monitoring-training-status-HR-measures.md`)
 
-## garmin-analyze
+## rampwise-analyze
 
 - Johnston R et al. The associations between training load and baseline characteristics on musculoskeletal injury and pain in endurance sport populations: A systematic review. *Journal of science and medicine in sport* 2018 https://doi.org/10.1016/j.jsams.2018.03.001 (PMID 29559317; abstract verified)
 - von Rosen P et al. Too little sleep and an unhealthy diet could increase the risk of sustaining a new injury in adolescent elite athletes. *Scandinavian journal of medicine & science in sports* 2017 https://doi.org/10.1111/sms.12735 (PMID 27539373; abstract verified)
 - Silbernagel KG et al. Continued sports activity, using a pain-monitoring model, during rehabilitation in patients with Achilles tendinopathy: a randomized controlled study. *The American journal of sports medicine* 2007 https://doi.org/10.1177/0363546506298279 (PMID 17307888; abstract verified)
-- The other papers behind this skill (Frandsen 2025, Nielsen 2014, Damsted 2019, Buist 2008, Buchheit 2014, Craven 2022) are listed under `garmin-load-injury` and `garmin-recovery`.
+- The other papers behind this skill (Frandsen 2025, Nielsen 2014, Damsted 2019, Buist 2008, Buchheit 2014, Craven 2022) are listed under `rampwise-load-injury` and `rampwise-recovery`.
 
-## garmin-coach
+## rampwise
 
 - Bosquet L et al. Effects of tapering on performance: a meta-analysis. *Medicine and science in sports and exercise* 2007;39(8):1358-1365 https://doi.org/10.1249/mss.0b013e31806010e0 (PMID 17762369; abstract verified (paywalled))
-- Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 https://doi.org/10.1111/sms.13725 (PMID 32421886; full text in `garmin-load-injury`)
+- Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 https://doi.org/10.1111/sms.13725 (PMID 32421886; full text in `rampwise-load-injury`)
 - Muniz-Pumares D et al. The Training Intensity Distribution of Marathon Runners Across Performance Levels. *Sports medicine (Auckland, N.Z.)* 2025;55(4):1023-1035 https://doi.org/10.1007/s40279-024-02137-7 (PMID 39616560; abstract verified (paywalled))
 - Vickers AJ et al. An empirical study of race times in recreational endurance runners. *BMC sports science, medicine & rehabilitation* 2016;8(1):26 https://doi.org/10.1186/s13102-016-0052-y (PMID 27570626; full text (cc by))
 
-## garmin-fueling
+## rampwise-fueling
 
 - Jeukendrup A A step towards personalized sports nutrition: carbohydrate intake during exercise. *Sports medicine (Auckland, N.Z.)* 2014;44 Suppl 1:S25-33 https://doi.org/10.1007/s40279-014-0148-z (PMID 24791914; full text (cc by))
 - Podlogar T et al. New Horizons in Carbohydrate Research and Application for Endurance Athletes. *Sports medicine (Auckland, N.Z.)* 2022;52(Suppl 1):5-23 https://doi.org/10.1007/s40279-022-01757-1 (PMID 36173597; full text (cc by))
@@ -48,7 +48,7 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - American College of Sports Medicine et al. American College of Sports Medicine position stand. Exercise and fluid replacement. *Medicine and science in sports and exercise* 2007;39(2):377-390 https://doi.org/10.1249/mss.0b013e31802ca597 (PMID 17277604; abstract verified (paywalled))
 - Hew-Butler T et al. Statement of the Third International Exercise-Associated Hyponatremia Consensus Development Conference, Carlsbad, California, 2015. *Clinical journal of sport medicine : official journal of the Canadian Academy of Sport Medicine* 2015;25(4):303-320 https://doi.org/10.1097/jsm.0000000000000221 (PMID 26102445; title only (no abstract; not used))
 
-## garmin-heat-weather
+## rampwise-heat-weather
 
 - Racinais S et al. Consensus recommendations on training and competing in the heat. *Scandinavian journal of medicine & science in sports* 2015;25 Suppl 1:6-19 https://doi.org/10.1111/sms.12467 (PMID 25943653; abstract verified (paywalled))
 - Racinais S et al. IOC consensus statement on recommendations and regulations for sport events in the heat. *British journal of sports medicine* 2023;57(1):8-25 https://doi.org/10.1136/bjsports-2022-105942 (PMID 36150754; full text (cc by-nc))
@@ -62,7 +62,7 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Tatterson AJ et al. Effects of heat stress on physiological responses and exercise performance in elite cyclists. *Journal of science and medicine in sport* 2000;3(2):186-193 https://doi.org/10.1016/s1440-2440(00)80080-8 (PMID 11104310; abstract verified (paywalled))
 - Casa DJ et al. National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses. *Journal of athletic training* 2015;50(9):986-1000 https://doi.org/10.4085/1062-6050-50.9.07 (PMID 26381473; abstract verified (paywalled))
 
-## garmin-load-injury
+## rampwise-load-injury
 
 - Schuster Brandt Frandsen J et al. How much running is too much? Identifying high-risk running sessions in a 5200-person cohort study. *British journal of sports medicine* 2025;59(17):1203-1210 https://doi.org/10.1136/bjsports-2024-109380 (PMID 40623829; full text (cc by-nc))
 - Damsted C et al. IS THERE EVIDENCE FOR AN ASSOCIATION BETWEEN CHANGES IN TRAINING LOAD AND RUNNING-RELATED INJURIES? A SYSTEMATIC REVIEW. *International journal of sports physical therapy* 2018;13(6):931-942 https://doi.org/10.26603/ijspt20180931 (PMID 30534459; abstract verified (paywalled))
@@ -74,18 +74,18 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Gabbett TJ The training-injury prevention paradox: should athletes be training smarter and harder?. *British journal of sports medicine* 2016;50(5):273-280 https://doi.org/10.1136/bjsports-2015-095788 (PMID 26758673; full text (cc by-nc))
 - Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 https://doi.org/10.1111/sms.13725 (PMID 32421886; full text (cc by))
 
-## garmin-planner
+## rampwise-planner
 
 - Buist I et al. No effect of a graded training program on the number of running-related injuries in novice runners: a randomized controlled trial. *The American journal of sports medicine* 2008;36(1):33-39 https://doi.org/10.1177/0363546507307505 (PMID 17940147; abstract verified (paywalled))
 - Nielsen RØ et al. Excessive progression in weekly running distance and risk of running-related injuries: an association which varies according to type of injury. *The Journal of orthopaedic and sports physical therapy* 2014;44(10):739-747 https://doi.org/10.2519/jospt.2014.5164 (PMID 25155475; abstract verified (paywalled))
-- Schuster Brandt Frandsen J et al. How much running is too much? Identifying high-risk running sessions in a 5200-person cohort study. *British journal of sports medicine* 2025;59(17):1203-1210 https://doi.org/10.1136/bjsports-2024-109380 (PMID 40623829; full text in `garmin-load-injury`: `<skills>/garmin-load-injury/references/papers/Frandsen_2025_how-much-running-is-too-much-session-spikes.md`)
-- Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 https://doi.org/10.1111/sms.13725 (PMID 32421886; full text in `garmin-load-injury`: `<skills>/garmin-load-injury/references/papers/Fokkema_2020_training-volume-longest-run-marathon-injuries.md`)
-- Stöggl T et al. Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training. *Frontiers in physiology* 2014;5:33 https://doi.org/10.3389/fphys.2014.00033 (PMID 24550842; full text in `garmin-aerobic-base`: `<skills>/garmin-aerobic-base/references/papers/Stoggl-Sperlich_2014_polarized-vs-threshold-vs-HIIT-vs-volume.md`)
+- Schuster Brandt Frandsen J et al. How much running is too much? Identifying high-risk running sessions in a 5200-person cohort study. *British journal of sports medicine* 2025;59(17):1203-1210 https://doi.org/10.1136/bjsports-2024-109380 (PMID 40623829; full text in `rampwise-load-injury`: `<skills>/rampwise-load-injury/references/papers/Frandsen_2025_how-much-running-is-too-much-session-spikes.md`)
+- Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 https://doi.org/10.1111/sms.13725 (PMID 32421886; full text in `rampwise-load-injury`: `<skills>/rampwise-load-injury/references/papers/Fokkema_2020_training-volume-longest-run-marathon-injuries.md`)
+- Stöggl T et al. Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training. *Frontiers in physiology* 2014;5:33 https://doi.org/10.3389/fphys.2014.00033 (PMID 24550842; full text in `rampwise-aerobic-base`: `<skills>/rampwise-aerobic-base/references/papers/Stoggl-Sperlich_2014_polarized-vs-threshold-vs-HIIT-vs-volume.md`)
 - Rønnestad BR et al. Optimizing strength training for running and cycling endurance performance: A review. *Scandinavian journal of medicine & science in sports* 2014;24(4):603-612 https://doi.org/10.1111/sms.12104 (PMID 23914932; abstract verified (paywalled))
-- Blagrove RC et al. Effects of Strength Training on the Physiological Determinants of Middle- and Long-Distance Running Performance: A Systematic Review. *Sports medicine (Auckland, N.Z.)* 2018;48(5):1117-1149 https://doi.org/10.1007/s40279-017-0835-7 (PMID 29249083; full text in `garmin-strength`: `<skills>/garmin-strength/references/papers/Blagrove_2018_strength-training-distance-runners-review.md`)
-- Schumann M et al. Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2022;52(3):601-612 https://doi.org/10.1007/s40279-021-01587-7 (PMID 34757594; full text in `garmin-strength`: `<skills>/garmin-strength/references/papers/Schumann_2022_concurrent-aerobic-strength-compatibility-meta-analysis.md`)
-- Eddens L et al. The Role of Intra-Session Exercise Sequence in the Interference Effect: A Systematic Review with Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2018;48(1):177-188 https://doi.org/10.1007/s40279-017-0784-1 (PMID 28917030; full text in `garmin-strength`: `<skills>/garmin-strength/references/papers/Eddens_2018_intra-session-exercise-sequence-interference.md`)
-- Vickers AJ et al. An empirical study of race times in recreational endurance runners. *BMC sports science, medicine & rehabilitation* 2016;8(1):26 https://doi.org/10.1186/s13102-016-0052-y (PMID 27570626; full text in `garmin-coach`: `<skills>/garmin-coach/references/papers/Vickers-Vertosick_2016_race-times-recreational-runners-marathon-prediction.md`)
+- Blagrove RC et al. Effects of Strength Training on the Physiological Determinants of Middle- and Long-Distance Running Performance: A Systematic Review. *Sports medicine (Auckland, N.Z.)* 2018;48(5):1117-1149 https://doi.org/10.1007/s40279-017-0835-7 (PMID 29249083; full text in `rampwise-strength`: `<skills>/rampwise-strength/references/papers/Blagrove_2018_strength-training-distance-runners-review.md`)
+- Schumann M et al. Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2022;52(3):601-612 https://doi.org/10.1007/s40279-021-01587-7 (PMID 34757594; full text in `rampwise-strength`: `<skills>/rampwise-strength/references/papers/Schumann_2022_concurrent-aerobic-strength-compatibility-meta-analysis.md`)
+- Eddens L et al. The Role of Intra-Session Exercise Sequence in the Interference Effect: A Systematic Review with Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2018;48(1):177-188 https://doi.org/10.1007/s40279-017-0784-1 (PMID 28917030; full text in `rampwise-strength`: `<skills>/rampwise-strength/references/papers/Eddens_2018_intra-session-exercise-sequence-interference.md`)
+- Vickers AJ et al. An empirical study of race times in recreational endurance runners. *BMC sports science, medicine & rehabilitation* 2016;8(1):26 https://doi.org/10.1186/s13102-016-0052-y (PMID 27570626; full text in `rampwise`: `<skills>/rampwise/references/papers/Vickers-Vertosick_2016_race-times-recreational-runners-marathon-prediction.md`)
 - Lauersen JB et al. The effectiveness of exercise interventions to prevent sports injuries: a systematic review and meta-analysis of randomised controlled trials. *British journal of sports medicine* 2014;48(11):871-877 https://doi.org/10.1136/bjsports-2013-092538 (PMID 24100287; abstract verified (paywalled))
 - Zinner C, Schäfer Olstad D, Sperlich B Mesocycles with different training intensity distribution in recreational runners. *Med Sci Sports Exerc* 2018 https://doi.org/10.1249/mss.0000000000001599 (PMID 29509644; abstract verified (paywalled))
 - Festa L, Tarperi C, Skroce K, La Torre A, Schena F Effects of different training intensity distribution in recreational runners. *Front Sports Act Living* 2019 https://doi.org/10.3389/fspor.2019.00070 (PMID 33344993; full text (CC BY))
@@ -101,7 +101,7 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Accuracy of fixed intensity anchors to estimate lactate thresholds in recreational runners. *Eur J Appl Physiol* 2025 https://doi.org/10.1007/s00421-025-05748-8 (supplementary DOI in the paper) (PMID 40088270; full text (CC BY))
 - Noninvasive assessment of the anaerobic threshold in endurance athletes: an evidence-based narrative review of methods. *Br Med Bull* 2026 PMCID PMC13662803 (PMID (none in MEDLINE record); full text (CC BY))
 
-## garmin-recovery
+## rampwise-recovery
 
 - Granero-Gallegos A et al. HRV-Based Training for Improving VO<sub>2max</sub> in Endurance Athletes. A Systematic Review with Meta-Analysis. *International journal of environmental research and public health* 2020;17(21):E7999 https://doi.org/10.3390/ijerph17217999 (PMID 33143175; full text (cc by))
 - Manresa-Rocamora A et al. Heart Rate Variability-Guided Training for Enhancing Cardiac-Vagal Modulation, Aerobic Fitness, and Endurance Performance: A Methodological Systematic Review with Meta-Analysis. *International journal of environmental research and public health* 2021;18(19):10299 https://doi.org/10.3390/ijerph181910299 (PMID 34639599; full text (cc by))
@@ -114,7 +114,7 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Meeusen R et al. Prevention, diagnosis, and treatment of the overtraining syndrome: joint consensus statement of the European College of Sport Science and the American College of Sports Medicine. *Medicine and science in sports and exercise* 2013;45(1):186-205 https://doi.org/10.1249/mss.0b013e318279a10a (PMID 23247672; abstract verified (paywalled))
 - Kellmann M et al. Recovery and Performance in Sport: Consensus Statement. *International journal of sports physiology and performance* 2018;13(2):240-245 https://doi.org/10.1123/ijspp.2017-0759 (PMID 29345524; abstract verified (paywalled))
 
-## garmin-strength
+## rampwise-strength
 
 - Schumann M et al. Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2022;52(3):601-612 https://doi.org/10.1007/s40279-021-01587-7 (PMID 34757594; full text (cc by))
 - Eddens L et al. The Role of Intra-Session Exercise Sequence in the Interference Effect: A Systematic Review with Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2018;48(1):177-188 https://doi.org/10.1007/s40279-017-0784-1 (PMID 28917030; full text (cc by))

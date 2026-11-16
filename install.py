@@ -8,7 +8,7 @@
   python install.py --update                 git pull --ff-only first, then install again
   python install.py --link                   symlink instead of copy (development)
 
-Personal data is NOT in these folders: it lives in $GARMIN_COACH_DATA (default ~/garmin-coach-data) and is never touched.
+Personal data is NOT in these folders: it lives in $RAMPWISE_DATA (default ~/rampwise-data) and is never touched.
 Existing folders with the same name are replaced; your athlete.json is not inside them.
 """
 import argparse
@@ -62,10 +62,13 @@ def main():
         for s in sorted(SKILLS.iterdir()):
             if s.is_dir():
                 print(f"{place(s, sk_dest / s.name, a.link):7} {sk_dest / s.name}")
+        old = sorted(x.name for x in sk_dest.glob("garmin-*") if x.is_dir() and (x / "SKILL.md").exists()) if sk_dest.exists() else []
+        if old:
+            print(f"\nNote: older skills from before the rename to Rampwise are still in {sk_dest}: {', '.join(old)}.\nThey are superseded by the rampwise-* skills; remove them when you are ready (your data is not inside them).")
         if ag_dest:
             for f in sorted(AGENTS.glob("*.md")):
                 print(f"{place(f, ag_dest / f.name, a.link):7} {ag_dest / f.name}")
-    print("\nDone. Next: pip install fitdecode ; garmin-personal-mcp auth ; ask your agent: Set up my Garmin coach.")
+    print("\nDone. Next: pip install fitdecode ; garmin-personal-mcp auth ; ask your agent: Set up my Rampwise coach.")
 
 
 if __name__ == "__main__":

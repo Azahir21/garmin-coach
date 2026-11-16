@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Download the open-access full texts listed in the skills' library.md files, for your own reading (not committed).
 
-  python tools/fetch_papers.py [--skill garmin-strength]
+  python tools/fetch_papers.py [--skill rampwise-strength]
 
 Reads each `skills/*/references/library.md` row whose status says `full text` and names a file under references/papers/, looks the PMID up in Europe PMC and
 saves the JATS full text converted to Markdown. Licences differ (some are non-commercial or no-derivatives): keep the files local, do not redistribute them.
@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest"
-UA = {"User-Agent": "garmin-coach-paper-fetcher/1.0 (open-access full texts via Europe PMC REST API)"}
+UA = {"User-Agent": "rampwise-paper-fetcher/1.0 (open-access full texts via Europe PMC REST API)"}
 
 
 def text_of(el):

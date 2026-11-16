@@ -1,11 +1,11 @@
 {
-  "name": "garmin-coach",
+  "name": "rampwise",
   "interface": {
-    "displayName": "Garmin Coach"
+    "displayName": "Rampwise"
   },
   "plugins": [
     {
-      "name": "garmin-coach",
+      "name": "rampwise",
       "source": {
         "source": "local",
         "path": "./"

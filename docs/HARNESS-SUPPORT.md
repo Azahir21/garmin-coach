@@ -2,8 +2,8 @@
 
 | Harness | How to install | Status |
 |---|---|---|
-| Claude Code | `/plugin marketplace add Azahir21/garmin-coach` | Built for and used with it. `claude plugin validate` was not available in the build environment; the manifests follow Anthropic's documented schema |
-| Codex (OpenAI) | `codex plugin marketplace add Azahir21/garmin-coach` | Manifests follow OpenAI's plugin docs as read on 2026-11-16 (portable `plugin.json`, `.agents/plugins/marketplace.json`). **Not tested.** Skills only: Codex plugins do not ship subagents |
+| Claude Code | `/plugin marketplace add Azahir21/rampwise` | Built for and used with it. `claude plugin validate` was not available in the build environment; the manifests follow Anthropic's documented schema |
+| Codex (OpenAI) | `codex plugin marketplace add Azahir21/rampwise` | Manifests follow OpenAI's plugin docs as read on 2026-11-16 (portable `plugin.json`, `.agents/plugins/marketplace.json`). **Not tested.** Skills only: Codex plugins do not ship subagents |
 | Other Agent Skills clients | `python install.py --target agents` | Skills follow the open Agent Skills layout (name = folder, description under 1024 characters, SKILL.md under 500 lines). Not tested outside Claude Code |
 
 Things that differ between harnesses:

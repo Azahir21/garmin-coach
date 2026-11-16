@@ -1,24 +1,26 @@
 {
-  "name": "garmin-coach",
+  "name": "rampwise",
   "owner": {
     "name": "Kei"
   },
   "metadata": {
-    "description": "Garmin Coach: evidence-labelled endurance coaching skills",
-    "version": "0.2.0"
+    "description": "Rampwise: an AI endurance coach for your Garmin data (independent, not affiliated with Garmin)",
+    "version": "0.3.0"
   },
   "plugins": [
     {
-      "name": "garmin-coach",
+      "name": "rampwise",
       "source": "./",
-      "description": "Evidence-labelled endurance coaching for AI agents: running, cycling and strength plans built from your own Garmin data, with recovery, load, heat, fueling and heart-rate specialists. Every rule is labelled research or practice. Experimental.",
-      "version": "0.2.0",
+      "description": "Rampwise: an AI endurance coach for your Garmin data. Evidence-labelled running, cycling and strength plans, daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
+      "version": "0.3.0",
       "category": "fitness",
       "tags": [
         "garmin",
         "running",
         "cycling",
-        "strength"
+        "strength",
+        "ai-coach",
+        "hrv"
       ]
     }
   ]
