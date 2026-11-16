@@ -1,0 +1,17 @@
+# Library: garmin-load-injury
+
+Every paper below was looked up in Europe PMC (PubMed index) on 2026-11-16: title, authors, journal, DOI and PMID come from that record, and the abstract was read before any rule was written from it.
+
+**Status column**: `full text` = open-access paper saved in `papers/` (license shown); `abstract verified` = paywalled, only the abstract was read, so only claims visible in the abstract are used; `title only` = no abstract available, not used for any rule.
+
+| # | Citation | DOI | PMID | Status |
+|---|---|---|---|---|
+| 1 | Schuster Brandt Frandsen J et al. How much running is too much? Identifying high-risk running sessions in a 5200-person cohort study. *British journal of sports medicine* 2025;59(17):1203-1210 | https://doi.org/10.1136/bjsports-2024-109380 | 40623829 | full text (cc by-nc): `references/papers/Frandsen_2025_how-much-running-is-too-much-session-spikes.md` |
+| 2 | Damsted C et al. IS THERE EVIDENCE FOR AN ASSOCIATION BETWEEN CHANGES IN TRAINING LOAD AND RUNNING-RELATED INJURIES? A SYSTEMATIC REVIEW. *International journal of sports physical therapy* 2018;13(6):931-942 | https://doi.org/10.26603/ijspt20180931 | 30534459 | abstract verified (paywalled) |
+| 3 | Damsted C et al. The Association Between Changes in Weekly Running Distance and Running-Related Injury: Preparing for a Half Marathon. *The Journal of orthopaedic and sports physical therapy* 2019;49(4):230-238 | https://doi.org/10.2519/jospt.2019.8541 | 30526231 | abstract verified (paywalled) |
+| 4 | Nielsen RØ et al. Excessive progression in weekly running distance and risk of running-related injuries: an association which varies according to type of injury. *The Journal of orthopaedic and sports physical therapy* 2014;44(10):739-747 | https://doi.org/10.2519/jospt.2014.5164 | 25155475 | abstract verified (paywalled) |
+| 5 | Buist I et al. No effect of a graded training program on the number of running-related injuries in novice runners: a randomized controlled trial. *The American journal of sports medicine* 2008;36(1):33-39 | https://doi.org/10.1177/0363546507307505 | 17940147 | abstract verified (paywalled) |
+| 6 | Impellizzeri FM et al. Acute:Chronic Workload Ratio: Conceptual Issues and Fundamental Pitfalls. *International journal of sports physiology and performance* 2020;15(6):907-913 | https://doi.org/10.1123/ijspp.2019-0864 | 32502973 | abstract verified (paywalled) |
+| 7 | Soligard T et al. How much is too much? (Part 1) International Olympic Committee consensus statement on load in sport and risk of injury. *British journal of sports medicine* 2016;50(17):1030-1041 | https://doi.org/10.1136/bjsports-2016-096581 | 27535989 | abstract verified (paywalled) |
+| 8 | Gabbett TJ The training-injury prevention paradox: should athletes be training smarter and harder?. *British journal of sports medicine* 2016;50(5):273-280 | https://doi.org/10.1136/bjsports-2015-095788 | 26758673 | full text (cc by-nc): `references/papers/Gabbett_2016_training-injury-prevention-paradox.md` |
+| 9 | Fokkema T et al. Training for a (half-)marathon: Training volume and longest endurance run related to performance and running injuries. *Scandinavian journal of medicine & science in sports* 2020;30(9):1692-1704 | https://doi.org/10.1111/sms.13725 | 32421886 | full text (cc by): `references/papers/Fokkema_2020_training-volume-longest-run-marathon-injuries.md` |

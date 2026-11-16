@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "garmin": {
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.12",
+        "garmin-personal-mcp"
+      ]
+    }
+  }
+}

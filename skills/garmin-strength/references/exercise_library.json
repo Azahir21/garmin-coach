@@ -1,0 +1,1217 @@
+{
+ "_about": "Exercise library for the strength planner. Nothing here is about one athlete. 'requires' are equipment tags the user must have (athlete.json equipment.tags); 'garmin' lists Garmin 'category/exercise' names used to match a user's own history (read from their FIT files). 'kind': heavy = loadable, bw = bodyweight/tempo, iso = timed hold, plyo = jumps (count contacts), speed = sprint or drill work. 'level' 1 = easiest. 'banned_tags' are matched against athlete.json constraints.no_exercises (push-up, pull-up, chin-up are never prescribed to a user who cannot do them). Which exercise is best for a goal is mostly practice: see references/evidence-map.md.",
+ "equipment_tags": {
+  "bodyweight": "no equipment",
+  "dumbbell": "dumbbells or convertible handles",
+  "barbell": "a barbell (a convertible handle pair counts)",
+  "plates": "weight plates",
+  "band": "resistance band",
+  "band_anchor": "a sturdy anchor point for a band",
+  "step": "a stair, box or sturdy chair to step on",
+  "bench": "a bench",
+  "rack": "squat rack",
+  "pullup_bar": "pull-up bar",
+  "slider": "towel or sliders on a smooth floor",
+  "anchor_feet": "something to hook the heels under (sofa, partner)",
+  "box": "a stable plyometric box",
+  "sled": "a sled or weighted drag",
+  "hill": "a hill or ramp for sprints",
+  "track": "open flat space of 30 m or more",
+  "gym": "gym machines and cables"
+ },
+ "exercises": [
+  {
+   "id": "goblet_squat",
+   "name": "Goblet squat (one loaded handle at the chest)",
+   "pattern": "squat",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "squat/goblet_squat"
+   ],
+   "cue": "3 s down, 1 s pause, drive up; heels flat"
+  },
+  {
+   "id": "bodyweight_squat",
+   "name": "Tempo squat, bodyweight",
+   "pattern": "squat",
+   "requires": [],
+   "uni": false,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "squat/body_weight_wall_squat"
+   ],
+   "cue": "4 s down, 1 s pause, fast up"
+  },
+  {
+   "id": "barbell_back_squat",
+   "name": "Barbell back squat (light, no rack: lift the bar onto your shoulders from the floor)",
+   "pattern": "squat",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "squat/barbell_back_squat",
+    "squat/back_squats",
+    "squat/weighted_back_squats"
+   ],
+   "cue": "brace, sit between the hips, stop the set if the bar drifts forward; no rack means light loads only"
+  },
+  {
+   "id": "front_squat_dumbbells",
+   "name": "Dumbbell front squat",
+   "pattern": "squat",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "squat/dumbbell_front_squat"
+   ],
+   "cue": "dumbbells on the shoulders, elbows up"
+  },
+  {
+   "id": "split_squat",
+   "name": "Static split squat with dumbbells",
+   "pattern": "single_leg_knee",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "squat/dumbbell_split_squat",
+    "lunge/barbell_split_squat",
+    "lunge/dumbbell_lunge"
+   ],
+   "cue": "3 s lowering, front shin vertical, both feet stay planted"
+  },
+  {
+   "id": "bulgarian_split_squat",
+   "name": "Rear-foot-elevated split squat (Bulgarian)",
+   "pattern": "single_leg_knee",
+   "requires": [
+    "dumbbell",
+    "step"
+   ],
+   "uni": true,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "lunge/dumbbell_bulgarian_split_squat",
+    "lunge/back_foot_elevated_dumbbell_split_squat",
+    "lunge/barbell_bulgarian_split_squat"
+   ],
+   "cue": "rear foot on the step, torso slightly forward, slow lowering"
+  },
+  {
+   "id": "reverse_lunge",
+   "name": "Reverse lunge with dumbbells",
+   "pattern": "single_leg_knee",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "lunge/dumbbell_reverse_lunge",
+    "lunge/barbell_reverse_lunge"
+   ],
+   "cue": "step back, lower the back knee to just above the floor, push through the front heel"
+  },
+  {
+   "id": "alternating_lunge",
+   "name": "Alternating forward lunge with dumbbells",
+   "pattern": "single_leg_knee",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "general",
+    "sprint"
+   ],
+   "garmin": [
+    "lunge/alternating_dumbbell_lunge",
+    "lunge/alternating_barbell_forward_lunge"
+   ],
+   "cue": "alternate legs, control the landing"
+  },
+  {
+   "id": "step_up",
+   "name": "Step-up with dumbbells",
+   "pattern": "single_leg_knee",
+   "requires": [
+    "dumbbell",
+    "step"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "squat/dumbbell_step_up",
+    "squat/step_up",
+    "squat/barbell_step_up"
+   ],
+   "cue": "the working leg does the lifting; lower for 3 s; the step should be knee height or lower"
+  },
+  {
+   "id": "skater_squat",
+   "name": "Skater squat (single-leg squat to a cushion), bodyweight",
+   "pattern": "single_leg_knee",
+   "requires": [],
+   "uni": true,
+   "level": 2,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "squat/partial_single_leg_squat",
+    "squat/pistol_squat"
+   ],
+   "cue": "slow, touch the cushion lightly, stand without a bounce"
+  },
+  {
+   "id": "romanian_deadlift",
+   "name": "Romanian deadlift (two legs)",
+   "pattern": "hinge",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "deadlift/romanian_deadlift",
+    "deadlift/dumbbell_straight_leg_deadlift",
+    "deadlift/barbell_straight_leg_deadlift",
+    "deadlift/straight_leg_deadlift"
+   ],
+   "cue": "hips back, flat back, bar close to the legs, feel the hamstrings, stop when the back would round"
+  },
+  {
+   "id": "single_leg_rdl",
+   "name": "Single-leg Romanian deadlift",
+   "pattern": "hinge",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "deadlift/single_leg_romanian_deadlift_with_dumbbell",
+    "deadlift/single_leg_barbell_straight_leg_deadlift",
+    "deadlift/single_leg_barbell_deadlift",
+    "deadlift/single_leg_deadlift_with_barbell"
+   ],
+   "cue": "touch a wall with one hand for balance, hips square, slow lowering"
+  },
+  {
+   "id": "good_morning",
+   "name": "Good morning with a barbell or handle across the shoulders (light)",
+   "pattern": "hinge",
+   "requires": [
+    "barbell"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "leg_curl/good_morning",
+    "leg_curl/bar_good_morning"
+   ],
+   "cue": "soft knees, hips back, light load only"
+  },
+  {
+   "id": "dumbbell_swing",
+   "name": "Two-hand dumbbell swing",
+   "pattern": "hinge",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "plyo",
+   "goals": [
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_raise/kettlebell_swing"
+   ],
+   "cue": "hip snap, arms are ropes; stop when the hinge turns into a squat"
+  },
+  {
+   "id": "glute_bridge",
+   "name": "Glute bridge, bodyweight",
+   "pattern": "hip_extension",
+   "requires": [],
+   "uni": false,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_raise/hip_raise"
+   ],
+   "cue": "ribs down, squeeze at the top 1-2 s"
+  },
+  {
+   "id": "single_leg_bridge",
+   "name": "Single-leg glute bridge",
+   "pattern": "hip_extension",
+   "requires": [],
+   "uni": true,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_raise/single_leg_hip_raise"
+   ],
+   "cue": "hips level, slow lowering"
+  },
+  {
+   "id": "hip_thrust_floor",
+   "name": "Hip thrust from the floor with a barbell or dumbbell on the hips",
+   "pattern": "hip_extension",
+   "requires": [
+    "barbell",
+    "plates"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "hip_raise/barbell_hip_thrust_on_floor",
+    "hip_raise/weighted_hip_raise"
+   ],
+   "cue": "upper back on the floor or a low support, chin tucked, full lockout"
+  },
+  {
+   "id": "hip_thrust_bench",
+   "name": "Hip thrust with the upper back on a bench",
+   "pattern": "hip_extension",
+   "requires": [
+    "barbell",
+    "plates",
+    "bench"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_raise/barbell_hip_thrust_with_bench"
+   ],
+   "cue": "bench at the shoulder blades, pause at the top"
+  },
+  {
+   "id": "nordic_curl",
+   "name": "Nordic hamstring curl (heels anchored)",
+   "pattern": "hamstring",
+   "requires": [
+    "anchor_feet"
+   ],
+   "uni": false,
+   "level": 3,
+   "kind": "bw",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [],
+   "cue": "kneel, heels held, lower as slowly as you can with hips extended, catch yourself, push back up lightly; 2-3 reps to start"
+  },
+  {
+   "id": "slider_leg_curl",
+   "name": "Slider or towel hamstring curl (bridge position)",
+   "pattern": "hamstring",
+   "requires": [
+    "slider"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "bw",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "leg_curl/sliding_leg_curl",
+    "leg_curl/single_leg_sliding_leg_curl"
+   ],
+   "cue": "heels on a towel, hips up, pull the heels in, slow return"
+  },
+  {
+   "id": "band_leg_curl",
+   "name": "Band hamstring curl",
+   "pattern": "hamstring",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "sprint",
+    "general",
+    "endurance"
+   ],
+   "garmin": [
+    "banded_exercises/hamstring_curls"
+   ],
+   "cue": "anchor low, slow return"
+  },
+  {
+   "id": "single_leg_calf_raise",
+   "name": "Single-leg calf raise (knee straight)",
+   "pattern": "calf",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "calf_raise/single_leg_standing_dumbbell_calf_raise",
+    "calf_raise/single_leg_standing_calf_raise",
+    "calf_raise/standing_dumbbell_calf_raise",
+    "calf_raise/standing_calf_raise"
+   ],
+   "cue": "2 s up, 1 s pause, 3 s down; full range on a step edge if you have one"
+  },
+  {
+   "id": "bent_knee_calf_raise",
+   "name": "Bent-knee calf raise (soleus)",
+   "pattern": "calf",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "calf_raise/single_leg_bent_knee_calf_raise",
+    "calf_raise/seated_calf_raise",
+    "calf_raise/weighted_seated_calf_raise"
+   ],
+   "cue": "dumbbell on the knee while seated, or knees bent standing, slow tempo"
+  },
+  {
+   "id": "calf_raise_bodyweight",
+   "name": "Calf raise, bodyweight",
+   "pattern": "calf",
+   "requires": [],
+   "uni": true,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "calf_raise/standing_calf_raise"
+   ],
+   "cue": "slow tempo, hold the top 1 s"
+  },
+  {
+   "id": "floor_press",
+   "name": "Floor press with dumbbells or a barbell",
+   "pattern": "push_horizontal",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "bench_press/barbell_floor_press",
+    "bench_press/dumbbell_floor_press",
+    "bench_press/one_arm_floor_press"
+   ],
+   "cue": "lie on the floor, elbows at about 45 degrees, pause the upper arms on the floor"
+  },
+  {
+   "id": "dumbbell_bench_press",
+   "name": "Dumbbell bench press",
+   "pattern": "push_horizontal",
+   "requires": [
+    "dumbbell",
+    "bench"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "general",
+    "sprint"
+   ],
+   "garmin": [
+    "bench_press/dumbbell_bench_press",
+    "bench_press/barbell_bench_press"
+   ],
+   "cue": "shoulder blades back, controlled lowering"
+  },
+  {
+   "id": "band_chest_press",
+   "name": "Band chest press",
+   "pattern": "push_horizontal",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [
+    "banded_exercises/chest_press"
+   ],
+   "cue": "anchor behind you at chest height"
+  },
+  {
+   "id": "overhead_press",
+   "name": "Standing overhead press with dumbbells",
+   "pattern": "push_vertical",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "shoulder_press/dumbbell_shoulder_press",
+    "shoulder_press/overhead_dumbbell_press",
+    "shoulder_press/seated_dumbbell_shoulder_press",
+    "shoulder_press/barbell_shoulder_press"
+   ],
+   "cue": "ribs down, press in a straight line, no back arch"
+  },
+  {
+   "id": "half_kneeling_press",
+   "name": "Half-kneeling single-arm press",
+   "pattern": "push_vertical",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "shoulder_press/single_arm_dumbbell_shoulder_press"
+   ],
+   "cue": "tall posture, squeeze the glute of the kneeling leg"
+  },
+  {
+   "id": "one_arm_row",
+   "name": "One-arm dumbbell row (free hand on a chair or thigh)",
+   "pattern": "pull_horizontal",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "row/dumbbell_row",
+    "row/one_arm_bent_over_row",
+    "row/single_arm_neutral_grip_dumbbell_row",
+    "row/alternating_dumbbell_row"
+   ],
+   "cue": "pull the elbow to the hip, pause 1 s"
+  },
+  {
+   "id": "bent_over_row",
+   "name": "Bent-over row with a barbell or two dumbbells",
+   "pattern": "pull_horizontal",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "general",
+    "sprint",
+    "endurance"
+   ],
+   "garmin": [
+    "row/bent_over_row_with_barbell",
+    "row/bent_over_row_with_dumbell",
+    "row/barbell_row"
+   ],
+   "cue": "flat back, row to the lower ribs"
+  },
+  {
+   "id": "band_row",
+   "name": "Band row",
+   "pattern": "pull_horizontal",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [
+    "banded_exercises/row",
+    "row/one_arm_row_with_band"
+   ],
+   "cue": "anchor at chest height, squeeze the shoulder blades"
+  },
+  {
+   "id": "band_pull_apart",
+   "name": "Band pull-apart (no anchor needed)",
+   "pattern": "pull_horizontal",
+   "requires": [
+    "band"
+   ],
+   "uni": false,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "banded_exercises/pull_apart"
+   ],
+   "cue": "arms straight, pull to the chest line, slow return"
+  },
+  {
+   "id": "face_pull",
+   "name": "Band face pull",
+   "pattern": "pull_horizontal",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [
+    "row/face_pull",
+    "banded_exercises/face_pull",
+    "row/banded_face_pulls"
+   ],
+   "cue": "anchor at face height, elbows high"
+  },
+  {
+   "id": "band_pulldown",
+   "name": "Band lat pulldown",
+   "pattern": "pull_vertical",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [
+    "banded_exercises/latpull"
+   ],
+   "cue": "anchor overhead, pull to the upper chest"
+  },
+  {
+   "id": "lat_pulldown_machine",
+   "name": "Lat pulldown (gym machine)",
+   "pattern": "pull_vertical",
+   "requires": [
+    "gym"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "general",
+    "sprint",
+    "endurance"
+   ],
+   "garmin": [
+    "pull_up/lat_pulldown"
+   ],
+   "cue": "pull to the upper chest, controlled return"
+  },
+  {
+   "id": "side_plank",
+   "name": "Side plank",
+   "pattern": "core",
+   "requires": [],
+   "uni": true,
+   "level": 1,
+   "kind": "iso",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "plank/side_plank"
+   ],
+   "cue": "straight line from head to feet, breathe"
+  },
+  {
+   "id": "dead_bug",
+   "name": "Dead bug",
+   "pattern": "core",
+   "requires": [],
+   "uni": true,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_stability/dead_bug"
+   ],
+   "cue": "low back pressed down, slow opposite arm and leg"
+  },
+  {
+   "id": "bird_dog",
+   "name": "Bird dog",
+   "pattern": "core",
+   "requires": [],
+   "uni": true,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "square hips, 2 s hold at the top"
+  },
+  {
+   "id": "plank",
+   "name": "Front plank",
+   "pattern": "core",
+   "requires": [],
+   "uni": false,
+   "level": 0,
+   "kind": "iso",
+   "goals": [
+    "endurance",
+    "general",
+    "sprint"
+   ],
+   "garmin": [
+    "plank/plank"
+   ],
+   "cue": "squeeze glutes, ribs down"
+  },
+  {
+   "id": "suitcase_carry",
+   "name": "Suitcase carry (one dumbbell, walk tall)",
+   "pattern": "core",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "iso",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "carry/farmers_carry",
+    "carry/dumbbell_waiter_carry"
+   ],
+   "cue": "do not lean; 20-30 m each side"
+  },
+  {
+   "id": "pallof_press",
+   "name": "Pallof press (band, anti-rotation)",
+   "pattern": "core",
+   "requires": [
+    "band",
+    "band_anchor"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "sprint",
+    "endurance",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "press out, hold 2 s, do not twist"
+  },
+  {
+   "id": "pogo_hops",
+   "name": "Pogo hops (stiff ankles, small fast hops)",
+   "pattern": "plyo",
+   "requires": [],
+   "uni": false,
+   "level": 1,
+   "kind": "plyo",
+   "goals": [
+    "sprint",
+    "endurance"
+   ],
+   "garmin": [],
+   "cue": "quiet landings, short ground contact; count contacts"
+  },
+  {
+   "id": "squat_jump",
+   "name": "Squat jump, bodyweight",
+   "pattern": "plyo",
+   "requires": [],
+   "uni": false,
+   "level": 1,
+   "kind": "plyo",
+   "goals": [
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "plyo/body_weight_jump_squat",
+    "plyo/jump_squat"
+   ],
+   "cue": "jump for height, land soft, reset between reps"
+  },
+  {
+   "id": "split_squat_jump",
+   "name": "Split squat jump",
+   "pattern": "plyo",
+   "requires": [],
+   "uni": false,
+   "level": 2,
+   "kind": "plyo",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [
+    "plyo/dumbbell_split_jump",
+    "plyo/alternating_jump_lunge"
+   ],
+   "cue": "switch legs in the air, soft landing"
+  },
+  {
+   "id": "broad_jump",
+   "name": "Standing broad jump",
+   "pattern": "plyo",
+   "requires": [
+    "track"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "plyo",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [],
+   "cue": "swing arms, stick the landing, walk back, full rest"
+  },
+  {
+   "id": "box_jump",
+   "name": "Box jump (step down, do not jump down)",
+   "pattern": "plyo",
+   "requires": [
+    "box"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "plyo",
+   "goals": [
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "plyo/box_jump",
+    "plyo/squat_jump_onto_box"
+   ],
+   "cue": "stable box at a height you can land on softly"
+  },
+  {
+   "id": "skater_bound",
+   "name": "Skater bound (lateral bounds)",
+   "pattern": "plyo",
+   "requires": [
+    "track"
+   ],
+   "uni": true,
+   "level": 2,
+   "kind": "plyo",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [
+    "plyo/lateral_leap_and_hop"
+   ],
+   "cue": "push off one leg, stick the landing on the other"
+  },
+  {
+   "id": "wall_drive_march",
+   "name": "Wall drive march (acceleration posture drill)",
+   "pattern": "speed",
+   "requires": [],
+   "uni": true,
+   "level": 1,
+   "kind": "speed",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [],
+   "cue": "lean on a wall at about 45 degrees, drive one knee up, rapid foot strike under the hip"
+  },
+  {
+   "id": "accel_sprint",
+   "name": "Acceleration sprints, 10-30 m from a standing or falling start",
+   "pattern": "speed",
+   "requires": [
+    "track"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "speed",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [],
+   "cue": "full warm-up first; full recovery (2-3 min) between reps; stop when speed drops"
+  },
+  {
+   "id": "sled_sprint",
+   "name": "Sled or hill sprints (resisted acceleration)",
+   "pattern": "speed",
+   "requires": [
+    "sled"
+   ],
+   "uni": false,
+   "level": 3,
+   "kind": "speed",
+   "goals": [
+    "sprint"
+   ],
+   "garmin": [],
+   "cue": "light-to-moderate resistance, 10-20 m, full recovery"
+  },
+  {
+   "id": "hill_sprint",
+   "name": "Short hill sprints (6-10 s)",
+   "pattern": "speed",
+   "requires": [
+    "hill"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "speed",
+   "goals": [
+    "sprint",
+    "endurance"
+   ],
+   "garmin": [],
+   "cue": "gentle gradient, drive the arms, walk down for recovery"
+  },
+  {
+   "id": "biceps_curl",
+   "name": "Dumbbell biceps curl",
+   "pattern": "arm",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "general"
+   ],
+   "garmin": [
+    "curl/barbell_biceps_curl",
+    "curl/dumbbell_biceps_curl"
+   ],
+   "cue": "no swinging"
+  },
+  {
+   "id": "triceps_extension",
+   "name": "Overhead dumbbell triceps extension",
+   "pattern": "arm",
+   "requires": [
+    "dumbbell"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "heavy",
+   "goals": [
+    "general"
+   ],
+   "garmin": [
+    "triceps_extension/overhead_dumbbell_triceps_extension"
+   ],
+   "cue": "elbows in, full stretch"
+  },
+  {
+   "id": "push_up",
+   "name": "Push-up",
+   "pattern": "push_horizontal",
+   "requires": [],
+   "uni": false,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "push_up/push_up"
+   ],
+   "cue": "straight line, chest to the floor",
+   "banned_tag": "push-up"
+  },
+  {
+   "id": "pull_up",
+   "name": "Pull-up",
+   "pattern": "pull_vertical",
+   "requires": [
+    "pullup_bar"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "pull_up/pull_up"
+   ],
+   "cue": "full hang to chin over the bar",
+   "banned_tag": "pull-up"
+  },
+  {
+   "id": "chin_up",
+   "name": "Chin-up",
+   "pattern": "pull_vertical",
+   "requires": [
+    "pullup_bar"
+   ],
+   "uni": false,
+   "level": 2,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "underhand grip, full hang",
+   "banned_tag": "chin-up"
+  },
+  {
+   "id": "side_lying_hip_abduction",
+   "name": "Side-lying hip abduction (top leg lifts, toes forward)",
+   "pattern": "hip_abduction",
+   "requires": [],
+   "uni": true,
+   "level": 0,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [
+    "hip_stability/external_hip_raise"
+   ],
+   "cue": "hips stacked, lift the top leg without rolling back, slow lowering"
+  },
+  {
+   "id": "banded_lateral_walk",
+   "name": "Banded lateral walk (band above the knees)",
+   "pattern": "hip_abduction",
+   "requires": [
+    "band"
+   ],
+   "uni": false,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "sprint",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "half squat, small steps sideways, keep tension on the band; 10-15 steps each way"
+  },
+  {
+   "id": "step_down_eccentric",
+   "name": "Slow step-down from a step (eccentric control)",
+   "pattern": "eccentric_knee",
+   "requires": [
+    "step"
+   ],
+   "uni": true,
+   "level": 1,
+   "kind": "bw",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "stand on the step, lower the other heel to the floor over 4-5 s, knee tracks over the toes, tap and come back"
+  },
+  {
+   "id": "weighted_step_down",
+   "name": "Step-down with dumbbells",
+   "pattern": "eccentric_knee",
+   "requires": [
+    "step",
+    "dumbbell"
+   ],
+   "uni": true,
+   "level": 2,
+   "kind": "heavy",
+   "goals": [
+    "endurance",
+    "general"
+   ],
+   "garmin": [],
+   "cue": "lower for 4-5 s, light touch with the heel, drive back up with the working leg"
+  }
+ ]
+}

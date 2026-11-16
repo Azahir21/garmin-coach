@@ -1,0 +1,1930 @@
+{
+ "_about": "Strength goal profiles. A profile says how many sessions a week, which movement patterns each session trains (in priority order), and the set/rep/rest prescription per exercise kind. Slots are kept in priority order: preferences.strength.version short = 3 slots, mid = 4, full = all. Each number carries an evidence label in the 'basis' lines: research = a paper in this library supports the DIRECTION; practice = a convention or a choice of this planner with no paper read for the exact number. The planner never claims more than the label.",
+ "default_goal": "endurance",
+ "goals": {
+  "endurance": {
+   "label": "Endurance (running, cycling): better economy and injury resistance without costing the key aerobic sessions",
+   "sessions_per_week": 2,
+   "basis": [
+    "research: strength training improves distance-running and cycling economy and performance; maximal-force work gave larger gains than other intensities (Berryman 2018, Blagrove 2018, Rønnestad & Mujika 2014)",
+    "research: 2-3 sessions a week for runners (Blagrove 2018); strength at least 3 h after cardio (Schumann 2022)",
+    "research: more weekly sets gave greater strength gains, but gains were similar from 1, 3 or 5 sets per exercise in trained men (Ralston 2017, Schoenfeld 2019); the number of exercises per session did not change sprint transfer (Seitz 2014)",
+    "practice: which movement patterns and how many slots; weekly set targets"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "6-12",
+     "rir": "2-3",
+     "rest_s": 90,
+     "tempo": "3 s lowering"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-15",
+     "rir": "2-3",
+     "rest_s": 60,
+     "tempo": "slow, 3 s lowering"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "6-10 s",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "lower",
+     "name": "lower body",
+     "why": "Strength work improves running and cycling economy: you use less energy at the same speed, and it makes the legs more resistant to overuse. The lower-body day goes after an easy day and before easy days, not before a key session.",
+     "check": "Last 2 reps hard, 2-3 left in reserve. Pain is a stop sign. Note the weight and reps (Garmin stores them) so the next plan can build on them.",
+     "cycle": [
+      {
+       "name": "knee-dominant",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 5
+        },
+        {
+         "pattern": "squat",
+         "priority": 6
+        }
+       ]
+      },
+      {
+       "name": "hinge and hamstrings",
+       "slots": [
+        {
+         "pattern": "hinge",
+         "priority": 1
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hamstring",
+         "priority": 5
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 6
+        }
+       ]
+      },
+      {
+       "name": "glutes and single-leg stability",
+       "slots": [
+        {
+         "pattern": "hip_extension",
+         "priority": 1
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        },
+        {
+         "pattern": "squat",
+         "priority": 6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "upper",
+     "name": "upper body and trunk",
+     "why": "Upper body and core work keeps your posture strong on the bike and your running form steady late in a session. Legs stay light because a long run or ride follows.",
+     "check": "Controlled reps, no shoulder pain. You should feel fresh the next morning.",
+     "cycle": [
+      {
+       "name": "push focus",
+       "slots": [
+        {
+         "pattern": "push_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 4
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 5
+        },
+        {
+         "pattern": "pull_vertical",
+         "priority": 6
+        }
+       ]
+      },
+      {
+       "name": "pull focus",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "pull_vertical",
+         "priority": 4
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 5
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 6
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "sprint": {
+   "label": "Sprint and power (acceleration, top speed): strength is a main driver, so more sessions and heavier loading",
+   "sessions_per_week": 3,
+   "basis": [
+    "research: gains in lower-body (back squat) strength transferred to sprint performance, r = -0.77 between squat-strength effect size and sprint effect size; frequency per week and the rest between sets moderated the effect; number of exercises per session, sets per exercise and % of 1RM did not (Seitz 2014, abstract)",
+    "research: high-level sprinters usually do strength and power work 2-3 times a week in the preparation period, with sprint-specific lifts (split squats, single-leg deadlifts, lunges, step-ups), and mostly place strength the day after sprint-specific training; ballistic loads up to about 60% 1RM give high power, heavier loads are needed for the force part (Haugen 2019 review: expert synthesis, not a trial)",
+    "research: horizontal force in acceleration was associated with hamstring activation before ground contact and eccentric hamstring strength, n = 14 (Morin 2015)",
+    "research: Nordic hamstring exercise in injury-prevention programmes: injury risk ratio 0.49 (0.32-0.74) across 15 studies (van Dyk 2019); lower NHE volumes gave similar strength and fascicle adaptations (Cuthbert 2020 meta-analysis)",
+    "research: plyometric programmes: sprint gains were most likely with a mix of jump types, horizontal jumps, at least 15 sessions and more than 80 combined jumps per session; added weight gave no extra benefit (Sáez de Villarreal 2012, abstract); resisted sprinting improved linear sprint (SMD 0.65) especially 0-10 m (Li 2025 meta-analysis)",
+    "research: strength gains were greater with loads of 80% 1RM or more (up to 8 repetitions maximum) (Lopez 2021); rests of at least 2 min were advised for resistance-trained people for strength (Grgic 2018, abstract)",
+    "practice: pattern priorities, 4 x 3-6 heavy sets, 20-30 jump contacts to start and building up, the order of sessions; no paper gives a safe jump progression for a beginner"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 4,
+     "reps": "3-6",
+     "rir": "1-3",
+     "rest_s": 150,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2",
+     "rest_s": 75,
+     "tempo": "slow, 3 s lowering"
+    },
+    "iso": {
+     "sets": 3,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 4,
+     "reps": "5 jumps (start with 20-30 contacts in total, add about 10 a week toward 80 or more)",
+     "rir": "",
+     "rest_s": 90,
+     "tempo": "full recovery, quiet landings"
+    },
+    "speed": {
+     "sets": 5,
+     "reps": "10-30 m",
+     "rir": "",
+     "rest_s": 150,
+     "tempo": "full recovery, stop when speed drops"
+    }
+   },
+   "sessions": [
+    {
+     "id": "lower_strength",
+     "name": "lower-body strength",
+     "why": "Lower-body strength is the base of sprint power: in the research, bigger gains in squat strength went with bigger sprint gains. Heavy sets with long rests build the force part; hinge and hip-extension work targets the muscles that drive acceleration.",
+     "check": "Bar speed or rep speed should stay fast; stop a set when the last rep slows a lot. Note the weight and reps.",
+     "cycle": [
+      {
+       "name": "squat and hip extension",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "single-leg strength",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power_hamstring",
+     "name": "power and hamstrings",
+     "why": "Jumps train the stiff, springy contacts of sprinting, and strong hamstrings that can absorb force are linked to horizontal force and fewer hamstring injuries. Keep the jumps fresh: stop when landings get noisy.",
+     "check": "Landings quiet, jumps as high or far at the end as at the start. No sharp hamstring or Achilles pain.",
+     "cycle": [
+      {
+       "name": "jumps and Nordics",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "hamstring",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "speed",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "bounds and hinge",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "hamstring",
+         "priority": 3
+        },
+        {
+         "pattern": "speed",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "upper_trunk",
+     "name": "upper body and trunk",
+     "why": "Upper-body and trunk strength supports arm drive and keeps the trunk stiff while the legs produce force.",
+     "check": "Controlled reps, no shoulder pain.",
+     "cycle": [
+      {
+       "name": "push and pull",
+       "slots": [
+        {
+         "pattern": "push_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 4
+        },
+        {
+         "pattern": "pull_vertical",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "general": {
+   "label": "General strength and muscle (health, shape, all-round fitness)",
+   "sessions_per_week": 3,
+   "basis": [
+    "research: more weekly sets gave more muscle growth (graded dose-response, Schoenfeld 2017) and more strength (Ralston 2017); at least 4 weekly sets per muscle group in a 6-15 RM range is a minimum for time-efficient training (Iversen 2021)",
+    "research: hypertrophy was similar with light and heavy loads when sets are taken close to failure, strength gains were larger with loads of 80% 1RM or more (Lopez 2021); training to failure was not shown to be better than stopping short for hypertrophy (Refalo 2023)",
+    "research: when weekly volume is equal, frequency made no clear difference to strength (Grgic 2018; Cuthbert 2021 in well-trained people)",
+    "practice: pattern split and the weekly set targets"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "6-12",
+     "rir": "1-3",
+     "rest_s": 90,
+     "tempo": "2-3 s lowering"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "10-15",
+     "rir": "1-2",
+     "rest_s": 60,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 3,
+     "reps": "30-45 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "10-20 m",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "lower",
+     "name": "lower body",
+     "why": "Large muscle groups of the legs respond well to weekly sets across squat, hinge and single-leg patterns.",
+     "check": "Last 1-3 reps hard. Note the weight and reps.",
+     "cycle": [
+      {
+       "name": "squat focus",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 6
+        }
+       ]
+      },
+      {
+       "name": "hinge focus",
+       "slots": [
+        {
+         "pattern": "hinge",
+         "priority": 1
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 2
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        },
+        {
+         "pattern": "squat",
+         "priority": 6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "push",
+     "name": "push and trunk",
+     "why": "Pressing patterns and the shoulders get their own weekly sets.",
+     "check": "Controlled reps, no shoulder pain.",
+     "cycle": [
+      {
+       "name": "push",
+       "slots": [
+        {
+         "pattern": "push_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "arm",
+         "priority": 4
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pull",
+     "name": "pull and posterior chain",
+     "why": "Rowing and pulling patterns balance the pressing work and protect the shoulders.",
+     "check": "Controlled reps, shoulder blades moving.",
+     "cycle": [
+      {
+       "name": "pull",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "pull_vertical",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "arm",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "runner_distance": {
+   "label": "Runner, 5 km to half marathon: better running economy and race pace",
+   "library_goal": "endurance",
+   "sessions_per_week": 2,
+   "basis": [
+    "research: strength training with resistance and plyometric exercises, 2-3 times a week for 8-12 weeks, improved running economy in highly trained middle- and long-distance runners (SMD -1.42, 5 controlled trials, 93 runners); the programmes used 2-4 lower-body exercises, up to 200 jumps and 5-10 short sprints (Balsalobre-Fernandez 2016)",
+    "research: heavy resistance training with near-maximal loads (>= 90% 1RM) improved running economy and time-trial performance more than plyometrics or lower loads (22 studies, g -0.32 vs -0.13); longer programmes (10-14 weeks) worked better (Eihara 2022 meta-analysis)",
+    "research: high-load (>= 80% 1RM) and combined methods improved running performance (ES -0.469 and -1.035); none improved VO2max, vVO2max, maximal steady state or sprint capacity (Llanos-Lagos 2024 systematic review; certainty very low to moderate)",
+    "practice: which patterns, the 5-8 rep range for athletes who cannot load heavy, and the jump contacts per session"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "5-8",
+     "rir": "1-3",
+     "rest_s": 120,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2-3",
+     "rest_s": 60,
+     "tempo": "slow, 3 s lowering"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps (keep every session under 200 jumps)",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 5,
+     "reps": "10-20 s",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "lower_strength",
+     "name": "lower-body strength",
+     "why": "Heavy lower-body strength is the best-supported way to lower the energy cost of running in trained runners. Few exercises, hard sets, long rests.",
+     "check": "Last reps slow but clean, 1-3 in reserve. Note the weight and reps.",
+     "cycle": [
+      {
+       "name": "single-leg strength",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "squat and hinge",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power_trunk",
+     "name": "power and trunk",
+     "why": "Short, springy jumps and calf work train the stiffness and power of the push-off; trunk work keeps form late in a run. Keep contacts low and landings quiet.",
+     "check": "Landings quiet, calves not sore the next day. Stop jumps when form gets sloppy.",
+     "cycle": [
+      {
+       "name": "jumps and calves",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "calf",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "speed and hips",
+       "slots": [
+        {
+         "pattern": "speed",
+         "priority": 1
+        },
+        {
+         "pattern": "plyo",
+         "priority": 2
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "runner_marathon": {
+   "label": "Runner, first marathon or high weekly mileage: finish healthy, with limited extra training time",
+   "library_goal": "endurance",
+   "sessions_per_week": 2,
+   "basis": [
+    "research (small RCT): 8 weeks of 2 strength sessions a week in marathon preparation raised knee-extension strength, with no clear difference in running economy or VO2 against endurance alone (22 recreational runners, Ferrauti 2010)",
+    "research (RCT, 720 first-time marathoners): a 10-minute quadriceps, hip-abductor and core programme 3 times a week did NOT reduce overuse injuries that stopped the marathon (7.1% vs 7.3%, risk ratio 0.97) (Toresdahl 2020); so no injury-prevention promise is made",
+    "research: hip-abductor weakness was linked to iliotibial band syndrome in distance runners, with no clear link for other injuries (Mucha 2017, systematic review)",
+    "research: strength training helped running economy in trained runners (Balsalobre-Fernandez 2016) but those runners had more training experience than most first-timers",
+    "practice: short sessions placed away from long runs; hip, calf and trunk selection"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 2,
+     "reps": "6-10",
+     "rir": "2-3",
+     "rest_s": 90,
+     "tempo": "3 s lowering"
+    },
+    "bw": {
+     "sets": 2,
+     "reps": "10-15",
+     "rir": "2-3",
+     "rest_s": 45,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 30,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 2,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "10 s",
+     "rir": "",
+     "rest_s": 90,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "legs_hips",
+     "name": "legs and hips",
+     "why": "Strong legs and hips are linked to a stable running stride. Keep it short: the evidence for injury prevention is mixed, so the goal is steady strength without adding fatigue to long runs.",
+     "check": "Fresh the next morning; if long-run legs feel heavy, drop to 2 sets or skip a session.",
+     "cycle": [
+      {
+       "name": "single-leg and hips",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "hinge and calves",
+       "slots": [
+        {
+         "pattern": "hinge",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "trunk_upper",
+     "name": "trunk and upper body",
+     "why": "Posture and arm swing hold up late in a long run when the trunk and upper back are strong.",
+     "check": "Controlled reps, no shoulder pain.",
+     "cycle": [
+      {
+       "name": "pull and trunk",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "core",
+         "priority": 2
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 3
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 4
+        }
+       ]
+      },
+      {
+       "name": "push and trunk",
+       "slots": [
+        {
+         "pattern": "push_vertical",
+         "priority": 1
+        },
+        {
+         "pattern": "core",
+         "priority": 2
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 3
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "runner_trail_ultra": {
+   "label": "Trail and ultra running: economy, durability on climbs and descents",
+   "library_goal": "endurance",
+   "sessions_per_week": 3,
+   "basis": [
+    "research (RCT, 25 ultra-marathoners): 12 weeks of home-based strength, explosive and plyometric training lowered the cost of running by 3-6% at submaximal speeds; the authors advise at least three such sessions a week (Giovanelli 2017)",
+    "research: strength training improved running economy in trained runners (Balsalobre-Fernandez 2016; Eihara 2022; Llanos-Lagos 2024)",
+    "gap: no trial read on eccentric or downhill-specific strength training for trail runners; the step-down and single-leg selection is practice, based on the load that descents put on the quadriceps",
+    "practice: three short sessions rather than two long ones; slow eccentric work and calf stiffness before races with big descents"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "6-10",
+     "rir": "2-3",
+     "rest_s": 90,
+     "tempo": "3-4 s lowering"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2-3",
+     "rest_s": 60,
+     "tempo": "slow, 4-5 s lowering"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30-45 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "6-10 s hill sprints",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "walk down"
+    }
+   },
+   "sessions": [
+    {
+     "id": "strength",
+     "name": "strength",
+     "why": "Heavy-ish single-leg and hinge work is the strength part of the programme that lowered running cost in ultra-marathoners.",
+     "check": "Last reps slow, 2-3 in reserve. Note the weights.",
+     "cycle": [
+      {
+       "name": "single-leg and hinge",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "squat and glutes",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "explosive",
+     "name": "explosive and plyometric",
+     "why": "Short, quiet jumps and hill sprints train the spring of the stride, the explosive and plyometric parts of the programme that lowered running cost.",
+     "check": "Quiet landings, calves recover within a day.",
+     "cycle": [
+      {
+       "name": "jumps",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "calf",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        }
+       ]
+      },
+      {
+       "name": "hill sprints",
+       "slots": [
+        {
+         "pattern": "speed",
+         "priority": 1
+        },
+        {
+         "pattern": "plyo",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "eccentric",
+     "name": "descent control and trunk",
+     "why": "Long descents load the quadriceps eccentrically; slow step-downs and hip work prepare the legs. (Practice: no trial read on this.)",
+     "check": "Knees tracking straight, no pain on the stairs the next day.",
+     "cycle": [
+      {
+       "name": "step-downs and hips",
+       "slots": [
+        {
+         "pattern": "eccentric_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "runner_middle_distance": {
+   "label": "Runner, 800 m to 5 km racing: economy plus the power for kicks and surges",
+   "library_goal": "sprint",
+   "sessions_per_week": 3,
+   "basis": [
+    "research: high-load (>= 80% 1RM) and combined strength methods improved running performance in middle- and long-distance runners; none improved sprint capacity, vVO2max or maximal steady state (Llanos-Lagos 2024 systematic review)",
+    "research: resistance plus plyometric training improved running economy in highly trained middle-distance runners (Balsalobre-Fernandez 2016); heavy near-maximal loads beat plyometrics for economy and time trial (2022 meta-analysis)",
+    "research: elite sprinters do strength and power work 2-3 times a week; resisted and unresisted sprint training both improved linear sprint (Haugen 2019; Li 2025) - used here for the speed slot only",
+    "practice: one speed or power day on top of two strength days; loads and jumps as in the runner profile"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 4,
+     "reps": "4-6",
+     "rir": "1-3",
+     "rest_s": 150,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2",
+     "rest_s": 60,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 4,
+     "reps": "5 jumps (stay under 200 jumps a session)",
+     "rir": "",
+     "rest_s": 90,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 5,
+     "reps": "10-30 m",
+     "rir": "",
+     "rest_s": 150,
+     "tempo": "full recovery, stop when speed drops"
+    }
+   },
+   "sessions": [
+    {
+     "id": "heavy_lower",
+     "name": "heavy lower body",
+     "why": "Heavy loading was the strength method with a clear running-performance effect in middle- and long-distance runners.",
+     "check": "Rep speed stays fast; stop a set when it slows a lot.",
+     "cycle": [
+      {
+       "name": "squat and hinge",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "single-leg and glutes",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "power",
+     "name": "power and speed",
+     "why": "Jumps and short sprints keep the fast-twitch side of middle-distance running trained, because strength training alone did not raise sprint capacity in the review.",
+     "check": "Fresh and fast; quality over quantity.",
+     "cycle": [
+      {
+       "name": "jumps and sprints",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "speed",
+         "priority": 2
+        },
+        {
+         "pattern": "calf",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        }
+       ]
+      },
+      {
+       "name": "bounds and hills",
+       "slots": [
+        {
+         "pattern": "speed",
+         "priority": 1
+        },
+        {
+         "pattern": "plyo",
+         "priority": 2
+        },
+        {
+         "pattern": "hamstring",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "trunk_upper",
+     "name": "upper body and trunk",
+     "why": "Trunk and arm strength supports form at pace.",
+     "check": "Controlled reps.",
+     "cycle": [
+      {
+       "name": "pull and push",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "cyclist_road": {
+   "label": "Cyclist, road endurance (sportive, gran fondo, time trial): more power at the same effort",
+   "library_goal": "endurance",
+   "sessions_per_week": 2,
+   "basis": [
+    "research (RCT, 20 well-trained cyclists): 12 weeks of 4 lower-body exercises, 3 x 4-10 RM, twice a week raised thigh muscle size, maximal force, Wingate peak power, power at 2 mmol/l lactate and mean power in a 40-minute all-out trial (Ronnestad 2010)",
+    "research (RCT, 20 elite cyclists): 10 weeks of heavy strength training raised half-squat force and 30-s Wingate power; the 40-minute trial change was not significantly different (Ronnestad 2017)",
+    "research (systematic review, 5 RCTs, highly trained cyclists): the 3 studies that improved time-trial performance replaced part of the endurance training with strength work, and 2 of them used explosive exercises; the 2 studies that simply added strength on top did not improve (Yamamoto 2010)",
+    "research (review): heavy strength training is recommended for cycling economy; effects on lactate-threshold power are mixed (Ronnestad & Mujika 2014)",
+    "practice: fit the sessions in by trimming easy riding (the planner keeps the weekly ride minutes; shorten an easy ride on strength days if you feel flat)"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "4-10",
+     "rir": "1-3",
+     "rest_s": 120,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2",
+     "rest_s": 60,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "6-10 s",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "lower_heavy",
+     "name": "lower body, heavy",
+     "why": "Heavy lower-body work raised cycling power measures in the trials: four exercises, 3 sets of 4-10 repetitions, twice a week.",
+     "check": "Last reps hard but clean; legs fresh for the next ride within 24 h.",
+     "cycle": [
+      {
+       "name": "squat and hinge",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 6
+        }
+       ]
+      },
+      {
+       "name": "single-leg and hips",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lower_power",
+     "name": "lower body, explosive and trunk",
+     "why": "Explosive exercises were part of the strength programmes that improved time-trial performance; the trunk holds the position on the bike.",
+     "check": "Explosive reps stay fast.",
+     "cycle": [
+      {
+       "name": "jumps and hinge",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "hips and upper back",
+       "slots": [
+        {
+         "pattern": "hip_extension",
+         "priority": 1
+        },
+        {
+         "pattern": "plyo",
+         "priority": 2
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "cyclist_sprint": {
+   "label": "Cyclist, sprint and punch (criterium, track sprint, finishing sprint): peak power and force",
+   "library_goal": "sprint",
+   "sessions_per_week": 3,
+   "basis": [
+    "research (cross-sectional, 20-30 sprint cyclists): maximum isometric strength was strongly correlated with jump and Wingate power, coach's rank and standing-start sprint times; larger, stronger riders had an advantage (Stone 2004) - a correlation, not a training trial",
+    "research (RCTs in well-trained and elite cyclists): 10-12 weeks of heavy lower-body strength training raised 30-s Wingate power more than endurance training alone (Ronnestad 2010, 2017)",
+    "research: sprint-power training in running athletes uses heavy sets with long rests, jumps and short sprints (Haugen 2019; Seitz 2014; Saez de Villarreal 2012) - borrowed here as practice, because no cycling-specific jump trial was read",
+    "practice: 3 sessions with the sprint work itself done on the bike (the planner does not write bike sprints in this profile)"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 4,
+     "reps": "3-6",
+     "rir": "1-3",
+     "rest_s": 150,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2",
+     "rest_s": 75,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 3,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 4,
+     "reps": "5 jumps (start at 20-30 jumps, add about 10 a week)",
+     "rir": "",
+     "rest_s": 90,
+     "tempo": "full recovery, quiet landings"
+    },
+    "speed": {
+     "sets": 5,
+     "reps": "6-10 s",
+     "rir": "",
+     "rest_s": 150,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "max_strength",
+     "name": "maximal strength",
+     "why": "Maximal strength correlated with sprint-cycling speed and heavy training raised Wingate power in trained cyclists.",
+     "check": "Rep speed stays high; note the weights.",
+     "cycle": [
+      {
+       "name": "squat and hip extension",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "single-leg and hinge",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "explosive",
+     "name": "explosive power",
+     "why": "Fast, springy work keeps the force quick; quiet landings and full recovery between sets.",
+     "check": "Jumps as high at the end as at the start.",
+     "cycle": [
+      {
+       "name": "jumps and swings",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "upper_trunk",
+     "name": "upper body and trunk",
+     "why": "A stiff trunk and strong arms let the legs push harder against the bars in a sprint.",
+     "check": "Controlled reps.",
+     "cycle": [
+      {
+       "name": "pull and push",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "cyclist_bone_health": {
+   "label": "Cyclist (especially masters or high-hour riders): protect bone and keep muscle, a low-impact sport",
+   "library_goal": "general",
+   "sessions_per_week": 2,
+   "basis": [
+    "research (cross-sectional, 40 competitive male cyclists): weight training hours were the only predictor of higher spine and hip bone density; cycling hours and years were not (Mathis & Caputo 2018) - an association, not a trial",
+    "gap: no trial read on jumping or heavy lifting to raise bone density in cyclists; the combination of heavy loading and small jumps is practice, with jumps added slowly",
+    "research: strength training improved cycling power measures (Ronnestad 2010, 2017); it does not conflict with the goal"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "6-10",
+     "rir": "2-3",
+     "rest_s": 90,
+     "tempo": "controlled down, fast up"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2-3",
+     "rest_s": 60,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps (start with 15-20 jumps in total, add slowly)",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 3,
+     "reps": "6-10 s",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "sessions": [
+    {
+     "id": "load_lower",
+     "name": "weight-bearing lower body",
+     "why": "Cycling puts little load through the spine and hips; heavy-ish weight-bearing exercises add the missing load.",
+     "check": "Controlled reps; note the weights.",
+     "cycle": [
+      {
+       "name": "squat and hinge",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "hips and single-leg",
+       "slots": [
+        {
+         "pattern": "hip_extension",
+         "priority": 1
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "calf",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "impact_upper",
+     "name": "impact, upper back and trunk",
+     "why": "Small jumps add impact, and upper-back work balances the bent riding position.",
+     "check": "Landings soft; no joint pain.",
+     "cycle": [
+      {
+       "name": "jumps and rows",
+       "slots": [
+        {
+         "pattern": "plyo",
+         "priority": 1
+        },
+        {
+         "pattern": "pull_horizontal",
+         "priority": 2
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 3
+        },
+        {
+         "pattern": "core",
+         "priority": 4
+        },
+        {
+         "pattern": "hip_abduction",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "triathlon": {
+   "label": "Triathlon (long distance): better cycling and running economy across a 26-week block",
+   "library_goal": "endurance",
+   "sessions_per_week": 2,
+   "basis": [
+    "research (RCT, 25 long-distance triathletes): 26 weeks of strength training, first moderate (8-12 reps, up to 75% 1RM, weeks 0-12) then heavy (1-6 reps, 85% 1RM or more, weeks 14-26), improved maximal strength, cycling economy and running economy with no body-mass change; endurance-only did not improve economy (Luckin-Baldwin 2021)",
+    "research: cyclists and runners both gained from heavy strength work (see the runner and cyclist profiles)",
+    "practice: the planner switches the heavy prescription at program week 13; set preferences.strength.program_start to the first week of the block"
+   ],
+   "prescription": {
+    "heavy": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2-3",
+     "rest_s": 90,
+     "tempo": "3 s lowering"
+    },
+    "bw": {
+     "sets": 3,
+     "reps": "8-12",
+     "rir": "2-3",
+     "rest_s": 60,
+     "tempo": "slow"
+    },
+    "iso": {
+     "sets": 2,
+     "reps": "30 s",
+     "rir": "1-2",
+     "rest_s": 45,
+     "tempo": ""
+    },
+    "plyo": {
+     "sets": 3,
+     "reps": "5 jumps",
+     "rir": "",
+     "rest_s": 60,
+     "tempo": "quiet landings"
+    },
+    "speed": {
+     "sets": 4,
+     "reps": "6-10 s",
+     "rir": "",
+     "rest_s": 120,
+     "tempo": "full recovery"
+    }
+   },
+   "phases": [
+    {
+     "from_program_week": 12,
+     "heavy": {
+      "sets": 3,
+      "reps": "3-6",
+      "rir": "1-3",
+      "rest_s": 150,
+      "tempo": "controlled down, fast up"
+     }
+    }
+   ],
+   "sessions": [
+    {
+     "id": "lower",
+     "name": "lower body",
+     "why": "The triathlete trial improved both cycling and running economy with lower-body strength that moved from moderate to heavy loads.",
+     "check": "Note the weights; legs recover before the next key session.",
+     "cycle": [
+      {
+       "name": "squat and hinge",
+       "slots": [
+        {
+         "pattern": "squat",
+         "priority": 1
+        },
+        {
+         "pattern": "hinge",
+         "priority": 2
+        },
+        {
+         "pattern": "single_leg_knee",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      },
+      {
+       "name": "single-leg and hips",
+       "slots": [
+        {
+         "pattern": "single_leg_knee",
+         "priority": 1
+        },
+        {
+         "pattern": "hip_extension",
+         "priority": 2
+        },
+        {
+         "pattern": "hinge",
+         "priority": 3
+        },
+        {
+         "pattern": "calf",
+         "priority": 4
+        },
+        {
+         "pattern": "core",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "upper_trunk",
+     "name": "upper body and trunk",
+     "why": "Swimming and posture on the bike and the run need upper-back and trunk strength.",
+     "check": "Controlled reps, shoulders happy.",
+     "cycle": [
+      {
+       "name": "pull and push",
+       "slots": [
+        {
+         "pattern": "pull_horizontal",
+         "priority": 1
+        },
+        {
+         "pattern": "push_vertical",
+         "priority": 2
+        },
+        {
+         "pattern": "core",
+         "priority": 3
+        },
+        {
+         "pattern": "push_horizontal",
+         "priority": 4
+        },
+        {
+         "pattern": "pull_vertical",
+         "priority": 5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

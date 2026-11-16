@@ -1,0 +1,23 @@
+{
+  "name": "garmin-coach",
+  "displayName": "Garmin Coach",
+  "version": "0.1.0",
+  "description": "Evidence-labelled endurance coaching for AI agents: running, cycling and strength plans built from your own Garmin data, with recovery, load, heat, fueling and heart-rate specialists. Every rule is labelled research or practice. Experimental.",
+  "author": {
+    "name": "Kei"
+  },
+  "homepage": "https://github.com/Azahir21/garmin-coach",
+  "repository": "https://github.com/Azahir21/garmin-coach",
+  "license": "Apache-2.0",
+  "keywords": [
+    "garmin",
+    "running",
+    "cycling",
+    "strength",
+    "endurance",
+    "training-plan",
+    "heart-rate",
+    "hrv",
+    "coach"
+  ]
+}

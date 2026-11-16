@@ -1,0 +1,19 @@
+# personal data: never commit
+athlete.json
+profile.md
+garmin-coach-data/
+plans/
+workouts/
+dashboard/
+*.fit
+*.zip
+.privacy-tokens
+# downloaded papers (licences differ): fetch locally with tools/fetch_papers.py
+skills/*/references/papers/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# agent harness state
+.omc/
+.claude/

@@ -1,0 +1,25 @@
+{
+  "name": "garmin-coach",
+  "owner": {
+    "name": "Kei"
+  },
+  "metadata": {
+    "description": "Garmin Coach: evidence-labelled endurance coaching skills",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "garmin-coach",
+      "source": "./",
+      "description": "Evidence-labelled endurance coaching for AI agents: running, cycling and strength plans built from your own Garmin data, with recovery, load, heat, fueling and heart-rate specialists. Every rule is labelled research or practice. Experimental.",
+      "version": "0.1.0",
+      "category": "fitness",
+      "tags": [
+        "garmin",
+        "running",
+        "cycling",
+        "strength"
+      ]
+    }
+  ]
+}
