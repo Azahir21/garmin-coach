@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 - no more garmin_* script names
+- `garmin_readiness.py` is now `readiness_check.py` and `garmin_weather.py` is now `weather_check.py` (same options). The default folder for exported workout files is `~/rampwise-workouts` (the older `~/garmin-workouts` is still used if it is the only one that exists).
+- Still named after the data source, on purpose: the `garmin-personal-mcp` server and its `garmin_*` tools (third-party), and the FIT cache folder `~/Downloads/garmin/coach` that the server allows.
+
 ## 0.3.0 - renamed to Rampwise
 - The project is now **Rampwise** (was "Garmin Coach") so it does not use another company's trademark. Skills are `rampwise-*`, the plugin and marketplace are `rampwise`, the repository is `Azahir21/rampwise` (GitHub redirects the old address). "Garmin" is used only descriptively, to say which data the tool reads.
 - Compatibility: `RAMPWISE_DATA` falls back to `GARMIN_COACH_DATA`, then `~/garmin-coach-data`; `RAMPWISE_WEATHER_OK` falls back to `GARMIN_COACH_WEATHER_OK`; calendar events with the old marker `garmin-coach-plan` are still found (`legacy_marker`). Reinstall the plugin under its new name.

@@ -2,7 +2,7 @@
 """Observed weather for a past (or current) session, from Open-Meteo (no key).
 
 Only coordinates (rounded to 2 decimals, ~1 km) and dates are sent to open-meteo.com. Never Garmin data,
-names or anything else. Callers must have the user's approval first (see garmin_weather.py).
+names or anything else. Callers must have the user's approval first (see weather_check.py).
 
 Source choice: the forecast API serves the last ~92 days (including yesterday), the archive API serves
 older dates (it lags a few days). Heat adjustment comes from `weather.heat_pct` (upstream, MIT).

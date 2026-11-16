@@ -25,10 +25,10 @@ import analysis  # noqa: E402
 
 def collect(today):
     """Activities (6 weeks) and readiness rows (4 weeks) for the comparison."""
-    import garmin_readiness  # noqa: E402
+    import readiness_check  # noqa: E402
     with gc.Garmin() as g:
         acts = [a for a in gc.list_activities(g, today - timedelta(days=45), today) if a["date"] <= today]
-        rows, _ = garmin_readiness.build_rows(g, today - timedelta(days=30), today)
+        rows, _ = readiness_check.build_rows(g, today - timedelta(days=30), today)
     return acts, rows
 
 

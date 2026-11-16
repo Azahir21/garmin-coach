@@ -2,8 +2,8 @@
 """Weather and heat context for a Garmin session (opt-in: sends coordinates + dates to open-meteo.com).
 
 Usage:
-  garmin_weather.py --activity-id ACTIVITY_ID --approved [--json]
-  garmin_weather.py --lat 51.5 --lon -0.12 --start "2026-11-14 04:51" --minutes 193 --approved [--json]
+  weather_check.py --activity-id ACTIVITY_ID --approved [--json]
+  weather_check.py --lat 51.5 --lon -0.12 --start "2026-11-14 04:51" --minutes 193 --approved [--json]
 
 Consent gate: without --approved (or env RAMPWISE_WEATHER_OK=1) nothing is sent anywhere.
 Heat adjustment: `weather.heat_pct` from tomasstankovic/running-coach (MIT): above 15 C air temperature,

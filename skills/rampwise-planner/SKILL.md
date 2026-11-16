@@ -26,7 +26,7 @@ Goals are whatever the user records in `athlete.json` (`athlete.py goal-add`); t
 Use the user's own words for sessions (for example "easy run", never a label the user dislikes) and ask if you are unsure.
 
 ## Workflow
-1. **State**: run `rampwise-recovery` readiness (`garmin_readiness.py --brief`) and `load_check.py` (or take the head coach's handoff blocks). Run `run_gate.py --record` (about a minute; it downloads recent run files).
+1. **State**: run `rampwise-recovery` readiness (`readiness_check.py --brief`) and `load_check.py` (or take the head coach's handoff blocks). Run `run_gate.py --record` (about a minute; it downloads recent run files).
 2. **Build**: `python -X utf8 "<skills>/rampwise-planner/scripts/build_plan.py" --start YYYY-MM-DD --weeks 4 --readiness green|amber|red --out "<skills>/rampwise-planner/plans/plan-YYYY-MM-DD.json"`. It reads history from Garmin, applies the rules below, and prints the weeks. Gate state is read from `athlete.json`; override with `--gate passed|open`.
 3. **Explain** in phone-friendly form: phase (base or pace intro), why a reset week if one is used, this week's sessions, one thing to watch. Quote numbers only from the script.
 4. **Calendar** (main session only, not a subagent): `calendar_events.py PLAN.json --json` prepares event payloads for the next 14 days. Before writing: list events in the window with the connector (`list_events`, `fullText` = `rampwise-plan`), delete old coach events (`delete_event`, notificationLevel NONE), look for clashes with the athlete's own events and tell them, then `create_event` for each, on the primary calendar, no attendees. Report how many were created and how to remove them (search `[GC]`).

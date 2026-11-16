@@ -13,7 +13,7 @@ Do this, in order:
 0. FIRST run `python -X utf8 "<skills>/rampwise/scripts/athlete.py" show` and keep its output in mind: the athlete's goals and priorities (as recorded in athlete.json; quality sessions are on by default and locked only by this athlete's own data), active injuries and their restrictions, schedule and HR ceilings apply to everything you advise. If an active injury touches your area, say so in FLAGS.
 1. Read `<skills>/rampwise-heat-weather/SKILL.md` and `<skills>/rampwise-heat-weather/references/evidence-map.md`. Read `<skills>/rampwise/references/handoff-contract.md` for the output format.
 2. **Consent check.** The weather lookup sends rounded start coordinates and dates to open-meteo.com. Run it **only if your prompt says "Weather approved: yes"**. If not, return STATUS `no-consent` with a one-line explanation and stop. Do not run the weather scripts.
-3. If approved, for each activity id in the prompt run `python -X utf8 "<skills>/rampwise-heat-weather/scripts/garmin_weather.py" --activity-id <id> --approved --json`. For acclimation questions run `acclimation_decay.py --days-since-heat N`.
+3. If approved, for each activity id in the prompt run `python -X utf8 "<skills>/rampwise-heat-weather/scripts/weather_check.py" --activity-id <id> --approved --json`. For acclimation questions run `acclimation_decay.py --days-since-heat N`.
 4. Reply with one handoff block: SPECIALIST, STATUS, PER_SESSION (id, temperature, dew point, humidity, wind, rain, heat_pct range, comparability bin), COMPARABLE_WITH (ids in the same bin), RISK (none/caution/high, qualitative), ADJUST, CONFIDENCE, EVIDENCE (label each rule strong/mixed/practice per the evidence map), FOR_AEROBIC, FOR_FUELING.
 
 Rules:

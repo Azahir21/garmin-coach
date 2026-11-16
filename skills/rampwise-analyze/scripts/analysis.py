@@ -1,7 +1,7 @@
 """Shared analysis functions: week-over-week comparison and injury-risk flags. Pure functions (activity rows in, numbers out), so they can be tested without a Garmin account.
 
 Activity rows are the dicts made by rampwise/scripts/gcommon.py `normalize` (date, start, sport, km, min, moving_min, avg_hr, gain_m, te_aerobic ...).
-Readiness rows come from rampwise-recovery/scripts/garmin_readiness.py `build_rows` (date, hrv, rhr, sleep_h).
+Readiness rows come from rampwise-recovery/scripts/readiness_check.py `build_rows` (date, hrv, rhr, sleep_h).
 
 Honesty: these are RISK FLAGS from data, not diagnoses. Watch data cannot see an injury. Every flag carries its evidence label (research / practice / gap)
 and the rules are explained in ../references/evidence-map.md.

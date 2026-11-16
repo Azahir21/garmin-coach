@@ -26,17 +26,17 @@ import analysis  # noqa: E402
 def readiness_json():
     """Today's readiness from the recovery skill (None if it cannot be read)."""
     try:
-        r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "garmin_readiness.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
+        r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "readiness_check.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
         return json.loads(r.stdout)
     except Exception:
         return None
 
 
 def collect(today):
-    import garmin_readiness  # noqa: E402
+    import readiness_check  # noqa: E402
     with gc.Garmin() as g:
         acts = [a for a in gc.list_activities(g, today - timedelta(days=75), today) if a["date"] <= today]
-        rows, _ = garmin_readiness.build_rows(g, today - timedelta(days=10), today)
+        rows, _ = readiness_check.build_rows(g, today - timedelta(days=10), today)
     return acts, rows
 
 

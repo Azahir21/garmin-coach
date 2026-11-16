@@ -5,9 +5,9 @@ One head coach, ten specialist skills (nine have a subagent), calculation script
 ```
 <skills>/
   rampwise/          head coach: orchestration, profile.md, handoff contract, paces.py, gcommon.py (Garmin data layer)
-  rampwise-recovery/       HRV, resting HR, sleep -> GREEN/AMBER/RED          (garmin_readiness.py)
+  rampwise-recovery/       HRV, resting HR, sleep -> GREEN/AMBER/RED          (readiness_check.py)
   rampwise-aerobic-base/   EF, decoupling, durability, zones, trend            (analyze_activity.py, aerobic_trend.py, hold_check.py)
-  rampwise-heat-weather/   observed weather, heat adjustment, acclimation      (garmin_weather.py, acclimation_decay.py)
+  rampwise-heat-weather/   observed weather, heat adjustment, acclimation      (weather_check.py, acclimation_decay.py)
   rampwise-load-injury/    spikes, ramp, rest days, hard-day spacing           (load_check.py)
   rampwise-strength/       strength timing/frequency next to cardio            (strength_check.py)
   rampwise-fueling/        carbs per hour, sweat rate                          (fuel_plan.py, sweat_rate.py)

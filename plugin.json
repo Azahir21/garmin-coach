@@ -1,6 +1,6 @@
 {
   "name": "rampwise",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Rampwise: an AI endurance coach for your Garmin data. Evidence-labelled running, cycling and strength plans, daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
   "author": {
     "name": "Kei"

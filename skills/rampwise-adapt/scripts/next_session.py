@@ -133,16 +133,16 @@ def main():
     plan, plan_path = latest_plan(a.plan)
     B = bp.setup_hr(ath)
     wk.set_zones(bp.zone_sets(ath["hr"]), (ath["hr"].get("target_mode") or {}).get("tolerance_bpm", 3))
-    import garmin_readiness  # noqa: E402
+    import readiness_check  # noqa: E402
     with gc.Garmin() as g:
         acts = [x for x in gc.list_activities(g, today - timedelta(days=60), today) if x["date"] <= today]
-        rows, _ = garmin_readiness.build_rows(g, today - timedelta(days=10), today)
+        rows, _ = readiness_check.build_rows(g, today - timedelta(days=10), today)
     ready = None
     if a.assume_readiness:
         ready = {"verdict": a.assume_readiness, "flags": []}
     else:
         try:
-            r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "garmin_readiness.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
+            r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "readiness_check.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
             ready = json.loads(r.stdout)
         except Exception:
             ready = None

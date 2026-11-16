@@ -339,7 +339,7 @@ def render_html(R):
 
 # ---------------------------------------------------------------- data and CLI
 def collect(today, mode, deep=True, adapt=True):
-    import garmin_readiness  # noqa: E402
+    import readiness_check  # noqa: E402
     import latest_activity as la  # noqa: E402
     import strength_history as sh  # noqa: E402
     ath = json.loads(gc.ATHLETE_PATH.read_text(encoding="utf-8")) if gc.ATHLETE_PATH.exists() else {}
@@ -350,7 +350,7 @@ def collect(today, mode, deep=True, adapt=True):
         plan = json.loads(pf.read_text(encoding="utf-8")) if pf else None
     with gc.Garmin() as g:
         acts = [a for a in gc.list_activities(g, today - timedelta(days=130), today) if a["date"] <= today]
-        rows, _ = garmin_readiness.build_rows(g, today - timedelta(days=100), today)
+        rows, _ = readiness_check.build_rows(g, today - timedelta(days=100), today)
         try:
             hist = sh.load_history(g, 130) if mode != "daily" else None
         except Exception:
@@ -370,7 +370,7 @@ def collect(today, mode, deep=True, adapt=True):
                 except Exception:
                     pass
     try:
-        r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "garmin_readiness.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
+        r = subprocess.run([sys.executable, "-X", "utf8", str(SKILLS / "rampwise-recovery" / "scripts" / "readiness_check.py"), "--json"], capture_output=True, text=True, encoding="utf-8", timeout=180)
         ready = json.loads(r.stdout)
     except Exception:
         ready = None

@@ -21,8 +21,8 @@ Targets (a 10 km time, a ride speed, a race) are checked, not promised: no verif
 
 | Specialist skill | Subagent | Scripts (run with `python -X utf8 "<skills>/<skill>/scripts/<file>"`) | Answers |
 |---|---|---|---|
-| `rampwise-recovery` | `coach-recovery` | `garmin_readiness.py` | Recovered enough? HRV, resting HR, sleep |
-| `rampwise-heat-weather` | `coach-heat` | `garmin_weather.py`, `acclimation_decay.py`, `weather.py` | Was it the weather? Heat adjustments |
+| `rampwise-recovery` | `coach-recovery` | `readiness_check.py` | Recovered enough? HRV, resting HR, sleep |
+| `rampwise-heat-weather` | `coach-heat` | `weather_check.py`, `acclimation_decay.py`, `weather.py` | Was it the weather? Heat adjustments |
 | `rampwise-load-injury` | `coach-load` | `load_check.py` | Spikes, volume ramp, rest days |
 | `rampwise-aerobic-base` | `coach-aerobic` | `analyze_activity.py`, `aerobic_trend.py`, `hold_check.py` | Is the aerobic engine improving? EF, decoupling, durability; how long a pace is held under the easy HR ceiling |
 | `rampwise-strength` | `coach-strength` | `strength_check.py` | Strength timing/frequency, tonight's session |
@@ -43,7 +43,7 @@ Each specialist folder has `SKILL.md` (how to use), `references/evidence-map.md`
 ## Two ways to work
 
 **Quick path (cheap, daily):** run the scripts yourself.
-`garmin_readiness.py --brief` and `load_check.py`, plus `strength_check.py` when evening strength is the question.
+`readiness_check.py --brief` and `load_check.py`, plus `strength_check.py` when evening strength is the question.
 
 **Team path (weekly review, workout analysis, planning, race readiness):** launch specialists as subagents with the `Agent` tool, in two stages, then synthesise. Follow `references/handoff-contract.md` for the prompts and the block format each one returns.
 1. **Stage 1, in parallel** (independent data): `coach-recovery`, `coach-load`, `coach-heat` (for the sessions in question, only if `weather_lookup_approved` is yes).

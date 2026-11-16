@@ -19,13 +19,13 @@ The weather lookup sends **only rounded start coordinates and dates** to open-me
 ## Run
 
 ```bash
-python -X utf8 "<skills>/rampwise-heat-weather/scripts/garmin_weather.py" --activity-id ACTIVITY_ID --approved
-python -X utf8 "<skills>/rampwise-heat-weather/scripts/garmin_weather.py" --activity-id ACTIVITY_ID --approved --json
+python -X utf8 "<skills>/rampwise-heat-weather/scripts/weather_check.py" --activity-id ACTIVITY_ID --approved
+python -X utf8 "<skills>/rampwise-heat-weather/scripts/weather_check.py" --activity-id ACTIVITY_ID --approved --json
 python -X utf8 "<skills>/rampwise-heat-weather/scripts/acclimation_decay.py" --days-since-heat 14
 # forecast for planning (up to 16 days ahead; upstream script, coordinates of the athlete's town; needs consent too)
 python -X utf8 "<skills>/rampwise-heat-weather/scripts/weather.py" --lat 00.00 --lon 00.00 --date 2026-12-05 --start 05:30 --hours 2
 ```
-`garmin_weather.py` returns temperature, dew point, humidity, apparent temperature, wind, rain, cloud, solar radiation, a heat adjustment and a comparability bin (3 C temperature and 3 C dew-point bins; sessions in the same bin can be compared for HR/speed trends).
+`weather_check.py` returns temperature, dew point, humidity, apparent temperature, wind, rain, cloud, solar radiation, a heat adjustment and a comparability bin (3 C temperature and 3 C dew-point bins; sessions in the same bin can be compared for HR/speed trends).
 
 ## How to read it (evidence in `references/evidence-map.md`)
 - **Air temperature is the main factor** in the largest dataset read (El Helou 2012, about 1.8 million marathon finishes): performance followed a quadratic curve with temperature, the best temperature depends on runner level, and above it speed falls and withdrawal rises. Humidity, dew point and pressure had **no significant effect** there; ozone mattered only together with temperature.

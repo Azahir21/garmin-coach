@@ -10,7 +10,7 @@ The author follows the plans for 3 months from the release date and reports hone
 |---|---|---|
 | Progress on each of the user's own goals | the script that matches the goal (for example `ride_check.py`, `run_gate.py`, `paces.py`) | monthly |
 | Pace (or speed) at a fixed easy heart rate | a MAF-style test on the same course, if the user uses one | monthly |
-| Resting HR, HRV band, sleep | `garmin_readiness.py` | weekly |
+| Resting HR, HRV band, sleep | `readiness_check.py` | weekly |
 | Weekly volume, rest days, spikes | `load_check.py` | weekly |
 | Sessions done as planned (%), sessions skipped and why | the user's notes | weekly |
 | Injuries or pain episodes | `athlete.py` notes | as they happen |

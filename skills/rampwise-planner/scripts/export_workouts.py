@@ -3,7 +3,7 @@
 
   export_workouts.py PLAN.json [--days 14] [--from YYYY-MM-DD] [--out DIR]
 
-Output folder: athlete.json workouts.output_dir (default ~/garmin-workouts). Each file is decoded again after it is written
+Output folder: athlete.json workouts.output_dir (default ~/rampwise-workouts; the older ~/garmin-workouts is used if only that exists). Each file is decoded again after it is written
 (CRC, step count, step values) before it is kept. The files have NOT been tried on a real watch. Usual route: connect the watch by
 USB and copy the .fit files into GARMIN/NewFiles (community reports on how reliably this works are mixed: copy a few at a time,
 eject, and check Training > Workouts on the watch). Strength sessions are not exported (Garmin strength workouts need exercise codes);
@@ -42,7 +42,7 @@ def out_dir():
         d = (ath.get("workouts") or {}).get("output_dir")
     except Exception:
         d = None
-    p = Path(d).expanduser() if d else Path.home() / "garmin-workouts"
+    p = Path(d).expanduser() if d else (Path.home() / "garmin-workouts" if (Path.home() / "garmin-workouts").exists() and not (Path.home() / "rampwise-workouts").exists() else Path.home() / "rampwise-workouts")
     p.mkdir(parents=True, exist_ok=True)
     return p
 

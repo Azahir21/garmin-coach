@@ -13,10 +13,10 @@ You do not plan sessions. You report a signal and its reasons to the head coach 
 ## Run
 
 ```bash
-python -X utf8 "<skills>/rampwise-recovery/scripts/garmin_readiness.py"            # full text
-python -X utf8 "<skills>/rampwise-recovery/scripts/garmin_readiness.py" --brief    # one line
-python -X utf8 "<skills>/rampwise-recovery/scripts/garmin_readiness.py" --json     # for handoff
-python -X utf8 "<skills>/rampwise-recovery/scripts/garmin_readiness.py" --stress 4  # athlete's own 1-5 life-stress rating
+python -X utf8 "<skills>/rampwise-recovery/scripts/readiness_check.py"            # full text
+python -X utf8 "<skills>/rampwise-recovery/scripts/readiness_check.py" --brief    # one line
+python -X utf8 "<skills>/rampwise-recovery/scripts/readiness_check.py" --json     # for handoff
+python -X utf8 "<skills>/rampwise-recovery/scripts/readiness_check.py" --stress 4  # athlete's own 1-5 life-stress rating
 ```
 The script pulls ~75 days of HRV, sleep and resting HR from the local Garmin server, so it needs no pasted data. Optional: ask the athlete for a life-stress rating (1 calm - 5 very heavy); 4-5 counts as a flag.
 Options: `--date YYYY-MM-DD`, `--days N`, `--trend N`.
