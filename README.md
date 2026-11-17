@@ -6,7 +6,7 @@
 
 Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
 
-> **Status: v0.5.1, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+> **Status: v0.5.2, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
 [![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
 *A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*

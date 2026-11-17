@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2 - project page and skill text follow the one planner
+- The project page shows the tool installer (`--tool`, `--list`), the `plan.py` commands (race or aerobic base) and where plans are saved; the export FAQ matches the one planner (`.fit` for runs and rides when heart-rate data are known). It gains a short "How the labels work" explainer, four papers read in full with DOI links, and a visible and structured last-updated date. Sitemap dates corrected.
+- The head coach and planner skills point at `plan.py`; two duplicated routing rows removed.
+- `docs/HARNESS-SUPPORT.md` lists the installer.
+
 ## 0.5.1 - install for 29 more AI tools
 - **Install for 29 more tools.** `install.py --tool <name>` installs the skills where each tool reads them: OpenAI Codex, Hermes, OpenClaw, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Roo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Trae, Qwen Code, Warp, JetBrains Junie and Factory; Aider, Continue.dev, Amazon Q Developer and Jules get an instructions file (they have no skills feature). `--list`, `--dry-run`, `--scope project`, `--uninstall`. Folders come from each tool's official documentation read on 2026-11-17 (`docs/INSTALL.md`); we ran only Claude Code, Trae could not be verified, and cloud-only agents cannot reach your Garmin data.
 

@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Rampwise: an AI coach for triathletes, runners, cyclists and swimmers (independent, not affiliated with Garmin)",
-    "version": "0.5.1"
+    "version": "0.5.2"
   },
   "plugins": [
     {
       "name": "rampwise",
       "source": "./",
       "description": "Rampwise: an AI coach for triathletes, runners, cyclists and swimmers, for your Garmin data or a few numbers you type. Evidence-labelled plans for 17 events (5K to Ironman, duathlon, cycling, open-water swimming), daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "category": "fitness",
       "tags": [
         "triathlon",
