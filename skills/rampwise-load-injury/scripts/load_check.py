@@ -5,7 +5,7 @@ Usage:
   load_check.py [--weeks 8] [--today YYYY-MM-DD] [--json]
 
 What it checks (all numbers come from your activities; the rules and their evidence strength are in
-references/evidence-map.md):
+../references/evidence-map.md):
   1. SINGLE-SESSION SPIKE (running). Each run vs the longest run of the previous 30 days. A single run more than
      10 % longer was associated with a higher rate of running-related overuse injury in a 5,205-runner cohort
      (Frandsen 2025, Br J Sports Med); the week-to-week ratio showed no relationship. Also prints the longest run

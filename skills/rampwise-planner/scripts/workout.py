@@ -113,7 +113,7 @@ def workout(name, sport, *steps):
     return {"name": name[:30], "sport": sport, "steps": list(steps)}
 
 
-# ---------------------------------------------------------------- templates (practice layouts; see references/evidence-map.md)
+# ---------------------------------------------------------------- templates (practice layouts; see ../references/evidence-map.md)
 def easy(sport, total_min, ceiling, floor, warm=10, cool=5, label=None):
     """Warm-up, one steady block at the easy heart rate, cool-down. The layout (warm-up + steady + cool-down) is the user's setting."""
     main = max(5, total_min - warm - cool)

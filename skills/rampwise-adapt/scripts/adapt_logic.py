@@ -1,6 +1,6 @@
 """Decision rules for adapting a planned session to today's state. Pure functions (no Garmin calls), so they can be tested offline.
 
-Each rule is labelled research or practice in references/evidence-map.md. The default direction is conservative: when the signals say "not today",
+Each rule is labelled research or practice in ../references/evidence-map.md. The default direction is conservative: when the signals say "not today",
 the session gets easier or shorter; progression is small, rare and only when everything is green. The user can always override.
 """
 from datetime import timedelta

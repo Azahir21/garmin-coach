@@ -19,7 +19,7 @@ FIT reading, moving-time handling and reliability checks are new):
 Reliability: steady effort needed. The result is flagged when the session is short (< 60 min moving), unsteady
 (high speed variation, walk/run or intervals), hilly (>= 10 m of climbing per km), or has no heart rate.
 Thresholds (5 % / 10 % decoupling, 3 % / 6 % durability) are coaching conventions, not published cut-offs; use them
-as a trend within YOUR data. Evidence notes: references/sources.md.
+as a trend within YOUR data. Evidence notes: ../references/sources.md.
 """
 import argparse
 import json

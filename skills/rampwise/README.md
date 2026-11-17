@@ -32,7 +32,7 @@ Each skill folder: `SKILL.md` (use), `references/evidence-map.md` (rule -> paper
 `readiness.py`, `weather.py` and `paces.py` are unmodified copies from https://github.com/tomasstankovic/running-coach (MIT, commit in `third_party/running-coach-COMMIT.txt`, license in `third_party/`). Everything that reads Garmin data, parses FIT files, and the load, strength, fuelling and aerobic scripts are new.
 
 ## Setup
-1. Add the `fitdecode` package once with pip (`--user`); it reads FIT files
+1. `python -m pip install --user fitdecode`
 2. `garmin-personal-mcp auth --check` must report "Connected to Garmin Connect".
 3. Start a **new** Claude Code session (skills and agents are loaded at start).
 

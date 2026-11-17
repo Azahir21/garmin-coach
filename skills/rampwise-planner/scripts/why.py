@@ -1,6 +1,6 @@
 """Plain-language 'why this session matters' and 'check after' texts for the plan and the calendar.
 
-Every text ends with an evidence label that matches references/evidence-map.md: what a paper found (research),
+Every text ends with an evidence label that matches ../references/evidence-map.md: what a paper found (research),
 what is a coaching convention (practice). Keep sentences short and free of jargon: the athlete asked for notes that
 explain why each session is in the plan.
 """

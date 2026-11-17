@@ -9,7 +9,7 @@ resting-HR flags, short sleep and sleep debt. One bad number is never enough on 
 Usage:
   readiness_check.py [--date YYYY-MM-DD] [--days 75] [--stress 1-5] [--brief | --json | --trend N]
 
-Evidence labels are in references/sources.md (HRV-guided training: small, uncertain benefit;
+Evidence labels are in ../references/sources.md (HRV-guided training: small, uncertain benefit;
 resting-HR and sleep thresholds are practice-based).
 """
 import argparse

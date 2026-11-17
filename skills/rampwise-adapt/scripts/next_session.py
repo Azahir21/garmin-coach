@@ -7,7 +7,7 @@ Reads your latest saved plan, today's readiness, the injury-risk watch (load, re
 plan you did. For each planned session on the target date(s) it decides: keep, progress (a small step up), easy_swap (quality becomes easy), reduce
 (shorter), recovery (20-30 min easy spin, only if pain-free) or rest. It builds the changed workout with the same builders as the planner, optionally writes
 the .fit file, and prints the calendar event update for the coach to apply (the script never writes to your calendar).
---record stores the date of a progression so the next one waits a week. Rules and evidence: references/evidence-map.md.
+--record stores the date of a progression so the next one waits a week. Rules and evidence: ../references/evidence-map.md.
 """
 import argparse
 import json

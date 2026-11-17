@@ -143,8 +143,8 @@ def local_files(folder):
 
 def write_index(folder, skill):
     lines = [f"# Papers for {skill}", "",
-             "One file per paper in the skill's `library.md` (the folder above this one). **Read depth** says how much of the paper the coach can actually read: `full text` (open access), `abstract only` (paywalled: the claim strength is capped by what the abstract says), or `title only`.",
-             "A rule in the skill's `evidence-map.md` must never claim more than its file here shows. To close a gap run `scripts/paper_fetch.py` (open-access papers) or put the paper's PDF in this folder and ask the coach to read it and update the evidence map.", "",
+             "One file per paper in `../library.md`. **Read depth** says how much of the paper the coach can actually read: `full text` (open access), `abstract only` (paywalled: the claim strength is capped by what the abstract says), or `title only`.",
+             "A rule in `../evidence-map.md` must never claim more than its file here shows. To close a gap run `scripts/paper_fetch.py` (open-access papers) or put the paper's PDF in this folder and ask the coach to read it and update the evidence map.", "",
              "| File | Read depth | Paper |", "|---|---|---|"]
     for f in sorted(Path(folder).glob("*.md")):
         if f.name == "INDEX.md":

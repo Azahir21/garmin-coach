@@ -24,7 +24,7 @@ python -X utf8 "<skills>/rampwise-aerobic-base/scripts/aerobic_trend.py" --days 
 python -X utf8 "<skills>/rampwise-aerobic-base/scripts/hold_check.py" --sport run --days 42
 python -X utf8 "<skills>/rampwise-aerobic-base/scripts/hold_check.py" --sport bike --days 30 --ceiling 150   # weaker on rides
 ```
-Needs the `fitdecode` package (added once with pip, `--user`). The scripts download the activity's FIT file through the local Garmin server (into `~/Downloads/garmin/coach`, cached) and read the second-by-second data. GPS is never printed or stored.
+Needs `python -m pip install --user fitdecode` once. The scripts download the activity's FIT file through the local Garmin server (into `~/Downloads/garmin/coach`, cached) and read the second-by-second data. GPS is never printed or stored.
 
 ## What the numbers mean
 - **Hold check** (`hold_check.py`): per session, the longest stretch at the session's usual pace with HR (30 s average) at or under the easy ceiling from `athlete.json` (HOLD, minutes); minutes until HR first stays above the ceiling for 60 s (counted after minute 10); HR drift per 10 min inside the steady stretch; and the athlete's speed while HR sits in the band ceiling-15..ceiling on flat ground (speed@band). Only walking-free stretches count. The trend needs 4+ usable sessions and is compared with the session-to-session variation. **Practice, not validated**: the concept rests on Vesterinen 2016/2017 and Buchheit 2014 (speed or HR at a fixed submaximal effort tracks adaptation in standardised tests), Smyth 2022 / Maunder 2021 (later onset of drift = more durable). Say plainly that temperature is uncontrolled unless `--weather-approved` was used, and that a lower HR is not always fitter (Ten Haaf 2019).
