@@ -3,13 +3,14 @@
 
 This script only prepares JSON. The coach (main session) creates the events with the connector tools
 (`create_event`) so the athlete's calendar is only written where they asked. Rolling window: only the next
-`window_days` (athlete.json calendar.window_days, default 14) are written, because the plan adapts to readiness,
+`window_weeks` (athlete.json calendar.window_weeks) or, if that is empty, `window_days` (calendar.window_days, default 14) are written, because the plan adapts to readiness,
 the run gate and load every week; re-sync weekly.
 
 Every event title starts with the prefix "[GC]" and every description ends with the marker line
 "rampwise-plan" so old coach events can be found (list_events fullText) and replaced without touching anything else.
 
-  calendar_events.py PLAN.json [--days 14] [--from YYYY-MM-DD] [--json]
+  calendar_events.py PLAN.json [--weeks 4 | --days 14] [--from YYYY-MM-DD] [--json]
+How far ahead to write: --days, then --weeks, then calendar.window_weeks, then calendar.window_days, then 14 days.
 Output: JSON {"calendar_id", "marker", "window": [start, end], "events": [...]} ready for create_event calls
 (fields: summary, startTime, endTime, description, colorId, allDay, availability, overrideReminders).
 """
@@ -30,6 +31,11 @@ FOCUS = {
     "RESET": "Reset week: the rides are trimmed after 14 days without rest and a RED readiness; your runs keep their usual size (easy run = 10 min warm-up + 35 min zone 2 + 5 min cool-down). Easy only. Sleep is the training.",
     "BUILD": "Build week: aerobic base first, easy effort, HR under the ceiling; the quality sessions in it replace easy ones, so they add no volume. {hold}",
     "DELOAD": "Deload week: about 25 % less volume to absorb the last weeks.",
+    "BASE": "Base week: mostly easy aerobic work, effort by feel or heart rate; the quality sessions replace easy ones, so they add no volume. {hold}",
+    "PEAK": "Peak week: the most specific work of the plan, still mostly easy. {hold}",
+    "TAPER": "Taper week: less volume, a little intensity kept, rest well.",
+    "RECOVERY": "Lighter week: about 25 % less volume (and the standardised aerobic test in a base plan).",
+    "RACE": "Race week.",
 }
 
 
@@ -37,6 +43,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("plan")
     ap.add_argument("--days", type=int, default=None)
+    ap.add_argument("--weeks", type=int, default=None, help="write this many weeks ahead (7 days each)")
     ap.add_argument("--from", dest="frm", default=None)
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
@@ -46,7 +53,7 @@ def main():
     cal = ath["calendar"]
     plan = json.loads(Path(a.plan).read_text(encoding="utf-8"))
     meta, sess = plan["meta"], plan["sessions"]
-    days = a.days or cal.get("window_days", 14)
+    days = a.days or ((a.weeks or cal.get("window_weeks") or 0) * 7) or cal.get("window_days", 14)
     start = datetime.strptime(a.frm or meta["start"], "%Y-%m-%d").date()
     end = start + timedelta(days=days)
     prefix, marker = cal["title_prefix"], cal["marker"]
@@ -61,7 +68,7 @@ def main():
             events.append({
                 "summary": f"{prefix} Week {wk['week']}: {wk['tag']} (about {wk['endurance_min']} min cardio)",
                 "startTime": f"{d.isoformat()}T00:00:00", "endTime": f"{(d + timedelta(days=1)).isoformat()}T00:00:00", "allDay": True,
-                "description": FOCUS[wk["tag"]].format(hold=("Same volume as the week before while an injury note is active (no extra volume)." if meta.get("hold_progression") else "")).strip() + f"\n\n{marker}:{meta['generated']}", "colorId": COLORS["week"], "availability": "AVAILABILITY_FREE",
+                "description": FOCUS.get(wk["tag"], "").format(hold=("Same volume as the week before while an injury note is active (no extra volume)." if meta.get("hold_progression") else "")).strip() + f"\n\n{marker}:{meta['generated']}", "colorId": COLORS["week"], "availability": "AVAILABILITY_FREE",
             })
         events.append({
             "summary": f"{prefix} {s['title']} - {s['minutes']} min",

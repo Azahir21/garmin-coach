@@ -31,6 +31,36 @@ def similar(acts, target, tol=0.35):
     return max(c, key=lambda a: a["start"]) if c else None
 
 
+def swim_pace(speed_kmh):
+    if not speed_kmh:
+        return "-"
+    s = 360.0 / speed_kmh
+    return f"{int(s // 60)}:{int(s % 60):02d}/100 m"
+
+
+def brick_analysis(acts, target):
+    """If the target is part of a brick (bike then run within 45 minutes), compare the run with the last similar run that was NOT after cycling: pace and heart rate.
+    Running after cycling costs more energy (Millet and Vleck 2000; Walsh 2019); one session says little, so the numbers are shown, not judged."""
+    bricks = gc.find_bricks(acts)
+    mine = next((b for b in bricks if b["kind"] == "bike-run" and target["id"] in (b["bike"]["id"], b["run"]["id"])), None)
+    if not mine:
+        return None
+    brun, bike = mine["run"], mine["bike"]
+    in_brick = {b["run"]["id"] for b in bricks if b["kind"] == "bike-run"}
+    base = [x for x in acts if x["sport"] == "run" and x["id"] not in in_brick and x["start"] < brun["start"] and brun["min"] and abs(x["min"] / brun["min"] - 1) <= 0.5]
+    prev = max(base, key=lambda x: x["start"]) if base else None
+
+    def pace(x):
+        mov = x.get("moving_min") or x["min"]
+        return mov * 60.0 / x["km"] if x["km"] > 0 and mov > 0 else None
+    out = {"gap_min": mine["gap_min"], "bike": {"id": bike["id"], "minutes": round(bike["min"]), "km": round(bike["km"], 1), "avg_hr": bike.get("avg_hr")},
+           "run": {"id": brun["id"], "minutes": round(brun["min"]), "km": round(brun["km"], 2), "avg_hr": brun.get("avg_hr"), "pace_s_per_km": round(pace(brun)) if pace(brun) else None}}
+    if prev and pace(prev) and pace(brun):
+        out["vs_standalone_run"] = {"date": str(prev["date"]), "pace_s_per_km": round(pace(prev)), "avg_hr": prev.get("avg_hr"), "pace_diff_s_per_km": round(pace(brun) - pace(prev)),
+                                    "hr_diff_bpm": (brun["avg_hr"] - prev["avg_hr"]) if brun.get("avg_hr") and prev.get("avg_hr") else None}
+    return out
+
+
 def side_by_side(a, b):
     def spd(x):
         mov = x.get("moving_min") or x["min"]
@@ -40,6 +70,8 @@ def side_by_side(a, b):
     sa, sb = spd(a), spd(b)
     if a["sport"] == "run":
         rows["pace"] = (analysis.pace_str(sa), analysis.pace_str(sb))
+    elif a["sport"] == "swim":
+        rows["pace_100m"] = (swim_pace(sa), swim_pace(sb))
     else:
         rows["speed_kmh"] = (round(sa, 1) if sa else None, round(sb, 1) if sb else None)
     return rows
@@ -66,10 +98,11 @@ def main():
                 return
             target = max(recent, key=lambda x: x["start"])
         out["activity"] = {"id": target["id"], "name": target["name"], "sport": target["sport"], "date": str(target["date"]), "minutes": round(target["min"]), "km": round(target["km"], 1), "avg_hr": target.get("avg_hr")}
+        out["brick"] = brick_analysis(acts, target)
         prev = similar(acts, target)
         if prev:
             out["compare_with"] = {"id": prev["id"], "name": prev["name"], "table": side_by_side(target, prev)}
-        if target["sport"] in ("run", "bike"):
+        if target["sport"] in ("run", "bike", "swim", "multi"):
             import analyze_activity  # noqa: E402
             try:
                 zones = g.call("garmin_get_heart_rate_zones")
@@ -87,6 +120,15 @@ def main():
         return
     t = out["activity"]
     print(f"ACTIVITY {t['date']}: {t['name']} ({t['sport']}), {t['minutes']} min, {t['km']} km, avg HR {t['avg_hr']}")
+    if out.get("brick"):
+        b = out["brick"]
+        print(f"\nBRICK: bike {b['bike']['minutes']} min ({b['bike']['km']} km, HR {b['bike']['avg_hr']}), then run {b['run']['minutes']} min ({b['run']['km']} km, HR {b['run']['avg_hr']}) after {b['gap_min']} min.")
+        v = b.get("vs_standalone_run")
+        if v:
+            print(f"  Against your last run not after cycling ({v['date']}): pace {v['pace_diff_s_per_km']:+d} s/km, heart rate {v['hr_diff_bpm'] if v['hr_diff_bpm'] is not None else 'n/a'} bpm. "
+                  "Running after cycling costs more; one session proves little (route, weather, effort).")
+        else:
+            print("  No earlier run that was not after cycling to compare with.")
     if "aerobic" in out:
         import analyze_activity  # noqa: E402
         analyze_activity.print_report(out["aerobic"])

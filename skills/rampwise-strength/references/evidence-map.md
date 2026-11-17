@@ -42,7 +42,7 @@ Strength: **research** = meta-analysis/review; **practice** = convention without
 - Next-day interference numbers.
 - That strength training prevents any particular injury in runners/cyclists (evidence is for sports injuries overall).
 
-## Full-text reading notes (read in full 2026-11-18)
+## Full-text reading notes (read in full 2026-11-17)
 What the full texts add to the rows above: sample, effect, and the limits the authors state. Where a row above says more than this, this section wins.
 
 - **Craven 2022 (Sports Med; full text read).** Meta-analysis of 69 publications and 227 outcomes, 89 % of participants male; sleep loss was defined as 6 hours or less in 24 hours. Mean change in performance -7.56 % (95 % CI -11.9 to -3.13), heterogeneity very high (I2 98.1 %). Consistent harm only after total deprivation and late restriction (waking early), not early restriction; about 0.4 % lower performance per extra hour awake before the task; tasks in the evening were consistently affected, morning tasks largely not; 98 % of outcomes measured sleep quantity only; just 8 of 227 outcomes were after 18:00. **So:** the 6-hour line matches the paper's own definition but is a readiness convention; the evidence is about performance, not injury, mostly men, and mostly single nights; the "evening session needs recovery" rule rests on few late-day outcomes.

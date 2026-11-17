@@ -18,6 +18,16 @@ def classify(s):
     n = (name or s.get("title", "")).lower()
     if s["sport"] == "strength":
         return {"cat": "strength", "q": None}
+    if s.get("phase") == "RACE" or s.get("kind") == "race":
+        return {"cat": "race", "q": None}
+    if s.get("kind") == "brick_run":
+        return {"cat": "brick", "q": None}
+    if "blocks" in s:                                   # a session from an event plan (event_plan.py)
+        if s.get("quality"):
+            return {"cat": "quality", "q": "event"}
+        if str(s.get("kind", "")).endswith("_long"):
+            return {"cat": "long", "q": None}
+        return {"cat": "easy", "q": None}
     for key, q in (("tempo", "tempo"), ("intervals", "intervals"), ("strides", "strides"), ("time trial", "tt")):
         if key in n:
             return {"cat": "quality", "q": q}
@@ -57,8 +67,8 @@ def decide(s, ctx):
     Returns {"decision": keep|progress|easy_swap|reduce|recovery|rest, "reasons": [...], "evidence": [...], "factor": float|None, "progress": {...}|None}.
     """
     c = classify(s)
-    if s["sport"] == "swim":                    # swim sessions are not adapted automatically yet
-        return {"decision": "keep", "reasons": ["swim sessions are not adapted automatically yet: on a RED or AMBER day halve it or swim easy technique only"], "evidence": ["practice"], "factor": None, "progress": None, "category": c}
+    if c["cat"] == "race":
+        return {"decision": "keep", "reasons": ["race day: not changed (if you are ill or hurt, see a clinician and decide for yourself)"], "evidence": ["practice"], "factor": None, "progress": None, "category": c}
     ready, inj, ids = ctx.get("readiness"), ctx.get("injury_level", "GREEN"), ctx.get("flag_ids", set())
     reasons, evidence = [], []
     out = {"decision": "keep", "reasons": reasons, "evidence": evidence, "factor": None, "progress": None, "category": c}
@@ -68,6 +78,12 @@ def decide(s, ctx):
         reasons.append("a pain check-in or an active injury note says stop: " + ("; ".join(sorted(i for i in ids if i in ("pain_checkin", "injury_active")))))
         evidence.append("practice: pain that changes how you move is a stop sign (the pain-monitoring idea comes from a small Achilles rehab trial, Silbernagel 2007)")
         out["decision"] = "rest"
+        return out
+    if c["cat"] == "brick":
+        if ready in ("RED", "AMBER") or inj in ("RED", "AMBER"):
+            reasons.append("brick run dropped: running straight after cycling costs more energy and its training benefit is unproven, so it goes first when recovery or the injury watch is not green")
+            evidence.append("research for the cost of run-after-bike, gap for the benefit (Walsh 2019 full text; Millet and Vleck 2000 abstract)")
+            out["decision"] = "rest"
         return out
     if c["cat"] == "strength":
         if ready == "RED" or inj == "RED" or "short_sleep" in ids:
@@ -108,7 +124,7 @@ def decide(s, ctx):
         return out
     # all green: maybe a small progression
     ad, wk, ds = ctx.get("adherence"), ctx.get("week_change_pct"), ctx.get("days_since_progress")
-    ok = (ready == "GREEN" and inj == "GREEN" and ad is not None and ad >= PROGRESS_MIN_ADHERENCE and (wk is None or wk <= PROGRESS_MAX_WEEK_CHANGE_PCT)
+    ok = (not ctx.get("no_progress") and ready == "GREEN" and inj == "GREEN" and ad is not None and ad >= PROGRESS_MIN_ADHERENCE and (wk is None or wk <= PROGRESS_MAX_WEEK_CHANGE_PCT)
           and (ds is None or ds >= PROGRESS_EVERY_DAYS) and s.get("week_tag") == "BUILD")
     if ok and c["cat"] in ("quality", "long", "easy"):
         out["decision"] = "progress"

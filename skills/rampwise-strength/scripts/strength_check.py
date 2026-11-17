@@ -41,7 +41,7 @@ def main():
     with gcommon.Garmin() as g:
         acts = gcommon.list_activities(g, start, today)
     strength = [r for r in acts if r["sport"] == "strength"]
-    endur = [r for r in acts if r["sport"] in ("run", "bike")]
+    endur = [r for r in acts if r["sport"] in ("run", "bike", "swim", "multi")]
     out = {"weeks": [], "same_day": [], "pre_key": [], "flags": []}
 
     byweek = {}
@@ -75,7 +75,7 @@ def main():
 
     for s in strength:
         for e in endur:
-            key = (e["sport"] == "run" and e["min"] >= KEY_RUN_MIN) or (e["sport"] == "bike" and e["min"] >= KEY_BIKE_MIN)
+            key = (e["sport"] == "run" and e["min"] >= KEY_RUN_MIN) or (e["sport"] in ("bike", "multi") and e["min"] >= KEY_BIKE_MIN) or (e["sport"] == "swim" and e["min"] >= KEY_BIKE_MIN)
             if not key:
                 continue
             gap = (e["start"] - s["end"]).total_seconds() / 3600

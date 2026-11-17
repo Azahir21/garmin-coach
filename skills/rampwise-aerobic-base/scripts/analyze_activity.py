@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aerobic analysis of ONE Garmin activity from its FIT file: efficiency factor, decoupling, HR drift,
+"""Aerobic analysis of ONE Garmin activity from its FIT file (runs and rides: efficiency, decoupling, drift; swims: pace per 100 m, rest share and a lap-based decoupling; multisport: the legs): efficiency factor, decoupling, HR drift,
 durability, cadence fade (bike), time in HR zones, and whether the numbers can be trusted.
 
 Usage:
@@ -131,8 +131,117 @@ def pick_zones(zones_res, sport):
             "sport": row.get("sport"), "method": row.get("trainingMethod")}
 
 
+def _fit_messages(zip_path, names):
+    """Raw FIT messages of the given kinds (lap, session) as plain dicts. GPS positions are not read."""
+    import fitdecode
+    import io
+    import zipfile
+    with zipfile.ZipFile(zip_path) as z:
+        data = z.read(next(n for n in z.namelist() if n.lower().endswith(".fit")))
+    out = {n: [] for n in names}
+    with fitdecode.FitReader(io.BytesIO(data)) as fr:
+        for f in fr:
+            if isinstance(f, fitdecode.FitDataMessage) and f.name in out:
+                out[f.name].append({fld.name: fld.value for fld in f.fields if fld.name not in ("start_position_lat", "start_position_long", "end_position_lat", "end_position_long")})
+    return out
+
+
+def swim_analysis(laps_in, summary):
+    """Aerobic reading of a swim from its LAP messages (the per-second records of a pool swim carry heart rate but no speed): pace per 100 m of swimming time, rest share,
+    and decoupling = percent drop of (speed / heart rate) from the first to the second half of the swimming distance. Wrist heart rate in water can be unreliable:
+    use it as a trend within the athlete's own swims, ideally with a chest strap (practice; no source read). Thresholds are the same coaching conventions as for runs and rides."""
+    act = [l for l in laps_in if (l.get("total_distance") or 0) > 0 and (l.get("total_timer_time") or 0) > 0]
+    res = {"kind": "swim", "id": summary["id"], "name": summary["name"], "start": str(summary["start"]), "elapsed_min": round(summary["min"]), "avg_hr": summary["avg_hr"]}
+    flags = []
+    if not act:
+        res["error"] = "no swimming laps with distance in this file"
+        return res
+    dist = sum(l["total_distance"] for l in act)
+    t_swim = sum(l["total_timer_time"] for l in act)
+    res.update({"swim_m": round(dist), "swim_min": round(t_swim / 60.0, 1), "pace_s_per_100m": round(t_swim / dist * 100.0), "laps": len(act),
+                "rest_share_pct": round(max(0.0, 1.0 - t_swim / (summary["min"] * 60.0)) * 100.0) if summary["min"] else None})
+    paces = [l["total_timer_time"] / l["total_distance"] * 100.0 for l in act]
+    mean_p = sum(paces) / len(paces)
+    cv = (sum((p - mean_p) ** 2 for p in paces) / len(paces)) ** 0.5 / mean_p if mean_p else 0
+    res["pace_variation_pct"] = round(cv * 100.0, 1)
+    if dist < 800 or len(act) < 8:
+        flags.append("too short for a drift reading (needs about 800 m and 8 swimming laps or more)")
+    if res["rest_share_pct"] is not None and res["rest_share_pct"] > 35:
+        flags.append("a lot of rest between laps: an interval or drill session, not a steady swim")
+    if cv > 0.12:
+        flags.append("pace varies a lot from lap to lap: not a steady swim")
+    hr_laps = [l for l in act if l.get("avg_heart_rate")]
+    if len(hr_laps) < len(act) * 0.8:
+        flags.append("heart rate missing for many laps (wrist heart rate often drops out in water): no efficiency reading")
+    else:
+        half = dist / 2.0
+        acc, a1, a2 = 0.0, [], []
+        for l in hr_laps:
+            (a1 if acc < half else a2).append(l)
+            acc += l["total_distance"]
+
+        def ef(ls):
+            d = sum(x["total_distance"] for x in ls)
+            t = sum(x["total_timer_time"] for x in ls)
+            hr = sum(x["avg_heart_rate"] * x["total_distance"] for x in ls) / d
+            return (d / t) * 60.0 / hr if t and hr else None
+        e1, e2 = ef(a1), ef(a2)
+        res["ef_m_per_min_per_bpm"] = round(ef(hr_laps), 2)
+        if e1 and e2:
+            res["decoupling_pct"] = round((e1 - e2) / e1 * 100.0, 1)
+            res["hr_first_half"] = round(sum(x["avg_heart_rate"] for x in a1) / len(a1))
+            res["hr_second_half"] = round(sum(x["avg_heart_rate"] for x in a2) / len(a2))
+    res["reliable"] = not flags
+    res["flags"] = flags
+    res["note"] = "Compare only with your own earlier swims in the same pool or water, similar effort. Pool and open water differ; wrist heart rate in water can be unreliable."
+    return res
+
+
+def multisport_legs(sessions_in, summary):
+    """Legs of a multisport activity (one file, several sessions): sport, time, distance, speed or pace, heart rate. Drift is not computed per leg."""
+    legs = []
+    for s in sessions_in:
+        d, t = s.get("total_distance") or 0, s.get("total_timer_time") or s.get("total_elapsed_time") or 0
+        sp = str(s.get("sport") or "other").lower()
+        leg = {"sport": sp, "minutes": round(t / 60.0, 1), "km": round(d / 1000.0, 2), "avg_hr": s.get("avg_heart_rate")}
+        if d and t:
+            if sp == "running":
+                leg["pace_s_per_km"] = round(t / (d / 1000.0))
+            elif sp == "swimming":
+                leg["pace_s_per_100m"] = round(t / d * 100.0)
+            else:
+                leg["speed_kmh"] = round(d / t * 3.6, 1)
+        legs.append(leg)
+    return {"kind": "multi", "id": summary["id"], "name": summary["name"], "start": str(summary["start"]), "legs": legs,
+            "note": "One recorded activity, split into its legs. A run straight after a bike costs more energy (Millet and Vleck 2000; Walsh 2019); per-leg drift is not computed."}
+
+
+def print_swim(r):
+    print(f"SWIM {r['start'][:16]}: {r['name']}")
+    if r.get("error"):
+        print("  " + r["error"])
+        return
+    print(f"  {r['swim_m']} m swum in {r['swim_min']} min (session {r['elapsed_min']} min, rest {r['rest_share_pct']} %), {r['laps']} laps, pace {r['pace_s_per_100m'] // 60}:{r['pace_s_per_100m'] % 60:02d} per 100 m (moving time), pace variation {r['pace_variation_pct']} %")
+    if "ef_m_per_min_per_bpm" in r:
+        print(f"  efficiency {r['ef_m_per_min_per_bpm']} m/min per bpm" + (f", decoupling {r['decoupling_pct']:+.1f} % (HR {r['hr_first_half']} -> {r['hr_second_half']})" if "decoupling_pct" in r else ""))
+    for f in r["flags"]:
+        print("  NOT RELIABLE:" if not r["reliable"] else "  note:", f)
+    print("  " + r["note"])
+
+
+def print_multi(r):
+    print(f"MULTISPORT {r['start'][:16]}: {r['name']}")
+    for l in r["legs"]:
+        extra = (f", pace {l['pace_s_per_km'] // 60}:{l['pace_s_per_km'] % 60:02d}/km" if "pace_s_per_km" in l else f", pace {l['pace_s_per_100m'] // 60}:{l['pace_s_per_100m'] % 60:02d}/100 m" if "pace_s_per_100m" in l else f", {l['speed_kmh']} km/h" if "speed_kmh" in l else "")
+        print(f"  {l['sport']:10} {l['minutes']} min, {l['km']} km{extra}, HR {l['avg_hr']}")
+    print("  " + r["note"])
+
+
 def analyze(g, activity_id, zones_res=None):
     s = gcommon.activity_summary(g, activity_id)
+    if s["sport"] in ("swim", "multi"):
+        m = _fit_messages(gcommon.fit_zip(g, activity_id), ("lap", "session"))
+        return swim_analysis(m["lap"], s) if s["sport"] == "swim" else multisport_legs(m["session"], s)
     recs, laps = gcommon.read_fit(gcommon.fit_zip(g, activity_id), with_laps=True)
     sport = s["sport"]
     # laps the watch marked as warm-up / cool-down / rest are not part of the steady effort
@@ -216,6 +325,10 @@ def analyze(g, activity_id, zones_res=None):
 
 
 def print_report(r):
+    if r.get("kind") == "swim":
+        return print_swim(r)
+    if r.get("kind") == "multi":
+        return print_multi(r)
     if r.get("error"):
         print(f"{r['id']}: {r['error']}")
         return

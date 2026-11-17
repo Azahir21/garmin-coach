@@ -1,6 +1,6 @@
 ---
 name: rampwise-load-injury
-description: Training-load and injury-risk specialist for the Rampwise coaching team. Use for "am I doing too much", weekly volume, ramp rate, longest run/ride, load spikes, rest days, training streaks, hard-day spacing, injury risk, "can I add a long run/ride", build-up pacing for a long event, and before adding volume. Runs a script on the user's real Garmin activity history. Works with rampwise-recovery (can the body absorb it), rampwise-strength (what else is on the plate) and rampwise (final verdict).
+description: Training-load and injury-risk specialist for the Rampwise coaching team. Use for "am I doing too much", weekly volume, ramp rate, longest run/ride/swim, load spikes, rest days, training streaks, hard-day spacing, injury risk, "can I add a long run/ride", build-up pacing for a long event, and before adding volume. Runs a script on the user's real Garmin activity history. Works with rampwise-recovery (can the body absorb it), rampwise-strength (what else is on the plate) and rampwise (final verdict). Counts swimming, multisport activities and brick sessions (bike then run) as load; the spike rule is research for running only (swim and ride are not studied).
 ---
 
 > **Paths.** `<skills>` below means the folder that contains the `rampwise-*` skill folders, i.e. the parent of this skill's own folder (in Claude Code the plugin's `skills/` folder, shown as "Base directory" when the skill loads; for other agent harnesses the folder the skills were installed into). Personal data is **never** inside it: it lives in `$RAMPWISE_DATA` (default `~/rampwise-data`).
@@ -46,3 +46,9 @@ FOR_STRENGTH: heavy lower-body today? yes/no (if two or more flags, no)
 - Activity time includes pauses (elapsed-based duration from the summary); the weekly numbers are approximate.
 - Strength sessions and non-endurance sports are counted as days but not as load.
 - Ask about current niggles and past injuries (see the profile) and treat any pain that changes gait or worsens during a session as a stop signal. None of the papers read here quantifies prior-injury risk, so no number is given.
+
+## Triathlon, ride and swim (what the evidence does and does not give)
+- Running is where short-course triathletes are hurt most (Guevara 2024, full text); long-distance triathlon has a high overuse burden at the knee and spine (Rhind 2022, Andersen 2013), from low-quality studies.
+- Cycling: control load (moderate evidence); bike-fit measures are not shown to prevent overuse pain (Visentini 2022).
+- Swimming: shoulder pain is common (about 20 to 38 % in the studies read) but **no risk-factor rule is supported** (McKenzie 2023). Ask about shoulder pain, treat pain that interferes as a stop sign, and raise swim volume gradually (practice).
+- The analysis scripts therefore ask sport-specific pain questions (shoulder for swimmers, knee and back for riders, lower leg for runners) and record answers with `athlete.py check-in`.

@@ -16,7 +16,7 @@ SKILLS = HERE.parent.parent
 sys.path.insert(0, str(SKILLS / "rampwise-report" / "scripts"))
 sys.path.insert(0, str(HERE))
 import charts as ch  # noqa: E402
-from event_plan import EFFORT, WD, fmt_blocks  # noqa: E402
+from plan import EFFORT, WD, fmt_blocks  # noqa: E402
 
 SPORT = {"swim": ("Swim", "s4"), "bike": ("Ride", "s2"), "run": ("Run", "s1"), "strength": ("Strength", "s3")}
 PHASE_LABEL = {"BASE": "Base", "BUILD": "Build", "PEAK": "Peak", "TAPER": "Taper", "RACE": "Race", "RECOVERY": "Recovery week"}
@@ -48,13 +48,13 @@ def dlabel(d):
 
 
 def render(meta, sessions, title=None, repo_url="https://github.com/Azahir21/rampwise", footer_extra=""):
-    ev_date = date.fromisoformat(meta["event_date"])
+    ev_date = date.fromisoformat(meta["event_date"]) if meta.get("event_date") else None
     title = title or f"{meta['event_label']} plan"
     by_week = {}
     for s in sessions:
         by_week.setdefault(s["week"], []).append(s)
-    parts = [f'<section class="hero"><h1>{escape(title)}</h1><p>{meta["weeks"]} weeks to {dlabel(ev_date)} {ev_date.year}. Level {escape(meta["level"])}, {meta["days_per_week"]} training days a week.</p>'
-             f'<div class="chips"><span class="chip">now {meta["hours_now"]:g} h/week</span><span class="chip">peak about {meta["peak_hours"]:g} h/week</span><span class="chip">taper {sum(1 for p in meta["phases"] if p == "TAPER")} week(s)</span>'
+    parts = [f'<section class="hero"><h1>{escape(title)}</h1><p>{str(meta["weeks"]) + " weeks to " + dlabel(ev_date) + " " + str(ev_date.year) if ev_date else str(meta["weeks"]) + " weeks, no race: building aerobic base"}. Level {escape(meta["level"])}, {meta["days_per_week"]} training days a week.</p>'
+             f'<div class="chips"><span class="chip">now {meta["hours_now"]:g} h/week</span><span class="chip">peak about {meta["peak_hours"]:g} h/week</span>{("<span class=chip>taper " + str(sum(1 for p in meta["phases"] if p == "TAPER")) + " week(s)</span>") if ev_date else ""}'
              f'<span class="chip">about {int(round(meta.get("hard_share_estimate", 0) * 100))} % hard (estimate)</span></div></section>']
     for w in meta.get("warnings", []):
         parts.append(f'<div class="warn"><b>Heads-up.</b> {escape(w)}</div>')

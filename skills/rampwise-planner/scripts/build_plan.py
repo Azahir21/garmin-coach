@@ -527,6 +527,27 @@ def to_md(meta, sess):
 
 
 def main():
+    """DEPRECATED: use plan.py (one planner for every goal). Without --legacy this forwards to `plan.py --goal base --from-garmin`; the old rolling planner runs only with --legacy."""
+    if "--legacy" not in sys.argv:
+        print("build_plan.py is deprecated: the one planner is plan.py (--goal base for no target, --event for a race; --from-garmin reads your training). Forwarding to plan.py.")
+        args, it = [], iter(sys.argv[1:])
+        for x in it:                                           # old options: some map to the new planner, some are gone
+            if x in ("--gate", "--reset"):
+                next(it, None)
+            elif x == "--hr-from-trend":
+                continue
+            elif x == "--days-per-week":
+                args += ["--days", next(it, "6")]
+            elif x == "--readiness":
+                v = next(it, "unknown")
+                args += ["--readiness", v] if v in ("red", "amber", "green") else []
+            else:
+                args.append(x)
+        sys.argv = [sys.argv[0], "--goal", "base", "--from-garmin"] + args
+        import plan as unified
+        unified.main()
+        return
+    sys.argv.remove("--legacy")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--start", default=str(date.today() + timedelta(days=1)))
     ap.add_argument("--weeks", type=int, default=4)

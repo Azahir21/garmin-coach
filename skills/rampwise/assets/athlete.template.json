@@ -49,6 +49,7 @@
       "max_minutes": 35
     },
     "output_dir": null,
+    "plan_weeks": 12,
     "units": {
       "run": "pace",
       "bike": "kmh"
@@ -60,6 +61,7 @@
     "title_prefix": "[GC]",
     "marker": "rampwise-plan",
     "window_days": 14,
+    "window_weeks": null,
     "write_approved": false
   },
   "notes": [],

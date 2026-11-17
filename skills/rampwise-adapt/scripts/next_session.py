@@ -31,7 +31,9 @@ STATE = gc.DATA_DIR / "adapt_state.json"
 
 
 def latest_plan(path=None):
-    p = Path(path) if path else max(gc.plan_files("plan-*.json"), default=None, key=lambda x: x.name)
+    """The plan to adapt: the one you name, else the most recently saved of the Garmin-history plans (plan-*.json) and the event plans (<event>-<date>/plan.json)."""
+    cands = gc.plan_files("plan-*.json") + gc.plan_files("plan.json")
+    p = Path(path) if path else max(cands, default=None, key=lambda x: x.stat().st_mtime)
     if not p:
         sys.exit(f"no saved plan in {gc.out_root() / 'plans'}: build one first (build_plan.py saves it there)")
     return json.loads(p.read_text(encoding="utf-8")), p
@@ -39,6 +41,24 @@ def latest_plan(path=None):
 
 def snap5(x):
     return max(5, int(round(x / 5.0)) * 5)
+
+
+def build_event_new(s, dec):
+    """Changed session for an event plan (no heart-rate numbers: RPE and time). rest, a short easy recovery session, or the same sport shorter and easy."""
+    import plan as evp
+    d, sport, orig = dec["decision"], s["sport"], s["minutes"]
+    if d == "rest":
+        return {"title": "Rest day (adapted)", "minutes": 0, "workout": None, "why_key": None, "desc": None}
+    label = {"swim": "Easy swim", "bike": "Easy ride", "run": "Easy run"}.get(sport, "Easy session")
+    if d == "recovery":
+        minutes = 25 if sport != "run" else 20
+        label = {"swim": "Easy swim, technique only", "bike": "Recovery spin", "run": "Easy walk or short jog"}.get(sport, label)
+    else:
+        minutes = max(20, snap5(orig * (dec["factor"] or 0.9)))
+    warm, cool = {"swim": (8, 5), "bike": (10, 8), "run": (5, 5)}.get(sport, (5, 5))
+    blocks = evp.pad_easy([], minutes, min(warm, minutes // 3), min(cool, minutes // 4))
+    note = "Only if it is pain-free; otherwise rest or a short easy walk." if d == "recovery" else "Kept easy on purpose (RPE 2-3, you can talk in full sentences)."
+    return {"title": f"{label} {minutes} min (adapted)", "minutes": minutes, "workout": None, "why_key": None, "blocks": blocks, "desc": f"{evp.fmt_blocks(blocks)}. {note}"}
 
 
 def build_new(s, dec, ath, B, longest):
@@ -132,8 +152,10 @@ def main():
     target = date.fromisoformat(a.date) if a.date else today + timedelta(days=1)
     ath = json.loads(gc.ATHLETE_PATH.read_text(encoding="utf-8"))
     plan, plan_path = latest_plan(a.plan)
-    B = bp.setup_hr(ath)
-    wk.set_zones(bp.zone_sets(ath["hr"]), (ath["hr"].get("target_mode") or {}).get("tolerance_bpm", 3))
+    is_event = (plan.get("meta") or {}).get("kind") == "event"
+    B = None if is_event else bp.setup_hr(ath)
+    if not is_event:
+        wk.set_zones(bp.zone_sets(ath["hr"]), (ath["hr"].get("target_mode") or {}).get("tolerance_bpm", 3))
     import readiness_check  # noqa: E402
     with gc.Garmin() as g:
         acts = [x for x in gc.list_activities(g, today - timedelta(days=60), today) if x["date"] <= today]
@@ -153,7 +175,7 @@ def main():
     since = (today - date.fromisoformat(state["last_progress"])).days if state.get("last_progress") else None
     longest = {sp: max((x["min"] for x in acts if x["sport"] == sp and (today - x["date"]).days <= 30), default=0) for sp in ("run", "bike")}
     ctx = {"readiness": (ready or {}).get("verdict"), "injury_level": inj["level"], "flag_ids": {f["id"] for f in inj["flags"] if f["level"] != "info"},
-           "adherence": al.adherence(plan["sessions"], acts, today), "week_change_pct": cmp["delta"]["endurance_minutes"]["pct"], "days_since_progress": since, "longest_min": longest}
+           "adherence": al.adherence(plan["sessions"], acts, today), "week_change_pct": cmp["delta"]["endurance_minutes"]["pct"], "days_since_progress": since, "longest_min": longest, "no_progress": is_event}
     # Only the first day is decided on today's readiness. Later days are provisional: readiness cannot be known yet, so only persistent signals count
     # (an active injury, a pain check-in, a recent spike); the coach re-runs this every morning.
     persistent = {"injury_active", "pain_checkin", "run_spike"}
@@ -164,7 +186,7 @@ def main():
         d = target + timedelta(days=k)
         for s in [x for x in plan["sessions"] if x["date"] == str(d)]:
             dec = al.decide(s, ctx if k == 0 else ctx_later)
-            new = build_new(s, dec, ath, B, longest) if dec["decision"] not in ("keep",) and s["sport"] != "strength" else None
+            new = (build_event_new(s, dec) if is_event else build_new(s, dec, ath, B, longest)) if dec["decision"] not in ("keep",) and s["sport"] != "strength" else None
             if dec["decision"] == "progress" and new is None:
                 dec = {**dec, "decision": "keep", "reasons": dec["reasons"] + ["no room to progress safely (already at the cap)"]}
             entry = {"provisional": k > 0, "date": str(d), "original": {"title": s["title"], "minutes": s["minutes"], "sport": s["sport"], "kind": s["kind"], "start": s["start"]}, "decision": dec["decision"], "factor": dec["factor"],

@@ -7,11 +7,11 @@ Reading only an abstract can hide the sample, the effect size and the limits. Th
 
 | Paper | Used for | Read |
 |---|---|---|
-| Frandsen 2025 (BJSM, 5,205 runners) | the 10 % single-run rule | **full text read 2026-11-18** (sample, counts, limits now in the maps) |
-| Fokkema 2020, Buchheit 2014, Craven 2022 | volume, readiness, sleep | **full text read 2026-11-18** |
-| Stoggl 2014, Schumann 2022, Eddens 2018, Blagrove 2018, Vickers 2016 | intensity distribution, strength, race prediction | **full text read 2026-11-18** |
+| Frandsen 2025 (BJSM, 5,205 runners) | the 10 % single-run rule | **full text read 2026-11-17** (sample, counts, limits now in the maps) |
+| Fokkema 2020, Buchheit 2014, Craven 2022 | volume, readiness, sleep | **full text read 2026-11-17** |
+| Stoggl 2014, Schumann 2022, Eddens 2018, Blagrove 2018, Vickers 2016 | intensity distribution, strength, race prediction | **full text read 2026-11-17** |
 | Gabbett 2016 | load paradox | full text (open access; read earlier) |
-| Walsh 2019 (Sports) | brick runs, cadence, run pacing, leg-pain history | **full text read 2026-11-18** |
+| Walsh 2019 (Sports) | brick runs, cadence, run pacing, leg-pain history | **full text read 2026-11-17** |
 | Bosquet 2007 (taper meta-analysis) | 2-week taper | abstract only (paywalled): effect size and how studies were pooled not read |
 | Munoz 2014, Neal 2011 (Ironman intensity distribution) | about 70-80 % easy | abstract only (paywalled) |
 | Figueiredo 2016 (swim/bike/run contribution) | swim share | abstract only (paywalled) |

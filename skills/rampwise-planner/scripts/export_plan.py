@@ -8,6 +8,8 @@
   zwo   one Zwift workout file per ride (swim and run sessions have no Zwift format). Power is written as a FRACTION of FTP, so Zwift scales it to your FTP.
   mrc   one ERG/MRC file per ride (minutes and percent of FTP), the layout used by trainer apps such as TrainerRoad. Format follows the common MRC layout;
         not tested in every app.
+  fit   Garmin .fit workout files for runs and rides, with YOUR heart-rate bands (zone first, custom bpm second); only when the plan has heart-rate workouts, i.e. your heart-rate
+        data are known. Not tried on every watch: check each file on your watch. Swims have no .fit export.
   csv   one spreadsheet with every session (date, sport, title, minutes, effort, description).
 Effort to FTP share is a practice scale (easy 65 %, steady 78 %, tempo 88 %, threshold 100 %, hard 112 %): no paper read sets those numbers, they are the
 conventional zone mid-points. Garmin .fit workout files for plans built from your Garmin history come from export_workouts.py (they need your heart-rate data).
@@ -23,7 +25,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from event_plan import EFFORT  # noqa: E402
+from plan import EFFORT  # noqa: E402
 
 MARK = "rampwise-plan"
 PREFIX = "[RW]"
@@ -114,7 +116,7 @@ def to_csv(path, sessions):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("plan")
-    ap.add_argument("--format", choices=["ics", "zwo", "mrc", "csv", "all"], default="all")
+    ap.add_argument("--format", choices=["ics", "zwo", "mrc", "csv", "fit", "all"], default="all")
     ap.add_argument("--out")
     ap.add_argument("--from", dest="start")
     ap.add_argument("--days", type=int)
@@ -136,6 +138,17 @@ def main():
     if a.format in ("csv", "all"):
         to_csv(out / "plan.csv", sess)
         made.append("plan.csv")
+    if a.format in ("fit", "all"):
+        n_fit = [s for s in sess if s.get("workout")]
+        if n_fit:
+            import subprocess
+            tmp = out / "plan_for_fit.json"
+            tmp.write_text(json.dumps({"meta": meta, "sessions": sess}, default=str), encoding="utf-8")
+            r = subprocess.run([sys.executable, "-X", "utf8", str(HERE / "export_workouts.py"), str(tmp), "--days", "400", "--from", sess[0]["date"], "--out", str(out / "fit")], capture_output=True, text=True, encoding="utf-8")
+            tmp.unlink()
+            made.append(f"{len(n_fit)} Garmin .fit workouts (fit/)" if r.returncode == 0 else "fit export failed: " + (r.stderr or r.stdout)[-160:])
+        elif a.format == "fit":
+            print("No heart-rate workouts in this plan: .fit files need your heart-rate data (ask the athlete for max HR / LTHR or their watch zones, record them in athlete.json, then re-run plan.py). Swim sessions have no .fit export.")
     rides = [s for s in sess if s["sport"] == "bike" and s["blocks"]]
     if a.format in ("zwo", "mrc", "all"):
         (out / "zwift").mkdir(exist_ok=True)

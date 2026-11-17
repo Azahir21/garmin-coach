@@ -205,6 +205,28 @@ def recent_activities(acts, today, days=14, run_pace=True):
     return rows
 
 
+def brick_rows(acts, today, days=28, run_pace=True):
+    """Bricks (a bike then a run within 45 minutes, or one multisport activity) in the last `days` days, each run against your last run that was not after cycling."""
+    import latest_activity as la
+    import gcommon as gcm
+    rows, multi = [], 0
+    for b in gcm.find_bricks(acts):
+        if not (0 <= (today - b["date"]).days <= days):
+            continue
+        if b["kind"] == "multisport":
+            multi += 1
+            continue
+        ba = la.brick_analysis(acts, b["run"]) or {}
+        bk, rn = b["bike"], ba.get("run", {})
+        mov = bk.get("moving_min") or bk["min"]
+        v = ba.get("vs_standalone_run") or {}
+        pace = rn.get("pace_s_per_km")
+        rows.append([str(b["date"]), f"{round(bk['min'])} min, {bk['km'] / (mov / 60.0):.1f} km/h" if bk["km"] > 0 and mov > 0 else f"{round(bk['min'])} min", f"{rn.get('minutes')} min, " + (mmss(pace) + "/km" if pace else "-"),
+                     f"{round(rn['avg_hr'])}" if rn.get("avg_hr") else "-", f"{b['gap_min']} min",
+                     (f"pace {v['pace_diff_s_per_km']:+d} s/km, heart rate {v['hr_diff_bpm']:+.0f} bpm" if v.get("hr_diff_bpm") is not None else (f"pace {v['pace_diff_s_per_km']:+d} s/km" if v else "no earlier normal run to compare"))])
+    return rows, multi
+
+
 # ---------------------------------------------------------------- strength
 def strength_summary(hist, today, weeks=12):
     """Sessions per week and the top set per exercise (first vs latest) from the sets logged on the watch."""

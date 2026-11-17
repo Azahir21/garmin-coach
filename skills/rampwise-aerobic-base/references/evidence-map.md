@@ -29,7 +29,7 @@ Strength: **research** = trial/meta-analysis/large dataset; **practice** = coach
 - Efficiency conclusions from speed:HR on hilly or stop-and-go rides without power.
 - Ultra-cycling-specific intensity prescriptions (no such trial in this library).
 
-## Full-text reading notes (read in full 2026-11-18)
+## Full-text reading notes (read in full 2026-11-17)
 What the full texts add to the rows above: sample, effect, and the limits the authors state. Where a row above says more than this, this section wins.
 
 - **Buchheit 2014 (Front Physiol; full text read).** A narrative review, not a trial. It favours 5-minute resting heart rate and time-domain heart-rate variability (rMSSD) recorded near-daily, plus submaximal exercise heart rate (30-60 s), interpreted against the measure's error and the smallest important change and the training context; resting HRV at least 3-4 days a week for chronic responses; and it warns that heart rate measures cannot inform on all aspects of wellness, fatigue and performance. **So:** the watch's overnight HRV is not the standardised morning 5-minute measure the paper describes, and the red/amber/green thresholds are practice; flags are prompts, read against the user's own baseline.

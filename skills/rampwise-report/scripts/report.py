@@ -164,6 +164,14 @@ def build(mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, late
                 blocks.append(("p", f"Strength: {e['strength_advice']}."))
         blocks.append(("p", "The coach applies the change to the calendar event after you agree (or when calendar updates are pre-approved)."))
 
+    br, nmulti = rd.brick_rows(acts, today, 28, units.get("run", "pace") == "pace")
+    if br or nmulti:
+        blocks.append(("h2", "Bricks (bike then run, last 28 days)"))
+        if br:
+            blocks.append(("table", ["Date", "Bike", "Run", "Run HR", "Gap", "Run against your last normal run"], br))
+        if nmulti:
+            blocks.append(("p", f"{nmulti} multisport activit{'y' if nmulti == 1 else 'ies'} recorded as one activity (legs are not split here)."))
+        blocks.append(("p", "Running straight after cycling costs more energy (Millet and Vleck 2000, abstract; Walsh 2019, full text), so a slower pace or higher heart rate than a normal run is expected; one session proves little (route, weather, effort). Whether brick sessions train anything is unproven, so the plans keep them short and drop them when recovery is low or an injury is active."))
     if mode in ("weekly", "monthly"):
         ra = rd.recent_activities(acts, today, 14, units.get("run", "pace") == "pace")
         blocks.append(("h2", "Recent activities (last 14 days)"))

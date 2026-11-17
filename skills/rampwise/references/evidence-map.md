@@ -17,7 +17,7 @@ Source names refer to `library.md` in this folder. Strength: **research** / **pr
 - That a predicted marathon time is reliable without recent long runs and weekly volume (use the slowest credible estimate).
 - That the precedence rules are research-derived.
 
-## Full-text reading notes (read in full 2026-11-18)
+## Full-text reading notes (read in full 2026-11-17)
 What the full texts add to the rows above: sample, effect, and the limits the authors state. Where a row above says more than this, this section wins.
 
 - **Fokkema 2020 (Scand J Med Sci Sports; full text read).** Questionnaires before and after the event: 556 half-marathon and 441 marathon recreational runners, training and injuries self-reported. In the half marathon >32 km/week (beta -4.19, 95 % CI -6.52 to -1.85) and a longest run >21 km went with faster finishes; in the marathon <40 km/week went with slower (beta 6.33) and >65 km/week with faster finishes (beta -14.09), and a longest run <25 km with slower (beta 13.44); no association with injuries was found. Limits: self-report; 14.7 % of the half-marathon group also ran the marathon; many runners were excluded and the excluded were younger, heavier and less experienced (groups with higher injury risk), which may bias the injury result; speed ("talent") may confound; low-volume high-intensity plans were not tested. **So:** "no association found" is not proof that high volume is safe; the long-run and volume caps in the plans stay practice informed by this study.

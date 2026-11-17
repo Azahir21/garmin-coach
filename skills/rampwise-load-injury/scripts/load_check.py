@@ -11,7 +11,7 @@ What it checks (all numbers come from your activities; the rules and their evide
      (Frandsen 2025, Br J Sports Med); the week-to-week ratio showed no relationship. Also prints the longest run
      that stays within +10 % today. For rides the same arithmetic is shown as an EXTRAPOLATION: no cycling study
      was found for it.
-  2. WEEKLY VOLUME CHANGE (run + bike minutes, complete weeks). >+20 % in a week or >+30 % over two weeks is flagged
+  2. WEEKLY VOLUME CHANGE (run + bike + swim minutes, complete weeks). >+20 % in a week or >+30 % over two weeks is flagged
      as a caution. Evidence: observational and mixed (Nielsen 2014, Damsted 2019; a graded "10 % rule" programme did not
      prevent injuries in an RCT, Buist 2008; the acute:chronic workload ratio is not recommended, Impellizzeri 2020).
      Use as a prompt to look closer, never as pass/fail.
@@ -57,7 +57,7 @@ def main():
     flag = lambda level, msg: out["flags"].append({"level": level, "msg": msg})
 
     # ---------------- weekly table
-    weeks = defaultdict(lambda: {"run_min": 0.0, "run_km": 0.0, "bike_min": 0.0, "bike_km": 0.0, "strength": 0, "other_min": 0.0,
+    weeks = defaultdict(lambda: {"run_min": 0.0, "run_km": 0.0, "bike_min": 0.0, "bike_km": 0.0, "strength": 0, "other_min": 0.0, "swim_min": 0.0, "swim_km": 0.0, "multi_min": 0.0, "bricks": 0, "long_swim_min": 0.0,
                                  "days": set(), "long_run_km": 0.0, "long_bike_min": 0.0, "sessions": 0})
     for r in acts:
         w = weeks[gcommon.week_start(r["date"])]
@@ -67,17 +67,25 @@ def main():
             w["run_min"] += r["min"]; w["run_km"] += r["km"]; w["long_run_km"] = max(w["long_run_km"], r["km"])
         elif r["sport"] == "bike":
             w["bike_min"] += r["min"]; w["bike_km"] += r["km"]; w["long_bike_min"] = max(w["long_bike_min"], r["min"])
+        elif r["sport"] == "swim":
+            w["swim_min"] += r["min"]; w["swim_km"] += r["km"]; w["long_swim_min"] = max(w["long_swim_min"], r["min"])
+        elif r["sport"] == "multi":
+            w["multi_min"] += r["min"]
         elif r["sport"] == "strength":
             w["strength"] += 1
         else:
             w["other_min"] += r["min"]
+    bricks = gcommon.find_bricks(acts)
+    for b in bricks:
+        weeks[gcommon.week_start(b["date"])]["bricks"] += 1
     this_week = gcommon.week_start(today)
     keys = sorted(k for k in weeks if k >= this_week - timedelta(weeks=a.weeks))
     for k in keys:
         w = weeks[k]
         out["weeks"].append({"week_start": str(k), "run_km": round(w["run_km"], 1), "run_min": round(w["run_min"]),
                              "bike_km": round(w["bike_km"], 1), "bike_min": round(w["bike_min"]),
-                             "endurance_min": round(w["run_min"] + w["bike_min"]), "strength_sessions": w["strength"],
+                             "swim_min": round(w["swim_min"]), "swim_km": round(w["swim_km"], 2), "multisport_min": round(w["multi_min"]), "bricks": w["bricks"],
+                             "endurance_min": round(w["run_min"] + w["bike_min"] + w["swim_min"] + w["multi_min"]), "strength_sessions": w["strength"],
                              "training_days": len(w["days"]), "sessions": w["sessions"],
                              "longest_run_km": round(w["long_run_km"], 1), "longest_ride_min": round(w["long_bike_min"]),
                              "complete": k < this_week})
@@ -161,8 +169,15 @@ def main():
     elif rest14 == 0:
         flag("NOTE", "no rest day in the last 14 days")
 
+    # ---------------- 3b. brick sessions (bike then run): practice limit, evidence in rampwise-planner/references/evidence-map.md (Walsh 2019)
+    recent_bricks = [b for b in bricks if 0 <= (today - b["date"]).days <= 6]
+    out["bricks_last7"] = len(recent_bricks)
+    if len(recent_bricks) > 2:
+        flag("NOTE", f"{len(recent_bricks)} brick sessions (bike then run) in the last 7 days: running straight after cycling costs more energy and the training benefit of bricks is unproven "
+                     "(Walsh 2019); one a week is the plan's limit (practice)")
+
     # ---------------- 4. hard days back to back
-    hard_days = sorted({r["date"] for r in acts if (r["te_aerobic"] or 0) >= HARD_TE and r["sport"] in ("run", "bike")})
+    hard_days = sorted({r["date"] for r in acts if (r["te_aerobic"] or 0) >= HARD_TE and r["sport"] in ("run", "bike", "swim", "multi")})
     out["hard_days_last14"] = [str(d) for d in hard_days if (today - d).days <= 14]
     for x, y in zip(hard_days, hard_days[1:]):
         if (y - x).days == 1 and (today - y).days <= 14:
@@ -172,10 +187,10 @@ def main():
         print(json.dumps(out, ensure_ascii=False, default=str))
         return
     print(f"Load check as of {today}  (history: {len(acts)} activities)\n")
-    print(f"{'week of':<11}{'run km':>7}{'run min':>8}{'bike km':>8}{'bike min':>9}{'endur.min':>10}{'strength':>9}{'days':>5}  longest run / ride")
+    print(f"{'week of':<11}{'run km':>7}{'run min':>8}{'bike km':>8}{'bike min':>9}{'swim min':>9}{'bricks':>7}{'endur.min':>10}{'strength':>9}{'days':>5}  longest run / ride")
     for w in out["weeks"]:
         tag = "" if w["complete"] else "  (partial)"
-        print(f"{w['week_start']:<11}{w['run_km']:>7}{w['run_min']:>8}{w['bike_km']:>8}{w['bike_min']:>9}{w['endurance_min']:>10}"
+        print(f"{w['week_start']:<11}{w['run_km']:>7}{w['run_min']:>8}{w['bike_km']:>8}{w['bike_min']:>9}{w['swim_min']:>9}{w['bricks']:>7}{w['endurance_min']:>10}"
               f"{w['strength_sessions']:>9}{w['training_days']:>5}  {w['longest_run_km']} km / {w['longest_ride_min']} min{tag}")
     print()
     for n in out["notes"]:

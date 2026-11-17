@@ -172,11 +172,14 @@ class Garmin:
 RUN_KEYS = ("running",)
 BIKE_KEYS = ("cycling", "biking", "bike", "ride", "gravel", "virtual_ride")
 STRENGTH_KEYS = ("strength", "hiit", "fitness_equipment")
-SWIM_KEYS = ("swim",)                       # lap_swimming, open_water_swimming
+SWIM_KEYS = ("swim",)
+MULTI_KEYS = ("multi_sport", "multisport", "triathlon", "duathlon")      # one recorded activity with several legs                       # lap_swimming, open_water_swimming
 
 
 def sport_of(type_key):
     k = (type_key or "").lower()
+    if any(x in k for x in MULTI_KEYS):
+        return "multi"
     if any(x in k for x in SWIM_KEYS):
         return "swim"
     if any(x in k for x in RUN_KEYS):
@@ -186,6 +189,32 @@ def sport_of(type_key):
     if any(x in k for x in STRENGTH_KEYS):
         return "strength"
     return "other"
+
+
+def find_bricks(acts, max_gap_min=45):
+    """Brick sessions: a bike activity followed by a run on the same day within `max_gap_min` minutes of the bike ending (separate recordings), or one multisport activity.
+    Returns a list of dicts: date, kind ("bike-run" or "multisport"), bike, run (activity rows, or None for multisport), gap_min."""
+    out = []
+    by_day = {}
+    for a in acts:
+        by_day.setdefault(a["date"], []).append(a)
+    for d, xs in sorted(by_day.items()):
+        xs.sort(key=lambda r: r["start"])
+        for a in xs:
+            if a["sport"] == "multi":
+                out.append({"date": d, "kind": "multisport", "bike": None, "run": None, "multi": a, "gap_min": None})
+        for i, b in enumerate(xs):
+            if b["sport"] != "bike":
+                continue
+            nxt = next((r for r in xs[i + 1:] if r["sport"] == "run"), None)
+            if nxt is not None:
+                try:
+                    gap = (nxt["start"] - b["end"]).total_seconds() / 60.0
+                except (TypeError, KeyError, AttributeError):
+                    continue
+                if 0 <= gap <= max_gap_min:
+                    out.append({"date": d, "kind": "bike-run", "bike": b, "run": nxt, "multi": None, "gap_min": round(gap)})
+    return out
 
 
 def parse_local(s):

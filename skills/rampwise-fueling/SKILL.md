@@ -1,6 +1,6 @@
 ---
 name: rampwise-fueling
-description: Fuelling and hydration specialist for the Rampwise coaching team. Use for carbohydrate per hour on long rides or runs, fuelling a marathon or an ultra-distance ride, gut training, sweat rate, how much to drink, dehydration, "I bonk/fade late", and whether late-session drift might be fuel or fluids. Calculators only for carbohydrate rate and sweat rate; no meal plans. Works with rampwise-heat-weather (sweat and heat), rampwise-aerobic-base (late-session decoupling) and rampwise.
+description: Fuelling and hydration specialist for the Rampwise coaching team. Use for carbohydrate per hour on long rides or runs, fuelling a marathon or an ultra-distance ride, gut training, sweat rate, how much to drink, dehydration, "I bonk/fade late", and whether late-session drift might be fuel or fluids. Calculators only for carbohydrate rate and sweat rate; no meal plans. Works with rampwise-heat-weather (sweat and heat), rampwise-aerobic-base (late-session decoupling) and rampwise. Triathlon-specific fuelling (bike-to-run) has no source read yet: only the general long-session guidance applies.
 ---
 
 > **Paths.** `<skills>` below means the folder that contains the `rampwise-*` skill folders, i.e. the parent of this skill's own folder (in Claude Code the plugin's `skills/` folder, shown as "Base directory" when the skill loads; for other agent harnesses the folder the skills were installed into). Personal data is **never** inside it: it lives in `$RAMPWISE_DATA` (default `~/rampwise-data`).
@@ -43,3 +43,6 @@ FLAGS: gut_not_ready, weight_gain_during_session, loss_over_2pct, fuel_unknown_f
 RELEVANCE_TO_DRIFT: "possible contributor" | "unlikely" | "unknown"
 REFER: dietitian for sodium, medical issues, low energy availability
 ```
+
+## Across sports (read before advising a triathlete, swimmer, cyclist or runner)
+Dehydration over about 2 % of body mass and large electrolyte shifts are the common targets (ACSM 2007, Jeukendrup 2011); carbohydrate use rises in the heat and when dehydrated (Mougin 2025). There is **no source read** for triathlon-specific targets (bike versus run), swim fuelling or duathlon, and the skill gives no sodium numbers: say so, use the general long-session guidance, and have the athlete practise the plan in training. For triathletes, water quality and heat are illness risks too (Guevara 2024).

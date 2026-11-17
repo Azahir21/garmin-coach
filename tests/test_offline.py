@@ -220,18 +220,18 @@ for env, want, label in (({"RAMPWISE_DATA": str(TMP / "a"), "GARMIN_COACH_DATA":
 # ---------------------------------------------------------------- event plans (no Garmin account), viewer and exports
 import xml.dom.minidom as _xml
 from datetime import timedelta as _td
-import event_plan as evp
+import plan as evp
 import export_plan as exp_
 import plan_viewer as pview
 
-check("event plans: 17 events are defined", len(evp.EVENTS) == 17, str(len(evp.EVENTS)))
+check("event plans: 17 events plus the no-target base goal are defined", len([k for k in evp.EVENTS if k != "base"]) == 17 and "base" in evp.EVENTS, str(len(evp.EVENTS)))
 r = run(SK / "rampwise-planner" / "scripts" / "event_plan.py", "--event", "marathon")
 check("event plan asks for the missing numbers instead of guessing (exit 2)", r.returncode == 2 and "ask" in r.stdout.lower() and "hours" in r.stdout.lower(), r.stdout[-200:])
 EV_ATH = {"equipment": {"tags": ["bodyweight", "dumbbell", "band", "step"]}}
 EV_START = date(2026, 11, 23)
 need = {"run": {"run"}, "tri": {"swim", "bike", "run"}, "du": {"bike", "run"}, "bike": {"bike"}, "swim": {"swim"}}
 bad_ev = []
-for key, e in evp.EVENTS.items():
+for key, e in [(k, v) for k, v in evp.EVENTS.items() if k != "base"]:
     lo, hi = e["weeks"]
     race = EV_START + _td(weeks=(lo + hi) // 2 - 1, days=6)
     meta_e, sess_e = evp.build(key, race, EV_START, "intermediate", min(e["peak"]["intermediate"] * 0.6, 10), e["peak"]["intermediate"], 6, {"longest_run_min": 70, "longest_ride_min": 150, "longest_swim_min": 40}, EV_ATH)
@@ -307,6 +307,126 @@ base_env = {k: v for k, v in os.environ.items() if k != "RAMPWISE_OUT"}
 r = subprocess.run([sys.executable, "-X", "utf8", str(SK / "rampwise-planner" / "scripts" / "event_plan.py"), "--event", "5k", "--event-date", "2027-03-14", "--level", "beginner", "--hours-now", "3",
                     "--max-hours", "5", "--days", "5", "--start", "2026-12-14", "--here"], capture_output=True, text=True, encoding="utf-8", env=base_env, cwd=str(cwd_dir))
 check("output folder: --here writes into ./rampwise-coach of the session folder, one plan folder per event", r.returncode == 0 and (cwd_dir / "rampwise-coach" / "plans" / "5k-2027-03-14" / "plan.json").exists(), r.stdout[-200:] + r.stderr[-200:])
+
+# ---------------------------------------------------------------- triathlon, duathlon, swim: bricks, swim pace, adapting event plans
+from datetime import datetime as _dt
+sys.path.insert(0, str(SK / "rampwise-adapt" / "scripts"))
+sys.path.insert(0, str(SK / "rampwise-aerobic-base" / "scripts"))
+import gcommon as gcm
+import latest_activity as lat
+import next_session as nxs
+
+
+def act(i, sport, start, mins, km, hr=140):
+    st = _dt.fromisoformat(start)
+    return {"id": i, "name": f"{sport} {i}", "sport": sport, "date": st.date(), "start": st, "end": st + _td(minutes=mins), "km": km, "min": mins, "moving_min": mins, "avg_hr": hr, "gain_m": 10, "te_aerobic": 2.5}
+
+
+check("multisport and swim activity types are recognised", gcm.sport_of("lap_swimming") == "swim" and gcm.sport_of("open_water_swimming") == "swim" and gcm.sport_of("multi_sport") == "multi" and gcm.sport_of("running") == "run")
+bk = [act(1, "bike", "2026-11-07T07:00:00", 90, 35), act(2, "run", "2026-11-07T08:40:00", 25, 4.0, 150),     # run starts 10 min after the ride ended: a brick
+      act(3, "bike", "2026-11-08T07:00:00", 60, 25), act(4, "run", "2026-11-08T11:00:00", 30, 4.5, 140),     # 3 hours later: not a brick
+      act(5, "run", "2026-11-04T07:00:00", 28, 4.2, 138), act(6, "swim", "2026-11-05T07:00:00", 40, 1.2, 130)]
+brk = gcm.find_bricks(bk)
+check("bricks: a run within 45 minutes after a ride is a brick, a run 3 hours later is not", len(brk) == 1 and brk[0]["run"]["id"] == 2 and brk[0]["gap_min"] == 10, str(brk))
+ba = lat.brick_analysis(bk, bk[1])
+check("brick analysis compares the brick run with the last run that was not after cycling", ba and ba["vs_standalone_run"]["date"] == "2026-11-04" and ba["vs_standalone_run"]["hr_diff_bpm"] == 12, str(ba))
+check("swim pace is shown per 100 m", lat.swim_pace(2.7) == "2:13/100 m")
+sw = an.aggregate([x for x in bk if x["sport"] == "swim"])
+check("analysis counts swim minutes as endurance time", sw["swim"]["minutes"] == 40 and sw["endurance_minutes"] == 40)
+
+meta_a, sess_a = evp.build("olympic-tri", date(2027, 6, 20), EV_START, "intermediate", 6, 9, 6, {"longest_run_min": 60, "longest_ride_min": 90, "longest_swim_min": 30}, EV_ATH)
+brick_s = next(x for x in sess_a if x["kind"] == "brick_run")
+swimq = next(x for x in sess_a if x["sport"] == "swim" and x["quality"])
+race_s = next(x for x in sess_a if x["kind"] == "race")
+g2 = {"readiness": "GREEN", "injury_level": "GREEN", "flag_ids": set(), "adherence": 0.95, "week_change_pct": 2, "days_since_progress": None, "no_progress": True}
+check("adapt: a brick run is dropped on amber or red, kept on green", al.decide(brick_s, {**g2, "readiness": "AMBER"})["decision"] == "rest" and al.decide(brick_s, {**g2, "injury_level": "RED", "flag_ids": {"run_spike"}})["decision"] == "rest" and al.decide(brick_s, g2)["decision"] == "keep")
+check("adapt: a quality swim becomes an easy swim on amber and a short technique swim on red", al.decide(swimq, {**g2, "readiness": "AMBER"})["decision"] == "easy_swap" and al.decide(swimq, {**g2, "readiness": "RED"})["decision"] == "recovery")
+check("adapt: race day is never changed", all(al.decide(race_s, {**g2, "readiness": r})["decision"] == "keep" for r in ("GREEN", "AMBER", "RED")))
+check("adapt: event plans never get an automatic progression", al.decide(next(x for x in sess_a if x["sport"] == "run" and x["quality"]), g2)["decision"] == "keep")
+nw = nxs.build_event_new(swimq, al.decide(swimq, {**g2, "readiness": "AMBER"}))
+check("adapt: the changed swim is easy, shorter or equal, with RPE text and no heart-rate numbers", nw["minutes"] <= swimq["minutes"] and "RPE" in nw["desc"] and "bpm" not in nw["desc"], str(nw))
+
+# ---------------------------------------------------------------- one planner: no-target base goal, injury lock, readiness reset, heart-rate workouts, water-temperature guidance
+sys.path.insert(0, str(SK / "rampwise-heat-weather" / "scripts"))
+import swim_water as sw_
+
+BASE_ATH = {"equipment": {"tags": ["bodyweight", "band"]}}
+mb, sb = evp.build("base", None, date(2026, 11, 23), "intermediate", 6, 9, 6, {"longest_run_min": 60, "longest_ride_min": 150, "longest_swim_min": 40}, BASE_ATH, weeks=12, sports=["run", "bike", "swim"])
+check("planner: the no-target base goal builds 12 weeks of run, ride, swim and strength with no race and no taper", mb["weeks"] == 12 and mb["goal"] == "base" and mb["event_date"] is None
+      and {x["sport"] for x in sb} >= {"run", "bike", "swim", "strength"} and not any(x["kind"] in ("race", "activation") for x in sb) and "TAPER" not in mb["phases"])
+check("planner: base volume rises at most 10 % a week and has lighter weeks", all(b2["target_min"] / a2["target_min"] <= 1.11 for a2, b2 in zip(mb["weekly"], mb["weekly"][1:]) if a2["tag"] != "RECOVERY" and b2["tag"] != "RECOVERY" and a2["target_min"]) and any(w["tag"] == "RECOVERY" for w in mb["weekly"]))
+check("planner: the aerobic test appears in lighter weeks only, one per sport", {x["week"] for x in sb if "Aerobic test" in x["title"]} <= {w["week"] for w in mb["weekly"] if w["tag"] == "RECOVERY"} and any("Aerobic test" in x["title"] for x in sb))
+mi, si = evp.build("base", None, date(2026, 11, 23), "intermediate", 6, 9, 6, {}, {**BASE_ATH, "injuries": [{"status": "active", "area": "calf"}]}, weeks=8, sports=["run", "bike"])
+check("planner: an active injury locks quality sessions in every plan", not any(x["quality"] for x in si) and any("injury" in w.lower() for w in mi["warnings"]))
+mr, sr_ = evp.build("base", None, date(2026, 11, 23), "intermediate", 6, 9, 6, {}, BASE_ATH, weeks=8, sports=["run", "bike"], readiness="red")
+check("planner: a RED readiness makes week 1 lighter", mr["weekly"][0]["target_min"] < 0.8 * mb["weekly"][0]["target_min"] and any("RED" in w for w in mr["warnings"]))
+HR_ATH = {**BASE_ATH, "preferences": {"quality": {"requires_gate": False}}, "hr": {"run_easy_max": 146, "run_zone_floors": [105, 126, 147, 158, 170], "easy_band": {"run": [126, 146], "bike": [126, 147]}, "zone_sets": {}}}
+mh, sh = evp.build("olympic-tri", date(2027, 6, 20), EV_START, "intermediate", 6, 9, 6, {"longest_run_min": 60, "longest_ride_min": 90, "longest_swim_min": 30}, HR_ATH)
+check("planner: with the athlete's heart-rate data, run and ride sessions carry heart-rate workouts (for .fit); swims and strength do not", mh["has_workouts"] and all(("workout" in x) == (x["sport"] in ("run", "bike") and bool(x["blocks"])) for x in sh))
+mn, sn = evp.build("olympic-tri", date(2027, 6, 20), EV_START, "intermediate", 6, 9, 6, {"longest_run_min": 60, "longest_ride_min": 90, "longest_swim_min": 30}, EV_ATH)
+check("planner: without heart-rate data nothing is assumed (no workouts, no .fit)", not mn["has_workouts"] and not any("workout" in x for x in sn))
+fit_dir = TMP / "fit_test"
+fit_dir.mkdir(exist_ok=True)
+(fit_dir / "plan.json").write_text(json.dumps({"meta": mh, "sessions": sh}, default=str), encoding="utf-8")
+rf = run(SK / "rampwise-planner" / "scripts" / "export_plan.py", fit_dir / "plan.json", "--format", "fit", "--out", fit_dir / "out")
+fits = list((fit_dir / "out" / "fit").glob("*.fit"))
+check("export: .fit workout files are written and decode when the plan has heart-rate workouts", rf.returncode == 0 and len(fits) >= 10, rf.stdout[-200:] + rf.stderr[-300:])
+rb = run(SK / "rampwise-planner" / "scripts" / "build_plan.py", "--help")
+check("build_plan.py forwards to the one planner (deprecated)", "deprecated" in (rb.stdout + rb.stderr).lower() or "plan.py" in (rb.stdout + rb.stderr), rb.stdout[-200:])
+vh = pview.render(mb, sb, "Base plan")
+check("plan viewer: a plan without a race date renders", "no race" in vh and "Week 1" in vh)
+wb = {x[0]: x[1] for x in sw_.bands(13, 1.5)}
+check("swim water: 13 C gives the cold-water caution and a wetsuit note; 10 C says stop; 33 C is over the upper limit", any("wetsuit" in x[1] for x in sw_.bands(13, 1.5)) and any(x[0] == "stop" for x in sw_.bands(10)) and any(x[0] == "stop" and "31" in x[1] for x in sw_.bands(33)))
+qs = an.injury_flags([act(70, "swim", "2026-11-14T07:00:00", 40, 1.2)], [], {"injuries": [], "checkins": []}, date(2026, 11, 16))["questions"]
+check("injury watch asks sport-specific pain questions (swimmers: shoulder)", any("shoulder" in q.lower() for q in qs), str(qs))
+
+# ---------------------------------------------------------------- aerobic reading of swims and multisport legs
+import analyze_activity as aa
+
+
+def lap(d, t, hr):
+    return {"total_distance": d, "total_timer_time": t, "avg_heart_rate": hr}
+
+
+steady = [lap(100, 100 + (i % 2), 130 + i // 4) for i in range(12)]
+sr_ = aa.swim_analysis(steady, {"id": 1, "name": "x", "start": "2026-11-01 07:00:00", "min": 22, "avg_hr": 135})
+check("swim analysis: a steady 1,200 m swim is reliable and gives pace per 100 m and a decoupling", sr_["reliable"] and abs(sr_["pace_s_per_100m"] - 100) <= 2 and "decoupling_pct" in sr_, str(sr_))
+sh_ = aa.swim_analysis(steady[:4], {"id": 2, "name": "x", "start": "2026-11-01 07:00:00", "min": 40, "avg_hr": 120})
+check("swim analysis: a short, rest-heavy swim is flagged not reliable", not sh_["reliable"] and any("too short" in f for f in sh_["flags"]) and any("rest" in f for f in sh_["flags"]))
+nohr = aa.swim_analysis([lap(100, 100, None) for _ in range(10)], {"id": 3, "name": "x", "start": "2026-11-01 07:00:00", "min": 18, "avg_hr": None})
+check("swim analysis: missing heart rate gives no efficiency reading", "ef_m_per_min_per_bpm" not in nohr and not nohr["reliable"])
+ml = aa.multisport_legs([{"sport": "cycling", "total_distance": 20000, "total_timer_time": 2400, "avg_heart_rate": 140}, {"sport": "running", "total_distance": 5000, "total_timer_time": 1500, "avg_heart_rate": 155}], {"id": 4, "name": "x", "start": "2026-11-01 07:00:00"})
+check("multisport: legs are listed with speed for the bike and pace for the run", ml["legs"][0]["speed_kmh"] == 30.0 and ml["legs"][1]["pace_s_per_km"] == 300)
+
+# ---------------------------------------------------------------- configurable plan length and calendar window
+cfg_ath = {"manual_baseline": {"level": "intermediate", "hours_now": 6, "max_hours": 9, "days_per_week": 6, "sports": ["run", "bike"]}, "equipment": {"tags": ["bodyweight", "band"]},
+           "preferences": {"plan_weeks": 4}, "calendar": {"calendar_id": "primary", "title_prefix": "[GC]", "marker": "rampwise-plan", "window_days": 14, "window_weeks": None}}
+(TMP / "athlete.json").write_text(json.dumps(cfg_ath), encoding="utf-8")
+PL = SK / "rampwise-planner" / "scripts" / "plan.py"
+r4 = run(PL, "--goal", "base", "--start", "2027-01-04", "--json")
+m4 = json.loads(r4.stdout)["meta"] if r4.returncode == 0 else {}
+check("plan length: preferences.plan_weeks sets the length of a no-target plan (4 weeks) and a short block is a note, not an error", m4.get("weeks") == 4 and any("4-week block" in w for w in m4.get("warnings", [])), r4.stdout[-200:] + r4.stderr[-200:])
+r6 = run(PL, "--goal", "base", "--start", "2027-01-04", "--weeks", "6", "--json")
+check("plan length: --weeks beats the saved preference", r6.returncode == 0 and json.loads(r6.stdout)["meta"]["weeks"] == 6)
+(TMP / "athlete.json").write_text(json.dumps({**cfg_ath, "preferences": {}}), encoding="utf-8")
+rd = run(PL, "--goal", "base", "--start", "2027-01-04", "--json")
+check("plan length: with nothing set a no-target plan is 12 weeks", rd.returncode == 0 and json.loads(rd.stdout)["meta"]["weeks"] == 12)
+rx = run(PL, "--goal", "base", "--start", "2027-01-04", "--weeks", "1")
+check("plan length: 1 week is refused (2 to 52)", rx.returncode != 0 and "2 to 52" in (rx.stdout + rx.stderr))
+cal_plan = TMP / "cal_plan.json"
+cal_plan.write_text(r6.stdout, encoding="utf-8")
+CE = SK / "rampwise-planner" / "scripts" / "calendar_events.py"
+
+
+def cal_window(*extra, win_weeks=None):
+    (TMP / "athlete.json").write_text(json.dumps({**cfg_ath, "calendar": {**cfg_ath["calendar"], "window_weeks": win_weeks}}), encoding="utf-8")
+    rr = run(CE, cal_plan, "--json", *extra)
+    o = json.loads(rr.stdout) if rr.returncode == 0 else {"window": ["", ""], "events": []}
+    return (date.fromisoformat(o["window"][1]) - date.fromisoformat(o["window"][0])).days if o["window"][0] else None
+
+
+check("calendar window: 14 days by default, --weeks 4 gives 28 days, --days beats --weeks, calendar.window_weeks is the saved setting",
+      cal_window() == 14 and cal_window("--weeks", "4") == 28 and cal_window("--weeks", "4", "--days", "7") == 7 and cal_window(win_weeks=4) == 28)
 
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
