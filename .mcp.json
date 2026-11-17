@@ -5,7 +5,7 @@
       "args": [
         "--python",
         "3.12",
-        "garmin-personal-mcp"
+        "garmin-personal-mcp@0.3.0"
       ]
     }
   }

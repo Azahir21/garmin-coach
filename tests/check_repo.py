@@ -125,6 +125,13 @@ for d in skills:
         bad(f"{d.name}: SKILL.md has 500 or more lines")
     if "$HOME/.claude/skills" in s or "~/.claude/skills" in s:
         bad(f"{d.name}: hard-coded ~/.claude/skills path (use <skills>)")
+mcp_path = ROOT / ".mcp.json"
+if mcp_path.exists():
+    for name_, srv in (json.loads(mcp_path.read_text(encoding="utf-8")).get("mcpServers") or {}).items():
+        if srv.get("command") in ("uvx", "npx", "pipx"):
+            pinned = any(re.search(r"(@|==)\d", str(x)) for x in srv.get("args", []))
+            if not pinned:
+                bad(f".mcp.json: server '{name_}' runs {srv['command']} without a pinned version (the Claude plugin directory blocks unpinned launchers)")
 ok(f"{len(skills)} skills follow the Agent Skills rules")
 for a in sorted((ROOT / "agents").glob("*.md")):
     s = a.read_text(encoding="utf-8")

@@ -96,9 +96,9 @@ def find_exe():
         if c and Path(c).exists():
             return [c]
     if shutil.which("uvx"):
-        return ["uvx", "--python", "3.12", "garmin-personal-mcp"]
+        return ["uvx", "--python", "3.12", "garmin-personal-mcp@0.3.0"]
     if shutil.which("uv"):
-        return ["uv", "tool", "run", "--python", "3.12", "garmin-personal-mcp"]
+        return ["uv", "tool", "run", "--python", "3.12", "garmin-personal-mcp@0.3.0"]
     raise SystemExit("garmin-personal-mcp not found. Install uv (https://docs.astral.sh/uv/) and run: uv tool install --python 3.12 garmin-personal-mcp "
                      "then: garmin-personal-mcp auth. Or set GARMIN_MCP_EXE to the program's full path.")
 

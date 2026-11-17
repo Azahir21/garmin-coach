@@ -54,6 +54,15 @@ python rampwise/install.py --tool all --dry-run     # preview
 ```
 Vercel's skills CLI also works: `npx skills add Azahir21/rampwise` (tested: a real install of all 11 skills with skills 1.9.0 on Linux, Node 22). Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
 
+## What it sends or fetches
+Everything that leaves your computer, in one place (also in [PRIVACY.md](PRIVACY.md)):
+- **Garmin:** the scripts talk to the `garmin-personal-mcp` server on your own machine, which reads your account with your own saved key. Nothing about this goes to Rampwise or to anyone else.
+- **Open-Meteo (weather):** only if you ask for weather; rounded start coordinates and dates.
+- **Europe PMC (papers):** when the coach fetches an open-access paper, only the paper's ID or DOI. The text it receives is treated as data to read, never as instructions.
+- **GitHub:** only when you run `install.py --update` (a `git pull`).
+- **The AI model you use** sees what the coach prints in a session (numbers from the scripts, a summary of your athlete file), under that provider's terms.
+Rampwise has no server and no analytics. Support and issues: [GitHub issues](https://github.com/Azahir21/rampwise/issues).
+
 ## Other watch brands and Strava
 The aerobic analysis of one activity also works on a `.fit` file from any maker (`analyze_activity.py --fit-file FILE`) and, as an untested draft, on Strava data saved as JSON (`--strava-json FILE`). Readiness, load and reports are still Garmin-only. Details, what each brand leaves out, and Strava's subscription and terms: [docs/OTHER-WATCHES.md](docs/OTHER-WATCHES.md).
 
