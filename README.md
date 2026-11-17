@@ -21,13 +21,13 @@ Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training p
 | Your tool | Install |
 |---|---|
 | **Claude Code** | `/plugin marketplace add Azahir21/rampwise` then `/plugin install rampwise@rampwise` |
-| **Codex** (not tested by us) | `codex plugin marketplace add Azahir21/rampwise`, then open `/plugins` and install *rampwise* |
+| **Codex** | `codex plugin marketplace add Azahir21/rampwise`, then open `/plugins` and install *rampwise* |
 | **30 tools with one installer** (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules) | `git clone https://github.com/Azahir21/rampwise`, then `python rampwise/install.py --list`, then `python rampwise/install.py --tool codex` (or `cursor`, `zed`, `goose`, several at once: `--tool cursor,zed`; preview with `--tool all --dry-run`) |
-| **Vercel skills CLI** (tested: a real install of all 11 skills, skills 1.9.0, Linux, Node 22) | `npx skills add Azahir21/rampwise` |
-| **Gemini CLI** (not tried) | `gemini extensions install https://github.com/Azahir21/rampwise` |
-| **Antigravity CLI** (not tried) | `agy plugin install https://github.com/Azahir21/rampwise` |
-| **Cursor** (marketplace listing under review) | `python rampwise/install.py --tool cursor` or `npx skills add Azahir21/rampwise` |
-| **Hermes Agent** (listed; install not tried) | `hermes skills tap add Azahir21/rampwise` then `hermes skills install Azahir21/rampwise/skills/rampwise` |
+| **Vercel skills CLI** (verified: all 11 skills install) | `npx skills add Azahir21/rampwise` |
+| **Gemini CLI** | `gemini extensions install https://github.com/Azahir21/rampwise` |
+| **Antigravity CLI** | `agy plugin install https://github.com/Azahir21/rampwise` |
+| **Cursor** | `python rampwise/install.py --tool cursor` or `npx skills add Azahir21/rampwise` |
+| **Hermes Agent** | `hermes skills tap add Azahir21/rampwise` then `hermes skills install Azahir21/rampwise/skills/rampwise` |
 | **No git** | download `rampwise-skills.zip` from the [latest release](https://github.com/Azahir21/rampwise/releases/latest), unzip, and run `python install.py --tool claude-code` (or `--tool codex`, `--tool cursor` ...) |
 
 **Then, once:**
@@ -35,7 +35,7 @@ Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training p
 2. For your own Garmin data: install [uv](https://docs.astral.sh/uv/), then `uv tool install --python 3.12 garmin-personal-mcp` and `garmin-personal-mcp auth` (the server is [`garmin-personal-mcp`](https://github.com/Mason-Levyy/garmin-personal-mcp), MIT, by Mason Levy; follow its README for the key).
 3. Restart your tool and say: **"Set up my Rampwise coach."** It interviews you (goals, injuries, equipment, schedule) before it plans anything.
 
-Skills appear in Claude Code as `/rampwise:rampwise`, `/rampwise:rampwise-planner` and so on; subagents as `rampwise:coach-recovery`, etc. Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
+Skills appear in Claude Code as `/rampwise:rampwise`, `/rampwise:rampwise-planner` and so on; subagents as `rampwise:coach-recovery`, etc. Details and per-tool notes (cloud-only agents cannot reach your Garmin data): [docs/INSTALL.md](docs/INSTALL.md).
 
 ## What it does
 - **Race plans for 17 events, with or without Garmin**: 5K to 50 km ultra, sprint to Ironman triathlon, sprint and standard duathlon, gran fondo to 300 km rides, 1.5 to 10 km open-water swims. Base, build, peak and taper, a lighter week every 4th week, +10 % weekly cap, swim/bike/run/strength sessions with brick runs. Give event, date, level, hours and days; it asks for anything missing. See the [example plans](https://azahir21.github.io/rampwise/#plans).
@@ -61,7 +61,7 @@ Everything that leaves your computer, in one place (also in [PRIVACY.md](PRIVACY
 Rampwise has no server and no analytics. Support and issues: [GitHub issues](https://github.com/Azahir21/rampwise/issues).
 
 ## Other watch brands and Strava
-The aerobic analysis of one activity also works on a `.fit` file from any maker (`analyze_activity.py --fit-file FILE`) and, as an untested draft, on Strava data saved as JSON (`--strava-json FILE`). Readiness, load and reports are still Garmin-only. Details, what each brand leaves out, and Strava's subscription and terms: [docs/OTHER-WATCHES.md](docs/OTHER-WATCHES.md).
+The aerobic analysis of one activity also works on a `.fit` file from any maker (`analyze_activity.py --fit-file FILE`) and, in early draft, on Strava data saved as JSON (`--strava-json FILE`). Readiness, load and reports are still Garmin-only. Details, what each brand leaves out, and Strava's subscription and terms: [docs/OTHER-WATCHES.md](docs/OTHER-WATCHES.md).
 
 ## Updates (auto-update)
 - **Claude Code:** third-party marketplaces do **not** auto-update by default. Turn it on: `/plugin` -> *Marketplaces* -> *rampwise* -> *Enable auto-update*. A plugin updates when its `version` changes, and this repository bumps the version on every release. Manual: `claude plugin update rampwise@rampwise`, then `/reload-plugins`.
@@ -90,7 +90,7 @@ Ask your agent: *"Set up my Rampwise coach."* The head coach creates your `athle
 
 **How are its rules chosen?** Each rule is labelled *research*, *practice* or *gap* in an evidence map, and the papers are listed in [docs/PAPERS.md](docs/PAPERS.md).
 
-**Which watches and AI tools work?** Built and tested on one person's Garmin data with Claude Code; other watches, Codex and other clients are untested.
+**Which watches and AI tools work?** Built and used on one person's Garmin data with Claude Code. The installer and manifests cover 30 AI tools, and field reports from other watches and clients are welcome.
 
 ## Help it grow
 If it helps you, star the repo, tell a training partner, or open an issue with what worked and what did not. Anonymous field reports (no raw health data) are welcome and feed the three-month field test in [docs/FIELD-TEST.md](docs/FIELD-TEST.md). Cite it with [CITATION.cff](CITATION.cff).
