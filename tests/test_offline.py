@@ -531,6 +531,18 @@ pj3.write_text(json.dumps({"activity": act_, "streams": {"heartrate": hr_}}), en
 r3 = run(AA, "--strava-json", pj3)
 check("strava-json: streams without time give a message that names what to request", r3.returncode != 0 and "time" in (r3.stdout + r3.stderr) and "heartrate" in (r3.stdout + r3.stderr))
 
+inst_home2 = TMP / "inst_home2"
+inst_home2.mkdir(exist_ok=True)
+env2 = {"HOME": str(inst_home2), "USERPROFILE": str(inst_home2)}
+run(INST, "--tool", "codex", env=env2)
+pap = inst_home2 / ".agents" / "skills" / "rampwise-planner" / "references" / "papers"
+pap.mkdir(parents=True, exist_ok=True)
+(pap / "Some-paper_2025.md").write_text("# local paper", encoding="utf-8")
+run(INST, "--tool", "codex", env=env2)
+check("installer: reinstalling keeps the user's local paper files (references/papers)", (pap / "Some-paper_2025.md").exists() and (inst_home2 / ".agents" / "skills" / "rampwise-planner" / "SKILL.md").exists())
+r_u = run(INST, "--tool", "codex", "--uninstall", env=env2)
+check("installer: uninstall removes the skills but keeps the local paper files and says so", (pap / "Some-paper_2025.md").exists() and not (inst_home2 / ".agents" / "skills" / "rampwise-planner" / "SKILL.md").exists() and "kept 1 local paper files" in r_u.stdout, r_u.stdout[-300:])
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

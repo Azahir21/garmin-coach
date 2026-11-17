@@ -107,7 +107,37 @@ def home_path(t: str) -> Path:
     return Path(t.replace("~", str(Path.home()), 1)) if t.startswith("~") else Path(t)
 
 
+PAPERS = Path("references") / "papers"        # local paper files (tools/build_paper_files.py): git-ignored, never in the repository, so an install or uninstall must not delete them
+
+
+def stash_papers(dst: Path):
+    """Move a skill's local papers folder out of the way before the folder is replaced. Returns the temporary path, or None."""
+    pp = dst / PAPERS
+    if dst.is_symlink() or not pp.is_dir():
+        return None
+    keep = dst.parent / f".{dst.name}-papers-keep"
+    if keep.exists():
+        shutil.rmtree(keep)
+    shutil.move(str(pp), str(keep))
+    return keep
+
+
+def restore_papers(keep, dst: Path):
+    if keep is None:
+        return
+    target = dst / PAPERS
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists() and not target.is_symlink():
+        for f in keep.iterdir():                         # the new folder already has some: add the rest, never overwrite
+            if not (target / f.name).exists():
+                shutil.move(str(f), str(target / f.name))
+        shutil.rmtree(keep)
+    else:
+        shutil.move(str(keep), str(target))
+
+
 def place(src: Path, dst: Path, link: bool):
+    keep = stash_papers(dst) if src.is_dir() else None
     if dst.is_symlink() or dst.is_file():
         dst.unlink()
     elif dst.exists():
@@ -116,11 +146,27 @@ def place(src: Path, dst: Path, link: bool):
     if link:
         try:
             dst.symlink_to(src, target_is_directory=src.is_dir())
+            restore_papers(keep, dst)                    # dst is the repository folder: the papers go into its git-ignored papers folder
             return "linked"
         except OSError:
             pass
     shutil.copytree(src, dst, ignore=shutil.ignore_patterns("__pycache__", "*.pyc")) if src.is_dir() else shutil.copy2(src, dst)
+    restore_papers(keep, dst)
     return "copied"
+
+
+def remove_skill(tgt: Path):
+    """Uninstall one skill folder but keep its local papers (they were not written by this installer). Returns how many paper files were kept."""
+    keep = stash_papers(tgt)
+    if tgt.is_dir() and not tgt.is_symlink():
+        shutil.rmtree(tgt)
+    elif tgt.exists() or tgt.is_symlink():
+        tgt.unlink()
+    if keep is None:
+        return 0
+    n = sum(1 for _ in keep.rglob("*") if _.is_file())
+    restore_papers(keep, tgt)
+    return n
 
 
 def upsert_block(path: Path, body: str, whole_file_header: str = ""):
@@ -257,9 +303,10 @@ def main():
         for n in names:
             tgt = dest / n
             if a.uninstall:
+                kept = 0
                 if not a.dry_run and (tgt.exists() or tgt.is_symlink()):
-                    shutil.rmtree(tgt) if tgt.is_dir() and not tgt.is_symlink() else tgt.unlink()
-                print(f"{'would remove' if a.dry_run else 'removed':12} {tgt}")
+                    kept = remove_skill(tgt)
+                print(f"{'would remove' if a.dry_run else 'removed':12} {tgt}" + (f"   (kept {kept} local paper files in references/papers)" if kept else ""))
             else:
                 print(f"{'would write' if a.dry_run else place(SKILLS / n, tgt, a.link):12} {tgt}")
         if a.uninstall and not a.dry_run:
