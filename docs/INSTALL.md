@@ -16,6 +16,10 @@ Remove everything the installer wrote with the same command plus `--uninstall`. 
 ## It must run on your computer
 The scripts read **your own Garmin data** through a local server and write your plans next to your files. So the agent has to run on your machine and be allowed to run Python. These cannot coach you, even with the skills installed: **Google Jules** (cloud virtual machine), the **GitHub Copilot cloud agent**, **GitLab Duo flows** and the **Devin cloud product** (they run on a server, not on your machine). Their local versions can: Copilot CLI and agent mode, the Duo CLI, Devin CLI and Desktop.
 
+## Other ways to install
+- **Vercel's `skills` CLI** (works with many of the tools above): `npx skills add Azahir21/rampwise`. Checked: `npx skills@1.4.0 add Azahir21/rampwise --list` finds all 11 skills (newer `skills` releases need Node 22.20 or later). An install through it was not tried. It lists your skills on skills.sh through anonymous install counts.
+- **Hermes Agent**: `hermes skills tap add Azahir21/rampwise`, then `hermes skills install Azahir21/rampwise/skills/rampwise` (from Hermes's documentation; not tried with this repo).
+
 ## What "checked" means here
 For every tool below, the official documentation page was **read on 2026-11-17** and the folder names come from it. **We did not run these tools ourselves**: only Claude Code has been used with Rampwise. If a tool's behaviour differs from its documentation, please open an issue ([field report](../.github/ISSUE_TEMPLATE/field-report.md)). Tool vendors rename and move folders often; `python install.py --list` shows what this version of Rampwise assumes.
 

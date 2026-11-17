@@ -69,6 +69,35 @@ ok(f"manifests agree (version {cm['version']}, licence Apache-2.0)")
 
 # ---------------------------------------------------------------- 3. Agent Skills rules
 skills = sorted(p for p in (ROOT / "skills").iterdir() if p.is_dir() and not p.name.startswith("."))
+BS, NL = chr(92), chr(10)
+
+
+def unquote_yaml(v):
+    """Value of a YAML scalar written on one line, quotes removed."""
+    if len(v) >= 2 and v[0] == v[-1] == chr(34):
+        return v[1:-1].replace(BS + chr(34), chr(34)).replace(BS + BS, BS)
+    if len(v) >= 2 and v[0] == v[-1] == chr(39):
+        return v[1:-1].replace(chr(39) * 2, chr(39))
+    return v
+
+
+def yaml_problem(fm):
+    """A plain (unquoted) YAML value must not contain ': ' or ' #': strict parsers (Vercel skills, Codex ...) reject it. Also uses PyYAML when it is installed."""
+    try:
+        import yaml
+        try:
+            yaml.safe_load(fm)
+        except Exception as e:
+            return str(e).splitlines()[0][:60]
+    except ImportError:
+        pass
+    for line in fm.split(NL):
+        m2 = re.match(r"^([a-z-]+):[ \t]*(.+)$", line)
+        if m2 and m2.group(2)[0] not in "\"'>|[{" and (": " in m2.group(2) or " #" in m2.group(2)):
+            return "unquoted value of '" + m2.group(1) + "' contains ': ' or ' #'"
+    return None
+
+
 for d in skills:
     sm = d / "SKILL.md"
     if not sm.exists():
@@ -86,8 +115,12 @@ for d in skills:
         bad(f"{d.name}: name must equal the folder name")
     if not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", d.name) or len(d.name) > 64:
         bad(f"{d.name}: name violates the Agent Skills naming rule")
-    if not desc or not (1 <= len(desc.group(1).strip()) <= 1024):
+    dtext = unquote_yaml(desc.group(1).strip()) if desc else ""
+    if not desc or not (1 <= len(dtext) <= 1024):
         bad(f"{d.name}: description missing or over 1024 characters")
+    why = yaml_problem(fm)
+    if why:
+        bad(f"{d.name}: front matter is not valid YAML ({why}); strict readers (Vercel skills, Codex ...) skip the skill")
     if s.count("\n") >= 500:
         bad(f"{d.name}: SKILL.md has 500 or more lines")
     if "$HOME/.claude/skills" in s or "~/.claude/skills" in s:
@@ -97,6 +130,9 @@ for a in sorted((ROOT / "agents").glob("*.md")):
     s = a.read_text(encoding="utf-8")
     if not re.search(r"^name:\s*\S+", s, re.M) or not re.search(r"^description:\s*\S+", s, re.M):
         bad(f"agents/{a.name}: name or description missing")
+    am = re.match(r"^---\n(.*?)\n---\n", s.replace("\r\n", "\n"), re.S)
+    if am and yaml_problem(am.group(1)):
+        bad(f"agents/{a.name}: front matter is not valid YAML ({yaml_problem(am.group(1))})")
     if "$HOME/.claude/skills" in s or "~/.claude/skills" in s:
         bad(f"agents/{a.name}: hard-coded path")
 ok("subagent files have name and description")

@@ -1,6 +1,6 @@
 ---
 name: coach-planner
-description: Training-plan specialist on the Rampwise coaching team. Use when the head coach (rampwise skill) needs a multi-week plan drafted, the run gate checked, goal progress (a race time, a ride speed) measured, or the next two weeks prepared for the calendar. Read-only: it prepares the plan and the calendar payload; the main session writes to Google Calendar. Returns a short handoff block plus the saved plan path.
+description: "Training-plan specialist on the Rampwise coaching team. Use when the head coach (rampwise skill) needs a multi-week plan drafted, the run gate checked, goal progress (a race time, a ride speed) measured, or the next two weeks prepared for the calendar. Read-only: it prepares the plan and the calendar payload; the main session writes to Google Calendar. Returns a short handoff block plus the saved plan path."
 tools: Bash, Read, Grep, Glob
 model: sonnet
 ---

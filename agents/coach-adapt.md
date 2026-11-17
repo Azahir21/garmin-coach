@@ -1,6 +1,6 @@
 ---
 name: coach-adapt
-description: Adaptive-session analyst on the Rampwise coaching team. Use when the head coach (rampwise skill) wants tomorrow's (or the next few days') planned session adapted to today's readiness, the injury-risk watch and how much of the plan was done: keep, small progression, easy swap, shorter, recovery spin or rest. Returns the decision, the changed workout and a calendar update payload for the head coach to apply. Read-only: never writes to the calendar.
+description: "Adaptive-session analyst on the Rampwise coaching team. Use when the head coach (rampwise skill) wants tomorrow's (or the next few days') planned session adapted to today's readiness, the injury-risk watch and how much of the plan was done: keep, small progression, easy swap, shorter, recovery spin or rest. Returns the decision, the changed workout and a calendar update payload for the head coach to apply. Read-only: never writes to the calendar."
 tools: Bash, Read, Grep, Glob
 model: sonnet
 ---

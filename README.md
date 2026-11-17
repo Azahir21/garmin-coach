@@ -52,7 +52,7 @@ python rampwise/install.py --list                   # tools, folders, how well e
 python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
 python rampwise/install.py --tool all --dry-run     # preview
 ```
-Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
+Vercel's skills CLI also works: `npx skills add Azahir21/rampwise` (we checked that `npx skills add ... --list` finds all 11 skills with skills 1.4.0; an actual install through it was not tried). Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
 
 ## Other watch brands and Strava
 The aerobic analysis of one activity also works on a `.fit` file from any maker (`analyze_activity.py --fit-file FILE`) and, as an untested draft, on Strava data saved as JSON (`--strava-json FILE`). Readiness, load and reports are still Garmin-only. Details, what each brand leaves out, and Strava's subscription and terms: [docs/OTHER-WATCHES.md](docs/OTHER-WATCHES.md).
