@@ -65,7 +65,25 @@ if cm.get("license") != "Apache-2.0" or px.get("license") != "Apache-2.0":
     bad("manifest license must be Apache-2.0")
 if not (ROOT / "NOTICE").exists() or "Apache License" not in (ROOT / "LICENSE").read_text(encoding="utf-8"):
     bad("LICENSE (Apache-2.0 text) and NOTICE must exist")
-ok(f"manifests agree (version {cm['version']}, licence Apache-2.0)")
+EXTRA = {"gemini-extension.json": ("name", "version", "description", "mcpServers", "contextFileName", "settings", "excludeTools", "plan", "themes", "migratedTo"),
+         ".antigravity-plugin/plugin.json": ("$schema", "name", "displayName", "description", "version", "logo", "suggestedPrompts", "skills", "disabled", "author", "homepage",
+                                             "repository", "license", "keywords", "extensions"),
+         ".cursor-plugin/plugin.json": ("name", "description", "version", "author", "homepage", "repository", "license", "keywords", "logo", "rules", "agents", "skills", "commands",
+                                        "hooks", "mcpServers", "variables")}
+for rel, allowed in EXTRA.items():
+    try:
+        mf = json.loads((ROOT / rel).read_text(encoding="utf-8"))
+    except Exception as e:
+        bad(f"{rel}: missing or not valid JSON ({e})")
+        continue
+    if mf.get("name") != cm["name"] or not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", str(mf.get("name"))):
+        bad(f"{rel}: name must equal the plugin name and be lowercase kebab-case")
+    if mf.get("version") != cm["version"]:
+        bad(f"{rel}: version differs from the plugin version (bump every manifest together)")
+    extra_keys = [k for k in mf if k not in allowed]
+    if extra_keys:
+        bad(f"{rel}: fields not in that tool's manifest schema: {', '.join(extra_keys)}")
+ok(f"manifests agree (version {cm['version']}, licence Apache-2.0; also the Gemini, Antigravity and Cursor manifests)")
 
 # ---------------------------------------------------------------- 3. Agent Skills rules
 skills = sorted(p for p in (ROOT / "skills").iterdir() if p.is_dir() and not p.name.startswith("."))

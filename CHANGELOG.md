@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- **Manifests for three more tools:** `gemini-extension.json` (Gemini CLI extensions; `skills/` is discovered by folder), `.antigravity-plugin/plugin.json` (Antigravity CLI plugins) and `.cursor-plugin/plugin.json` (Cursor plugins). Their field names come from each tool's official documentation (read 2026-11-17); none of the three tools was run here, so installs are untested. `check_repo.py` keeps all manifests on the same name and version and rejects fields the schemas do not allow.
+
 ## 0.6.2 - four skills no longer hidden from strict readers
 - **Fix: four skills were invisible to strict readers.** The front matter of `rampwise-planner`, `rampwise-analyze`, `rampwise-adapt` and `rampwise-fueling` (and two subagent files) had an unquoted `description` containing `: `, which is invalid YAML. Claude Code is lenient, but strict parsers such as Vercel's `skills` CLI skipped those skills (it found 7 of 11, without the planner). The descriptions are now quoted, and `check_repo.py` fails on this from now on.
 - Docs: `npx skills add Azahir21/rampwise` is tested (real install of all 11 skills with `skills` 1.9.0 on Linux, a script run from the installed folder, `skills update` reports up to date); the Hermes tap commands and how updating works for both are in the install docs.

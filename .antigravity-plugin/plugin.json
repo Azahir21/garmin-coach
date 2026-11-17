@@ -1,0 +1,35 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "rampwise",
+  "displayName": "Rampwise",
+  "description": "AI coach for triathletes, runners, cyclists and swimmers: evidence-labelled plans, daily adaptation, injury-risk watch, reports. Not affiliated with Garmin.",
+  "version": "0.6.2",
+  "author": {
+    "name": "Kei",
+    "url": "https://github.com/Azahir21"
+  },
+  "homepage": "https://github.com/Azahir21/rampwise",
+  "repository": "https://github.com/Azahir21/rampwise",
+  "license": "Apache-2.0",
+  "keywords": [
+    "garmin",
+    "running",
+    "cycling",
+    "endurance",
+    "training-plan",
+    "heart-rate",
+    "hrv",
+    "coach",
+    "ai-coach",
+    "injury-prevention",
+    "agent-skills",
+    "triathlon",
+    "swimming",
+    "duathlon"
+  ],
+  "suggestedPrompts": [
+    "Set up my Rampwise coach.",
+    "Plan my Olympic triathlon on 2027-06-20: intermediate, 6 hours a week now, up to 9, 6 days a week.",
+    "Analyze this .fit file from my watch."
+  ]
+}
