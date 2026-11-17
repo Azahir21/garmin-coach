@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.1 - install for 29 more AI tools
+- **Install for 29 more tools.** `install.py --tool <name>` installs the skills where each tool reads them: OpenAI Codex, Hermes, OpenClaw, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Roo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Trae, Qwen Code, Warp, JetBrains Junie and Factory; Aider, Continue.dev, Amazon Q Developer and Jules get an instructions file (they have no skills feature). `--list`, `--dry-run`, `--scope project`, `--uninstall`. Folders come from each tool's official documentation read on 2026-11-17 (`docs/INSTALL.md`); we ran only Claude Code, Trae could not be verified, and cloud-only agents cannot reach your Garmin data.
+
 ## 0.5.0 - one planner for any sport, safety evidence, triathlon and swim support
 - **One planner.** `plan.py` replaces the two planners: a race (17 events) or **no target** (`--goal base`: aerobic base for any mix of run, ride and swim), with `--from-garmin` to read your real training, an injury lock on quality sessions, `--readiness` to lighten week 1, a standardised aerobic test in lighter weeks, heart-rate workouts when your heart-rate data are known, and `.fit` export (`export_plan.py --format fit`). `event_plan.py` and `build_plan.py` are forwarding names; `build_plan.py --legacy` keeps the old rolling planner until the next release.
 - **Aerobic drift for every sport:** `analyze_activity.py` reads swims from their lap data (pace per 100 m, rest share, decoupling, reliability flags) and multisport activities as legs.

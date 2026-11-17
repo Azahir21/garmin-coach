@@ -6,6 +6,7 @@ This repository is a set of **Agent Skills** (`skills/<name>/SKILL.md`) plus sub
 - Start with the **`rampwise`** skill (head coach). It tells you which specialist skill to load and which script to run. Specialists: `rampwise-recovery`, `rampwise-aerobic-base`, `rampwise-heat-weather`, `rampwise-load-injury`, `rampwise-strength`, `rampwise-fueling`, `rampwise-planner` (also `event_plan.py`: race plans for 17 events without Garmin data, `plan_viewer.py`, `export_plan.py`), `rampwise-analyze` (week comparison, injury-risk watch), `rampwise-adapt` (adapt tomorrow's session, calendar payload), `rampwise-report` (daily/weekly/monthly reports).
 - Scripts are Python 3.10+ and are run from the command line: `python -X utf8 <skills>/<skill>/scripts/<file>.py`. `<skills>` is the folder holding the `rampwise-*` skill folders. Numbers must come from the scripts, rules from each skill's `references/evidence-map.md`. Never invent a number, a paper or a timeline.
 - Garmin data comes from the `garmin-personal-mcp` server (`.mcp.json`; `garmin-personal-mcp auth` stores the key once). The scripts start it themselves.
+- Installing for other tools: `python install.py --list` and `docs/INSTALL.md` (the registry of tool folders is in `install.py`; every entry cites a page read on a stated date: do not add a tool or a path from memory).
 - Personal data lives in `$RAMPWISE_DATA` (default `~/rampwise-data`). First run: `athlete.py init`, then interview the user.
 
 ## Non-negotiable rules

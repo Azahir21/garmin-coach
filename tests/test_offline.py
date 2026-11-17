@@ -428,6 +428,46 @@ def cal_window(*extra, win_weeks=None):
 check("calendar window: 14 days by default, --weeks 4 gives 28 days, --days beats --weeks, calendar.window_weeks is the saved setting",
       cal_window() == 14 and cal_window("--weeks", "4") == 28 and cal_window("--weeks", "4", "--days", "7") == 7 and cal_window(win_weeks=4) == 28)
 
+# ---------------------------------------------------------------- installer for other agent tools
+import importlib.util as _ilu
+_spec = _ilu.spec_from_file_location("rw_install", ROOT / "install.py")
+rw_install = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(rw_install)
+asked = ["OpenAI Codex", "Hermes", "OpenClaw", "Gemini CLI", "Antigravity", "Cursor", "GitHub Copilot", "Windsurf", "Aider", "Cline", "OpenCode", "Devin", "Amazon Q Developer", "Kilo Code",
+         "Roo Code", "Goose", "Continue.dev", "Zed", "Amp", "Jules", "Augment Code", "Kiro", "Mistral Vibe", "GitLab Duo", "Trae AI", "Qwen Code", "Warp", "Junie", "Factory"]
+check("installer: all 29 requested tools are registered", len(rw_install.REQUIRED) == 29 and all(k in rw_install.TOOLS for k in rw_install.REQUIRED)
+      and all(any(w.lower() in rw_install.TOOLS[k]["name"].lower() or w.lower().split(".")[0] in k for k in rw_install.REQUIRED) for w in asked))
+install_doc = (ROOT / "docs" / "INSTALL.md").read_text(encoding="utf-8")
+check("installer: every registered tool is in docs/INSTALL.md with its --tool key", all(f"`{k}`" in install_doc for k in rw_install.TOOLS))
+check("installer: only Trae is marked unverified, and the registry has no tool with a missing folder",
+      [k for k, t in rw_install.TOOLS.items() if t["status"] != "read"] == ["trae"] and all(t["mode"] == "rules" or (t.get("skills") and t.get("project")) for t in rw_install.TOOLS.values()))
+inst_home, inst_proj = TMP / "inst_home", TMP / "inst_proj"
+inst_home.mkdir(exist_ok=True)
+inst_proj.mkdir(exist_ok=True)
+inst_env = {"HOME": str(inst_home), "USERPROFILE": str(inst_home)}
+INST = ROOT / "install.py"
+r_a = run(INST, "--tool", "codex,cursor,zed,hermes,kiro", env=inst_env)
+check("installer: skills go to the shared folder (once for codex, cursor and zed) and to Hermes and Kiro's own folders",
+      r_a.returncode == 0 and (inst_home / ".agents" / "skills" / "rampwise" / "SKILL.md").exists() and (inst_home / ".hermes" / "skills" / "rampwise-planner" / "scripts" / "plan.py").exists()
+      and (inst_home / ".kiro" / "skills" / "rampwise").is_dir() and r_a.stdout.count(str(inst_home / ".agents" / "skills" / "rampwise-adapt")) == 1, r_a.stdout[-300:] + r_a.stderr[-300:])
+check("installer: nothing but real skills is copied (every installed folder has a SKILL.md)", all((d / "SKILL.md").exists() for d in (inst_home / ".agents" / "skills").iterdir()))
+r_b = run(INST, "--tool", "aider", env=inst_env)
+check("installer: a tool that writes into a project refuses without --project", r_b.returncode != 0 and "--project" in (r_b.stdout + r_b.stderr))
+(inst_proj / "AGENTS.md").write_text("# Team notes" + chr(10), encoding="utf-8")
+r_c = run(INST, "--tool", "aider,continue,amazonq,jules", "--project", inst_proj, env=inst_env)
+check("installer: tools without skills get an instructions file; the existing AGENTS.md keeps its text and gets a marked block",
+      r_c.returncode == 0 and (inst_proj / "RAMPWISE.md").exists() and "alwaysApply: true" in (inst_proj / ".continue" / "rules" / "rampwise.md").read_text(encoding="utf-8")
+      and (inst_proj / ".amazonq" / "rules" / "rampwise.md").exists() and (inst_proj / "AGENTS.md").read_text(encoding="utf-8").startswith("# Team notes") and "rampwise/SKILL.md" in (inst_proj / "AGENTS.md").read_text(encoding="utf-8"),
+      r_c.stdout[-300:] + r_c.stderr[-300:])
+run(INST, "--tool", "jules", "--project", inst_proj, env=inst_env)
+check("installer: running it again does not duplicate the block", (inst_proj / "AGENTS.md").read_text(encoding="utf-8").count("rampwise:begin") == 1)
+r_d = run(INST, "--tool", "all", "--dry-run", env=inst_env)
+check("installer: --tool all --dry-run writes nothing and skips the project-writing tools", r_d.returncode == 0 and "Skipped" in r_d.stdout and not (inst_home / ".trae").exists() and "!! Trae AI" in r_d.stdout, r_d.stdout[-200:])
+r_e = run(INST, "--tool", "codex,cursor,zed,hermes,kiro,aider,continue,amazonq,jules", "--project", inst_proj, "--uninstall", env=inst_env)
+check("installer: --uninstall removes what it wrote, keeps the user's own text and leaves no empty folders",
+      r_e.returncode == 0 and (inst_proj / "AGENTS.md").read_text(encoding="utf-8").strip() == "# Team notes" and not (inst_proj / ".continue").exists() and not (inst_proj / "RAMPWISE.md").exists()
+      and not (inst_home / ".agents").exists() and not (inst_home / ".kiro").exists() and inst_home.exists() and inst_proj.exists(), r_e.stdout[-300:] + r_e.stderr[-300:])
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

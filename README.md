@@ -6,7 +6,7 @@
 
 Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
 
-> **Status: v0.5.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+> **Status: v0.5.1, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
 [![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
 *A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*
@@ -45,18 +45,20 @@ codex plugin marketplace add Azahir21/rampwise
 ```
 then open `/plugins` and install *rampwise*. Codex plugins do not ship subagents: the skills work without them.
 
-**Any other harness that supports Agent Skills**, or if you prefer plain files:
+**Any other AI coding tool**: one installer knows where 30 tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, and an instructions-file fallback for Aider, Continue, Amazon Q and Jules):
 ```text
 git clone https://github.com/Azahir21/rampwise
-python rampwise/install.py --target agents      # copies skills to ~/.agents/skills
-python rampwise/install.py --target claude      # copies skills and subagents to ~/.claude
+python rampwise/install.py --list                   # tools, folders, how well each was checked
+python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
+python rampwise/install.py --tool all --dry-run     # preview
 ```
+Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
 
 ## Updates (auto-update)
 - **Claude Code:** third-party marketplaces do **not** auto-update by default. Turn it on: `/plugin` -> *Marketplaces* -> *rampwise* -> *Enable auto-update*. A plugin updates when its `version` changes, and this repository bumps the version on every release. Manual: `claude plugin update rampwise@rampwise`, then `/reload-plugins`.
 - **Claude Code, always on:** per Anthropic's docs the marketplace entry in your settings can carry `autoUpdate` (`extraKnownMarketplaces`); check the current docs for the exact shape, and note that updates apply after `/reload-plugins` or the next launch.
 - **Codex:** `codex plugin marketplace upgrade rampwise` (the docs do not describe automatic plugin updates).
-- **install.py users:** `python install.py --update` runs `git pull --ff-only` and reinstalls.
+- **install.py users:** `python install.py --update --tool <your tool>` runs `git pull --ff-only` and reinstalls. Remove with `--uninstall`.
 - Your personal data is **not** in the plugin folder, so updates never overwrite it.
 
 ## First run
