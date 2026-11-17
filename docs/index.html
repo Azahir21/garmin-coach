@@ -28,6 +28,7 @@
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Windows, macOS, Linux (runs inside an AI agent such as Claude Code)",
       "softwareVersion": "0.5.1",
+      "dateModified": "2026-11-17",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "url": "https://azahir21.github.io/rampwise/",
       "downloadUrl": "https://github.com/Azahir21/rampwise/releases/latest",
@@ -46,7 +47,7 @@
         {"@type": "Question", "name": "Is Rampwise free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is licensed under Apache-2.0. You need an AI agent client such as Claude Code, which has its own terms and costs. Garmin data access, if you use it, needs your own Garmin account with Personal API access."}},
         {"@type": "Question", "name": "Do I need a Garmin watch?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can give a few numbers (event, date, level, weekly hours, days per week) and get a full plan with no Garmin account. With Garmin data it can also adapt your plan from your real training and recovery."}},
         {"@type": "Question", "name": "Which events does it plan?", "acceptedAnswer": {"@type": "Answer", "text": "Running: 5 km, 10 km, half marathon, marathon, 50 km ultra. Triathlon: sprint, Olympic, 70.3, Ironman. Duathlon: sprint and standard. Cycling: gran fondo (100 km), century (160 km), ultra ride (300 km). Open-water swimming: 1.5 km, 5 km, 10 km. Plans run base, build, peak and taper with a lighter week every fourth week."}},
-        {"@type": "Question", "name": "Can I export the plan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files come from the Garmin-history planner and need your heart-rate data."}},
+        {"@type": "Question", "name": "Can I export the plan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files for runs and rides are written when your heart-rate data are known (zone first, custom bpm second); swims have no .fit file."}},
         {"@type": "Question", "name": "Is Rampwise affiliated with Garmin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read."}},
         {"@type": "Question", "name": "Does my data leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent."}},
         {"@type": "Question", "name": "Does it replace a coach or a doctor?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician."}},
@@ -158,15 +159,18 @@ code{font:.88em ui-monospace,Consolas,monospace;background:color-mix(in srgb,var
   <h2>How it works</h2>
   <p class="sub">Three steps. Nothing is guessed: it asks for your numbers, and says where an answer is an estimate.</p>
   <div class="steps">
-    <div class="step"><h3>Tell it your race</h3><p>Event, date, level, hours per week and days you can train. Or connect your Garmin data and let it read your last weeks of training.</p></div>
+    <div class="step"><h3>Tell it your goal</h3><p>A race: event, date, level, hours per week and days you can train. No race yet: it builds your aerobic base for the sports you choose. Or connect your Garmin data and let it read your last weeks of training.</p></div>
     <div class="step"><h3>Get your plan</h3><p>Open it in the plan viewer, send it to your calendar, Zwift or trainer app, and see why each rule is there.</p></div>
     <div class="step"><h3>Adapt as you go</h3><p>Each morning it re-checks tomorrow against your recovery and risk flags, and reports how the week compared with the last.</p></div>
   </div>
   <pre><code># no Garmin needed: five numbers are enough
-python event_plan.py --event olympic-tri --event-date 2027-06-20 --level intermediate \
+python plan.py --event olympic-tri --event-date 2027-06-20 --level intermediate \
   --hours-now 6 --max-hours 9 --days 6
-python plan_viewer.py plan.json      # one interactive HTML page
-python export_plan.py plan.json      # .ics  .csv  .zwo  .mrc</code></pre>
+# no race yet? build your aerobic base instead (2 to 52 weeks, default 12)
+python plan.py --goal base --from-garmin --sports run,bike,swim --level intermediate --max-hours 9
+# each run prints where it saved plan.json (in ~/rampwise-coach/plans/); use that path:
+python plan_viewer.py PLAN.json      # one interactive HTML page
+python export_plan.py PLAN.json --format all   # .ics  .csv  .zwo  .mrc, and Garmin .fit if your heart-rate data are known</code></pre>
 </section>
 
 <section id="evidence">
@@ -177,6 +181,15 @@ python export_plan.py plan.json      # .ics  .csv  .zwo  .mrc</code></pre>
     <div class="lab"><b class="p">practice</b><p>A coaching convention. Example: a lighter week every fourth week, and the swim/bike/run split for each distance.</p></div>
     <div class="lab"><b class="g">gap</b><p>Nothing read supports it. Example: brick sessions as such. Shown openly so you can change it.</p></div>
   </div>
+  <h3 style="margin-top:22px">How the labels work</h3>
+  <p>Every rule in a Rampwise plan or check carries one of three labels. <b>Research</b> means a published study supports the direction of the rule, and the reference says whether the full text or only the abstract was read. <b>Practice</b> means a coaching convention with no study behind it, such as a lighter week every fourth week. <b>Gap</b> means nothing read supports it, and the plan says so. A rule never claims more than its source: observational studies are called observational, and where studies disagree the rule is marked weak.</p>
+  <p>Papers read in full, among others:</p>
+  <ul>
+    <li>Frandsen et al. 2025, <em>British Journal of Sports Medicine</em>: in about 5,200 runners, running far beyond the longest run of the last 30 days went with more overuse injuries, while week-to-week jumps did not (<a href="https://doi.org/10.1136/bjsports-2024-109380">doi</a>). Observational.</li>
+    <li>Walsh 2019, <em>Sports</em>: the bike-to-run transition costs triathletes pace, which is why brick runs in the plans stay short (<a href="https://doi.org/10.3390/sports7050099">doi</a>).</li>
+    <li>Guevara et al. 2024, <em>Journal of Sport and Health Science</em>: in short-course triathletes, running causes most overuse injuries; stomach and heart problems were linked to water quality and heat (<a href="https://doi.org/10.1016/j.jshs.2023.03.002">doi</a>).</li>
+    <li>Tipton et al. 2014, <em>Extreme Physiology &amp; Medicine</em>: open-water swimming in cold and warm water; the authors call the evidence for the usual temperature limits weak (<a href="https://doi.org/10.1186/2046-7648-3-12">doi</a>).</li>
+  </ul>
   <p class="note" style="margin-top:16px">Honest status: experimental, built and tested on one person's data. Not tested on other watches or AI clients yet, and no plan can promise a finish time. Read the <a href="https://github.com/Azahir21/rampwise/blob/main/DISCLAIMER.md">disclaimer</a>.</p>
 </section>
 
@@ -190,8 +203,10 @@ python export_plan.py plan.json      # .ics  .csv  .zwo  .mrc</code></pre>
     <div class="pane p1"><pre><code>/plugin marketplace add Azahir21/rampwise
 /plugin install rampwise@rampwise</code></pre><p>Then ask: <em>"Set up my Rampwise coach."</em> It interviews you (goals, injuries, equipment, schedule) before it plans anything.</p></div>
     <div class="pane p2"><pre><code>git clone https://github.com/Azahir21/rampwise
-python rampwise/install.py --target agents</code></pre><p>Copies the skills to <code>~/.agents/skills</code> for Codex and other Agent Skills clients (untested). Use <code>--target claude</code> for Claude Code files.</p></div>
-    <div class="pane p3"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --target claude</code> (or <code>--target agents</code>).</p></div>
+python rampwise/install.py --list                   # tools, folders, how well each was checked
+python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
+python rampwise/install.py --tool all --dry-run     # preview</code></pre><p>One installer knows where 30 AI coding tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules). Folders come from each tool's official documentation; we ran only Claude Code ourselves. Cloud-only agents cannot reach your Garmin data. <a href="https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md">Details and caveats per tool</a>.</p></div>
+    <div class="pane p3"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --tool claude-code</code> (or <code>--tool codex</code>, <code>--tool cursor</code> ... see <code>--list</code>).</p></div>
   </div>
   <p class="sub" style="margin-top:6px">Using Garmin data too? Install <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> (MIT, by Mason Levy), Python 3.10+, and <code>pip install fitdecode</code>.</p>
 </section>
@@ -202,7 +217,7 @@ python rampwise/install.py --target agents</code></pre><p>Copies the skills to <
   <details><summary>Is Rampwise free?</summary><p>Yes. It is licensed under Apache-2.0. You need an AI agent client such as Claude Code, which has its own terms and costs. Garmin data access, if you use it, needs your own Garmin account with Personal API access.</p></details>
   <details><summary>Do I need a Garmin watch?</summary><p>No. Give a few numbers (event, date, level, weekly hours, days per week) and get a full plan with no Garmin account. With Garmin data it can also adapt your plan from your real training and recovery.</p></details>
   <details><summary>Which events does it plan?</summary><p>Running: 5 km, 10 km, half marathon, marathon, 50 km ultra. Triathlon: sprint, Olympic, 70.3, Ironman. Duathlon: sprint and standard. Cycling: gran fondo (100 km), century (160 km), ultra ride (300 km). Open-water swimming: 1.5 km, 5 km, 10 km. Plans run base, build, peak and taper with a lighter week every fourth week.</p></details>
-  <details><summary>Can I export the plan?</summary><p>Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files come from the Garmin-history planner and need your heart-rate data.</p></details>
+  <details><summary>Can I export the plan?</summary><p>Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files for runs and rides are written when your heart-rate data are known (zone first, custom bpm second); swims have no .fit file.</p></details>
   <details><summary>Is Rampwise affiliated with Garmin?</summary><p>No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read.</p></details>
   <details><summary>Does my data leave my computer?</summary><p>Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent. See the <a href="https://github.com/Azahir21/rampwise/blob/main/PRIVACY.md">privacy notes</a>.</p></details>
   <details><summary>Does it replace a coach or a doctor?</summary><p>No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician.</p></details>
@@ -210,6 +225,6 @@ python rampwise/install.py --target agents</code></pre><p>Copies the skills to <
 </section>
 </div>
 
-<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
+<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. Last updated 2026-11-17 (v0.5.1). <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
 </body>
 </html>

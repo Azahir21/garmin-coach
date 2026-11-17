@@ -71,9 +71,7 @@ Subagents cannot launch other subagents; you orchestrate. Each returns a short h
 | Calendar sync | "put the plan in my calendar", weekly refresh | planner drafts; **you** write the events (see below) |
 | Brick check | "how was my brick?", "run after the bike" | analyze (`latest_activity.py` shows the brick run against your last normal run), load (bricks per week), planner notes on bricks |
 | Plan with no target | "I want to improve my endurance / aerobic base" (no race) | `coach-planner` -> `plan.py --goal base --from-garmin --sports ...` (ask level, hours available, which sports); adapt daily with `coach-adapt` |
-| Event plan (any sport) | "plan my Olympic tri / duathlon / gran fondo / 5 km swim / marathon" | `coach-planner` -> `event_plan.py` (works without Garmin data; ask first for level, hours, days, longest sessions, leg-pain history); then `plan_viewer.py`, `export_plan.py`; adapt it daily with `coach-adapt` |
-| Brick check | "how was my brick?", "run after the bike" | analyze (`latest_activity.py` shows the brick run against your last normal run), load (bricks per week), planner notes on bricks |
-| Event plan (any sport) | "plan my Olympic tri / duathlon / gran fondo / 5 km swim / marathon" | `coach-planner` -> `event_plan.py` (works without Garmin data; ask first for level, hours, days, longest sessions, leg-pain history); then `plan_viewer.py`, `export_plan.py`; adapt it daily with `coach-adapt` |
+| Event plan (any sport) | "plan my Olympic tri / duathlon / gran fondo / 5 km swim / marathon" | `coach-planner` -> `plan.py --event ...` (works without Garmin data; ask first for level, hours, days, longest sessions, leg-pain history); then `plan_viewer.py`, `export_plan.py`; adapt it daily with `coach-adapt` |
 | Race readiness | "am I ready for my long event?" | aerobic (durability on long sessions), load (longest run/ride, ramp), fueling, heat; `paces.py` for race-time estimates; evidence in `references/evidence-map.md` |
 | Why? | "why is my HR high / why do I fade?" | heat first, then recovery, fueling, aerobic |
 
