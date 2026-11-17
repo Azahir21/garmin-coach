@@ -70,6 +70,7 @@ Subagents cannot launch other subagents; you orchestrate. Each returns a short h
 | Goal progress | "how far is my race goal?", "how far is my ride speed goal?" | planner (`ride_check.py`, time trial -> `paces.py`) |
 | Calendar sync | "put the plan in my calendar", weekly refresh | planner drafts; **you** write the events (see below) |
 | Brick check | "how was my brick?", "run after the bike" | analyze (`latest_activity.py` shows the brick run against your last normal run), load (bricks per week), planner notes on bricks |
+| Other watch or Strava | "analyze this .fit file", "my COROS/Wahoo/Suunto/Polar run", "my Strava activity" | aerobic: `analyze_activity.py --fit-file FILE` or `--strava-json FILE` (one activity; everything else stays Garmin-only; see `docs/OTHER-WATCHES.md`) |
 | Plan with no target | "I want to improve my endurance / aerobic base" (no race) | `coach-planner` -> `plan.py --goal base --from-garmin --sports ...` (ask level, hours available, which sports); adapt daily with `coach-adapt` |
 | Event plan (any sport) | "plan my Olympic tri / duathlon / gran fondo / 5 km swim / marathon" | `coach-planner` -> `plan.py --event ...` (works without Garmin data; ask first for level, hours, days, longest sessions, leg-pain history); then `plan_viewer.py`, `export_plan.py`; adapt it daily with `coach-adapt` |
 | Race readiness | "am I ready for my long event?" | aerobic (durability on long sessions), load (longest run/ride, ramp), fueling, heat; `paces.py` for race-time estimates; evidence in `references/evidence-map.md` |

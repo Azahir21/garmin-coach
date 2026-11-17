@@ -6,7 +6,7 @@
 
 Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
 
-> **Status: v0.5.2, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+> **Status: v0.6.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
 [![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
 *A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*
@@ -53,6 +53,9 @@ python rampwise/install.py --tool codex             # or cursor, zed, goose, ...
 python rampwise/install.py --tool all --dry-run     # preview
 ```
 Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
+
+## Other watch brands and Strava
+The aerobic analysis of one activity also works on a `.fit` file from any maker (`analyze_activity.py --fit-file FILE`) and, as an untested draft, on Strava data saved as JSON (`--strava-json FILE`). Readiness, load and reports are still Garmin-only. Details, what each brand leaves out, and Strava's subscription and terms: [docs/OTHER-WATCHES.md](docs/OTHER-WATCHES.md).
 
 ## Updates (auto-update)
 - **Claude Code:** third-party marketplaces do **not** auto-update by default. Turn it on: `/plugin` -> *Marketplaces* -> *rampwise* -> *Enable auto-update*. A plugin updates when its `version` changes, and this repository bumps the version on every release. Manual: `claude plugin update rampwise@rampwise`, then `/reload-plugins`.

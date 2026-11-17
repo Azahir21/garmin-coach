@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 - FIT files from any watch brand, Strava draft
+- **Other watch brands:** `analyze_activity.py --fit-file FILE` analyses a `.fit` file (or the Garmin `.zip`) from any maker: efficiency, drift and durability for runs and rides, pace per 100 m and drift for pool swims, the legs of multisport files. The reader is tolerant of what each brand leaves out (speed worked out from distance, missing ascent, UTC times, no heart rate) and says so. Tested on synthetic files only.
+- **Strava (draft):** `--strava-json FILE` reads Strava API activity and streams saved as JSON, following Strava's documented field names (three stream shapes accepted). Never run against a live account; Strava needs a subscription to create an API app and its agreement restricts how the data may be used: see `docs/OTHER-WATCHES.md`.
+
 ## 0.5.2 - project page and skill text follow the one planner
 - The project page shows the tool installer (`--tool`, `--list`), the `plan.py` commands (race or aerobic base) and where plans are saved; the export FAQ matches the one planner (`.fit` for runs and rides when heart-rate data are known). It gains a short "How the labels work" explainer, four papers read in full with DOI links, and a visible and structured last-updated date. Sitemap dates corrected.
 - The head coach and planner skills point at `plan.py`; two duplicated routing rows removed.

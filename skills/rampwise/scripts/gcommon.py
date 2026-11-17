@@ -280,6 +280,21 @@ def fit_zip(g, activity_id):
     return path
 
 
+def fit_bytes(path):
+    """Bytes of a FIT file given a .fit file or a .zip that contains one (Garmin's export is a zip)."""
+    p = Path(path)
+    head = p.read_bytes()[:16] if p.suffix.lower() != ".zip" else b""
+    if p.suffix.lower() == ".zip" or head[:2] == b"PK":
+        with zipfile.ZipFile(p) as z:
+            name = next((n for n in z.namelist() if n.lower().endswith(".fit")), None)
+            if name is None:
+                raise SystemExit(f"no .fit file inside {p.name}")
+            return z.read(name)
+    if head[8:12] != b".FIT":
+        raise SystemExit(f"{p.name} does not look like a FIT file (a .fit activity file or the .zip Garmin exports is expected)")
+    return p.read_bytes()
+
+
 def read_fit(zip_path, with_laps=False):
     """Per-second records: list of dicts with t (s since start), hr, speed (m/s), alt (m), power, cadence, dist (m).
     GPS positions are deliberately dropped. with_laps=True returns (records, laps) where each lap is
@@ -288,9 +303,7 @@ def read_fit(zip_path, with_laps=False):
         import fitdecode
     except ImportError:
         raise SystemExit("fitdecode is missing: run  python -m pip install --user fitdecode")
-    with zipfile.ZipFile(zip_path) as z:
-        name = next(n for n in z.namelist() if n.lower().endswith(".fit"))
-        data = z.read(name)
+    data = fit_bytes(zip_path)
     recs, t0, laps = [], None, []
     with fitdecode.FitReader(io.BytesIO(data)) as fr:
         for f in fr:
@@ -310,7 +323,7 @@ def read_fit(zip_path, with_laps=False):
                 "t": (ts - t0).total_seconds(),
                 "hr": f.get_value("heart_rate", fallback=None),
                 "speed": f.get_value("enhanced_speed", fallback=None) if f.has_field("enhanced_speed") else f.get_value("speed", fallback=None),
-                "alt": f.get_value("enhanced_altitude", fallback=None),
+                "alt": f.get_value("enhanced_altitude", fallback=None) if f.has_field("enhanced_altitude") else f.get_value("altitude", fallback=None),
                 "power": f.get_value("power", fallback=None),
                 "cadence": f.get_value("cadence", fallback=None),
                 "dist": f.get_value("distance", fallback=None),

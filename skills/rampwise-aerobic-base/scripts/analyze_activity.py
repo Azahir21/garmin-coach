@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Aerobic analysis of ONE Garmin activity from its FIT file (runs and rides: efficiency, decoupling, drift; swims: pace per 100 m, rest share and a lap-based decoupling; multisport: the legs): efficiency factor, decoupling, HR drift,
+"""Aerobic analysis of ONE activity from its FIT data (runs and rides: efficiency, decoupling, drift; swims: pace per 100 m, rest share and a lap-based decoupling; multisport: the legs): efficiency factor, decoupling, HR drift,
 durability, cadence fade (bike), time in HR zones, and whether the numbers can be trusted.
 
 Usage:
-  analyze_activity.py ACTIVITY_ID [--json] [--lthr N]
+  analyze_activity.py ACTIVITY_ID [--json]            a Garmin activity (downloaded through your own Garmin server)
+  analyze_activity.py --fit-file FILE [--sport run|bike|swim] [--json]    a .fit file (or the .zip Garmin exports) from ANY watch brand: Garmin, Wahoo, COROS, Suunto, Polar ...
+  analyze_activity.py --strava-json FILE [--sport run|bike] [--json]      Strava API data an agent saved as JSON (see activity_sources.py; not run against a live account)
+Files from other brands are read tolerantly: missing speed is worked out from distance, missing heart rate or ascent is reported, and Garmin-only extras (HR zones from
+your Garmin account, watch-marked warm-up laps on other brands) are used only when present.
 
 Method (formulas and thresholds adapted from tomasstankovic/running-coach `analyze_session.py`, MIT; the
 FIT reading, moving-time handling and reliability checks are new):
@@ -132,18 +136,9 @@ def pick_zones(zones_res, sport):
 
 
 def _fit_messages(zip_path, names):
-    """Raw FIT messages of the given kinds (lap, session) as plain dicts. GPS positions are not read."""
-    import fitdecode
-    import io
-    import zipfile
-    with zipfile.ZipFile(zip_path) as z:
-        data = z.read(next(n for n in z.namelist() if n.lower().endswith(".fit")))
-    out = {n: [] for n in names}
-    with fitdecode.FitReader(io.BytesIO(data)) as fr:
-        for f in fr:
-            if isinstance(f, fitdecode.FitDataMessage) and f.name in out:
-                out[f.name].append({fld.name: fld.value for fld in f.fields if fld.name not in ("start_position_lat", "start_position_long", "end_position_lat", "end_position_long")})
-    return out
+    """Raw FIT messages of the given kinds (lap, session) as plain dicts, from a .fit file or the .zip Garmin exports. GPS positions are not read."""
+    import activity_sources
+    return activity_sources.read_messages(gcommon.fit_bytes(zip_path), tuple(names))
 
 
 def swim_analysis(laps_in, summary):
@@ -231,19 +226,50 @@ def print_swim(r):
 
 def print_multi(r):
     print(f"MULTISPORT {r['start'][:16]}: {r['name']}")
+    if not r["legs"]:
+        print("  " + r["note"])
+        return
     for l in r["legs"]:
         extra = (f", pace {l['pace_s_per_km'] // 60}:{l['pace_s_per_km'] % 60:02d}/km" if "pace_s_per_km" in l else f", pace {l['pace_s_per_100m'] // 60}:{l['pace_s_per_100m'] % 60:02d}/100 m" if "pace_s_per_100m" in l else f", {l['speed_kmh']} km/h" if "speed_kmh" in l else "")
         print(f"  {l['sport']:10} {l['minutes']} min, {l['km']} km{extra}, HR {l['avg_hr']}")
     print("  " + r["note"])
 
 
-def analyze(g, activity_id, zones_res=None):
+def garmin_source(g, activity_id):
+    """The same dict activity_sources returns, for an activity on your own Garmin account."""
     s = gcommon.activity_summary(g, activity_id)
+    z = gcommon.fit_zip(g, activity_id)
     if s["sport"] in ("swim", "multi"):
-        m = _fit_messages(gcommon.fit_zip(g, activity_id), ("lap", "session"))
-        return swim_analysis(m["lap"], s) if s["sport"] == "swim" else multisport_legs(m["session"], s)
-    recs, laps = gcommon.read_fit(gcommon.fit_zip(g, activity_id), with_laps=True)
+        m = _fit_messages(z, ("lap", "session"))
+        return {"summary": s, "recs": [], "laps": [], "lap_msgs": m["lap"], "session_msgs": m["session"], "origin": {"kind": "garmin", "notes": []}}
+    recs, laps = gcommon.read_fit(z, with_laps=True)
+    return {"summary": s, "recs": recs, "laps": laps, "lap_msgs": [], "session_msgs": [], "origin": {"kind": "garmin", "notes": []}}
+
+
+def analyze(g, activity_id, zones_res=None):
+    return analyze_source(garmin_source(g, activity_id), zones_res)
+
+
+def analyze_source(src, zones_res=None):
+    s, recs, laps = src["summary"], src["recs"], src["laps"]
+    res = _analyze(s, recs, laps, src, zones_res)
+    res["source"] = {k: v for k, v in src["origin"].items() if v}
+    return res
+
+
+def _analyze(s, recs, laps, src, zones_res):
+    if s["sport"] in ("swim", "multi"):
+        if s["sport"] == "swim":
+            if not src["lap_msgs"]:
+                return {"kind": "swim", "id": s["id"], "name": s["name"], "start": str(s["start"]), "elapsed_min": round(s["min"]), "avg_hr": s["avg_hr"], "flags": [],
+                        "error": "a swim needs lap data (distance and time per length); Strava streams and files without laps do not have it: export the FIT file from your watch's own app"}
+            return swim_analysis(src["lap_msgs"], s)
+        if not src["session_msgs"]:
+            return {"kind": "multi", "id": s["id"], "name": s["name"], "start": str(s["start"]), "legs": [], "note": "no session data: a multisport activity needs the FIT file from the watch"}
+        return multisport_legs(src["session_msgs"], s)
     sport = s["sport"]
+    if sport == "strength":
+        return {"id": s["id"], "name": s["name"], "type": s["type"], "sport": sport, "start": str(s["start"]), "error": "a strength session has no pace or speed: the aerobic analysis does not apply (use rampwise-strength)"}
     # laps the watch marked as warm-up / cool-down / rest are not part of the steady effort
     exclude = [(l["start"], l["end"]) for l in laps if l["intensity"] in ("warmup", "cooldown", "rest", "recovery")]
     has_warmup = any(l["intensity"] == "warmup" for l in laps)
@@ -256,7 +282,9 @@ def analyze(g, activity_id, zones_res=None):
            "warmup_cooldown_removed": bool(exclude)}
     flags = []
     if not pts_all or total_mt < skip + 900:
-        res["error"] = "too little moving data with heart rate after the warm-up"
+        res["error"] = ("no heart-rate data in this activity: efficiency and drift need it" if not any(r.get("hr") for r in recs) else
+                        "no speed data in this activity (and no distance to work it out from)" if not any(r.get("speed") for r in recs) else
+                        "too little moving data with heart rate after the warm-up")
         return res
     pts = [p for p in pts_all if p[0] >= skip]
     if n_rest >= 2:
@@ -324,7 +352,17 @@ def analyze(g, activity_id, zones_res=None):
     return res
 
 
+def print_source(r):
+    o = r.get("source") or {}
+    if o.get("kind") in ("fit-file", "strava-json"):
+        who = " ".join(x for x in (o.get("manufacturer"), o.get("product"), o.get("device")) if x) or "unknown device"
+        print(f"source: {'FIT file' if o['kind'] == 'fit-file' else 'Strava JSON'} {o.get('file', '')} ({who}). Garmin heart-rate zones are only available for Garmin activities.")
+        for n in o.get("notes", []):
+            print(f"note: {n}")
+
+
 def print_report(r):
+    print_source(r)
     if r.get("kind") == "swim":
         return print_swim(r)
     if r.get("kind") == "multi":
@@ -362,15 +400,26 @@ def print_report(r):
 def main():
     gcommon.utf8_stdout()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("activity_id", type=int)
+    ap.add_argument("activity_id", type=int, nargs="?", help="a Garmin activity id")
+    ap.add_argument("--fit-file", help=".fit file (or the .zip Garmin exports) from any watch brand")
+    ap.add_argument("--strava-json", help="Strava API activity + streams saved as JSON")
+    ap.add_argument("--sport", choices=["run", "bike", "swim"], help="override the sport when the file does not say it")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
-    with gcommon.Garmin() as g:
-        try:
-            zones = g.call("garmin_get_heart_rate_zones")
-        except gcommon.GarminError:
-            zones = None
-        r = analyze(g, a.activity_id, zones)
+    chosen = [x for x in (a.activity_id, a.fit_file, a.strava_json) if x is not None]
+    if len(chosen) != 1:
+        ap.error("give exactly one of: an ACTIVITY_ID (Garmin), --fit-file FILE, --strava-json FILE")
+    if a.fit_file or a.strava_json:
+        import activity_sources
+        src = activity_sources.load_fit_file(a.fit_file, a.sport) if a.fit_file else activity_sources.load_strava_json(a.strava_json, a.sport)
+        r = analyze_source(src)
+    else:
+        with gcommon.Garmin() as g:
+            try:
+                zones = g.call("garmin_get_heart_rate_zones")
+            except gcommon.GarminError:
+                zones = None
+            r = analyze(g, a.activity_id, zones)
     if a.json:
         print(json.dumps(r, ensure_ascii=False, default=str))
     else:

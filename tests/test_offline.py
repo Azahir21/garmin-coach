@@ -468,6 +468,69 @@ check("installer: --uninstall removes what it wrote, keeps the user's own text a
       r_e.returncode == 0 and (inst_proj / "AGENTS.md").read_text(encoding="utf-8").strip() == "# Team notes" and not (inst_proj / ".continue").exists() and not (inst_proj / "RAMPWISE.md").exists()
       and not (inst_home / ".agents").exists() and not (inst_home / ".kiro").exists() and inst_home.exists() and inst_proj.exists(), r_e.stdout[-300:] + r_e.stderr[-300:])
 
+# ---------------------------------------------------------------- activities from other watch brands and from Strava
+sys.path.insert(0, str(ROOT / "tests"))
+import make_fit_activity as mfa
+import activity_sources as asrc
+
+oth = TMP / "other_brands"
+oth.mkdir(exist_ok=True)
+AA = SK / "rampwise-aerobic-base" / "scripts" / "analyze_activity.py"
+f_g = mfa.make(oth / "garmin.fit", "running", minutes=70, manufacturer=1, power=0)
+f_s = mfa.make(oth / "other_no_speed.fit", "running", minutes=70, manufacturer=23, with_speed=False, with_altitude=False, power=0)
+f_h = mfa.make(oth / "no_hr.fit", "cycling", minutes=70, with_hr=False, speed=8)
+rg = json.loads(run(AA, "--fit-file", f_g, "--json").stdout)
+rs = json.loads(run(AA, "--fit-file", f_s, "--json").stdout)
+check("fit-file: a Garmin-style file gives efficiency, decoupling and a reliable flag, and names the source", rg["sport"] == "run" and rg["reliable"] and "decoupling_pct" in rg and rg["source"]["kind"] == "fit-file" and rg["metric"] == "speed:HR", str(rg)[:300])
+check("fit-file: a file from another maker with no speed and no altitude fields gives the same result (speed worked out from distance) and says so",
+      abs(rs["decoupling_pct"] - rg["decoupling_pct"]) < 0.3 and any("worked out from distance" in n for n in rs["source"]["notes"]), str(rs)[:300])
+rh = run(AA, "--fit-file", f_h)
+check("fit-file: a file with no heart rate says so instead of failing", rh.returncode == 0 and "no heart-rate data" in rh.stdout, rh.stdout[-200:] + rh.stderr[-200:])
+import zipfile as _zf
+with _zf.ZipFile(oth / "export.zip", "w") as _z:
+    _z.write(f_g, "activity.fit")
+rz = json.loads(run(AA, "--fit-file", oth / "export.zip", "--json").stdout)
+check("fit-file: the .zip that Garmin exports works as well as a bare .fit", abs(rz["decoupling_pct"] - rg["decoupling_pct"]) < 0.01)
+bad = oth / "notfit.fit"
+bad.write_bytes(b"this is not a fit file at all")
+rb = run(AA, "--fit-file", bad)
+check("fit-file: a file that is not FIT is refused with a clear message", rb.returncode != 0 and "does not look like a FIT file" in (rb.stdout + rb.stderr), rb.stdout[-120:] + rb.stderr[-200:])
+rn = run(AA)
+check("fit-file: giving no source is an error that lists the three ways", rn.returncode != 0 and "--fit-file" in rn.stderr)
+f_sw = mfa.make(oth / "swim.fit", "swimming", minutes=30, speed=0.0, swim_laps=[(100, 105 + (i % 2), 130 + i // 3) for i in range(12)])
+rsw = json.loads(run(AA, "--fit-file", f_sw, "--json").stdout)
+check("fit-file: a pool swim file is read from its laps (pace per 100 m)", rsw.get("kind") == "swim" and rsw.get("swim_m") == 1200 and 100 <= rsw["pace_s_per_100m"] <= 110, str(rsw)[:300])
+f_tri = mfa.make(oth / "multi.fit", sessions=[("cycling", "generic", 2400, 20000, 140), ("running", "generic", 1500, 5000, 155)], minutes=10)
+rtri = json.loads(run(AA, "--fit-file", f_tri, "--json").stdout)
+check("fit-file: a multisport file is shown as its legs", rtri.get("kind") == "multi" and [l["sport"] for l in rtri["legs"]] == ["cycling", "running"], str(rtri)[:300])
+# Strava JSON in the three stream shapes an MCP server may return
+src_g = asrc.load_fit_file(f_g)
+ts_ = [round(r["t"]) for r in src_g["recs"]]
+hr_ = [r["hr"] for r in src_g["recs"]]
+vel_ = [round(r["speed"], 3) for r in src_g["recs"]]
+act_ = {"id": 123, "name": "Test run", "sport_type": "Run", "start_date_local": "2026-11-01T06:00:00Z", "elapsed_time": 4200, "moving_time": 4200, "distance": 12180.0, "average_heartrate": 144.0, "total_elevation_gain": 0.0, "device_name": "COROS PACE 3"}
+shapes = {"dict": {"time": {"data": ts_}, "heartrate": {"data": hr_}, "velocity_smooth": {"data": vel_}},
+          "plain": {"time": ts_, "heartrate": hr_, "velocity_smooth": vel_},
+          "list": [{"type": "time", "data": ts_}, {"type": "heartrate", "data": hr_}, {"type": "velocity_smooth", "data": vel_}]}
+decs = []
+for nm, st in shapes.items():
+    pj = oth / f"strava_{nm}.json"
+    pj.write_text(json.dumps({"activity": act_, "streams": st}), encoding="utf-8")
+    rj = json.loads(run(AA, "--strava-json", pj, "--json").stdout)
+    decs.append(rj.get("decoupling_pct"))
+    if nm == "dict":
+        rj0 = rj
+check("strava-json: streams in the three shapes (dict of data, plain lists, list of typed streams) give the same drift as the FIT file", all(d is not None and abs(d - rg["decoupling_pct"]) < 0.3 for d in decs), str(decs))
+check("strava-json: the source line names the device and the warm-up note", rj0["source"]["kind"] == "strava-json" and rj0["source"]["device"] == "COROS PACE 3" and rj0["sport"] == "run", str(rj0["source"]))
+pj2 = oth / "strava_swim.json"
+pj2.write_text(json.dumps({"activity": {**act_, "sport_type": "Swim"}, "streams": shapes["plain"]}), encoding="utf-8")
+rj2 = json.loads(run(AA, "--strava-json", pj2, "--json").stdout)
+check("strava-json: a swim from Strava is refused politely (no lap data), pointing to the watch's own FIT export", "lap data" in rj2.get("error", ""), str(rj2)[:200])
+pj3 = oth / "strava_notime.json"
+pj3.write_text(json.dumps({"activity": act_, "streams": {"heartrate": hr_}}), encoding="utf-8")
+r3 = run(AA, "--strava-json", pj3)
+check("strava-json: streams without time give a message that names what to request", r3.returncode != 0 and "time" in (r3.stdout + r3.stderr) and "heartrate" in (r3.stdout + r3.stderr))
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

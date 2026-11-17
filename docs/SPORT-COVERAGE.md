@@ -6,7 +6,7 @@ Checked against the code on 2026-11-17 (updated after the one-planner change). *
 |---|---|---|---|---|---|---|
 | rampwise (head coach) | yes | yes | yes | yes | yes | routing covers event plans, brick check |
 | rampwise-recovery | yes | yes | yes | yes | yes | sport-neutral (HRV, sleep, resting heart rate) |
-| rampwise-aerobic-base | yes | yes | yes | legs | n/a | swims from lap data (reliability flags; wrist HR in water can drop out); multisport shown as legs; trend and hold checks stay run and ride |
+| rampwise-aerobic-base | yes | yes | yes | legs | n/a | swims from lap data (reliability flags; wrist HR in water can drop out); multisport shown as legs; trend and hold checks stay run and ride; `--fit-file` / `--strava-json` read one activity from any watch brand or Strava (synthetic tests only, see OTHER-WATCHES.md) |
 | rampwise-heat-weather | yes | yes | yes (open water) | partial | n/a | `swim_water.py` gives water-temperature guidance (weak evidence); stop rule for all sports; no WBGT cut-off (no source read) |
 | rampwise-load-injury | yes | yes (extrapolation) | partial (no rule: none supported) | partial | partial | swims and multisport counted in weekly minutes; bricks counted, more than 2 in 7 days is noted; the 10 % single-run rule is research for running only |
 | rampwise-strength | n/a | n/a | n/a | n/a | yes | swims and multisport count as cardio for the 3-hour gap; goal profiles for runner, cyclist, triathlon |
