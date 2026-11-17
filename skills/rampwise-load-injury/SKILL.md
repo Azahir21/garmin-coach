@@ -47,6 +47,9 @@ FOR_STRENGTH: heavy lower-body today? yes/no (if two or more flags, no)
 - Strength sessions and non-endurance sports are counted as days but not as load.
 - Ask about current niggles and past injuries (see the profile) and treat any pain that changes gait or worsens during a session as a stop signal. None of the papers read here quantifies prior-injury risk, so no number is given.
 
+## Chronic and acute load (CTL, ATL, TSB)
+`load_check.py` and the weekly and monthly reports also show chronic load (CTL, 42-day average), acute load (ATL, 7-day average) and their balance (TSB = CTL - ATL), built from the watch's own per-activity training load. It is **context, labelled practice**: the constants are a convention, nothing read validates them for injury or form, and no flag, band or acute:chronic ratio comes from them (Impellizzeri 2020; Jones 2017 supports watching sudden changes in load, not a value). Say that when you quote them; never call a TSB "good" or "bad", and do not use them to override the injury rules above. Activities without a load value count as zero and the output says how many.
+
 ## Triathlon, ride and swim (what the evidence does and does not give)
 - Running is where short-course triathletes are hurt most (Guevara 2024, full text); long-distance triathlon has a high overuse burden at the knee and spine (Rhind 2022, Andersen 2013), from low-quality studies.
 - Cycling: control load (moderate evidence); bike-fit measures are not shown to prevent overuse pain (Visentini 2022).

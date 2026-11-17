@@ -235,6 +235,7 @@ def normalize(a):
         "avg_hr": a.get("averageHR"), "max_hr": a.get("maxHR"),
         "gain_m": float(a.get("elevationGain") or 0),
         "te_aerobic": a.get("aerobicTrainingEffect"), "te_anaerobic": a.get("anaerobicTrainingEffect"),
+        "load": a.get("activityTrainingLoad"),                 # Garmin's own training load for the activity (from the watch)
         "lat": a.get("startLatitude"), "lon": a.get("startLongitude"),
     }
 
@@ -335,6 +336,41 @@ def read_fit(zip_path, with_laps=False):
         s = (l["start_ts"] - t0).total_seconds() if t0 else 0.0
         out.append({"start": s, "end": s + l["elapsed"], "intensity": l["intensity"].lower()})
     return recs, out
+
+
+def training_load_series(acts, end, start=None, ctl_days=42, atl_days=7):
+    """Chronic load (CTL), acute load (ATL) and their balance (TSB) from Garmin's per-activity training load.
+
+    Daily load = the sum of `load` (Garmin's activityTrainingLoad) of that day's activities; days without activity are 0.
+    CTL and ATL are exponential moving averages of the daily load with time constants of 42 and 7 days (the usual convention of the
+    fitness-fatigue idea: practice, no source read for these constants); TSB = CTL - ATL at the end of the day. Both averages start at the mean
+    daily load of the first 28 days of the window, so a history that starts mid-training does not begin at zero.
+    Activities without a load value are counted, not guessed. Returns {"series": [...], "coverage": {...}}."""
+    start = start or min((a["date"] for a in acts if a["date"] <= end), default=end)
+    by_day, with_load, without = {}, 0, 0
+    for a in acts:
+        if a["date"] > end or a["date"] < start:
+            continue
+        if a.get("load") is None:
+            without += 1
+            continue
+        with_load += 1
+        by_day[a["date"]] = by_day.get(a["date"], 0.0) + float(a["load"])
+    n = (end - start).days + 1
+    cov = {"window_days": n, "activities_with_load": with_load, "activities_without_load": without, "ctl_days": ctl_days, "atl_days": atl_days,
+           "settled": n >= ctl_days + 28}
+    if not with_load or n < 1:
+        return {"series": [], "coverage": cov}
+    first28 = [by_day.get(start + timedelta(days=i), 0.0) for i in range(min(28, n))]
+    ctl = atl = sum(first28) / len(first28)
+    series = []
+    for i in range(n):
+        d = start + timedelta(days=i)
+        load = by_day.get(d, 0.0)
+        ctl += (load - ctl) / ctl_days
+        atl += (load - atl) / atl_days
+        series.append({"date": d, "load": round(load, 1), "ctl": round(ctl, 1), "atl": round(atl, 1), "tsb": round(ctl - atl, 1)})
+    return {"series": series, "coverage": cov}
 
 
 def week_start(d):

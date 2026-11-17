@@ -184,6 +184,25 @@ def build(mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, late
         blocks.append(("h2", "Volume over the weeks"))
         weekly_chart("weekly_minutes", "Minutes per week by sport", "The last column is the week so far. Reset and deload weeks show as dips.",
                      lambda n: ch.bars(tail(ws["labels"], n), [("Run", tail(ws["run_min"], n), "s1"), ("Ride", tail(ws["bike_min"], n), "s2")] + ([("Swim", tail(ws["swim_min"], n), "s4")] if any(ws["swim_min"]) else []), f"Minutes per week by sport, last {n} weeks", "min"), "12 weeks" if mode == "monthly" else "8 weeks")
+        # ---- training load model (context only; built from Garmin's own per-activity load)
+        lm = gc.training_load_series(acts, today, start=today - timedelta(days=129))
+        if lm["series"]:
+            ser = lm["series"]
+            now_ = ser[-1]
+            ago_ = ser[-29] if len(ser) >= 29 else None
+            blocks.append(("h2", "Training load (context)"))
+            blocks.append(("table", ["", "Now", "4 weeks ago", "What it is"], [
+                ["Chronic load (CTL)", now_["ctl"], ago_["ctl"] if ago_ else "-", "42-day average of your daily Garmin training load"],
+                ["Acute load (ATL)", now_["atl"], ago_["atl"] if ago_ else "-", "7-day average of the same"],
+                ["Balance (TSB)", f"{now_['tsb']:+}", f"{ago_['tsb']:+}" if ago_ else "-", "CTL minus ATL: negative means more recent load than usual, positive means less"]]))
+            lab = [f"{r['date']:%d %b}" for r in ser]
+            chart("load_model", "Chronic and acute load", "Daily Garmin training load smoothed over 42 days (chronic) and 7 days (acute). Context only: no limit is implied.",
+                  {f"{n} weeks": ch.lines(tail(lab, 7 * n), [("Chronic (CTL)", tail([r["ctl"] for r in ser], 7 * n), "s1"), ("Acute (ATL)", tail([r["atl"] for r in ser], 7 * n), "s2")],
+                                          f"Training load, last {n} weeks", "load", dec=0, tick_every=7) for n in (4, 8, 12)}, "8 weeks")
+            c = lm["coverage"]
+            extra = f" {c['activities_without_load']} activities had no Garmin load value and count as zero." if c["activities_without_load"] else ""
+            blocks.append(("p", "Practice, not research: the 42-day and 7-day averages are a coaching convention, and no study read here validates them for injury or form. "
+                                "The acute:chronic ratio is not shown on purpose (Impellizzeri 2020)." + extra))
         if mode == "monthly":
             ds = [today - timedelta(days=i) for i in range(83, -1, -1)]
             mins = [sum(a["min"] for a in acts if a["date"] == d and a["sport"] in ("run", "bike", "swim", "strength")) for d in ds]

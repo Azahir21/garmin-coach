@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+- **Chronic and acute training load (CTL, ATL, TSB).** `load_check.py` and the weekly and monthly reports now show them, built from Garmin's own per-activity training load (`activityTrainingLoad`, which the official Personal API server already returns): CTL = 42-day average, ATL = 7-day average, TSB = CTL minus ATL, with a chart. Context only and labelled practice: no flag, no band, no acute:chronic ratio (Impellizzeri 2020). Jones 2017 (full text) added to the evidence map. Activities without a load value are counted, not guessed.
+
+## Unreleased
 - **Manifests for three more tools:** `gemini-extension.json` (Gemini CLI extensions; `skills/` is discovered by folder), `.antigravity-plugin/plugin.json` (Antigravity CLI plugins) and `.cursor-plugin/plugin.json` (Cursor plugins). Their field names come from each tool's official documentation (read 2026-11-17); none of the three tools was run here, so installs are untested. `check_repo.py` keeps all manifests on the same name and version and rejects fields the schemas do not allow.
 
 ## 0.6.2 - four skills no longer hidden from strict readers

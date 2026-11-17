@@ -17,6 +17,9 @@ What it checks (all numbers come from your activities; the rules and their evide
      Use as a prompt to look closer, never as pass/fail.
   3. REST. Days without any activity in the last 7 / 14 days, and the current run of consecutive training days.
   4. HARD DAYS. Back-to-back days with Garmin aerobic training effect >= 4.0 (Garmin's own metric; a practice rule).
+  5. LOAD MODEL (context, no flag). Chronic load (CTL, 42-day average), acute load (ATL, 7-day average) and their balance (TSB = CTL - ATL),
+     built from Garmin's own per-activity training load. A convention from the fitness-fatigue idea (practice: no source read for the 42/7-day
+     constants). It makes no injury claim and has no pass/fail band: the acute:chronic ratio is deliberately not computed (Impellizzeri 2020).
 Fixed thresholds below are labelled in code; change them only with a reason.
 """
 import argparse
@@ -55,6 +58,22 @@ def main():
 
     out = {"today": str(today), "flags": [], "weeks": [], "notes": []}
     flag = lambda level, msg: out["flags"].append({"level": level, "msg": msg})
+
+    # ---------------- 5. load model (context only)
+    lm = gcommon.training_load_series(acts, today, start=start)
+    if lm["series"]:
+        ser = lm["series"]
+
+        def snap(d):
+            row = next((r for r in ser if r["date"] == d), None)
+            return {"date": str(d), "ctl": row["ctl"], "atl": row["atl"], "tsb": row["tsb"]} if row else None
+
+        now, ago = snap(today), snap(today - timedelta(days=28))
+        out["load_model"] = {"today": now, "four_weeks_ago": ago, "ctl_change_4w": round(now["ctl"] - ago["ctl"], 1) if now and ago else None,
+                             "coverage": lm["coverage"], "weekly": [{"week_start": str(k), "load": round(sum(r["load"] for r in ser if gcommon.week_start(r["date"]) == k), 1),
+                                                                      "ctl_end": [r for r in ser if gcommon.week_start(r["date"]) == k][-1]["ctl"],
+                                                                      "atl_end": [r for r in ser if gcommon.week_start(r["date"]) == k][-1]["atl"]}
+                                                                     for k in sorted({gcommon.week_start(r["date"]) for r in ser})[-8:]]}
 
     # ---------------- weekly table
     weeks = defaultdict(lambda: {"run_min": 0.0, "run_km": 0.0, "bike_min": 0.0, "bike_km": 0.0, "strength": 0, "other_min": 0.0, "swim_min": 0.0, "swim_km": 0.0, "multi_min": 0.0, "bricks": 0, "long_swim_min": 0.0,
@@ -197,6 +216,20 @@ def main():
         print("info ", n)
     print(f"rest: {rest7} day(s) without activity in the last 7, {rest14} in the last 14; current training streak {streak} day(s)")
     print()
+    lmo = out.get("load_model")
+    if lmo and lmo["today"]:
+        t = lmo["today"]
+        print("Training load (Garmin activity load; context only, practice, no injury claim)")
+        print(f"  today: CTL {t['ctl']} (42-day average), ATL {t['atl']} (7-day average), TSB {t['tsb']:+} (CTL minus ATL; negative = more recent load than usual, positive = less)")
+        if lmo["four_weeks_ago"]:
+            print(f"  4 weeks ago: CTL {lmo['four_weeks_ago']['ctl']}, ATL {lmo['four_weeks_ago']['atl']}  ->  CTL change {lmo['ctl_change_4w']:+}")
+        c = lmo["coverage"]
+        if c["activities_without_load"]:
+            print(f"  note: {c['activities_without_load']} of {c['activities_with_load'] + c['activities_without_load']} activities had no Garmin load value and count as zero")
+        if not c["settled"]:
+            print(f"  note: only {c['window_days']} days of history, so CTL is still settling (a 42-day average needs about 10 weeks)")
+        print("  The acute:chronic ratio is not computed on purpose (Impellizzeri 2020). Use these numbers for context, not as a limit.")
+        print()
     if not out["flags"]:
         print("OK   no spike, volume or rest concern found in the data")
     for f in out["flags"]:

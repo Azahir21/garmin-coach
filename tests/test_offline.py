@@ -601,6 +601,22 @@ check("paper fetch: words from the citation find the paper (all words must match
 rc2 = pf.main(["--root", str(proot), "Nobody", "1999"])
 check("paper fetch: no match is reported, not guessed", rc2 == 1)
 
+# ---------------------------------------------------------------- chronic / acute load from Garmin's per-activity training load
+_d0 = date(2026, 1, 1)
+_const = gcm.training_load_series([{"date": _d0 + _td(days=i), "load": 50.0} for i in range(300)], _d0 + _td(days=299))
+check("load model: a constant daily load gives CTL = ATL = the load and a balance of zero", _const["series"][-1]["ctl"] == 50.0 and _const["series"][-1]["atl"] == 50.0 and _const["series"][-1]["tsb"] == 0.0 and _const["coverage"]["settled"])
+_imp = gcm.training_load_series([{"date": _d0 + _td(days=60), "load": 420.0}], _d0 + _td(days=60), start=_d0)["series"][-1]
+check("load model: one load of 420 after a zero history gives ATL 420/7 = 60, CTL 420/42 = 10 and a balance of -50", (_imp["atl"], _imp["ctl"], _imp["tsb"]) == (60.0, 10.0, -50.0), str(_imp))
+_mixed = gcm.training_load_series([{"date": _d0, "load": 30.0}, {"date": _d0, "load": 20.0}, {"date": _d0 + _td(days=1), "load": None}], _d0 + _td(days=1))
+check("load model: two activities on one day add up, an activity without a load value is counted as missing, not guessed", _mixed["series"][0]["load"] == 50.0 and _mixed["coverage"]["activities_without_load"] == 1 and _mixed["series"][1]["load"] == 0.0)
+check("load model: no load values at all gives an empty series, not an error", gcm.training_load_series([{"date": _d0, "load": None}], _d0)["series"] == [])
+check("load model: a short history is marked as not settled yet", not gcm.training_load_series([{"date": _d0, "load": 40.0}], _d0 + _td(days=20))["coverage"]["settled"])
+_acts_l = [{**x, "load": 25.0} for x in big]
+_rl = rp.build("weekly", T0, _acts_l, rrows, athr, plan_f, None, rdy, injr, cmpr, None, None)
+check("report: with Garmin load values the weekly report shows the training-load section, its chart and the practice label", any(blk == ("h2", "Training load (context)") for blk in _rl["blocks"]) and "load_model" in _rl["figs"], "")
+_rn = rp.build("weekly", T0, big, rrows, athr, plan_f, None, rdy, injr, cmpr, None, None)
+check("report: without load values the section is left out instead of showing zeros", not any(blk == ("h2", "Training load (context)") for blk in _rn["blocks"]))
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

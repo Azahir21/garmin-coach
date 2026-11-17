@@ -33,7 +33,7 @@ for k in range(0, 110):
     km = speed * mins * 0.95 / 60
     n += 1
     acts.append({"id": n, "name": f"{sport} {n}", "sport": sport, "date": d, "start": f"{d}T07:00:00", "km": km, "min": mins, "moving_min": mins * 0.95,
-                 "avg_hr": 138 + random.randint(-6, 8), "gain_m": random.randint(10, 160), "te_aerobic": random.choice([2.4, 2.9, 3.2, 4.1])})
+                 "avg_hr": 138 + random.randint(-6, 8), "gain_m": random.randint(10, 160), "te_aerobic": random.choice([2.4, 2.9, 3.2, 4.1]), "load": round(mins * random.uniform(0.35, 0.8), 1)})
 rows = [{"date": str(today - timedelta(days=k)), "hrv": 62 + random.randint(-9, 9), "rhr": 51 + random.randint(-2, 4), "sleep_h": round(random.uniform(5.6, 8.4), 1)} for k in range(110)]
 ath = {"goals": [{"title": "Ride 60 km at 25 km/h", "target_speed_kmh": 25.0, "target_distance_km": 60},
                  {"title": "Run 10 km in 55:00", "target_pace_s_per_km": 330},

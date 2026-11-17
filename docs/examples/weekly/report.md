@@ -2,17 +2,16 @@
 
 SAMPLE with synthetic data (random numbers, nobody's health data). Real reports are made on your own computer from your own Garmin data.
 
-Generated 2026-11-17 07:39 from your own Garmin data. Units: running pace (min/km), cycling km/h.
+Generated 2026-11-17 19:38 from your own Garmin data. Units: running pace (min/km), cycling km/h.
 
 
 ## What stands out
 
 - Readiness today is GREEN.
 - Injury-risk watch: GREEN (0 signals).
-- run minutes: 132 min vs 289 before, down (-54 %)
-- bike minutes: 88 min vs 0 before, up
+- run minutes: 158 min vs 207 before, down (-24 %)
 - strength sessions: 2 sessions vs 0 before, up
-- run average pace 5:53/km vs 5:50/km before (average HR 136 vs 135); pace depends on the route, weather and the mix of easy and hard runs
+- run average pace 5:57/km vs 5:55/km before (average HR 139 vs 134); pace depends on the route, weather and the mix of easy and hard runs
 
 
 ## Recovery
@@ -41,6 +40,8 @@ Generated 2026-11-17 07:39 from your own Garmin data. Units: running pace (min/k
 Questions for you:
 - Any new pain or niggle today? Where, how bad (0-10), and does it change how you walk or run?
 - Is anything worse the morning after training than it was the day before?
+- Riders: any knee, lower-back or neck pain, or numb hands or feet on rides? Does it change after a bike-fit or position change?
+- Runners: any shin, calf, Achilles, knee or foot pain that changes how you run? If you do bricks (run after the bike), does it show up there first?
 
 > Risk flags from data and your own reports, not a diagnosis. Watch data cannot see an injury: pain that changes your gait, keeps rising or lasts more than a few days needs a clinician.
 
@@ -51,16 +52,15 @@ Last 7 days (2026-11-09 to 2026-11-15) against the 7 days before (2026-11-02 to 
 
 | Sport | Last 7 days | Before | Change | km now / before | Pace or speed now / before |
 |---|---|---|---|---|---|
-| Running | 132 min | 289 min | -54 % | 21.3 / 47.0 km | 5:53/km / 5:50/km |
-| Cycling | 88 min | 0 min | +88 | 32.9 / 0 km | 23.46 km/h / - |
+| Running | 158 min | 207 min | -24 % | 25.2 / 33.3 km | 5:57/km / 5:55/km |
+| Cycling | 0 min | 0 min | +0 | 0 / 0 km | - / - |
 | Strength | 2 sessions | 0 sessions | +2 | - | - |
 
-Calendar week so far (2026-11-09 to 2026-11-15): 220 run + ride minutes against 289 on the same days last week.
+Calendar week so far (2026-11-09 to 2026-11-15): 158 run + ride minutes against 207 on the same days last week.
 
-- run minutes: 132 min vs 289 before, down (-54 %)
-- bike minutes: 88 min vs 0 before, up
+- run minutes: 158 min vs 207 before, down (-24 %)
 - strength sessions: 2 sessions vs 0 before, up
-- run average pace 5:53/km vs 5:50/km before (average HR 136 vs 135); pace depends on the route, weather and the mix of easy and hard runs
+- run average pace 5:57/km vs 5:55/km before (average HR 139 vs 134); pace depends on the route, weather and the mix of easy and hard runs
 
 ![Minutes per day by sport](figures/daily_minutes.svg)
 *Stacked by sport. Rest days are empty columns.*
@@ -71,17 +71,15 @@ Calendar week so far (2026-11-09 to 2026-11-15): 220 run + ride minutes against 
 | Date | Sport | Time | km | Pace / speed | Avg HR | Against the last similar one |
 |---|---|---|---|---|---|---|
 | 2026-11-15 | Strength | 53 min | - | - | 145 |  |
-| 2026-11-13 | Run | 39 min | 6.2 | 5:57/km | 133 | 2026-11-11: pace faster by 5 s/km, heart rate -2 bpm |
-| 2026-11-12 | Strength | 74 min | - | - | 142 |  |
-| 2026-11-11 | Run | 37 min | 5.9 | 6:01/km | 135 | 2026-11-02: pace slower by 15 s/km, heart rate +3 bpm |
-| 2026-11-10 | Run | 56 min | 9.2 | 5:46/km | 139 | 2026-11-08: pace faster by 22 s/km, heart rate -2 bpm |
-| 2026-11-09 | Ride | 88 min | 32.9 | 23.5 km/h | 146 | 2026-10-17: speed +1 %, heart rate +10 bpm |
-| 2026-11-08 | Run | 56 min | 8.6 | 6:08/km | 141 | 2026-11-06: pace slower by 28 s/km, heart rate +9 bpm |
-| 2026-11-06 | Run | 73 min | 12.3 | 5:40/km | 132 | 2026-11-05: pace slower by 4 s/km, heart rate -6 bpm |
-| 2026-11-05 | Run | 54 min | 9.1 | 5:37/km | 138 | 2026-11-04: pace faster by 24 s/km, heart rate +5 bpm |
-| 2026-11-04 | Run | 66 min | 10.4 | 6:01/km | 133 | 2026-11-01: pace faster by 4 s/km, heart rate -7 bpm |
-| 2026-11-02 | Run | 40 min | 6.6 | 5:46/km | 132 | 2026-10-15: pace slower by 1 s/km, heart rate -3 bpm |
-| 2026-11-01 | Run | 62 min | 9.7 | 6:05/km | 140 | 2026-10-26: pace slower by 3 s/km, heart rate +4 bpm |
+| 2026-11-14 | Run | 39 min | 6.2 | 5:56/km | 133 | 2026-11-05: pace slower by 17 s/km, heart rate -6 bpm |
+| 2026-11-13 | Strength | 61 min | - | - | 141 |  |
+| 2026-11-10 | Run | 66 min | 10.5 | 5:57/km | 141 | 2026-11-09: pace faster by 2 s/km, heart rate +1 bpm |
+| 2026-11-09 | Run | 53 min | 8.5 | 5:59/km | 140 | 2026-11-07: pace faster by 7 s/km, heart rate +7 bpm |
+| 2026-11-07 | Run | 58 min | 9.0 | 6:06/km | 133 | 2026-11-05: pace slower by 27 s/km, heart rate -6 bpm |
+| 2026-11-05 | Run | 43 min | 7.3 | 5:39/km | 139 | 2026-11-03: pace faster by 7 s/km, heart rate +7 bpm |
+| 2026-11-04 | Run | 66 min | 10.4 | 6:01/km | 133 | 2026-10-24: pace faster by 8 s/km, heart rate -9 bpm |
+| 2026-11-03 | Run | 40 min | 6.6 | 5:46/km | 132 | 2026-10-30: pace slower by 4 s/km, heart rate -12 bpm |
+| 2026-11-01 | Strength | 55 min | - | - | 143 |  |
 
 Each row is compared with your last earlier session of the same sport and a similar length. Differences also depend on route, weather and what you intended.
 
@@ -90,6 +88,20 @@ Each row is compared with your last earlier session of the same sport and a simi
 
 ![Minutes per week by sport](figures/weekly_minutes.svg)
 *The last column is the week so far. Reset and deload weeks show as dips.*
+
+
+## Training load (context)
+
+|  | Now | 4 weeks ago | What it is |
+|---|---|---|---|
+| Chronic load (CTL) | 21.7 | 24.2 | 42-day average of your daily Garmin training load |
+| Acute load (ATL) | 20.4 | 24.7 | 7-day average of the same |
+| Balance (TSB) | +1.3 | -0.5 | CTL minus ATL: negative means more recent load than usual, positive means less |
+
+![Chronic and acute load](figures/load_model.svg)
+*Daily Garmin training load smoothed over 42 days (chronic) and 7 days (acute). Context only: no limit is implied.*
+
+Practice, not research: the 42-day and 7-day averages are a coaching convention, and no study read here validates them for injury or form. The acute:chronic ratio is not shown on purpose (Impellizzeri 2020).
 
 
 ## Running
@@ -127,7 +139,7 @@ Each row is compared with your last earlier session of the same sport and a simi
 
 ## Plan against what was done
 
-Last 14 days: 5 of 6 planned days done (at least half the planned minutes).
+Last 14 days: 3 of 6 planned days done (at least half the planned minutes).
 
 ![Planned and done minutes](figures/plan_vs_done.svg)
 *Grey = planned in the saved plan, blue = done.*
