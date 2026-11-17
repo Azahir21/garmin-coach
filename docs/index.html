@@ -27,7 +27,7 @@
       "description": "A free, open-source AI coach for triathletes, runners and cyclists. It builds evidence-labelled plans for events from 5 km to Ironman, adapts the next session to how you are doing, watches for injury-risk signals and writes reports. It works from your own Garmin data or from a few numbers you type. Independent project, not affiliated with Garmin.",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Windows, macOS, Linux (runs inside an AI agent such as Claude Code)",
-      "softwareVersion": "0.6.1",
+      "softwareVersion": "0.6.2",
       "dateModified": "2026-11-17",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "url": "https://azahir21.github.io/rampwise/",
@@ -210,7 +210,9 @@ python export_plan.py PLAN.json --format all   # .ics  .csv  .zwo  .mrc, and Gar
     <div class="pane p2"><pre><code>git clone https://github.com/Azahir21/rampwise
 python rampwise/install.py --list                   # tools, folders, how well each was checked
 python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
-python rampwise/install.py --tool all --dry-run     # preview</code></pre><p>One installer knows where 30 AI coding tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules). Folders come from each tool's official documentation; we ran only Claude Code ourselves. Cloud-only agents cannot reach your Garmin data. <a href="https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md">Details and caveats per tool</a>.</p></div>
+python rampwise/install.py --tool all --dry-run     # preview
+# or with Vercel's skills CLI:
+npx skills add Azahir21/rampwise</code></pre><p>One installer knows where 30 AI coding tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules). Folders come from each tool's official documentation; we ran only Claude Code ourselves, plus a real install of all 11 skills through the skills CLI on Linux. Cloud-only agents cannot reach your Garmin data. <a href="https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md">Details and caveats per tool</a>.</p></div>
     <div class="pane p3"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --tool claude-code</code> (or <code>--tool codex</code>, <code>--tool cursor</code> ... see <code>--list</code>).</p></div>
   </div>
   <p class="sub" style="margin-top:6px">Using Garmin data too? Install <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> (MIT, by Mason Levy), Python 3.10+, and <code>pip install fitdecode</code>.</p>
@@ -231,6 +233,6 @@ python rampwise/install.py --tool all --dry-run     # preview</code></pre><p>One
 </section>
 </div>
 
-<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. Last updated 2026-11-17 (v0.6.1). <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
+<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. Last updated 2026-11-17 (v0.6.2). <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
 </body>
 </html>

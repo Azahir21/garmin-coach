@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.6.2 - four skills no longer hidden from strict readers
 - **Fix: four skills were invisible to strict readers.** The front matter of `rampwise-planner`, `rampwise-analyze`, `rampwise-adapt` and `rampwise-fueling` (and two subagent files) had an unquoted `description` containing `: `, which is invalid YAML. Claude Code is lenient, but strict parsers such as Vercel's `skills` CLI skipped those skills (it found 7 of 11, without the planner). The descriptions are now quoted, and `check_repo.py` fails on this from now on.
-- Docs: `npx skills add Azahir21/rampwise` and the Hermes tap command are listed in the install docs.
+- Docs: `npx skills add Azahir21/rampwise` is tested (real install of all 11 skills with `skills` 1.9.0 on Linux, a script run from the installed folder, `skills update` reports up to date); the Hermes tap commands and how updating works for both are in the install docs.
 
 ## 0.6.1 - the coach can fetch papers on demand
 - **The coach can fetch papers on demand.** `skills/rampwise/scripts/paper_fetch.py "Walsh 2019"` (or `--pmid`, `--doi`, `--status`) downloads the full text of an open-access paper from Europe PMC into the skill's `references/papers/`, replaces an old abstract-only file, and for a paywalled paper saves only the abstract and says so. The head coach and every specialist skill now tell the coach to open the paper's file before quoting it, to fetch it when it is missing or abstract only, and never to claim more than the file shows. Only the paper's ID or DOI is sent; nothing about the athlete.

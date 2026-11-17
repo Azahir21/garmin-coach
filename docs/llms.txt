@@ -4,7 +4,7 @@
 
 ## Start here
 - [README](https://github.com/Azahir21/rampwise/blob/main/README.md): what it does, requirements, install, first run
-- [Install for your AI tool](https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md): one installer for 29 tools, folders per tool with the official pages read
+- [Install for your AI tool](https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md): one installer for 29 tools (or `npx skills add Azahir21/rampwise`), folders per tool with the official pages read
 - [Other watch brands and Strava](https://github.com/Azahir21/rampwise/blob/main/docs/OTHER-WATCHES.md): .fit files from any maker, Strava draft, what stays Garmin-only
 - [Sample weekly report](https://azahir21.github.io/rampwise/sample/): interactive report built from synthetic data
 - [Disclaimer](https://github.com/Azahir21/rampwise/blob/main/DISCLAIMER.md): not medical advice; no promise of results
