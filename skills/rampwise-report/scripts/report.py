@@ -3,7 +3,7 @@
 
   report.py daily|weekly|monthly [--date YYYY-MM-DD] [--format md|html|both] [--out DIR] [--no-deep] [--no-adapt]
 
-Output folder (default $RAMPWISE_DATA/reports/<date>-<mode>/): report.md, figures/*.svg, report.html (all inline, no network, works offline; period buttons
+Output folder (default <output folder>/reports/<date>-<mode>/, normally ~/rampwise-coach; --here uses ./rampwise-coach): report.md, figures/*.svg, report.html (all inline, no network, works offline; period buttons
 and hover tooltips, light and dark mode), and reports/latest-<mode>.html. Everything comes from your own Garmin data, your plan and athlete.json:
 week-over-week comparison, recovery, injury-risk watch, plan adherence, goal meters (baseline, now, target; a distance, never a forecast), strength logs,
 and tomorrow's adapted session. Goals and units follow the user's settings (preferences.units: run "pace" or "kmh", bike "kmh"); no goals set = no meters.
@@ -108,12 +108,17 @@ def build(mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, late
     blocks.append(("h2", "This week against last week"))
     cr = cmp["rolling"]
     rows_t = []
-    for sport, lab in (("run", "Running"), ("bike", "Cycling"), ("strength", "Strength")):
+    for sport, lab in (("run", "Running"), ("bike", "Cycling"), ("swim", "Swimming"), ("strength", "Strength")):
+        if sport == "swim" and not (cr["this"]["swim"]["sessions"] or cr["before"]["swim"]["sessions"]):
+            continue
         a, b, d = cr["this"][sport], cr["before"][sport], cr["delta"][sport]
         key = "minutes" if sport != "strength" else "sessions"
         pct = f"{d['minutes' if sport != 'strength' else 'sessions']['pct']:+.0f} %" if d[key]["pct"] is not None else (f"{d[key]['abs']:+g}" if d[key]["abs"] is not None else "-")
+        swim_pace = (lambda v: (rd.mmss(360.0 / v) + "/100 m") if v else "-")
         sp_a = (rd.mmss(rd.pace_s(a["avg_speed_kmh"])) + "/km") if sport == "run" and a["avg_speed_kmh"] and units.get("run", "pace") == "pace" else (f"{a['avg_speed_kmh']} km/h" if a["avg_speed_kmh"] else "-")
         sp_b = (rd.mmss(rd.pace_s(b["avg_speed_kmh"])) + "/km") if sport == "run" and b["avg_speed_kmh"] and units.get("run", "pace") == "pace" else (f"{b['avg_speed_kmh']} km/h" if b["avg_speed_kmh"] else "-")
+        if sport == "swim":
+            sp_a, sp_b = swim_pace(a["avg_speed_kmh"]), swim_pace(b["avg_speed_kmh"])
         rows_t.append([lab, f"{a[key]} {'min' if key == 'minutes' else 'session' + ('' if a[key] == 1 else 's')}", f"{b[key]} {'min' if key == 'minutes' else 'session' + ('' if b[key] == 1 else 's')}", pct, f"{a['km']} / {b['km']} km" if sport != "strength" else "-", f"{sp_a} / {sp_b}" if sport != "strength" else "-"])
     blocks.append(("p", f"Last 7 days ({cr['this']['from']} to {cr['this']['to']}) against the 7 days before ({cr['before']['from']} to {cr['before']['to']}). Works whether or not there was an activity today."))
     blocks.append(("table", ["Sport", "Last 7 days", "Before", "Change", "km now / before", "Pace or speed now / before"], rows_t))
@@ -127,8 +132,8 @@ def build(mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, late
     dm = rd.daily_minutes(acts, days14)
     pl14, dn14 = rd.plan_vs_done(plan, acts, days14)
     chart("daily_minutes", "Minutes per day by sport", "Stacked by sport. Rest days are empty columns.",
-          {"14 days": ch.bars(labs14, [("Run", dm["run"], "s1"), ("Ride", dm["bike"], "s2"), ("Strength", dm["strength"], "s3")], "Minutes per day, last 14 days", "min"),
-           "28 days": ch.bars([f"{d.day}" for d in days28], [("Run", rd.daily_minutes(acts, days28)["run"], "s1"), ("Ride", rd.daily_minutes(acts, days28)["bike"], "s2"), ("Strength", rd.daily_minutes(acts, days28)["strength"], "s3")], "Minutes per day, last 28 days", "min", tick_every=2)}, "14 days")
+          {"14 days": ch.bars(labs14, [("Run", dm["run"], "s1"), ("Ride", dm["bike"], "s2")] + ([("Swim", dm["swim"], "s4")] if any(dm["swim"]) else []) + [("Strength", dm["strength"], "s3")], "Minutes per day, last 14 days", "min"),
+           "28 days": ch.bars([f"{d.day}" for d in days28], [("Run", rd.daily_minutes(acts, days28)["run"], "s1"), ("Ride", rd.daily_minutes(acts, days28)["bike"], "s2")] + ([("Swim", rd.daily_minutes(acts, days28)["swim"], "s4")] if any(rd.daily_minutes(acts, days28)["swim"]) else []) + [("Strength", rd.daily_minutes(acts, days28)["strength"], "s3")], "Minutes per day, last 28 days", "min", tick_every=2)}, "14 days")
 
     # ---- the latest activity (daily) and tomorrow
     if mode == "daily":
@@ -160,13 +165,20 @@ def build(mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, late
         blocks.append(("p", "The coach applies the change to the calendar event after you agree (or when calendar updates are pre-approved)."))
 
     if mode in ("weekly", "monthly"):
+        ra = rd.recent_activities(acts, today, 14, units.get("run", "pace") == "pace")
+        blocks.append(("h2", "Recent activities (last 14 days)"))
+        if ra:
+            blocks.append(("table", ["Date", "Sport", "Time", "km", "Pace / speed", "Avg HR", "Against the last similar one"], ra))
+            blocks.append(("p", "Each row is compared with your last earlier session of the same sport and a similar length. Differences also depend on route, weather and what you intended."))
+        else:
+            blocks.append(("p", "No activities in the last 14 days."))
         # ---- volume
         blocks.append(("h2", "Volume over the weeks"))
         weekly_chart("weekly_minutes", "Minutes per week by sport", "The last column is the week so far. Reset and deload weeks show as dips.",
-                     lambda n: ch.bars(tail(ws["labels"], n), [("Run", tail(ws["run_min"], n), "s1"), ("Ride", tail(ws["bike_min"], n), "s2")], f"Run and ride minutes per week, last {n} weeks", "min"), "12 weeks" if mode == "monthly" else "8 weeks")
+                     lambda n: ch.bars(tail(ws["labels"], n), [("Run", tail(ws["run_min"], n), "s1"), ("Ride", tail(ws["bike_min"], n), "s2")] + ([("Swim", tail(ws["swim_min"], n), "s4")] if any(ws["swim_min"]) else []), f"Minutes per week by sport, last {n} weeks", "min"), "12 weeks" if mode == "monthly" else "8 weeks")
         if mode == "monthly":
             ds = [today - timedelta(days=i) for i in range(83, -1, -1)]
-            mins = [sum(a["min"] for a in acts if a["date"] == d and a["sport"] in ("run", "bike", "strength")) for d in ds]
+            mins = [sum(a["min"] for a in acts if a["date"] == d and a["sport"] in ("run", "bike", "swim", "strength")) for d in ds]
             chart("heatmap", "Training days", "Darker = more minutes that day.", {"12 weeks": ch.heatmap(ds, mins, "Training calendar, last 12 weeks")}, "12 weeks")
         # ---- running
         if any(ws["run_min"]):
@@ -275,8 +287,8 @@ def render_md_full(R, outdir):
     return "\n".join(out) + "\n"
 
 
-HTML_CSS = """:root{color-scheme:light dark;--page:#f4f4f1;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--border:rgba(11,11,11,.08);--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--all:#898781;--track:#cde2fb;--good:#0ca30c;--warn:#fab219;--crit:#d03b3b;--band:rgba(42,120,214,.12)}
-@media (prefers-color-scheme:dark){:root{--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.08);--s1:#3987e5;--s2:#d95926;--s3:#199e70;--track:#184f95;--band:rgba(57,135,229,.18)}}
+HTML_CSS = """:root{color-scheme:light dark;--page:#f4f4f1;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--border:rgba(11,11,11,.08);--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#7c5cd6;--all:#898781;--track:#cde2fb;--good:#0ca30c;--warn:#fab219;--crit:#d03b3b;--band:rgba(42,120,214,.12)}
+@media (prefers-color-scheme:dark){:root{--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--border:rgba(255,255,255,.08);--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#9b82e8;--track:#184f95;--band:rgba(57,135,229,.18)}}
 *{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
 h1{font-size:1.6rem;margin:.2em 0}h2{font-size:1.15rem;margin:0;padding:14px 0 6px}details{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin:14px 0;padding:0 16px}summary{cursor:pointer;font-weight:650;font-size:1.1rem;padding:14px 0;list-style:none}summary::-webkit-details-marker{display:none}summary::after{content:"+";float:right;color:var(--muted)}details[open] summary::after{content:"-"}
 .lede{color:var(--ink2)}table{border-collapse:collapse;width:100%;margin:8px 0 14px;font-size:.92rem}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}th{color:var(--ink2);font-weight:600}
@@ -285,7 +297,7 @@ h1{font-size:1.6rem;margin:.2em 0}h2{font-size:1.15rem;margin:0;padding:14px 0 6
 .chart{margin:14px 0}.chart .cap{color:var(--ink2);font-size:.88rem;margin:2px 0 8px}.chart>input{position:absolute;opacity:0;pointer-events:none}.chart>label{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:3px 12px;margin:0 6px 8px 0;cursor:pointer;font-size:.85rem;color:var(--ink2);background:var(--surface)}
 .chart>input:checked+label{background:var(--ink);color:var(--page);border-color:var(--ink)}.chart>input:focus-visible+label{outline:2px solid var(--s1);outline-offset:2px}.pane{display:none}.r0:checked~.p0,.r1:checked~.p1,.r2:checked~.p2,.r3:checked~.p3{display:block}
 .disc{color:var(--muted);font-size:.82rem;margin-top:24px}ul{padding-left:1.2rem}@media print{details{break-inside:avoid}.chart>input,.chart>label{display:none}.pane{display:block!important}}
-.t{font:12px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink2)}.tt{font:600 13px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink)}.g{stroke:var(--grid);stroke-width:1}.a{stroke:var(--axis);stroke-width:1}.s1{fill:var(--s1);stroke:var(--s1)}.s2{fill:var(--s2);stroke:var(--s2)}.s3{fill:var(--s3);stroke:var(--s3)}.s0{fill:var(--all);stroke:var(--all)}
+.t{font:12px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink2)}.tt{font:600 13px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink)}.g{stroke:var(--grid);stroke-width:1}.a{stroke:var(--axis);stroke-width:1}.s1{fill:var(--s1);stroke:var(--s1)}.s2{fill:var(--s2);stroke:var(--s2)}.s3{fill:var(--s3);stroke:var(--s3)}.s4{fill:var(--s4);stroke:var(--s4)}.s0{fill:var(--all);stroke:var(--all)}
 .l{fill:none;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}.p,.bar{stroke:none}.band{fill:var(--band);stroke:none}.cell0{fill:var(--grid)}svg{display:block}"""
 
 
@@ -344,10 +356,8 @@ def collect(today, mode, deep=True, adapt=True):
     import strength_history as sh  # noqa: E402
     ath = json.loads(gc.ATHLETE_PATH.read_text(encoding="utf-8")) if gc.ATHLETE_PATH.exists() else {}
     plan = None
-    pdir = gc.DATA_DIR / "plans"
-    if pdir.exists():
-        pf = max(pdir.glob("plan-*.json"), default=None, key=lambda x: x.name)
-        plan = json.loads(pf.read_text(encoding="utf-8")) if pf else None
+    pf = max(gc.plan_files("plan-*.json"), default=None, key=lambda x: x.name)
+    plan = json.loads(pf.read_text(encoding="utf-8")) if pf else None
     with gc.Garmin() as g:
         acts = [a for a in gc.list_activities(g, today - timedelta(days=130), today) if a["date"] <= today]
         rows, _ = readiness_check.build_rows(g, today - timedelta(days=100), today)
@@ -411,12 +421,13 @@ def main():
     ap.add_argument("--out")
     ap.add_argument("--no-deep", action="store_true", help="skip the FIT-file aerobic analysis of the latest activity (daily)")
     ap.add_argument("--no-adapt", action="store_true", help="skip the next-session adaptation")
+    gc.apply_here_flag()
     a = ap.parse_args()
     gc.utf8_stdout()
     today = date.fromisoformat(a.date) if a.date else date.today()
     acts, rows, ath, plan, hist, ready, inj, cmp, adapt, latest = collect(today, a.mode, not a.no_deep, not a.no_adapt)
     R = build(a.mode, today, acts, rows, ath, plan, hist, ready, inj, cmp, adapt, latest)
-    outdir = Path(a.out) if a.out else gc.DATA_DIR / "reports" / f"{today}-{a.mode}"
+    outdir = Path(a.out) if a.out else gc.out_dir("reports") / f"{today}-{a.mode}"
     for p in write_report(R, outdir, a.format):
         print("wrote", p)
     print(f"readiness {ready.get('verdict') if ready else 'unknown'} | injury watch {inj['level']} | {len(R['figs'])} figures")

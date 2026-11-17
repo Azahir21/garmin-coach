@@ -1,0 +1,862 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rampwise//Event plan//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:5 km run plan
+BEGIN:VEVENT
+UID:2026-11-23-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261123T183000
+DTEND:20261123T190500
+SUMMARY:[RW] Strength: lower-body strength (single-leg strength) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 1 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261124T063000
+DTEND:20261124T070000
+SUMMARY:[RW] Easy run with strides (30 min)
+DESCRIPTION:10 min warm-up\; 7 min easy\; 6 x (0.33 min hard + 1 min easy)
+ \; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoot
+ h\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can 
+ talk in full sentences. Use your watch's easy heart-rate zone if you have
+  one.\n\nWeek 1 (BASE). Not medical advice\; pain that changes how you mo
+ ve means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261126T063000
+DTEND:20261126T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261126T183000
+DTEND:20261126T190000
+SUMMARY:[RW] Strength: power and trunk (jumps and calves) (30 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 1 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261127T063000
+DTEND:20261127T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261128T063000
+DTEND:20261128T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261129T063000
+DTEND:20261129T070500
+SUMMARY:[RW] Long run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-30-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261130T183000
+DTEND:20261130T190500
+SUMMARY:[RW] Strength: lower-body strength (squat and hinge) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 2 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261201T063000
+DTEND:20261201T070000
+SUMMARY:[RW] Easy run with strides (30 min)
+DESCRIPTION:10 min warm-up\; 7 min easy\; 6 x (0.33 min hard + 1 min easy)
+ \; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoot
+ h\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can 
+ talk in full sentences. Use your watch's easy heart-rate zone if you have
+  one.\n\nWeek 2 (BASE). Not medical advice\; pain that changes how you mo
+ ve means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261203T063000
+DTEND:20261203T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261203T183000
+DTEND:20261203T185000
+SUMMARY:[RW] Strength: power and trunk (speed and hips) (20 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 2 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261204T063000
+DTEND:20261204T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261205T063000
+DTEND:20261205T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261206T063000
+DTEND:20261206T070500
+SUMMARY:[RW] Long run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-07-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261207T183000
+DTEND:20261207T190500
+SUMMARY:[RW] Strength: lower-body strength (single-leg strength) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 3 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261208T063000
+DTEND:20261208T070500
+SUMMARY:[RW] Easy run with strides (35 min)
+DESCRIPTION:10 min warm-up\; 12 min easy\; 6 x (0.33 min hard + 1 min easy
+ )\; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoo
+ th\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can
+  talk in full sentences. Use your watch's easy heart-rate zone if you hav
+ e one.\n\nWeek 3 (BASE). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261210T063000
+DTEND:20261210T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261210T183000
+DTEND:20261210T190000
+SUMMARY:[RW] Strength: power and trunk (jumps and calves) (30 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 3 (BASE). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261211T063000
+DTEND:20261211T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261212T063000
+DTEND:20261212T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261213T063000
+DTEND:20261213T071000
+SUMMARY:[RW] Long run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261214T183000
+DTEND:20261214T185500
+SUMMARY:[RW] Strength: lower-body strength (squat and hinge) (light) (25 m
+ in)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 4 (RECOVERY).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-run1-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261215T063000
+DTEND:20261215T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261217T063000
+DTEND:20261217T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261217T183000
+DTEND:20261217T185000
+SUMMARY:[RW] Strength: power and trunk (speed and hips) (light) (20 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 4 (RECOVERY).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261219T063000
+DTEND:20261219T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261220T063000
+DTEND:20261220T071000
+SUMMARY:[RW] Long run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261221T183000
+DTEND:20261221T190500
+SUMMARY:[RW] Strength: lower-body strength (single-leg strength) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 5 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-run1-tempo-run-10-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261222T063000
+DTEND:20261222T070500
+SUMMARY:[RW] Tempo run (10 min tempo) (35 min)
+DESCRIPTION:10 min warm-up\; 7 min easy\; 10 min tempo\; 8 min cool-down. 
+ Tempo is comfortably hard (RPE 6): short sentences only. Stop if anything
+  hurts.\n\nWeek 5 (BUILD). Not medical advice\; pain that changes how you
+  move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261224T063000
+DTEND:20261224T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261224T183000
+DTEND:20261224T190000
+SUMMARY:[RW] Strength: power and trunk (jumps and calves) (30 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 5 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261225T063000
+DTEND:20261225T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261226T063000
+DTEND:20261226T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261227T063000
+DTEND:20261227T071500
+SUMMARY:[RW] Long run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261228T183000
+DTEND:20261228T190500
+SUMMARY:[RW] Strength: lower-body strength (squat and hinge) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 6 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-run1-tempo-run-12-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261229T063000
+DTEND:20261229T071000
+SUMMARY:[RW] Tempo run (12 min tempo) (40 min)
+DESCRIPTION:10 min warm-up\; 10 min easy\; 12 min tempo\; 8 min cool-down.
+  Tempo is comfortably hard (RPE 6): short sentences only. Stop if anythin
+ g hurts.\n\nWeek 6 (BUILD). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261230T063000
+DTEND:20261230T071000
+SUMMARY:[RW] Easy ride (cross-training) (40 min)
+DESCRIPTION:8 min warm-up\; 27 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  6 (BUILD). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261231T063000
+DTEND:20261231T071000
+SUMMARY:[RW] Easy run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261231T183000
+DTEND:20261231T185000
+SUMMARY:[RW] Strength: power and trunk (speed and hips) (20 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 6 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-01-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270101T063000
+DTEND:20270101T071000
+SUMMARY:[RW] Easy run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-02-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270102T063000
+DTEND:20270102T071000
+SUMMARY:[RW] Easy run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-03-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270103T063000
+DTEND:20270103T072000
+SUMMARY:[RW] Long run (50 min)
+DESCRIPTION:5 min warm-up\; 40 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-04-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270104T183000
+DTEND:20270104T190500
+SUMMARY:[RW] Strength: lower-body strength (squat and hinge) (35 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 7 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-05-run1-tempo-run-14-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270105T063000
+DTEND:20270105T071500
+SUMMARY:[RW] Tempo run (14 min tempo) (45 min)
+DESCRIPTION:10 min warm-up\; 13 min easy\; 14 min tempo\; 8 min cool-down.
+  Tempo is comfortably hard (RPE 6): short sentences only. Stop if anythin
+ g hurts.\n\nWeek 7 (BUILD). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-06-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270106T063000
+DTEND:20270106T071500
+SUMMARY:[RW] Easy ride (cross-training) (45 min)
+DESCRIPTION:8 min warm-up\; 32 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  7 (BUILD). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270107T063000
+DTEND:20270107T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270107T183000
+DTEND:20270107T185000
+SUMMARY:[RW] Strength: power and trunk (speed and hips) (20 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 7 (BUILD). No
+ t medical advice\; pain that changes how you move means stop.\nrampwise-p
+ lan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-08-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270108T063000
+DTEND:20270108T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270109T063000
+DTEND:20270109T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270110T063000
+DTEND:20270110T072500
+SUMMARY:[RW] Long run (55 min)
+DESCRIPTION:5 min warm-up\; 45 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-11-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270111T183000
+DTEND:20270111T185500
+SUMMARY:[RW] Strength: lower-body strength (single-leg strength) (light) (
+ 25 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 8 (RECOVERY).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-12-run1-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270112T063000
+DTEND:20270112T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270114T063000
+DTEND:20270114T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270114T183000
+DTEND:20270114T185000
+SUMMARY:[RW] Strength: power and trunk (jumps and calves) (light) (20 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 8 (RECOVERY).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-15-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270115T063000
+DTEND:20270115T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270116T063000
+DTEND:20270116T070500
+SUMMARY:[RW] Easy run (35 min)
+DESCRIPTION:5 min warm-up\; 25 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270117T063000
+DTEND:20270117T072500
+SUMMARY:[RW] Long run (55 min)
+DESCRIPTION:5 min warm-up\; 45 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-18-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270118T183000
+DTEND:20270118T190000
+SUMMARY:[RW] Strength: lower-body strength (squat and hinge) (30 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 9 (PEAK). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-19-run1-race-effort-interval@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270119T063000
+DTEND:20270119T072000
+SUMMARY:[RW] Race-effort intervals (5 x 3 min) (50 min)
+DESCRIPTION:12 min warm-up\; 5 min easy\; 5 x (3 min hard + 2 min easy)\; 
+ 8 min cool-down. Hard but controlled\; the last repeat should match the f
+ irst. Stop if form falls apart.\n\nWeek 9 (PEAK). Not medical advice\; pa
+ in that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-20-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270120T063000
+DTEND:20270120T071500
+SUMMARY:[RW] Easy ride (cross-training) (45 min)
+DESCRIPTION:8 min warm-up\; 32 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  9 (PEAK). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270121T063000
+DTEND:20270121T072000
+SUMMARY:[RW] Easy run (50 min)
+DESCRIPTION:5 min warm-up\; 40 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (PEAK). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-str2-strength-power-and-t@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270121T183000
+DTEND:20270121T185500
+SUMMARY:[RW] Strength: power and trunk (speed and hips) (25 min)
+DESCRIPTION:Runner\, 5 km to half marathon: better running economy and rac
+ e pace. Lift with 2-3 reps in reserve\, stop a set if form breaks. Streng
+ th starts at least 3 hours after cardio (practice).\n\nWeek 9 (PEAK). Not
+  medical advice\; pain that changes how you move means stop.\nrampwise-pl
+ an
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-run4-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270122T063000
+DTEND:20270122T072000
+SUMMARY:[RW] Easy run (50 min)
+DESCRIPTION:5 min warm-up\; 40 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (PEAK). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-run3-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270123T063000
+DTEND:20270123T072000
+SUMMARY:[RW] Easy run (50 min)
+DESCRIPTION:5 min warm-up\; 40 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (PEAK). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270124T063000
+DTEND:20270124T073000
+SUMMARY:[RW] Long run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (PEAK). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-26-run1-sharpener-4-x-2-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270126T063000
+DTEND:20270126T065500
+SUMMARY:[RW] Sharpener (4 x 2 min) (25 min)
+DESCRIPTION:10 min warm-up\; 4 x (2 min threshold + 2 min easy)\; 8 min co
+ ol-down. Short and crisp\, then stop. The taper keeps a little intensity 
+ while volume drops (Bosquet 2007).\n\nWeek 10 (TAPER). Not medical advice
+ \; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270128T063000
+DTEND:20270128T065500
+SUMMARY:[RW] Easy run (25 min)
+DESCRIPTION:5 min warm-up\; 15 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 10 (TAPER). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-activation-activation-20-min-ea@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270130T090000
+DTEND:20270130T092000
+SUMMARY:[RW] Activation (20 min easy run + 3 short pickups) (20 min)
+DESCRIPTION:20 min easy with 3 pickups of 15 s at race effort. Pack your k
+ it\, check your gear\, eat normally\, sleep.\n\nWeek 10 (TAPER). Not medi
+ cal advice\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-race-race-day-5-km-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270131T080000
+DTEND:20270131T090000
+SUMMARY:[RW] RACE DAY: 5 km run
+DESCRIPTION:Start easier than feels necessary for the first third. Eat and
+  drink as practised\, nothing new. It is a day to enjoy the work you did\
+ ; no plan can promise a time.\n\nWeek 10 (RACE). Not medical advice\; pai
+ n that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

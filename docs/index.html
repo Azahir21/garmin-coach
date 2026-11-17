@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rampwise: free open-source AI endurance coach for your Garmin data</title>
-<meta name="description" content="Rampwise is a free, open-source AI coach for runners and cyclists. It reads your own Garmin data and gives evidence-labelled training plans, daily adaptation, an injury-risk watch and reports. Works with Claude Code and other Agent Skills clients. Not affiliated with Garmin.">
+<title>Rampwise: free open-source AI coach for triathletes, runners, cyclists and swimmers</title>
+<meta name="description" content="Rampwise is a free, open-source AI coach for triathletes, runners, cyclists and swimmers. Evidence-labelled plans for 17 events (5K to Ironman, duathlon, cycling, open-water swimming), daily adaptation, an injury-risk watch and reports, from your own Garmin data or a few numbers you type. Not affiliated with Garmin.">
 <link rel="canonical" href="https://azahir21.github.io/rampwise/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rampwise: free open-source AI endurance coach for your Garmin data">
-<meta property="og:description" content="Evidence-labelled running, cycling and strength plans, daily adaptation, an injury-risk watch and reports, from your own Garmin data. Free, Apache-2.0.">
+<meta property="og:title" content="Rampwise: free open-source AI coach for triathletes, runners, cyclists and swimmers">
+<meta property="og:description" content="Plans for 17 events from 5K to Ironman, duathlon, cycling and open-water swimming, daily adaptation, injury-risk watch and reports. Free, Apache-2.0, evidence-labelled.">
 <meta property="og:url" content="https://azahir21.github.io/rampwise/">
-<meta property="og:image" content="https://azahir21.github.io/rampwise/img/sample-weekly.png">
+<meta property="og:image" content="https://azahir21.github.io/rampwise/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rampwise: free open-source AI endurance coach for your Garmin data">
-<meta name="twitter:description" content="Plans, daily adaptation, injury-risk watch and reports from your own Garmin data. Free and open source.">
-<meta name="twitter:image" content="https://azahir21.github.io/rampwise/img/sample-weekly.png">
+<meta name="twitter:title" content="Rampwise: free open-source AI coach for triathletes, runners, cyclists and swimmers">
+<meta name="twitter:description" content="Plans for 17 events from 5K to Ironman, duathlon, cycling and open-water swimming, daily adaptation, injury-risk watch and reports. Free and open source.">
+<meta name="twitter:image" content="https://azahir21.github.io/rampwise/img/og.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,87 +24,192 @@
       "@id": "https://azahir21.github.io/rampwise/#software",
       "name": "Rampwise",
       "alternateName": "Rampwise endurance coach",
-      "description": "A free, open-source AI endurance coach that reads your own Garmin data and produces evidence-labelled running, cycling and strength plans, daily adaptation, an injury-risk watch and daily, weekly and monthly reports. Independent project, not affiliated with Garmin.",
+      "description": "A free, open-source AI coach for triathletes, runners and cyclists. It builds evidence-labelled plans for events from 5 km to Ironman, adapts the next session to how you are doing, watches for injury-risk signals and writes reports. It works from your own Garmin data or from a few numbers you type. Independent project, not affiliated with Garmin.",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Windows, macOS, Linux (runs inside an AI agent such as Claude Code)",
-      "softwareVersion": "0.3.1",
+      "softwareVersion": "0.4.0",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "url": "https://azahir21.github.io/rampwise/",
-      "downloadUrl": "https://github.com/Azahir21/rampwise",
+      "downloadUrl": "https://github.com/Azahir21/rampwise/releases/latest",
       "codeRepository": "https://github.com/Azahir21/rampwise",
       "programmingLanguage": "Python",
       "isAccessibleForFree": true,
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
       "author": {"@type": "Person", "name": "Kei", "url": "https://github.com/Azahir21"},
-      "keywords": "AI running coach, AI cycling coach, Garmin data, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills",
-      "screenshot": "https://azahir21.github.io/rampwise/img/sample-weekly.png"
+      "keywords": "AI triathlon coach, AI running coach, AI cycling coach, training plan, Ironman, marathon, 70.3, Garmin data, HRV, injury prevention, Claude Code plugin, Agent Skills",
+      "screenshot": "https://azahir21.github.io/rampwise/img/plan-viewer.png"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type": "Question", "name": "What is Rampwise?", "acceptedAnswer": {"@type": "Answer", "text": "Rampwise is a free, open-source set of AI agent skills that coaches a runner or cyclist from their own Garmin data. It builds training plans, adapts the next session to how you are doing, watches for injury-risk signals and writes daily, weekly and monthly reports."}},
-        {"@type": "Question", "name": "Is Rampwise free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is licensed under Apache-2.0. You need your own Garmin account with Personal API access and an AI agent client such as Claude Code, which has its own terms and costs."}},
-        {"@type": "Question", "name": "Is Rampwise affiliated with Garmin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool reads."}},
-        {"@type": "Question", "name": "Does my data leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "Your Garmin data is read through a local server and your own key, and your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Weather lookups are optional and only run with your consent."}},
-        {"@type": "Question", "name": "Does it replace a human coach or a doctor?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is experimental software, not medical advice. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician."}},
-        {"@type": "Question", "name": "How are its training rules chosen?", "acceptedAnswer": {"@type": "Answer", "text": "Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the repository. It asks you for heart-rate data, equipment and starting weights instead of assuming them."}},
-        {"@type": "Question", "name": "Which AI tools and watches does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "It is built as a Claude Code plugin and as plain Agent Skills for other clients; Codex and other clients are untested. It was built and tested on one person's Garmin data and has not been verified on other watches."}}
+        {"@type": "Question", "name": "What is Rampwise?", "acceptedAnswer": {"@type": "Answer", "text": "Rampwise is a free, open-source set of AI agent skills that coaches triathletes, runners and cyclists. It builds plans for running, cycling, swimming, duathlon and triathlon events, adapts the next session to how you are doing, watches for injury-risk signals and writes daily, weekly and monthly reports."}},
+        {"@type": "Question", "name": "Is Rampwise free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is licensed under Apache-2.0. You need an AI agent client such as Claude Code, which has its own terms and costs. Garmin data access, if you use it, needs your own Garmin account with Personal API access."}},
+        {"@type": "Question", "name": "Do I need a Garmin watch?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can give a few numbers (event, date, level, weekly hours, days per week) and get a full plan with no Garmin account. With Garmin data it can also adapt your plan from your real training and recovery."}},
+        {"@type": "Question", "name": "Which events does it plan?", "acceptedAnswer": {"@type": "Answer", "text": "Running: 5 km, 10 km, half marathon, marathon, 50 km ultra. Triathlon: sprint, Olympic, 70.3, Ironman. Duathlon: sprint and standard. Cycling: gran fondo (100 km), century (160 km), ultra ride (300 km). Open-water swimming: 1.5 km, 5 km, 10 km. Plans run base, build, peak and taper with a lighter week every fourth week."}},
+        {"@type": "Question", "name": "Can I export the plan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files come from the Garmin-history planner and need your heart-rate data."}},
+        {"@type": "Question", "name": "Is Rampwise affiliated with Garmin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read."}},
+        {"@type": "Question", "name": "Does my data leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent."}},
+        {"@type": "Question", "name": "Does it replace a coach or a doctor?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician."}},
+        {"@type": "Question", "name": "How are its training rules chosen?", "acceptedAnswer": {"@type": "Answer", "text": "Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the repository. It asks you for your numbers instead of assuming them."}}
       ]
     }
   ]
 }
 </script>
 <style>
-:root{color-scheme:light dark;--page:#f4f4f1;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--border:rgba(11,11,11,.1);--accent:#2a78d6}
-@media (prefers-color-scheme:dark){:root{--page:#0d0d0d;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--border:rgba(255,255,255,.1);--accent:#3987e5}}
-*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:780px;margin:0 auto;padding:28px 16px 64px}h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .4em}h2{font-size:1.25rem;margin:1.8em 0 .5em}
-p,li{color:var(--ink)}.lede{font-size:1.1rem;color:var(--ink2)}a{color:var(--accent)}code,pre{font:.9rem ui-monospace,Consolas,monospace}pre{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;overflow:auto}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:6px 18px;margin:12px 0}.btns a{display:inline-block;margin:6px 8px 6px 0;padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:var(--surface);text-decoration:none;font-weight:600}
-.btns a.primary{background:var(--accent);color:#fff;border-color:var(--accent)}details{border-bottom:1px solid var(--border);padding:10px 0}summary{cursor:pointer;font-weight:600}img{max-width:100%;border-radius:12px;border:1px solid var(--border)}.small{color:var(--muted);font-size:.88rem}
+:root{color-scheme:light dark;--page:#f6f6f3;--surface:#fff;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--border:rgba(11,11,11,.1);--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#7c5cd6;--shadow:0 18px 50px rgba(30,40,80,.18)}
+@media (prefers-color-scheme:dark){:root{--page:#0b0b0c;--surface:#171718;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;--border:rgba(255,255,255,.1);--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#9b82e8;--shadow:0 18px 50px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--s1)}.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:5;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--page) 82%,transparent);border-bottom:1px solid var(--border)}nav .wrap{display:flex;align-items:center;gap:18px;height:56px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.3px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px}.mark{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--s4),var(--s1) 50%,var(--s2))}
+nav .links{margin-left:auto;display:flex;gap:16px;font-size:.92rem}nav .links a{text-decoration:none;color:var(--ink2)}nav .links a:hover{color:var(--ink)}@media(max-width:700px){nav .links a:not(.gh){display:none}}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1200px 500px at 85% -10%,rgba(235,104,52,.75),transparent 60%),radial-gradient(900px 500px at 0% 0%,rgba(124,92,214,.9),transparent 60%),linear-gradient(135deg,#27408b,#2a78d6)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;padding-top:58px;padding-bottom:64px}@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:4px 14px;font-size:.84rem;font-weight:700;letter-spacing:.04em}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.05;letter-spacing:-1.2px;margin:.35em 0 .3em}.hero p.lead{font-size:1.18rem;opacity:.95;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 14px}.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.55);color:#fff}.btn.primary{background:#fff;color:#1f2f6b;border-color:#fff}
+.sports{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.sports span{padding:5px 14px;border-radius:999px;font-weight:700;font-size:.88rem;background:rgba(255,255,255,.2)}
+.shot{border-radius:16px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.3);overflow:hidden;background:#fff;transform:rotate(1.2deg)}.shot img{display:block;width:100%;height:auto}
+.fine{font-size:.82rem;opacity:.85;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-28px auto 0;position:relative;z-index:2}@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px 16px;text-align:center;box-shadow:var(--shadow)}.stat b{display:block;font-size:1.6rem;letter-spacing:-.5px}.stat span{color:var(--ink2);font-size:.88rem}
+section{padding:58px 0 8px}h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.6px;margin:0 0 .35em}.sub{color:var(--ink2);max-width:46em;margin:0 0 22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px 18px 16px}.card h3{margin:.5em 0 .25em;font-size:1.05rem}.card p{margin:0;color:var(--ink2);font-size:.95rem}
+.ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff}.ic svg{width:22px;height:22px}.c1{background:var(--s1)}.c2{background:var(--s2)}.c3{background:var(--s3)}.c4{background:var(--s4)}
+.plan{display:block;position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}.plan:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.plan .bar{height:6px;border-radius:3px;margin-bottom:12px}.tri .bar{background:linear-gradient(90deg,var(--s4),var(--s2),var(--s1))}.run .bar{background:var(--s1)}.bike .bar{background:var(--s2)}.swim .bar{background:#0f9fb0}.du .bar{background:linear-gradient(90deg,var(--s1),var(--s2))}
+.plan h3{margin:0}.plan .meta{color:var(--ink2);font-size:.9rem;margin:.2em 0 .7em}.plan .dl{font-size:.82rem;color:var(--muted)}.plan .dl a{color:var(--ink2);position:relative;z-index:2}.stretch{color:inherit;text-decoration:none}.stretch::after{content:"";position:absolute;inset:0;z-index:1}.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.05em;padding:2px 9px;border-radius:999px;color:#fff;margin-bottom:8px}.tag.tri{background:var(--s4)}.tag.run{background:var(--s1)}.tag.bike{background:var(--s2)}.tag.swim{background:#0f9fb0}.tag.du{background:linear-gradient(90deg,var(--s1),var(--s2))}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:800px){.steps{grid-template-columns:1fr}}.step{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px}.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--s4),var(--s1));color:#fff;font-weight:800;margin-bottom:10px}.step h3{margin:.1em 0 .25em}.step p{margin:0;color:var(--ink2);font-size:.95rem}
+.labels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:800px){.labels{grid-template-columns:1fr}}.lab{border-radius:18px;padding:16px 18px;border:1px solid var(--border);background:var(--surface)}.lab b{display:inline-block;padding:2px 12px;border-radius:999px;color:#fff;font-size:.82rem;margin-bottom:8px}.lab .r{background:var(--s3)}.lab .p{background:var(--s1)}.lab .g{background:var(--muted)}.lab p{margin:0;font-size:.93rem;color:var(--ink2)}
+pre{background:#0f1424;color:#e8ecff;border-radius:14px;padding:14px 16px;overflow:auto;font:.88rem/1.5 ui-monospace,Consolas,monospace;margin:10px 0}
+.tabs>input{position:absolute;opacity:0}.tabs>label{display:inline-block;padding:7px 16px;border-radius:999px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-weight:600;font-size:.9rem;margin:0 8px 10px 0;color:var(--ink2)}
+.tabs>input:checked+label{background:var(--ink);color:var(--page);border-color:var(--ink)}.tabs .pane{display:none}#t1:checked~.p1,#t2:checked~.p2,#t3:checked~.p3{display:block}.tabs>input:focus-visible+label{outline:2px solid var(--s1);outline-offset:2px}
+details{border-bottom:1px solid var(--border);padding:12px 0}summary{cursor:pointer;font-weight:650}details p{color:var(--ink2);margin:.5em 0 0}
+.note{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--s2);border-radius:12px;padding:12px 16px;color:var(--ink2);font-size:.93rem}
+footer{margin-top:54px;border-top:1px solid var(--border);padding:26px 0 50px;color:var(--muted);font-size:.88rem}footer a{color:var(--ink2)}
+code{font:.88em ui-monospace,Consolas,monospace;background:color-mix(in srgb,var(--ink) 8%,transparent);padding:1px 6px;border-radius:6px}pre code{background:none;padding:0}
 </style>
 </head>
 <body>
-<main>
-<h1>Rampwise: a free, open-source AI endurance coach for your Garmin data</h1>
-<p class="lede">Rampwise gives runners and cyclists evidence-labelled training plans, a daily adjustment of tomorrow's session, an injury-risk watch and daily, weekly and monthly reports. It works from <em>your own</em> Garmin data, runs inside an AI agent such as Claude Code, and costs nothing.</p>
-<p class="btns"><a class="primary" href="https://github.com/Azahir21/rampwise">Get it on GitHub</a> <a href="sample/">See a sample report</a> <a href="https://github.com/Azahir21/rampwise/releases">Releases</a></p>
-<p class="small">Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Experimental: read the <a href="https://github.com/Azahir21/rampwise/blob/main/DISCLAIMER.md">disclaimer</a>.</p>
+<nav><div class="wrap"><a class="logo" href="#"><span class="mark"></span>Rampwise</a><div class="links"><a href="#plans">Plans</a><a href="#how">How it works</a><a href="#evidence">Evidence</a><a href="#install">Install</a><a href="#faq">FAQ</a><a class="gh" href="https://github.com/Azahir21/rampwise">GitHub</a></div></div></nav>
 
-<a href="sample/"><img src="img/sample-weekly.png" alt="A sample Rampwise weekly report with a heart-rate-variability chart, written from synthetic data"></a>
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">FREE · OPEN SOURCE · APACHE-2.0</span>
+    <h1>Train for your race with a coach that shows its evidence.</h1>
+    <p class="lead">Rampwise is an AI coach for triathletes, runners, cyclists and swimmers. Pick an event (triathlon, duathlon, running, cycling or open-water swimming), get a periodised plan, and let it adjust tomorrow's session to how you are actually doing. Works from your own Garmin data, or from a few numbers you type.</p>
+    <div class="btns"><a class="btn primary" href="#plans">Browse example plans</a><a class="btn" href="https://github.com/Azahir21/rampwise">Get it on GitHub</a></div>
+    <div class="sports"><span>Swim</span><span>Bike</span><span>Run</span><span>Strength</span></div>
+    <p class="fine">Independent project, not affiliated with Garmin Ltd. Experimental: not medical advice, no promised results.</p>
+  </div>
+  <a class="shot" href="races/olympic-tri.html" aria-label="Open the Olympic triathlon example plan"><img src="img/plan-viewer.png" alt="The Rampwise plan viewer showing a 13-week Olympic triathlon plan with a weekly hours chart and a week of sessions" width="1100" height="820"></a>
+</div></header>
 
-<h2>What it does</h2>
-<div class="card"><ul>
-<li><strong>Plans</strong> rolling 4-week running, cycling and strength plans from your last weeks of training, with reset and deload weeks and a +10 % step cap.</li>
-<li><strong>Adapts</strong> tomorrow's session to your readiness, injury-risk watch and how much of the plan you did: keep, a small step up, easier, shorter, or rest. It prepares the calendar update and applies it only after you agree.</li>
-<li><strong>Watches for injury risk</strong> from load spikes, rest streaks, low recovery, short sleep and your own pain check-ins. Flags are prompts with an evidence label, never a diagnosis.</li>
-<li><strong>Analyses</strong> your latest session against the last similar one, and this week against last week.</li>
-<li><strong>Reports</strong> as Markdown with figures or one interactive HTML file, with goal meters when you set a goal.</li>
-<li><strong>Asks, never assumes</strong> your heart-rate zones, equipment and starting weights, and labels every rule research, practice or gap.</li>
-</ul></div>
+<div class="wrap stats">
+  <div class="stat"><b>17</b><span>race types: tri, duathlon, run, ride, swim</span></div>
+  <div class="stat"><b>4</b><span>sports: swim, bike, run, strength</span></div>
+  <div class="stat"><b>3</b><span>evidence labels on every rule</span></div>
+  <div class="stat"><b>$0</b><span>free, open source</span></div>
+</div>
 
-<h2>How to install (Claude Code)</h2>
-<pre>/plugin marketplace add Azahir21/rampwise
-/plugin install rampwise@rampwise</pre>
-<p>You also need a Garmin account with Personal API access and the <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> server (MIT, by Mason Levy), Python 3.10+, and <code>pip install fitdecode</code>. Then ask your agent: <em>"Set up my Rampwise coach."</em> Other Agent Skills clients: see the <a href="https://github.com/Azahir21/rampwise#install">install section</a>.</p>
+<div class="wrap">
+<section id="plans">
+  <h2>Pick your race</h2>
+  <p class="sub">Seventeen example plans built from made-up numbers. Open one to see every week, each session's steps, and the reasons behind the plan. Give your own numbers to get your own.</p>
+  <div class="grid3">
+    <!--PLANS-->
+    <div class="card plan tri"><div class="bar"></div><span class="tag tri">TRIATHLON</span><h3><a class="stretch" href="races/sprint-tri.html">Sprint triathlon</a></h3><p class="meta">10 weeks · peak about 6 h/week</p><p class="dl"><a href="races/sprint-tri/plan.ics">.ics</a> · <a href="races/sprint-tri/plan.csv">.csv</a></p></div>
+    <div class="card plan tri"><div class="bar"></div><span class="tag tri">TRIATHLON</span><h3><a class="stretch" href="races/olympic-tri.html">Olympic triathlon</a></h3><p class="meta">13 weeks · peak about 9 h/week</p><p class="dl"><a href="races/olympic-tri/plan.ics">.ics</a> · <a href="races/olympic-tri/plan.csv">.csv</a></p></div>
+    <div class="card plan tri"><div class="bar"></div><span class="tag tri">TRIATHLON</span><h3><a class="stretch" href="races/70.3.html">Half-distance triathlon (70.3)</a></h3><p class="meta">17 weeks · peak about 11 h/week</p><p class="dl"><a href="races/70.3/plan.ics">.ics</a> · <a href="races/70.3/plan.csv">.csv</a></p></div>
+    <div class="card plan tri"><div class="bar"></div><span class="tag tri">TRIATHLON</span><h3><a class="stretch" href="races/ironman.html">Full-distance triathlon (Ironman)</a></h3><p class="meta">21 weeks · peak about 14 h/week</p><p class="dl"><a href="races/ironman/plan.ics">.ics</a> · <a href="races/ironman/plan.csv">.csv</a></p></div>
+    <div class="card plan du"><div class="bar"></div><span class="tag du">DUATHLON</span><h3><a class="stretch" href="races/duathlon-sprint.html">Sprint duathlon (run, ride, run)</a></h3><p class="meta">10 weeks · peak about 6 h/week</p><p class="dl"><a href="races/duathlon-sprint/plan.ics">.ics</a> · <a href="races/duathlon-sprint/plan.csv">.csv</a></p></div>
+    <div class="card plan du"><div class="bar"></div><span class="tag du">DUATHLON</span><h3><a class="stretch" href="races/duathlon-standard.html">Standard duathlon (run, ride, run)</a></h3><p class="meta">13 weeks · peak about 8.5 h/week</p><p class="dl"><a href="races/duathlon-standard/plan.ics">.ics</a> · <a href="races/duathlon-standard/plan.csv">.csv</a></p></div>
+    <div class="card plan run"><div class="bar"></div><span class="tag run">RUNNING</span><h3><a class="stretch" href="races/5k.html">5 km run</a></h3><p class="meta">10 weeks · peak about 5 h/week</p><p class="dl"><a href="races/5k/plan.ics">.ics</a> · <a href="races/5k/plan.csv">.csv</a></p></div>
+    <div class="card plan run"><div class="bar"></div><span class="tag run">RUNNING</span><h3><a class="stretch" href="races/10k.html">10 km run</a></h3><p class="meta">11 weeks · peak about 6 h/week</p><p class="dl"><a href="races/10k/plan.ics">.ics</a> · <a href="races/10k/plan.csv">.csv</a></p></div>
+    <div class="card plan run"><div class="bar"></div><span class="tag run">RUNNING</span><h3><a class="stretch" href="races/half.html">Half marathon</a></h3><p class="meta">13 weeks · peak about 7 h/week</p><p class="dl"><a href="races/half/plan.ics">.ics</a> · <a href="races/half/plan.csv">.csv</a></p></div>
+    <div class="card plan run"><div class="bar"></div><span class="tag run">RUNNING</span><h3><a class="stretch" href="races/marathon.html">Marathon</a></h3><p class="meta">17 weeks · peak about 8.5 h/week</p><p class="dl"><a href="races/marathon/plan.ics">.ics</a> · <a href="races/marathon/plan.csv">.csv</a></p></div>
+    <div class="card plan run"><div class="bar"></div><span class="tag run">RUNNING</span><h3><a class="stretch" href="races/ultra-50k.html">50 km ultra</a></h3><p class="meta">19 weeks · peak about 10 h/week</p><p class="dl"><a href="races/ultra-50k/plan.ics">.ics</a> · <a href="races/ultra-50k/plan.csv">.csv</a></p></div>
+    <div class="card plan bike"><div class="bar"></div><span class="tag bike">CYCLING</span><h3><a class="stretch" href="races/gran-fondo.html">Gran fondo (100 km ride)</a></h3><p class="meta">13 weeks · peak about 7.5 h/week</p><p class="dl"><a href="races/gran-fondo/plan.ics">.ics</a> · <a href="races/gran-fondo/plan.csv">.csv</a></p></div>
+    <div class="card plan bike"><div class="bar"></div><span class="tag bike">CYCLING</span><h3><a class="stretch" href="races/century.html">Century ride (160 km)</a></h3><p class="meta">15 weeks · peak about 9 h/week</p><p class="dl"><a href="races/century/plan.ics">.ics</a> · <a href="races/century/plan.csv">.csv</a></p></div>
+    <div class="card plan bike"><div class="bar"></div><span class="tag bike">CYCLING</span><h3><a class="stretch" href="races/ultra-ride.html">Ultra-distance ride (300 km)</a></h3><p class="meta">20 weeks · peak about 12 h/week</p><p class="dl"><a href="races/ultra-ride/plan.ics">.ics</a> · <a href="races/ultra-ride/plan.csv">.csv</a></p></div>
+    <div class="card plan swim"><div class="bar"></div><span class="tag swim">SWIMMING</span><h3><a class="stretch" href="races/swim-1500.html">Open-water swim 1.5 km</a></h3><p class="meta">11 weeks · peak about 5 h/week</p><p class="dl"><a href="races/swim-1500/plan.ics">.ics</a> · <a href="races/swim-1500/plan.csv">.csv</a></p></div>
+    <div class="card plan swim"><div class="bar"></div><span class="tag swim">SWIMMING</span><h3><a class="stretch" href="races/swim-5k.html">Open-water swim 5 km</a></h3><p class="meta">16 weeks · peak about 8 h/week</p><p class="dl"><a href="races/swim-5k/plan.ics">.ics</a> · <a href="races/swim-5k/plan.csv">.csv</a></p></div>
+    <div class="card plan swim"><div class="bar"></div><span class="tag swim">SWIMMING</span><h3><a class="stretch" href="races/swim-10k.html">Marathon swim 10 km</a></h3><p class="meta">20 weeks · peak about 10 h/week</p><p class="dl"><a href="races/swim-10k/plan.ics">.ics</a> · <a href="races/swim-10k/plan.csv">.csv</a></p></div>
+    <!--/PLANS-->
+  </div>
+</section>
 
-<h2>Frequently asked questions</h2>
-<details open><summary>What is Rampwise?</summary><p>A free, open-source set of AI agent skills that coaches a runner or cyclist from their own Garmin data. It builds training plans, adapts the next session to how you are doing, watches for injury-risk signals and writes daily, weekly and monthly reports.</p></details>
-<details><summary>Is Rampwise free?</summary><p>Yes, it is licensed under Apache-2.0. You need your own Garmin account with Personal API access and an AI agent client such as Claude Code, which has its own terms and costs.</p></details>
-<details><summary>Is Rampwise affiliated with Garmin?</summary><p>No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool reads.</p></details>
-<details><summary>Does my data leave my computer?</summary><p>Your Garmin data is read through a local server and your own key, and your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Weather lookups are optional and only run with your consent. See the <a href="https://github.com/Azahir21/rampwise/blob/main/PRIVACY.md">privacy notes</a>.</p></details>
-<details><summary>Does it replace a human coach or a doctor?</summary><p>No. It is experimental software, not medical advice. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician.</p></details>
-<details><summary>How are its training rules chosen?</summary><p>Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the <a href="https://github.com/Azahir21/rampwise/blob/main/docs/PAPERS.md">paper list</a>. It never promises a result or a date for a goal.</p></details>
-<details><summary>Which AI tools and watches does it work with?</summary><p>It is built as a Claude Code plugin and as plain Agent Skills for other clients; Codex and other clients are untested. It was built and tested on one person's Garmin data and has not been verified on other watches. A three-month field test by the author starts now; results will be published honestly.</p></details>
+<section id="features">
+  <h2>What you get</h2>
+  <p class="sub">A plan is the start. Rampwise keeps coaching after you press go.</p>
+  <div class="grid3">
+    <div class="card"><div class="ic c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V10m5 10V4m5 16v-7m5 7V8"/></svg></div><h3>Periodised plans</h3><p>Base, build, peak and taper, a lighter week every fourth week, and weekly volume that rises by 10 % at most. If the weeks you have cannot reach the usual peak safely, it says so.</p></div>
+    <div class="card"><div class="ic c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M2 20c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2M14 5l3 3-3 3"/></svg></div><h3>Real triathlon plans</h3><p>Swim, bike, run and strength with brick runs, a swim/bike/run split per distance, and long-session caps. Swim sessions are written by time and effort, so they fit any pool.</p></div>
+    <div class="card"><div class="ic c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5l3 2"/><circle cx="12" cy="13" r="8"/><path d="M9 2h6"/></svg></div><h3>Daily adaptation</h3><p>Checks readiness, the injury-risk watch and how much of the plan you did, then keeps, softens or rests tomorrow's session. Changes your calendar only after you agree.</p></div>
+    <div class="card"><div class="ic c3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Injury-risk watch</h3><p>Flags long-run spikes, 14 days without rest, short sleep and your own pain check-ins, each with its evidence label. Prompts to look closer, never a diagnosis.</p></div>
+    <div class="card"><div class="ic c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4m8-4v4"/></svg></div><h3>Export anywhere</h3><p>Calendar (.ics), spreadsheet (.csv), Zwift (.zwo) and ERG/MRC ride workouts. Garmin .fit workouts come from the Garmin-history planner.</p></div>
+    <div class="card"><div class="ic c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9m6 10V5m6 14v-8m4 8H2"/></svg></div><h3>Reports</h3><p>Daily, weekly and monthly reports as Markdown or one interactive HTML file: recovery, week-over-week, plan against done and goal meters. Works offline.</p></div>
+  </div>
+</section>
 
-<h2>Links</h2>
-<ul>
-<li><a href="https://github.com/Azahir21/rampwise">Source code and README</a> (Apache-2.0)</li>
-<li><a href="sample/">Sample weekly report</a> (synthetic data)</li>
-<li><a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> and <a href="https://github.com/Azahir21/rampwise/issues">issues</a></li>
-<li><a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits and licences</a></li>
-</ul>
-<p class="small">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors.</p>
-</main>
+<section id="how">
+  <h2>How it works</h2>
+  <p class="sub">Three steps. Nothing is guessed: it asks for your numbers, and says where an answer is an estimate.</p>
+  <div class="steps">
+    <div class="step"><h3>Tell it your race</h3><p>Event, date, level, hours per week and days you can train. Or connect your Garmin data and let it read your last weeks of training.</p></div>
+    <div class="step"><h3>Get your plan</h3><p>Open it in the plan viewer, send it to your calendar, Zwift or trainer app, and see why each rule is there.</p></div>
+    <div class="step"><h3>Adapt as you go</h3><p>Each morning it re-checks tomorrow against your recovery and risk flags, and reports how the week compared with the last.</p></div>
+  </div>
+  <pre><code># no Garmin needed: five numbers are enough
+python event_plan.py --event olympic-tri --event-date 2027-06-20 --level intermediate \
+  --hours-now 6 --max-hours 9 --days 6
+python plan_viewer.py plan.json      # one interactive HTML page
+python export_plan.py plan.json      # .ics  .csv  .zwo  .mrc</code></pre>
+</section>
+
+<section id="evidence">
+  <h2>Every rule wears a label</h2>
+  <p class="sub">A coach should be able to say why. Rampwise marks each rule by how much stands behind it, and lists the papers in the repository.</p>
+  <div class="labels">
+    <div class="lab"><b class="r">research</b><p>A paper supports the direction. Example: a 2-week taper that cuts volume by about 41-60 % and keeps intensity gave the best gains in a meta-analysis of 27 studies.</p></div>
+    <div class="lab"><b class="p">practice</b><p>A coaching convention. Example: a lighter week every fourth week, and the swim/bike/run split for each distance.</p></div>
+    <div class="lab"><b class="g">gap</b><p>Nothing read supports it. Example: brick sessions as such. Shown openly so you can change it.</p></div>
+  </div>
+  <p class="note" style="margin-top:16px">Honest status: experimental, built and tested on one person's data. Not tested on other watches or AI clients yet, and no plan can promise a finish time. Read the <a href="https://github.com/Azahir21/rampwise/blob/main/DISCLAIMER.md">disclaimer</a>.</p>
+</section>
+
+<section id="install">
+  <h2>Install in a minute</h2>
+  <p class="sub">Free to use. You need an AI agent client such as Claude Code. A Garmin account is optional.</p>
+  <div class="tabs">
+    <input type="radio" name="t" id="t1" checked><label for="t1">Claude Code</label>
+    <input type="radio" name="t" id="t2"><label for="t2">Other agents</label>
+    <input type="radio" name="t" id="t3"><label for="t3">Zip download</label>
+    <div class="pane p1"><pre><code>/plugin marketplace add Azahir21/rampwise
+/plugin install rampwise@rampwise</code></pre><p>Then ask: <em>"Set up my Rampwise coach."</em> It interviews you (goals, injuries, equipment, schedule) before it plans anything.</p></div>
+    <div class="pane p2"><pre><code>git clone https://github.com/Azahir21/rampwise
+python rampwise/install.py --target agents</code></pre><p>Copies the skills to <code>~/.agents/skills</code> for Codex and other Agent Skills clients (untested). Use <code>--target claude</code> for Claude Code files.</p></div>
+    <div class="pane p3"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --target claude</code> (or <code>--target agents</code>).</p></div>
+  </div>
+  <p class="sub" style="margin-top:6px">Using Garmin data too? Install <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> (MIT, by Mason Levy), Python 3.10+, and <code>pip install fitdecode</code>.</p>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <details open><summary>What is Rampwise?</summary><p>A free, open-source set of AI agent skills that coaches triathletes, runners and cyclists. It builds plans for running, cycling, swimming, duathlon and triathlon events, adapts the next session to how you are doing, watches for injury-risk signals and writes daily, weekly and monthly reports.</p></details>
+  <details><summary>Is Rampwise free?</summary><p>Yes. It is licensed under Apache-2.0. You need an AI agent client such as Claude Code, which has its own terms and costs. Garmin data access, if you use it, needs your own Garmin account with Personal API access.</p></details>
+  <details><summary>Do I need a Garmin watch?</summary><p>No. Give a few numbers (event, date, level, weekly hours, days per week) and get a full plan with no Garmin account. With Garmin data it can also adapt your plan from your real training and recovery.</p></details>
+  <details><summary>Which events does it plan?</summary><p>Running: 5 km, 10 km, half marathon, marathon, 50 km ultra. Triathlon: sprint, Olympic, 70.3, Ironman. Duathlon: sprint and standard. Cycling: gran fondo (100 km), century (160 km), ultra ride (300 km). Open-water swimming: 1.5 km, 5 km, 10 km. Plans run base, build, peak and taper with a lighter week every fourth week.</p></details>
+  <details><summary>Can I export the plan?</summary><p>Yes: calendar files (.ics), spreadsheets (.csv), and Zwift (.zwo) and ERG/MRC ride workouts, with power written as a share of FTP. Garmin .fit workout files come from the Garmin-history planner and need your heart-rate data.</p></details>
+  <details><summary>Is Rampwise affiliated with Garmin?</summary><p>No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read.</p></details>
+  <details><summary>Does my data leave my computer?</summary><p>Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent. See the <a href="https://github.com/Azahir21/rampwise/blob/main/PRIVACY.md">privacy notes</a>.</p></details>
+  <details><summary>Does it replace a coach or a doctor?</summary><p>No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician.</p></details>
+  <details><summary>How are its training rules chosen?</summary><p>Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the <a href="https://github.com/Azahir21/rampwise/blob/main/docs/PAPERS.md">paper list</a>. It asks you for your numbers instead of assuming them.</p></details>
+</section>
+</div>
+
+<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
 </body>
 </html>

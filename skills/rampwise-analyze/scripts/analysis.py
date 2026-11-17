@@ -9,7 +9,7 @@ and the rules are explained in ../references/evidence-map.md.
 from datetime import date, timedelta
 from statistics import mean
 
-SPORTS = ("run", "bike", "strength", "other")
+SPORTS = ("run", "bike", "swim", "strength", "other")
 # thresholds, each labelled (see references/evidence-map.md)
 SPIKE_PCT = 10.0            # research: Frandsen 2025, single run vs longest run of the previous 30 days
 SPIKE_RED_PCT = 100.0       # research: the largest hazard ratio was above +100 %; the colour mapping is practice
@@ -50,10 +50,10 @@ def aggregate(acts):
             "hard_sessions": sum(1 for a in xs if (a.get("te_aerobic") or 0) >= HARD_TE),
             "days": len({a["date"] for a in xs}),
         }
-    endur = [a for a in acts if a["sport"] in ("run", "bike")]
+    endur = [a for a in acts if a["sport"] in ("run", "bike", "swim")]
     out["endurance_minutes"] = round(sum(a["min"] for a in endur))
-    out["training_days"] = len({a["date"] for a in acts if a["sport"] in ("run", "bike", "strength")})
-    out["sessions"] = len([a for a in acts if a["sport"] in ("run", "bike", "strength")])
+    out["training_days"] = len({a["date"] for a in acts if a["sport"] in ("run", "bike", "swim", "strength")})
+    out["sessions"] = len([a for a in acts if a["sport"] in ("run", "bike", "swim", "strength")])
     return out
 
 
@@ -76,7 +76,7 @@ def compare(acts, today):
     for key, (a_rng, b_rng) in {"rolling": (r_this, r_prev), "calendar_same_days": (c_this, c_same), "calendar_vs_last_full_week": (c_this, c_full)}.items():
         A, B = aggregate(_in(acts, *a_rng)), aggregate(_in(acts, *b_rng))
         d = {}
-        for sport in ("run", "bike", "strength"):
+        for sport in ("run", "bike", "swim", "strength"):
             d[sport] = {k: _delta(A[sport][k], B[sport][k], SMALL_BASE_MIN if k == "minutes" else 0) for k in ("sessions", "minutes", "km", "gain_m", "avg_hr", "avg_speed_kmh", "longest_min", "hard_sessions")}
         d["endurance_minutes"] = _delta(A["endurance_minutes"], B["endurance_minutes"], SMALL_BASE_MIN)
         d["training_days"] = _delta(A["training_days"], B["training_days"])
@@ -117,7 +117,7 @@ def insights(cmp, units=None):
         u = unit if A[name][key] != 1 or unit != "sessions" else "session"
         return f"{name} {key}: {A[name][key]} {u} vs {B[name][key]} before, {word}{pct}"
 
-    for sport in ("run", "bike", "strength"):
+    for sport in ("run", "bike", "swim", "strength"):
         s = phr(sport, "minutes" if sport != "strength" else "sessions", "min" if sport != "strength" else "sessions")
         if s:
             out.append(s)
@@ -139,7 +139,7 @@ def _flag(level, fid, text, evidence, action):
 
 
 def consecutive_days(acts, today):
-    days = {a["date"] for a in acts if a["sport"] in ("run", "bike", "strength")}
+    days = {a["date"] for a in acts if a["sport"] in ("run", "bike", "swim", "strength")}
     d = today if today in days else today - timedelta(days=1)
     n = 0
     while d in days:
@@ -176,14 +176,14 @@ def injury_flags(acts, rows, athlete, today, readiness=None):
         if ref >= SPIKE_MIN_REF_KM and over > SPIKE_PCT and r["km"] - ref > 0.3:
             lvl = "red" if over > SPIKE_RED_PCT else "amber"
             flags.append(_flag(lvl, "run_spike", f"The run on {r['date']} ({r['km']:.1f} km) was {over:.0f} % longer than your longest run in the 30 days before ({ref:.1f} km).",
-                               "research: Frandsen 2025 (5,205 runners): injury rates were higher after a single run more than 10 % longer than the recent longest",
+                               "research (observational; Frandsen 2025, 5,205 mostly experienced adult runners, self-reported injuries): injury rates were higher after a single run more than 10 % longer than the recent longest; no trial yet",
                                f"Keep the next long run at or under {ref * 1.1:.1f} km until it is the new normal; watch for new pain."))
     # 2. week-over-week jump (practice, mixed evidence)
     c = compare(acts, today)["rolling"]
     d = c["delta"]["endurance_minutes"]
     if d["pct"] is not None and d["pct"] >= WEEK_JUMP_PCT:
-        flags.append(_flag("amber", "week_jump", f"Run + ride minutes in the last 7 days are up {d['pct']:.0f} % on the 7 days before ({c['this']['endurance_minutes']} vs {c['before']['endurance_minutes']} min).",
-                           "practice with mixed observational support (Nielsen 2014, Damsted 2019); a graded 10 % rule did not prevent injuries in an RCT (Buist 2008)", "Hold this week's volume instead of adding more; a prompt to look closer, not a verdict."))
+        flags.append(_flag("amber", "week_jump", f"Endurance minutes (run, ride, swim) in the last 7 days are up {d['pct']:.0f} % on the 7 days before ({c['this']['endurance_minutes']} vs {c['before']['endurance_minutes']} min).",
+                           "practice, weak support: the largest cohort found no week-to-week association (Frandsen 2025); mixed in smaller studies (Nielsen 2014, Damsted 2019); a graded 10 % rule did not prevent injuries in an RCT (Buist 2008)", "Hold this week's volume instead of adding more; a prompt to look closer, not a verdict."))
     # 3. rest days
     n = consecutive_days(acts, today)
     if n >= NO_REST_AMBER:

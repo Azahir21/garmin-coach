@@ -1,0 +1,138 @@
+[
+ {
+  "key": "5k",
+  "label": "5 km run",
+  "kind": "run",
+  "weeks": 10,
+  "peak_hours": 5.0,
+  "sessions": 69
+ },
+ {
+  "key": "10k",
+  "label": "10 km run",
+  "kind": "run",
+  "weeks": 11,
+  "peak_hours": 6.0,
+  "sessions": 82
+ },
+ {
+  "key": "half",
+  "label": "Half marathon",
+  "kind": "run",
+  "weeks": 13,
+  "peak_hours": 7.0,
+  "sessions": 100
+ },
+ {
+  "key": "marathon",
+  "label": "Marathon",
+  "kind": "run",
+  "weeks": 17,
+  "peak_hours": 8.5,
+  "sessions": 133
+ },
+ {
+  "key": "ultra-50k",
+  "label": "50 km ultra",
+  "kind": "run",
+  "weeks": 19,
+  "peak_hours": 10.0,
+  "sessions": 149
+ },
+ {
+  "key": "sprint-tri",
+  "label": "Sprint triathlon",
+  "kind": "tri",
+  "weeks": 10,
+  "peak_hours": 6.0,
+  "sessions": 82
+ },
+ {
+  "key": "olympic-tri",
+  "label": "Olympic triathlon",
+  "kind": "tri",
+  "weeks": 13,
+  "peak_hours": 9.0,
+  "sessions": 106
+ },
+ {
+  "key": "70.3",
+  "label": "Half-distance triathlon (70.3)",
+  "kind": "tri",
+  "weeks": 17,
+  "peak_hours": 11.0,
+  "sessions": 139
+ },
+ {
+  "key": "ironman",
+  "label": "Full-distance triathlon (Ironman)",
+  "kind": "tri",
+  "weeks": 21,
+  "peak_hours": 14.0,
+  "sessions": 173
+ },
+ {
+  "key": "duathlon-sprint",
+  "label": "Sprint duathlon (run, ride, run)",
+  "kind": "du",
+  "weeks": 10,
+  "peak_hours": 6.0,
+  "sessions": 78
+ },
+ {
+  "key": "duathlon-standard",
+  "label": "Standard duathlon (run, ride, run)",
+  "kind": "du",
+  "weeks": 13,
+  "peak_hours": 8.5,
+  "sessions": 105
+ },
+ {
+  "key": "gran-fondo",
+  "label": "Gran fondo (100 km ride)",
+  "kind": "bike",
+  "weeks": 13,
+  "peak_hours": 7.5,
+  "sessions": 92
+ },
+ {
+  "key": "century",
+  "label": "Century ride (160 km)",
+  "kind": "bike",
+  "weeks": 15,
+  "peak_hours": 9.0,
+  "sessions": 109
+ },
+ {
+  "key": "ultra-ride",
+  "label": "Ultra-distance ride (300 km)",
+  "kind": "bike",
+  "weeks": 20,
+  "peak_hours": 12.0,
+  "sessions": 155
+ },
+ {
+  "key": "swim-1500",
+  "label": "Open-water swim 1.5 km",
+  "kind": "swim",
+  "weeks": 11,
+  "peak_hours": 5.0,
+  "sessions": 85
+ },
+ {
+  "key": "swim-5k",
+  "label": "Open-water swim 5 km",
+  "kind": "swim",
+  "weeks": 16,
+  "peak_hours": 8.0,
+  "sessions": 125
+ },
+ {
+  "key": "swim-10k",
+  "label": "Marathon swim 10 km",
+  "kind": "swim",
+  "weeks": 20,
+  "peak_hours": 10.0,
+  "sessions": 157
+ }
+]

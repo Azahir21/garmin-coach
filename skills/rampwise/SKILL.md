@@ -33,7 +33,10 @@ Targets (a 10 km time, a ride speed, a race) are checked, not promised: no verif
 | `rampwise-report` | (main session runs it) | `report.py daily\|weekly\|monthly` | Markdown + interactive HTML report with figures and goal meters |
 | (this skill) | - | `scripts/athlete.py` (memory), `scripts/paces.py` (upstream, MIT), `scripts/gcommon.py` | Goals/injuries memory, race predictions, shared Garmin data layer |
 
-Each specialist folder has `SKILL.md` (how to use), `references/evidence-map.md` (rule -> paper -> what was verified -> strength), `references/library.md` (all papers with DOI and status) and `references/papers/` (open-access full texts). Use them when the athlete asks "why?": say whether a rule is **research** (and which paper), **practice** (coaching convention) or a **gap**. Never quote a number that is not in a script output or an evidence map.
+Each specialist folder has `SKILL.md` (how to use), `references/evidence-map.md` (rule -> paper -> what was verified -> strength), `references/library.md` (all papers with DOI and status) and `references/papers/` (open-access full texts). Use them when the athlete asks "why?": say whether a rule is **research** (and which paper), **practice** (coaching convention) or a **gap**. **Before you quote a number, sample size or effect from a paper, open its file** in the skill's `references/papers/` (find it in `references/papers/INDEX.md`): a `full text` file can be quoted for sample, effect and limits; an `abstract only` file caps the claim at what the abstract says (say "abstract only"); `title only` supports nothing but the citation. Never quote from memory. Never quote a number that is not in a script output or an evidence map.
+
+## Where generated files go
+Plans, plan pages, exports, reports, workouts and the dashboard go to `~/rampwise-coach/` (subfolders `plans/`, `reports/`, `workouts/`, `dashboard/`); athlete memory stays in `~/rampwise-data`. Tell the user where a file is. The user can change the folder without moving data (`athlete.py set preferences.output_dir '"<folder>"'`, env `RAMPWISE_OUT`, or `--here` on a command for `./rampwise-coach` in the session folder). Offer `--here` when they want files next to the project they are working in.
 
 ## Setup check (first use, or when a script fails)
 - `python -m pip install --user fitdecode` (FIT file reading).

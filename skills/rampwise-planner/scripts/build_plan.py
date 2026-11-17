@@ -535,7 +535,8 @@ def main():
     ap.add_argument("--reset", choices=["auto", "yes", "no"], default="auto")
     ap.add_argument("--hr-from-trend", action="store_true", help="the athlete shared no heart-rate data: estimate an easy band from their activities")
     ap.add_argument("--days-per-week", type=int, choices=[5, 6], default=None)
-    ap.add_argument("--out")
+    ap.add_argument("--out", help="default: plans/plan-<start>.json in the output folder")
+    gc.apply_here_flag()
     a = ap.parse_args()
     gc.utf8_stdout()
     athlete = json.loads((ATHLETE_JSON).read_text(encoding="utf-8"))
@@ -559,10 +560,10 @@ def main():
         print("\n" + hr_note)
     if meta.get("strength", {}).get("needs"):
         print("\nASK THE ATHLETE (strength): " + "; ".join(meta["strength"]["needs"]))
-    if a.out:
-        Path(a.out).parent.mkdir(parents=True, exist_ok=True)
-        Path(a.out).write_text(json.dumps({"meta": meta, "sessions": sess}, indent=1, default=str), encoding="utf-8")
-        print(f"\n(saved {a.out})")
+    outp = Path(a.out) if a.out else gc.out_dir("plans") / f"plan-{a.start}.json"
+    outp.parent.mkdir(parents=True, exist_ok=True)
+    outp.write_text(json.dumps({"meta": meta, "sessions": sess}, indent=1, default=str), encoding="utf-8")
+    print(f"\n(saved {outp})")
 
 
 if __name__ == "__main__":

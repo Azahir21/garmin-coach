@@ -20,6 +20,20 @@ jobs:
           [ "v$V" = "${GITHUB_REF_NAME}" ] || { echo "tag ${GITHUB_REF_NAME} does not match plugin version v$V"; exit 1; }
       - name: Release notes from CHANGELOG
         run: python -c "import re;t=open('CHANGELOG.md',encoding='utf-8').read();m=re.search(r'^## (.+?)\n(.*?)(?=^## |\Z)',t,re.S|re.M);open('notes.md','w',encoding='utf-8').write(m.group(2).strip())"
+      - name: Build the downloadable zip
+        run: |
+          python - <<'PY'
+          import zipfile, pathlib
+          root = pathlib.Path('.')
+          with zipfile.ZipFile('rampwise-skills.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+              for top in ('skills', 'agents'):
+                  for p in sorted((root / top).rglob('*')):
+                      if p.is_file() and '__pycache__' not in p.parts:
+                          z.write(p, p.as_posix())
+              for f in ('install.py', 'README.md', 'LICENSE', 'NOTICE', 'DISCLAIMER.md', 'PRIVACY.md', 'CREDITS.md', 'CHANGELOG.md'):
+                  z.write(f, f)
+          PY
       - uses: softprops/action-gh-release@v2
         with:
           body_path: notes.md
+          files: rampwise-skills.zip

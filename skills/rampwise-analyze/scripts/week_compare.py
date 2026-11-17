@@ -46,7 +46,7 @@ def print_text(c):
         x = c[key]
         print(f"\n{title}: {x['this']['from']} to {x['this']['to']}  vs  {x['before']['from']} to {x['before']['to']}")
         print(f"  {'':10}{'now':>10}{'before':>10}{'change':>10}")
-        for sport, unit in (("run", "min"), ("bike", "min"), ("strength", "sessions")):
+        for sport, unit in (("run", "min"), ("bike", "min"), ("swim", "min"), ("strength", "sessions")):
             k = "minutes" if sport != "strength" else "sessions"
             a, b, d = x["this"][sport][k], x["before"][sport][k], x["delta"][sport][k]
             pct = f"{d['pct']:+.0f}%" if d["pct"] is not None else (f"{d['abs']:+g}" if d["abs"] is not None else "-")

@@ -4,22 +4,24 @@
     "name": "Kei"
   },
   "metadata": {
-    "description": "Rampwise: an AI endurance coach for your Garmin data (independent, not affiliated with Garmin)",
-    "version": "0.3.1"
+    "description": "Rampwise: an AI coach for triathletes, runners, cyclists and swimmers (independent, not affiliated with Garmin)",
+    "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "rampwise",
       "source": "./",
-      "description": "Rampwise: an AI endurance coach for your Garmin data. Evidence-labelled running, cycling and strength plans, daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
-      "version": "0.3.1",
+      "description": "Rampwise: an AI coach for triathletes, runners, cyclists and swimmers, for your Garmin data or a few numbers you type. Evidence-labelled plans for 17 events (5K to Ironman, duathlon, cycling, open-water swimming), daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
+      "version": "0.4.0",
       "category": "fitness",
       "tags": [
-        "garmin",
+        "triathlon",
         "running",
         "cycling",
+        "swimming",
         "strength",
         "ai-coach",
+        "garmin",
         "hrv"
       ]
     }

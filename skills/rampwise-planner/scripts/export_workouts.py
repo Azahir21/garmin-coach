@@ -42,9 +42,11 @@ def out_dir():
         d = (ath.get("workouts") or {}).get("output_dir")
     except Exception:
         d = None
-    p = Path(d).expanduser() if d else (Path.home() / "garmin-workouts" if (Path.home() / "garmin-workouts").exists() and not (Path.home() / "rampwise-workouts").exists() else Path.home() / "rampwise-workouts")
-    p.mkdir(parents=True, exist_ok=True)
-    return p
+    if d:
+        p = Path(d).expanduser()
+        p.mkdir(parents=True, exist_ok=True)
+        return p
+    return gc.out_dir("workouts")
 
 
 def main():

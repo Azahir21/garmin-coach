@@ -33,7 +33,7 @@ def classify(s):
 def adherence(plan_sessions, acts, today, days=14):
     """Share of planned run/bike/strength sessions in the last `days` days that were done (same sport, same day, at least half the planned minutes)."""
     start = today - timedelta(days=days)
-    planned = [s for s in plan_sessions if start <= _d(s["date"]) < today and s["sport"] in ("run", "bike", "strength")]
+    planned = [s for s in plan_sessions if start <= _d(s["date"]) < today and s["sport"] in ("run", "bike", "swim", "strength")]
     if len(planned) < 3:
         return None
     done = 0
@@ -57,6 +57,8 @@ def decide(s, ctx):
     Returns {"decision": keep|progress|easy_swap|reduce|recovery|rest, "reasons": [...], "evidence": [...], "factor": float|None, "progress": {...}|None}.
     """
     c = classify(s)
+    if s["sport"] == "swim":                    # swim sessions are not adapted automatically yet
+        return {"decision": "keep", "reasons": ["swim sessions are not adapted automatically yet: on a RED or AMBER day halve it or swim easy technique only"], "evidence": ["practice"], "factor": None, "progress": None, "category": c}
     ready, inj, ids = ctx.get("readiness"), ctx.get("injury_level", "GREEN"), ctx.get("flag_ids", set())
     reasons, evidence = [], []
     out = {"decision": "keep", "reasons": reasons, "evidence": evidence, "factor": None, "progress": None, "category": c}

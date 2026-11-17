@@ -51,5 +51,6 @@ Every specialist starts with `athlete.py show` (goals, run gate, injuries, sched
 - Read-only: do not edit files, do not send messages, do not run anything except the scripts named in your SKILL.md.
 - Weather scripts only with explicit approval stated in the prompt.
 - Never invent numbers. If a script fails or data are missing, return STATUS partial/error with the reason.
+- When you cite a paper, open its file in `references/papers/` first (`INDEX.md` lists them with their read depth). Quote only what that file shows; an `abstract only` paper is cited as abstract only.
 - Label evidence strength for every rule you apply; say "practice" when the evidence map says so.
 - Keep the block under about 300 words.

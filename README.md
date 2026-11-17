@@ -1,17 +1,19 @@
-# Rampwise: an AI endurance coach for your Garmin data
+# Rampwise: an AI coach for triathletes, runners, cyclists and swimmers
 
-**Evidence-labelled running, cycling and strength coaching for AI agents (Claude Code, Codex and other Agent Skills clients).** Plans, daily adaptation, an injury-risk watch and daily/weekly/monthly reports built from *your own* Garmin data, with specialists for recovery, load, heat, fueling and heart-rate zones. Free and open source (Apache-2.0).
+**Evidence-labelled coaching for triathlon, duathlon, running, cycling and open-water swimming, for AI agents (Claude Code, Codex and other Agent Skills clients).** Race plans for 17 events (no Garmin needed), daily adaptation, an injury-risk watch and daily/weekly/monthly reports built from *your own* Garmin data or a few numbers you type, with specialists for recovery, load, heat, fueling and heart-rate zones. Free and open source (Apache-2.0).
 
 > Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. and is used here only to say which data the tool reads.
 
 Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
 
-> **Status: v0.3.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
+> **Status: v0.4.0, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
 [![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
 *A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*
 
 ## What it does
+- **Race plans for 17 events, with or without Garmin**: 5K to 50 km ultra, sprint to Ironman triathlon, sprint and standard duathlon, gran fondo to 300 km rides, 1.5 to 10 km open-water swims. Base, build, peak and taper, a lighter week every 4th week, +10 % weekly cap, swim/bike/run/strength sessions with brick runs. Give event, date, level, hours and days; it asks for anything missing. See the [example plans](https://azahir21.github.io/rampwise/#plans).
+- **Plan viewer and exports**: one interactive HTML page per plan; calendar (.ics), spreadsheet (.csv), Zwift (.zwo) and ERG/MRC ride files. (Import into Zwift/TrainerRoad is untested; Garmin .fit files come from the Garmin-history planner.)
 - **Plans**: rolling 4-week plans (easy, long, tempo, strides, intervals, climb and MAF-test sessions; rides; strength) from your last weeks of training, with reset and deload weeks and a +10 % step cap.
 - **Garmin workouts**: writes structured `.fit` workout files (warm-up, steady, intervals, rest, cool-down) with your watch's own heart-rate **zone** when one covers the band, otherwise a custom bpm range, and says which it used. Not verified on every watch.
 - **Specialists**: recovery (HRV, sleep, resting HR to a GREEN/AMBER/RED readiness), aerobic base (pace at a heart rate, drift), load and injury flags, heat and weather adjustment, fueling and sweat-rate maths, strength placement.
@@ -83,6 +85,22 @@ If it helps you, star the repo, tell a training partner, or open an issue with w
 ## Upgrading from "Garmin Coach" (before v0.3.0)
 The project was renamed to Rampwise so it does not use another company's trademark. Skills are now `rampwise-*` and the plugin is `rampwise` (`/plugin marketplace add Azahir21/rampwise`, then `/plugin install rampwise@rampwise`). Your data keeps working: `RAMPWISE_DATA` falls back to the older `GARMIN_COACH_DATA`, and `~/garmin-coach-data` is still used if it is the only folder that exists. Calendar events made earlier (marker `garmin-coach-plan`) are still found. GitHub redirects the old repository address.
 
+## Where files go
+Generated files (plans, plan pages, exports, reports, workouts, the dashboard) go to one main folder, **`~/rampwise-coach/`**, with a subfolder for each kind:
+```text
+rampwise-coach/
+  plans/<event>-<date>/    plan.json, plan.html (viewer), exports/ (.ics .csv .zwo .mrc)
+  plans/plan-<date>.json   rolling plans built from your Garmin history
+  reports/<date>-<mode>/   report.md, figures/, report.html
+  workouts/                .fit workout files
+  dashboard/               dashboard.html and its history
+```
+Your **data** (`athlete.json`, your profile, the adapt state) stays in `~/rampwise-data` and is never moved by this setting.
+Change the output folder without moving anything: `athlete.py set preferences.output_dir '"~/my-training-files"'`, or set `RAMPWISE_OUT`, or add `--here` to a command to write into a `rampwise-coach` folder in the directory you are working in. Use `"cwd"` as the preference to always do that. Older files stay where they were and are still found.
+
+## Paper library (for the "why?" questions)
+The repository lists every paper behind a rule (`docs/PAPERS.md`) but does not ship the texts. Run `python tools/build_paper_files.py` once: it saves the full text of open-access papers and the abstract (with citation) of the others into each skill's `references/papers/` folder, with an `INDEX.md` that says which is which. The coach opens the file before quoting a paper, and says "abstract only" when that is all there is. Details: [docs/EVIDENCE-DEPTH.md](docs/EVIDENCE-DEPTH.md).
+
 ## Safety and evidence
 Not medical advice. See [DISCLAIMER.md](DISCLAIMER.md). The planner never promises a date for a goal; targets are checked against your data. See [PRIVACY.md](PRIVACY.md) for what stays on your machine.
 
@@ -96,6 +114,7 @@ skills/                eleven Agent Skills (SKILL.md + scripts + references)
 agents/                nine subagent prompts (Claude Code)
 tools/                 install, owner placeholders, paper fetcher
 tests/                 repo checks and offline tests (no Garmin account needed)
+docs/races/            example plans for the 17 events (tools/make_demo_plans.py)
 docs/index.html        project page (SEO, FAQ, structured data); docs/sample/ is the sample report (tools/make_sample_report.py, synthetic data)
 docs/                  papers, field-test protocol, harness notes
 ```

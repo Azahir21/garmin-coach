@@ -1,7 +1,7 @@
 {
   "name": "rampwise",
-  "version": "0.3.1",
-  "description": "Rampwise: an AI endurance coach for your Garmin data. Evidence-labelled running, cycling and strength plans, daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
+  "version": "0.4.0",
+  "description": "Rampwise: an AI coach for triathletes, runners, cyclists and swimmers, for your Garmin data or a few numbers you type. Evidence-labelled plans for 17 events (5K to Ironman, duathlon, cycling, open-water swimming), daily adaptation, injury-risk watch and reports. Independent project, not affiliated with Garmin. Experimental.",
   "author": {
     "name": "Kei"
   },
@@ -20,6 +20,9 @@
     "coach",
     "ai-coach",
     "injury-prevention",
-    "agent-skills"
+    "agent-skills",
+    "triathlon",
+    "swimming",
+    "duathlon"
   ]
 }

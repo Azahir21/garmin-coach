@@ -27,7 +27,7 @@ def day_list(end, n):
 
 
 def daily_minutes(acts, days):
-    out = {s: [0.0] * len(days) for s in ("run", "bike", "strength")}
+    out = {s: [0.0] * len(days) for s in ("run", "bike", "swim", "strength")}
     idx = {d: i for i, d in enumerate(days)}
     for a in acts:
         if a["date"] in idx and a["sport"] in out:
@@ -44,7 +44,7 @@ def weekly_series(acts, rows, today, n):
     """Per calendar week (oldest first, the current week is partial): minutes, km, sessions per sport, longest run and ride, average speed, run efficiency, recovery means."""
     starts = week_starts(today, n)
     out = {"labels": [], "week_start": [str(s) for s in starts], "partial_last": True}
-    keys = ("run_min", "bike_min", "strength_sessions", "run_km", "bike_km", "longest_run_km", "longest_ride_km", "run_speed", "bike_speed", "run_hr", "bike_hr", "run_ef", "hrv", "rhr", "sleep_h", "training_days", "hard")
+    keys = ("run_min", "bike_min", "swim_min", "strength_sessions", "run_km", "bike_km", "longest_run_km", "longest_ride_km", "run_speed", "bike_speed", "run_hr", "bike_hr", "run_ef", "hrv", "rhr", "sleep_h", "training_days", "hard")
     for k in keys:
         out[k] = []
     for s in starts:
@@ -54,6 +54,7 @@ def weekly_series(acts, rows, today, n):
         out["labels"].append(f"{s.day} {analysis.__dict__.get('MONTHS', ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])[s.month - 1]}")
         out["run_min"].append(ag["run"]["minutes"])
         out["bike_min"].append(ag["bike"]["minutes"])
+        out["swim_min"].append(ag["swim"]["minutes"])
         out["strength_sessions"].append(ag["strength"]["sessions"])
         out["run_km"].append(ag["run"]["km"])
         out["bike_km"].append(ag["bike"]["km"])
@@ -87,11 +88,11 @@ def plan_vs_done(plan, acts, days):
     """Planned and done minutes per day (run + ride + strength) for the given days."""
     pl = {str(d): 0 for d in days}
     for s in (plan or {}).get("sessions", []):
-        if s["date"] in pl and s["sport"] in ("run", "bike", "strength"):
+        if s["date"] in pl and s["sport"] in ("run", "bike", "swim", "strength"):
             pl[s["date"]] += s["minutes"]
     dn = {str(d): 0 for d in days}
     for a in acts:
-        if str(a["date"]) in dn and a["sport"] in ("run", "bike", "strength"):
+        if str(a["date"]) in dn and a["sport"] in ("run", "bike", "swim", "strength"):
             dn[str(a["date"])] += a["min"]
     return [pl[str(d)] for d in days], [round(dn[str(d)]) for d in days]
 
@@ -153,6 +154,55 @@ def goal_progress(athlete, acts, today, period_days=84):
                 continue
             out.append({"label": g["title"], "baseline": base, "now": now, "target": target, "better": t.get("better", "higher"), "unit": t.get("unit", ""), "note": m.replace("_", " "), "n": 0})
     return out
+
+
+# ---------------------------------------------------------------- recent activities
+NAMES = {"run": "Run", "bike": "Ride", "swim": "Swim", "strength": "Strength"}
+
+
+def _spd(a):
+    mov = a.get("moving_min") or a["min"]
+    return a["km"] / (mov / 60.0) if a["km"] > 0 and mov > 0 else None
+
+
+def speed_text(a, run_pace=True):
+    v = _spd(a)
+    if not v:
+        return "-"
+    if a["sport"] == "run" and run_pace:
+        return mmss(3600.0 / v) + "/km"
+    if a["sport"] == "swim":
+        return mmss(360.0 / v) + "/100 m"
+    return f"{v:.1f} km/h"
+
+
+def similar_before(acts, a, tol=0.35):
+    c = [x for x in acts if x["sport"] == a["sport"] and x["id"] != a["id"] and x["start"] < a["start"] and a["min"] and abs(x["min"] / a["min"] - 1) <= tol]
+    return max(c, key=lambda x: x["start"]) if c else None
+
+
+def recent_activities(acts, today, days=14, run_pace=True):
+    """Rows for a table of the last `days` days: what was done and how it compared with the last similar session (same sport, length within 35 %). Numbers only."""
+    rows = []
+    for a in sorted((x for x in acts if x["sport"] in NAMES and 0 <= (today - x["date"]).days <= days), key=lambda x: x["start"], reverse=True):
+        prev = similar_before(acts, a)
+        vs = ""
+        if prev and a["sport"] != "strength":
+            sa, sb = _spd(a), _spd(prev)
+            bits = []
+            if sa and sb:
+                if a["sport"] == "run" and run_pace:
+                    d = 3600.0 / sa - 3600.0 / sb
+                    bits.append(f"pace {'faster' if d < 0 else 'slower'} by {abs(int(round(d)))} s/km")
+                else:
+                    bits.append(f"speed {(sa / sb - 1) * 100:+.0f} %")
+            if a.get("avg_hr") and prev.get("avg_hr"):
+                bits.append(f"heart rate {a['avg_hr'] - prev['avg_hr']:+.0f} bpm")
+            vs = f"{prev['date']}: " + ", ".join(bits)
+        elif a["sport"] != "strength":
+            vs = "no similar earlier session"
+        rows.append([str(a["date"]), NAMES[a["sport"]], f"{round(a['min'])} min", f"{a['km']:.1f}" if a["km"] else "-", speed_text(a, run_pace), f"{round(a['avg_hr'])}" if a.get("avg_hr") else "-", vs])
+    return rows
 
 
 # ---------------------------------------------------------------- strength

@@ -1,0 +1,1661 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rampwise//Event plan//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Open-water swim 5 km plan
+BEGIN:VEVENT
+UID:2026-11-23-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261123T063000
+DTEND:20261123T071000
+SUMMARY:[RW] Swim: technique and aerobic (40 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 15 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 1 (BASE). Not medical advice\; pain that changes how you move mea
+ ns stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-23-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261123T183000
+DTEND:20261123T190000
+SUMMARY:[RW] Strength: lower body (knee-dominant) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261124T063000
+DTEND:20261124T071000
+SUMMARY:[RW] Swim: aerobic endurance (40 min)
+DESCRIPTION:8 min easy swim\; 20 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 1 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-25-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261125T063000
+DTEND:20261125T071000
+SUMMARY:[RW] Swim: aerobic endurance (40 min)
+DESCRIPTION:8 min easy swim\; 20 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 1 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261126T183000
+DTEND:20261126T185500
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261127T063000
+DTEND:20261127T071000
+SUMMARY:[RW] Swim: aerobic endurance (40 min)
+DESCRIPTION:8 min easy swim\; 20 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 1 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261128T063000
+DTEND:20261128T073500
+SUMMARY:[RW] Long swim (65 min)
+DESCRIPTION:10 min warm-up\; 50 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 1 (BASE). Not medical advice\; pain that changes how y
+ ou move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261129T063000
+DTEND:20261129T073500
+SUMMARY:[RW] Easy ride (cross-training) (65 min)
+DESCRIPTION:8 min warm-up\; 52 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  1 (BASE). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-30-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261130T063000
+DTEND:20261130T071500
+SUMMARY:[RW] Swim: technique and aerobic (45 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 20 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 2 (BASE). Not medical advice\; pain that changes how you move mea
+ ns stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-30-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261130T183000
+DTEND:20261130T190000
+SUMMARY:[RW] Strength: lower body (hinge and hamstrings) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261201T063000
+DTEND:20261201T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 2 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-02-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261202T063000
+DTEND:20261202T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 2 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261203T183000
+DTEND:20261203T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261204T063000
+DTEND:20261204T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 2 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261205T063000
+DTEND:20261205T074500
+SUMMARY:[RW] Long swim (75 min)
+DESCRIPTION:10 min warm-up\; 60 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 2 (BASE). Not medical advice\; pain that changes how y
+ ou move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261206T063000
+DTEND:20261206T074500
+SUMMARY:[RW] Easy ride (cross-training) (75 min)
+DESCRIPTION:8 min warm-up\; 62 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  2 (BASE). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-07-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261207T063000
+DTEND:20261207T072000
+SUMMARY:[RW] Swim: technique and aerobic (50 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 25 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 3 (BASE). Not medical advice\; pain that changes how you move mea
+ ns stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-07-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261207T183000
+DTEND:20261207T190000
+SUMMARY:[RW] Strength: lower body (glutes and single-leg stability) (30 mi
+ n)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261208T063000
+DTEND:20261208T072000
+SUMMARY:[RW] Swim: aerobic endurance (50 min)
+DESCRIPTION:8 min easy swim\; 30 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 3 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-09-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261209T063000
+DTEND:20261209T072000
+SUMMARY:[RW] Swim: aerobic endurance (50 min)
+DESCRIPTION:8 min easy swim\; 30 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 3 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261210T183000
+DTEND:20261210T185500
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261211T063000
+DTEND:20261211T072000
+SUMMARY:[RW] Swim: aerobic endurance (50 min)
+DESCRIPTION:8 min easy swim\; 30 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 3 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261212T063000
+DTEND:20261212T075000
+SUMMARY:[RW] Long swim (80 min)
+DESCRIPTION:10 min warm-up\; 65 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 3 (BASE). Not medical advice\; pain that changes how y
+ ou move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261213T063000
+DTEND:20261213T075000
+SUMMARY:[RW] Easy ride (cross-training) (80 min)
+DESCRIPTION:8 min warm-up\; 67 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  3 (BASE). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261214T063000
+DTEND:20261214T070500
+SUMMARY:[RW] Swim: technique and aerobic (35 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 10 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 4 (RECOVERY). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261214T183000
+DTEND:20261214T185000
+SUMMARY:[RW] Strength: lower body (knee-dominant) (light) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261215T063000
+DTEND:20261215T070500
+SUMMARY:[RW] Swim: aerobic endurance (35 min)
+DESCRIPTION:8 min easy swim\; 15 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 4 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261216T063000
+DTEND:20261216T070500
+SUMMARY:[RW] Swim: aerobic endurance (35 min)
+DESCRIPTION:8 min easy swim\; 15 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 4 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261217T183000
+DTEND:20261217T185000
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (light) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261218T063000
+DTEND:20261218T070500
+SUMMARY:[RW] Swim: aerobic endurance (35 min)
+DESCRIPTION:8 min easy swim\; 15 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 4 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261219T063000
+DTEND:20261219T074000
+SUMMARY:[RW] Long swim (70 min)
+DESCRIPTION:10 min warm-up\; 55 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that changes h
+ ow you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261220T063000
+DTEND:20261220T073000
+SUMMARY:[RW] Easy ride (cross-training) (60 min)
+DESCRIPTION:8 min warm-up\; 47 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  4 (RECOVERY). Not medical advice\; pain that changes how you move means 
+ stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261221T063000
+DTEND:20261221T072500
+SUMMARY:[RW] Swim: technique and aerobic (55 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 30 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 5 (BASE). Not medical advice\; pain that changes how you move mea
+ ns stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261221T183000
+DTEND:20261221T190000
+SUMMARY:[RW] Strength: lower body (hinge and hamstrings) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 5 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261222T063000
+DTEND:20261222T072500
+SUMMARY:[RW] Swim: aerobic endurance (55 min)
+DESCRIPTION:8 min easy swim\; 35 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 5 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261223T063000
+DTEND:20261223T072500
+SUMMARY:[RW] Swim: aerobic endurance (55 min)
+DESCRIPTION:8 min easy swim\; 35 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 5 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261224T183000
+DTEND:20261224T185500
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 5 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261225T063000
+DTEND:20261225T072500
+SUMMARY:[RW] Swim: aerobic endurance (55 min)
+DESCRIPTION:8 min easy swim\; 35 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 5 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261226T063000
+DTEND:20261226T080000
+SUMMARY:[RW] Long swim (90 min)
+DESCRIPTION:10 min warm-up\; 75 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 5 (BASE). Not medical advice\; pain that changes how y
+ ou move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261227T063000
+DTEND:20261227T080000
+SUMMARY:[RW] Easy ride (cross-training) (90 min)
+DESCRIPTION:8 min warm-up\; 77 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  5 (BASE). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261228T063000
+DTEND:20261228T073000
+SUMMARY:[RW] Swim: technique and aerobic (60 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 35 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 6 (BASE). Not medical advice\; pain that changes how you move mea
+ ns stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261228T183000
+DTEND:20261228T185500
+SUMMARY:[RW] Strength: lower body (glutes and single-leg stability) (25 mi
+ n)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 6 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261229T063000
+DTEND:20261229T073000
+SUMMARY:[RW] Swim: aerobic endurance (60 min)
+DESCRIPTION:8 min easy swim\; 40 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 6 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261230T063000
+DTEND:20261230T073000
+SUMMARY:[RW] Swim: aerobic endurance (60 min)
+DESCRIPTION:8 min easy swim\; 40 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 6 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261231T183000
+DTEND:20261231T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 6 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-01-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270101T063000
+DTEND:20270101T073000
+SUMMARY:[RW] Swim: aerobic endurance (60 min)
+DESCRIPTION:8 min easy swim\; 40 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 6 (BASE). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-02-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270102T063000
+DTEND:20270102T080500
+SUMMARY:[RW] Long swim (95 min)
+DESCRIPTION:10 min warm-up\; 80 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 6 (BASE). Not medical advice\; pain that changes how y
+ ou move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-03-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270103T063000
+DTEND:20270103T080500
+SUMMARY:[RW] Easy ride (cross-training) (95 min)
+DESCRIPTION:8 min warm-up\; 82 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  6 (BASE). Not medical advice\; pain that changes how you move means stop
+ .\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-04-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270104T063000
+DTEND:20270104T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 7 (BUILD). Not medical advice\; pain that changes how you move me
+ ans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-04-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270104T183000
+DTEND:20270104T190000
+SUMMARY:[RW] Strength: lower body (hinge and hamstrings) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-05-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270105T063000
+DTEND:20270105T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 7 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-06-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270106T063000
+DTEND:20270106T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 7 (BUILD). Not medical advice\
+ ; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270107T183000
+DTEND:20270107T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-08-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270108T063000
+DTEND:20270108T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 7 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270109T063000
+DTEND:20270109T081500
+SUMMARY:[RW] Long swim (105 min)
+DESCRIPTION:10 min warm-up\; 33 min easy\; 3 x (16 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 7 (BUILD). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270110T063000
+DTEND:20270110T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  7 (BUILD). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-11-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270111T063000
+DTEND:20270111T071500
+SUMMARY:[RW] Swim: technique and aerobic (45 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 20 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 8 (RECOVERY). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-11-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270111T183000
+DTEND:20270111T185000
+SUMMARY:[RW] Strength: lower body (glutes and single-leg stability) (light
+ ) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-12-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270112T063000
+DTEND:20270112T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 8 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-13-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270113T063000
+DTEND:20270113T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 8 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270114T183000
+DTEND:20270114T185000
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (light) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-15-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270115T063000
+DTEND:20270115T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 8 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270116T063000
+DTEND:20270116T080500
+SUMMARY:[RW] Long swim (95 min)
+DESCRIPTION:10 min warm-up\; 80 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that changes h
+ ow you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270117T063000
+DTEND:20270117T075000
+SUMMARY:[RW] Easy ride (cross-training) (80 min)
+DESCRIPTION:8 min warm-up\; 67 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  8 (RECOVERY). Not medical advice\; pain that changes how you move means 
+ stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-18-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270118T063000
+DTEND:20270118T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you move me
+ ans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-18-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270118T183000
+DTEND:20270118T190000
+SUMMARY:[RW] Strength: lower body (knee-dominant) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 9 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-19-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270119T063000
+DTEND:20270119T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 9 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-20-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270120T063000
+DTEND:20270120T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 9 (BUILD). Not medical advice\
+ ; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270121T183000
+DTEND:20270121T185500
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 9 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270122T063000
+DTEND:20270122T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 9 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270123T063000
+DTEND:20270123T082500
+SUMMARY:[RW] Long swim (115 min)
+DESCRIPTION:10 min warm-up\; 40 min easy\; 3 x (17 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270124T063000
+DTEND:20270124T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  9 (BUILD). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-25-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270125T063000
+DTEND:20270125T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 10 (BUILD). Not medical advice\; pain that changes how you move m
+ eans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-25-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270125T183000
+DTEND:20270125T190000
+SUMMARY:[RW] Strength: lower body (hinge and hamstrings) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 10 (BUILD). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-26-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270126T063000
+DTEND:20270126T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 10 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-27-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270127T063000
+DTEND:20270127T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 10 (BUILD). Not medical advice
+ \; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270128T183000
+DTEND:20270128T185500
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 10 (BUILD). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-29-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270129T063000
+DTEND:20270129T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 10 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270130T063000
+DTEND:20270130T083000
+SUMMARY:[RW] Long swim (120 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 3 x (18 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 10 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270131T063000
+DTEND:20270131T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  10 (BUILD). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-01-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270201T063000
+DTEND:20270201T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 11 (BUILD). Not medical advice\; pain that changes how you move m
+ eans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-01-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270201T183000
+DTEND:20270201T185500
+SUMMARY:[RW] Strength: lower body (glutes and single-leg stability) (25 mi
+ n)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 11 (BUILD). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-02-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270202T063000
+DTEND:20270202T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 11 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-03-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270203T063000
+DTEND:20270203T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 11 (BUILD). Not medical advice
+ \; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270204T183000
+DTEND:20270204T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 11 (BUILD). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-05-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270205T063000
+DTEND:20270205T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 11 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270206T063000
+DTEND:20270206T083000
+SUMMARY:[RW] Long swim (120 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 3 x (18 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 11 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-07-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270207T063000
+DTEND:20270207T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  11 (BUILD). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-08-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270208T063000
+DTEND:20270208T071500
+SUMMARY:[RW] Swim: technique and aerobic (45 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 20 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 12 (RECOVERY). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-08-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270208T183000
+DTEND:20270208T185000
+SUMMARY:[RW] Strength: lower body (knee-dominant) (light) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 12 (RECOVERY). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-09-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270209T063000
+DTEND:20270209T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 12 (RECOVERY). Not medical advice\; pain
+  that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-10-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270210T063000
+DTEND:20270210T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 12 (RECOVERY). Not medical advice\; pain
+  that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-11-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270211T183000
+DTEND:20270211T185000
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (light) (20 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 12 (RECOVERY). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-12-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270212T063000
+DTEND:20270212T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 12 (RECOVERY). Not medical advice\; pain
+  that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270213T063000
+DTEND:20270213T080500
+SUMMARY:[RW] Long swim (95 min)
+DESCRIPTION:10 min warm-up\; 80 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 12 (RECOVERY). Not medical advice\; pain that changes 
+ how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-14-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270214T063000
+DTEND:20270214T075000
+SUMMARY:[RW] Easy ride (cross-training) (80 min)
+DESCRIPTION:8 min warm-up\; 67 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  12 (RECOVERY). Not medical advice\; pain that changes how you move means
+  stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-15-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270215T063000
+DTEND:20270215T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 13 (PEAK). Not medical advice\; pain that changes how you move me
+ ans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-15-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270215T183000
+DTEND:20270215T190000
+SUMMARY:[RW] Strength: lower body (hinge and hamstrings) (30 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 13 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-16-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270216T063000
+DTEND:20270216T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 13 (PEAK). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-17-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270217T063000
+DTEND:20270217T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 13 (PEAK). Not medical advice\
+ ; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-18-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270218T183000
+DTEND:20270218T185500
+SUMMARY:[RW] Strength: upper body and trunk (pull focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 13 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-19-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270219T063000
+DTEND:20270219T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 13 (PEAK). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-20-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270220T063000
+DTEND:20270220T083000
+SUMMARY:[RW] Long swim (120 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 3 x (18 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 13 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-21-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270221T063000
+DTEND:20270221T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  13 (PEAK). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-22-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270222T063000
+DTEND:20270222T073500
+SUMMARY:[RW] Swim: technique and aerobic (65 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 40 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 14 (PEAK). Not medical advice\; pain that changes how you move me
+ ans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-22-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270222T183000
+DTEND:20270222T185500
+SUMMARY:[RW] Strength: lower body (glutes and single-leg stability) (25 mi
+ n)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 14 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-23-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270223T063000
+DTEND:20270223T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 14 (PEAK). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-24-swim2-swim-main-set-8-x-3-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270224T063000
+DTEND:20270224T073500
+SUMMARY:[RW] Swim: main set (8 x 3 min) (65 min)
+DESCRIPTION:8 min easy swim + kick\; 6 min drills\; 8 x (3 min tempo + 0.5
+  min recovery)\; 5 min cool-down. Steady-hard repeats (RPE 6)\, even pace
+  from the first to the last. Swim time and effort\, not distance: pools a
+ nd paces differ. If you know your 100 m time\, convert the minutes to met
+ res. Rest 15-30 s between repeats.\n\nWeek 14 (PEAK). Not medical advice\
+ ; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-25-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270225T183000
+DTEND:20270225T185500
+SUMMARY:[RW] Strength: upper body and trunk (push focus) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 14 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-26-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270226T063000
+DTEND:20270226T073500
+SUMMARY:[RW] Swim: aerobic endurance (65 min)
+DESCRIPTION:8 min easy swim\; 45 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 14 (PEAK). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-27-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270227T063000
+DTEND:20270227T083000
+SUMMARY:[RW] Long swim (120 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 3 x (18 min steady + 3 min easy
+ )\; 5 min cool-down. Continuous aerobic swimming (RPE 3-4). In open water
+  practise sighting every 8-10 strokes\, and swim with a partner or a safe
+ ty buoy. Race-effort blocks (RPE 4-5). Swim time and effort\, not distanc
+ e.\n\nWeek 14 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270228T063000
+DTEND:20270228T081500
+SUMMARY:[RW] Easy ride (cross-training) (105 min)
+DESCRIPTION:8 min warm-up\; 92 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  14 (PEAK). Not medical advice\; pain that changes how you move means sto
+ p.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-01-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270301T063000
+DTEND:20270301T071500
+SUMMARY:[RW] Swim: technique and aerobic (45 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 20 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 15 (TAPER). Not medical advice\; pain that changes how you move m
+ eans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-01-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270301T183000
+DTEND:20270301T185500
+SUMMARY:[RW] Strength: lower body (knee-dominant) (light) (25 min)
+DESCRIPTION:Endurance (running\, cycling): better economy and injury resis
+ tance without costing the key aerobic sessions. Lift with 2-3 reps in res
+ erve\, stop a set if form breaks. Strength starts at least 3 hours after 
+ cardio (practice).\n\nWeek 15 (TAPER). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-02-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270302T063000
+DTEND:20270302T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 15 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-03-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270303T063000
+DTEND:20270303T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 15 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-05-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270305T063000
+DTEND:20270305T071500
+SUMMARY:[RW] Swim: aerobic endurance (45 min)
+DESCRIPTION:8 min easy swim\; 25 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 15 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-swim_long-long-swim@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270306T063000
+DTEND:20270306T080000
+SUMMARY:[RW] Long swim (90 min)
+DESCRIPTION:10 min warm-up\; 75 min easy\; 5 min cool-down. Continuous aer
+ obic swimming (RPE 3-4). In open water practise sighting every 8-10 strok
+ es\, and swim with a partner or a safety buoy. Swim time and effort\, not
+  distance.\n\nWeek 15 (TAPER). Not medical advice\; pain that changes how
+  you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-07-bike_x-easy-ride-cross-trai@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270307T063000
+DTEND:20270307T074500
+SUMMARY:[RW] Easy ride (cross-training) (75 min)
+DESCRIPTION:8 min warm-up\; 62 min easy\; 5 min cool-down. Low-impact aero
+ bic work next to the running: Mostly steady endurance (RPE 2-3\, 56-75 % 
+ of FTP if you use power). Eat and drink on rides over 90 minutes.\n\nWeek
+  15 (TAPER). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-08-swim1-swim-technique-and-a@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270308T063000
+DTEND:20270308T070000
+SUMMARY:[RW] Swim: technique and aerobic (30 min)
+DESCRIPTION:8 min easy swim + kick\; 10 min drills (catch-up\, fingertip d
+ rag\, sculling)\; 10 min steady aerobic\, RPE 3\; 5 min cool-down. Swim t
+ ime and effort\, not distance: pools and paces differ. If you know your 1
+ 00 m time\, convert the minutes to metres. Rest 15-30 s between repeats.\
+ n\nWeek 16 (TAPER). Not medical advice\; pain that changes how you move m
+ eans stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-09-swim4-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270309T063000
+DTEND:20270309T070000
+SUMMARY:[RW] Swim: aerobic endurance (30 min)
+DESCRIPTION:8 min easy swim\; 10 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 16 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-10-swim2-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270310T063000
+DTEND:20270310T070000
+SUMMARY:[RW] Swim: aerobic endurance (30 min)
+DESCRIPTION:8 min easy swim\; 10 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 16 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-12-swim3-swim-aerobic-enduran@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270312T063000
+DTEND:20270312T070000
+SUMMARY:[RW] Swim: aerobic endurance (30 min)
+DESCRIPTION:8 min easy swim\; 10 min steady aerobic with a few 25 m kicks\
+ ; 5 min cool-down. Swim time and effort\, not distance: pools and paces d
+ iffer. If you know your 100 m time\, convert the minutes to metres. Rest 
+ 15-30 s between repeats.\n\nWeek 16 (TAPER). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-activation-activation-20-min-ea@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270313T090000
+DTEND:20270313T092000
+SUMMARY:[RW] Activation (20 min easy swim + 3 short pickups) (20 min)
+DESCRIPTION:20 min easy with 3 pickups of 15 s at race effort. Pack your k
+ it\, check your gear\, eat normally\, sleep.\n\nWeek 16 (TAPER). Not medi
+ cal advice\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-14-race-race-day-open-water-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270314T080000
+DTEND:20270314T090000
+SUMMARY:[RW] RACE DAY: Open-water swim 5 km
+DESCRIPTION:Start easier than feels necessary for the first third. Eat and
+  drink as practised\, nothing new. It is a day to enjoy the work you did\
+ ; no plan can promise a time.\n\nWeek 16 (RACE). Not medical advice\; pai
+ n that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

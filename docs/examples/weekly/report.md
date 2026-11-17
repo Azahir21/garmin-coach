@@ -2,7 +2,7 @@
 
 SAMPLE with synthetic data (random numbers, nobody's health data). Real reports are made on your own computer from your own Garmin data.
 
-Generated 2026-11-17 00:06 from your own Garmin data. Units: running pace (min/km), cycling km/h.
+Generated 2026-11-17 07:39 from your own Garmin data. Units: running pace (min/km), cycling km/h.
 
 
 ## What stands out
@@ -64,6 +64,26 @@ Calendar week so far (2026-11-09 to 2026-11-15): 220 run + ride minutes against 
 
 ![Minutes per day by sport](figures/daily_minutes.svg)
 *Stacked by sport. Rest days are empty columns.*
+
+
+## Recent activities (last 14 days)
+
+| Date | Sport | Time | km | Pace / speed | Avg HR | Against the last similar one |
+|---|---|---|---|---|---|---|
+| 2026-11-15 | Strength | 53 min | - | - | 145 |  |
+| 2026-11-13 | Run | 39 min | 6.2 | 5:57/km | 133 | 2026-11-11: pace faster by 5 s/km, heart rate -2 bpm |
+| 2026-11-12 | Strength | 74 min | - | - | 142 |  |
+| 2026-11-11 | Run | 37 min | 5.9 | 6:01/km | 135 | 2026-11-02: pace slower by 15 s/km, heart rate +3 bpm |
+| 2026-11-10 | Run | 56 min | 9.2 | 5:46/km | 139 | 2026-11-08: pace faster by 22 s/km, heart rate -2 bpm |
+| 2026-11-09 | Ride | 88 min | 32.9 | 23.5 km/h | 146 | 2026-10-17: speed +1 %, heart rate +10 bpm |
+| 2026-11-08 | Run | 56 min | 8.6 | 6:08/km | 141 | 2026-11-06: pace slower by 28 s/km, heart rate +9 bpm |
+| 2026-11-06 | Run | 73 min | 12.3 | 5:40/km | 132 | 2026-11-05: pace slower by 4 s/km, heart rate -6 bpm |
+| 2026-11-05 | Run | 54 min | 9.1 | 5:37/km | 138 | 2026-11-04: pace faster by 24 s/km, heart rate +5 bpm |
+| 2026-11-04 | Run | 66 min | 10.4 | 6:01/km | 133 | 2026-11-01: pace faster by 4 s/km, heart rate -7 bpm |
+| 2026-11-02 | Run | 40 min | 6.6 | 5:46/km | 132 | 2026-10-15: pace slower by 1 s/km, heart rate -3 bpm |
+| 2026-11-01 | Run | 62 min | 9.7 | 6:05/km | 140 | 2026-10-26: pace slower by 3 s/km, heart rate +4 bpm |
+
+Each row is compared with your last earlier session of the same sport and a similar length. Differences also depend on route, weather and what you intended.
 
 
 ## Volume over the weeks

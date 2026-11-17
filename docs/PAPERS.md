@@ -100,6 +100,15 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 - Accuracy of wearables for determining the maximal oxygen uptake and lactate threshold: a qualitative systematic review. *Front Sports Act Living* 2025 PMCID PMC12748164 (PMID 41477023; full text (CC BY))
 - Accuracy of fixed intensity anchors to estimate lactate thresholds in recreational runners. *Eur J Appl Physiol* 2025 https://doi.org/10.1007/s00421-025-05748-8 (supplementary DOI in the paper) (PMID 40088270; full text (CC BY))
 - Noninvasive assessment of the anaerobic threshold in endurance athletes: an evidence-based narrative review of methods. *Br Med Bull* 2026 PMCID PMC13662803 (PMID (none in MEDLINE record); full text (CC BY))
+- Bosquet L et al. Effects of tapering on performance: a meta-analysis. *Medicine and science in sports and exercise* 2007 https://doi.org/10.1249/mss.0b013e31806010e0 (PMID 17762369; abstract verified)
+- Munoz I et al. Training-intensity distribution during an ironman season: relationship with competition performance. *International journal of sports physiology and performance* 2014 https://doi.org/10.1123/ijspp.2012-0352 (PMID 23921084; abstract verified)
+- Neal CM et al. A 6-month analysis of training-intensity distribution and physiological adaptation in Ironman triathletes. *Journal of sports sciences* 2011 https://doi.org/10.1080/02640414.2011.596217 (PMID 21967604; abstract verified)
+- Figueiredo P et al. Changes in contributions of swimming, cycling, and running performances on overall triathlon performance over a 26-year period. *Journal of strength and conditioning research* 2016 https://doi.org/10.1519/jsc.0000000000001335 (PMID 26808853; abstract verified)
+- Andersen CA et al. High prevalence of overuse injury among iron-distance triathletes. *British journal of sports medicine* 2013 https://doi.org/10.1136/bjsports-2013-092397 (PMID 23902775; abstract verified)
+- Knechtle B et al. Differential correlations between anthropometry, training volume, and performance in male and female Ironman triathletes. *Journal of strength and conditioning research* 2010 https://doi.org/10.1519/jsc.0b013e3181c643b6 (PMID 20571444; abstract verified)
+- Walsh JA. The rise of elite short-course triathlon re-emphasises the necessity to transition efficiently from cycling to running. *Sports* 2019 https://doi.org/10.3390/sports7050099 (PMID 31035687; full text read)
+- Millet GP, Vleck VE. Physiological and biomechanical adaptations to the cycle to run transition in Olympic triathlon. *British journal of sports medicine* 2000 https://doi.org/10.1136/bjsm.34.5.384 (PMID 11049151; abstract only)
+- Berry NT et al. The effects of a duathlon simulation on ventilatory threshold and running economy. *Journal of sports science and medicine* 2016 (PMID 27274661; abstract only)
 
 ## rampwise-recovery
 

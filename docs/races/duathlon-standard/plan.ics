@@ -1,0 +1,1324 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rampwise//Event plan//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Standard duathlon (run\, ride\, run) plan
+BEGIN:VEVENT
+UID:2026-11-24-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261124T063000
+DTEND:20261124T071500
+SUMMARY:[RW] Easy run with strides (45 min)
+DESCRIPTION:10 min warm-up\; 22 min easy\; 6 x (0.33 min hard + 1 min easy
+ )\; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoo
+ th\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can
+  talk in full sentences. Use your watch's easy heart-rate zone if you hav
+ e one.\n\nWeek 1 (BASE). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261124T183000
+DTEND:20261124T190500
+SUMMARY:[RW] Strength: lower body (squat and hinge) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 1 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-25-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261125T063000
+DTEND:20261125T072500
+SUMMARY:[RW] Ride with cadence drills (55 min)
+DESCRIPTION:10 min warm-up\; 19 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 1 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261126T063000
+DTEND:20261126T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261126T183000
+DTEND:20261126T190500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 1 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261127T063000
+DTEND:20261127T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261128T063000
+DTEND:20261128T081000
+SUMMARY:[RW] Long ride (100 min)
+DESCRIPTION:10 min warm-up\; 80 min easy\; 10 min cool-down. Mostly steady
+  endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on 
+ rides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261129T063000
+DTEND:20261129T073500
+SUMMARY:[RW] Long run (65 min)
+DESCRIPTION:5 min warm-up\; 55 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 1 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261201T063000
+DTEND:20261201T072000
+SUMMARY:[RW] Easy run with strides (50 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 6 x (0.33 min hard + 1 min easy
+ )\; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoo
+ th\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can
+  talk in full sentences. Use your watch's easy heart-rate zone if you hav
+ e one.\n\nWeek 2 (BASE). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261201T183000
+DTEND:20261201T190500
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 2 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-02-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261202T063000
+DTEND:20261202T073000
+SUMMARY:[RW] Ride with cadence drills (60 min)
+DESCRIPTION:10 min warm-up\; 24 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 2 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261203T063000
+DTEND:20261203T072000
+SUMMARY:[RW] Easy run (50 min)
+DESCRIPTION:5 min warm-up\; 40 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261203T183000
+DTEND:20261203T190500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 2 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261204T063000
+DTEND:20261204T073000
+SUMMARY:[RW] Easy ride (60 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261205T063000
+DTEND:20261205T082000
+SUMMARY:[RW] Long ride (110 min)
+DESCRIPTION:10 min warm-up\; 90 min easy\; 10 min cool-down. Mostly steady
+  endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on 
+ rides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261206T063000
+DTEND:20261206T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 2 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261208T063000
+DTEND:20261208T072500
+SUMMARY:[RW] Easy run with strides (55 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 6 x (0.33 min hard + 1 min easy
+ )\; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoo
+ th\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can
+  talk in full sentences. Use your watch's easy heart-rate zone if you hav
+ e one.\n\nWeek 3 (BASE). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261208T183000
+DTEND:20261208T190000
+SUMMARY:[RW] Strength: lower body (squat and hinge) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 3 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-09-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261209T063000
+DTEND:20261209T073500
+SUMMARY:[RW] Ride with cadence drills (65 min)
+DESCRIPTION:10 min warm-up\; 29 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 3 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261210T063000
+DTEND:20261210T072500
+SUMMARY:[RW] Easy run (55 min)
+DESCRIPTION:5 min warm-up\; 45 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261210T183000
+DTEND:20261210T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 3 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261211T063000
+DTEND:20261211T073500
+SUMMARY:[RW] Easy ride (65 min)
+DESCRIPTION:10 min warm-up\; 47 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261212T063000
+DTEND:20261212T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261213T063000
+DTEND:20261213T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 3 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-run1-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261215T063000
+DTEND:20261215T071000
+SUMMARY:[RW] Easy run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261215T183000
+DTEND:20261215T185500
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (light) (25 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 4 (RECOVERY). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261216T063000
+DTEND:20261216T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261217T063000
+DTEND:20261217T071000
+SUMMARY:[RW] Easy run (40 min)
+DESCRIPTION:5 min warm-up\; 30 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261217T183000
+DTEND:20261217T185500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (light) (25 mi
+ n)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 4 (RECOVERY). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261218T063000
+DTEND:20261218T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261219T063000
+DTEND:20261219T080500
+SUMMARY:[RW] Long ride (95 min)
+DESCRIPTION:10 min warm-up\; 75 min easy\; 10 min cool-down. Mostly steady
+  endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on 
+ rides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261220T063000
+DTEND:20261220T073000
+SUMMARY:[RW] Long run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 4 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-run1-easy-run-with-stride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261222T063000
+DTEND:20261222T073000
+SUMMARY:[RW] Easy run with strides (60 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 6 x (0.33 min hard + 1 min easy
+ )\; 5 min cool-down. Six relaxed fast strides of about 20 s (RPE 7\, smoo
+ th\, not a sprint) with easy jogging between. Easy means RPE 2-3: you can
+  talk in full sentences. Use your watch's easy heart-rate zone if you hav
+ e one.\n\nWeek 5 (BASE). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261222T183000
+DTEND:20261222T190500
+SUMMARY:[RW] Strength: lower body (squat and hinge) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 5 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261223T063000
+DTEND:20261223T075000
+SUMMARY:[RW] Ride with cadence drills (80 min)
+DESCRIPTION:10 min warm-up\; 44 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 5 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261224T063000
+DTEND:20261224T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261224T183000
+DTEND:20261224T190500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 5 (BASE). Not medical advice\; pain that changes how you move means st
+ op.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261225T063000
+DTEND:20261225T075000
+SUMMARY:[RW] Easy ride (80 min)
+DESCRIPTION:10 min warm-up\; 62 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261226T063000
+DTEND:20261226T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261227T063000
+DTEND:20261227T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 5 (BASE). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-run1-tempo-run-18-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261229T063000
+DTEND:20261229T073000
+SUMMARY:[RW] Tempo run (18 min tempo) (60 min)
+DESCRIPTION:10 min warm-up\; 24 min easy\; 18 min tempo\; 8 min cool-down.
+  Tempo is comfortably hard (RPE 6): short sentences only. Stop if anythin
+ g hurts.\n\nWeek 6 (BUILD). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261229T183000
+DTEND:20261229T190500
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 6 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261230T063000
+DTEND:20261230T080000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (90 min)
+DESCRIPTION:12 min warm-up\; 34 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 6 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261231T063000
+DTEND:20261231T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20261231T183000
+DTEND:20261231T190500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (35 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 6 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-01-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270101T063000
+DTEND:20270101T080000
+SUMMARY:[RW] Steady-tempo ride (2 x 18 min) (90 min)
+DESCRIPTION:12 min warm-up\; 24 min easy\; 2 x (18 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 6 (BUILD). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-02-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270102T063000
+DTEND:20270102T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 6 (BUILD). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-02-brick_run-brick-run-straight-o@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270102T090000
+DTEND:20270102T091500
+SUMMARY:[RW] Brick run (straight off the bike) (15 min)
+DESCRIPTION:15 min easy-steady run\, RPE 3-5. Legs often feel heavy for th
+ e first 5 minutes: normal. Keep it easy: running straight after cycling c
+ osts more energy than running fresh (Millet and Vleck 2000)\, and whether
+  bricks improve that is unproven (Walsh 2019). Stop if anything hurts.\n\
+ nWeek 6 (BUILD). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-03-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270103T063000
+DTEND:20270103T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 6 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-05-run1-tempo-run-18-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270105T063000
+DTEND:20270105T073000
+SUMMARY:[RW] Tempo run (18 min tempo) (60 min)
+DESCRIPTION:10 min warm-up\; 24 min easy\; 18 min tempo\; 8 min cool-down.
+  Tempo is comfortably hard (RPE 6): short sentences only. Stop if anythin
+ g hurts.\n\nWeek 7 (BUILD). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-05-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270105T183000
+DTEND:20270105T190000
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 7 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-06-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270106T063000
+DTEND:20270106T080000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (90 min)
+DESCRIPTION:12 min warm-up\; 34 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 7 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270107T063000
+DTEND:20270107T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270107T183000
+DTEND:20270107T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 7 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-08-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270108T063000
+DTEND:20270108T080000
+SUMMARY:[RW] Steady-tempo ride (2 x 18 min) (90 min)
+DESCRIPTION:12 min warm-up\; 24 min easy\; 2 x (18 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 7 (BUILD). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270109T063000
+DTEND:20270109T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 7 (BUILD). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-brick_run-brick-run-straight-o@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270109T090000
+DTEND:20270109T091500
+SUMMARY:[RW] Brick run (straight off the bike) (15 min)
+DESCRIPTION:15 min easy-steady run\, RPE 3-5. Legs often feel heavy for th
+ e first 5 minutes: normal. Keep it easy: running straight after cycling c
+ osts more energy than running fresh (Millet and Vleck 2000)\, and whether
+  bricks improve that is unproven (Walsh 2019). Stop if anything hurts.\n\
+ nWeek 7 (BUILD). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270110T063000
+DTEND:20270110T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 7 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-12-run1-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270112T063000
+DTEND:20270112T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-12-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270112T183000
+DTEND:20270112T185000
+SUMMARY:[RW] Strength: lower body (squat and hinge) (light) (20 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 8 (RECOVERY). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-13-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270113T063000
+DTEND:20270113T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270114T063000
+DTEND:20270114T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270114T183000
+DTEND:20270114T185000
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (light) (20 mi
+ n)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 8 (RECOVERY). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-15-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270115T063000
+DTEND:20270115T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270116T063000
+DTEND:20270116T082000
+SUMMARY:[RW] Long ride (110 min)
+DESCRIPTION:10 min warm-up\; 90 min easy\; 10 min cool-down. Mostly steady
+  endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on 
+ rides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270117T063000
+DTEND:20270117T073500
+SUMMARY:[RW] Long run (65 min)
+DESCRIPTION:5 min warm-up\; 55 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 8 (RECOVERY). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-19-run1-tempo-run-18-min-tem@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270119T063000
+DTEND:20270119T073000
+SUMMARY:[RW] Tempo run (18 min tempo) (60 min)
+DESCRIPTION:10 min warm-up\; 24 min easy\; 18 min tempo\; 8 min cool-down.
+  Tempo is comfortably hard (RPE 6): short sentences only. Stop if anythin
+ g hurts.\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-19-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270119T183000
+DTEND:20270119T190000
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 9 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-20-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270120T063000
+DTEND:20270120T080000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (90 min)
+DESCRIPTION:12 min warm-up\; 34 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 9 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270121T063000
+DTEND:20270121T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270121T183000
+DTEND:20270121T185500
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (25 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 9 (BUILD). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270122T063000
+DTEND:20270122T080000
+SUMMARY:[RW] Steady-tempo ride (2 x 18 min) (90 min)
+DESCRIPTION:12 min warm-up\; 24 min easy\; 2 x (18 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270123T063000
+DTEND:20270123T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-brick_run-brick-run-straight-o@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270123T090000
+DTEND:20270123T091500
+SUMMARY:[RW] Brick run (straight off the bike) (15 min)
+DESCRIPTION:15 min easy-steady run\, RPE 3-5. Legs often feel heavy for th
+ e first 5 minutes: normal. Keep it easy: running straight after cycling c
+ osts more energy than running fresh (Millet and Vleck 2000)\, and whether
+  bricks improve that is unproven (Walsh 2019). Stop if anything hurts.\n\
+ nWeek 9 (BUILD). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270124T063000
+DTEND:20270124T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 9 (BUILD). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-26-run1-race-effort-blocks-2@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270126T063000
+DTEND:20270126T073000
+SUMMARY:[RW] Race-effort blocks (2 x 13 min) (60 min)
+DESCRIPTION:10 min warm-up\; 8 min easy\; 2 x (13 min tempo + 4 min easy)\
+ ; 8 min cool-down. Settle into the effort you plan to hold on race day (R
+ PE 5-6). Practise your fuelling here.\n\nWeek 10 (PEAK). Not medical advi
+ ce\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-26-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270126T183000
+DTEND:20270126T190000
+SUMMARY:[RW] Strength: lower body (squat and hinge) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 10 (PEAK). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-27-bike1-race-effort-ride-2-x@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270127T063000
+DTEND:20270127T080000
+SUMMARY:[RW] Race-effort ride (2 x 20 min) (90 min)
+DESCRIPTION:12 min warm-up\; 18 min easy\; 2 x (20 min tempo + 6 min easy)
+ \; 8 min cool-down. Hold the effort you plan to ride on race day (RPE 5-6
+ )\; practise fuelling.\n\nWeek 10 (PEAK). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270128T063000
+DTEND:20270128T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 10 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270128T183000
+DTEND:20270128T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 10 (PEAK). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-29-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270129T063000
+DTEND:20270129T080000
+SUMMARY:[RW] Steady-tempo ride (2 x 18 min) (90 min)
+DESCRIPTION:12 min warm-up\; 24 min easy\; 2 x (18 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 10 (PEAK). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270130T063000
+DTEND:20270130T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 10 (PEAK). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-brick_run-brick-run-straight-o@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270130T090000
+DTEND:20270130T092500
+SUMMARY:[RW] Brick run (straight off the bike) (25 min)
+DESCRIPTION:25 min easy-steady run\, RPE 3-5. Legs often feel heavy for th
+ e first 5 minutes: normal. Keep it easy: running straight after cycling c
+ osts more energy than running fresh (Millet and Vleck 2000)\, and whether
+  bricks improve that is unproven (Walsh 2019). Stop if anything hurts.\n\
+ nWeek 10 (PEAK). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270131T063000
+DTEND:20270131T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 10 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-02-run1-race-effort-blocks-2@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270202T063000
+DTEND:20270202T073000
+SUMMARY:[RW] Race-effort blocks (2 x 13 min) (60 min)
+DESCRIPTION:10 min warm-up\; 8 min easy\; 2 x (13 min tempo + 4 min easy)\
+ ; 8 min cool-down. Settle into the effort you plan to hold on race day (R
+ PE 5-6). Practise your fuelling here.\n\nWeek 11 (PEAK). Not medical advi
+ ce\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-02-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270202T183000
+DTEND:20270202T190000
+SUMMARY:[RW] Strength: lower body (single-leg and hips) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 11 (PEAK). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-03-bike1-race-effort-ride-2-x@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270203T063000
+DTEND:20270203T080000
+SUMMARY:[RW] Race-effort ride (2 x 20 min) (90 min)
+DESCRIPTION:12 min warm-up\; 18 min easy\; 2 x (20 min tempo + 6 min easy)
+ \; 8 min cool-down. Hold the effort you plan to ride on race day (RPE 5-6
+ )\; practise fuelling.\n\nWeek 11 (PEAK). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270204T063000
+DTEND:20270204T073000
+SUMMARY:[RW] Easy run (60 min)
+DESCRIPTION:5 min warm-up\; 50 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 11 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-str2-strength-upper-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270204T183000
+DTEND:20270204T190000
+SUMMARY:[RW] Strength: upper body and trunk (pull and push) (30 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 11 (PEAK). Not medical advice\; pain that changes how you move means s
+ top.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-05-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270205T063000
+DTEND:20270205T080000
+SUMMARY:[RW] Steady-tempo ride (2 x 18 min) (90 min)
+DESCRIPTION:12 min warm-up\; 24 min easy\; 2 x (18 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 11 (PEAK). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270206T063000
+DTEND:20270206T083000
+SUMMARY:[RW] Long ride (120 min)
+DESCRIPTION:10 min warm-up\; 100 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 11 (PEAK). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-brick_run-brick-run-straight-o@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270206T090000
+DTEND:20270206T092500
+SUMMARY:[RW] Brick run (straight off the bike) (25 min)
+DESCRIPTION:25 min easy-steady run\, RPE 3-5. Legs often feel heavy for th
+ e first 5 minutes: normal. Keep it easy: running straight after cycling c
+ osts more energy than running fresh (Millet and Vleck 2000)\, and whether
+  bricks improve that is unproven (Walsh 2019). Stop if anything hurts.\n\
+ nWeek 11 (PEAK). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-07-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270207T063000
+DTEND:20270207T074000
+SUMMARY:[RW] Long run (70 min)
+DESCRIPTION:5 min warm-up\; 60 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 11 (PEAK). Not medical advice\; pain that chan
+ ges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-09-run1-sharpener-4-x-2-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270209T063000
+DTEND:20270209T071500
+SUMMARY:[RW] Sharpener (4 x 2 min) (45 min)
+DESCRIPTION:10 min warm-up\; 11 min easy\; 4 x (2 min threshold + 2 min ea
+ sy)\; 8 min cool-down. Short and crisp\, then stop. The taper keeps a lit
+ tle intensity while volume drops (Bosquet 2007).\n\nWeek 12 (TAPER). Not 
+ medical advice\; pain that changes how you move means stop.\nrampwise-pla
+ n
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-09-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270209T183000
+DTEND:20270209T185000
+SUMMARY:[RW] Strength: lower body (squat and hinge) (light) (20 min)
+DESCRIPTION:Triathlon (long distance): better cycling and running economy 
+ across a 26-week block. Lift with 2-3 reps in reserve\, stop a set if for
+ m breaks. Strength starts at least 3 hours after cardio (practice).\n\nWe
+ ek 12 (TAPER). Not medical advice\; pain that changes how you move means 
+ stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-10-bike1-sharpener-ride-4-x-2@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270210T063000
+DTEND:20270210T072000
+SUMMARY:[RW] Sharpener ride (4 x 2 min) (50 min)
+DESCRIPTION:12 min warm-up\; 10 min easy\; 4 x (2 min threshold + 3 min ea
+ sy)\; 8 min cool-down. Short and crisp\, then stop (taper: volume down\, 
+ intensity kept).\n\nWeek 12 (TAPER). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-11-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270211T063000
+DTEND:20270211T071500
+SUMMARY:[RW] Easy run (45 min)
+DESCRIPTION:5 min warm-up\; 35 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 12 (TAPER). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-12-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270212T063000
+DTEND:20270212T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270213T063000
+DTEND:20270213T081500
+SUMMARY:[RW] Long ride (105 min)
+DESCRIPTION:10 min warm-up\; 85 min easy\; 10 min cool-down. Mostly steady
+  endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on 
+ rides over 90 minutes.\n\nWeek 12 (TAPER). Not medical advice\; pain that
+  changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-14-run_long-long-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270214T063000
+DTEND:20270214T073500
+SUMMARY:[RW] Long run (65 min)
+DESCRIPTION:5 min warm-up\; 55 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 12 (TAPER). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-16-run1-sharpener-4-x-2-min@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270216T063000
+DTEND:20270216T070000
+SUMMARY:[RW] Sharpener (4 x 2 min) (30 min)
+DESCRIPTION:10 min warm-up\; 4 x (2 min threshold + 2 min easy)\; 8 min co
+ ol-down. Short and crisp\, then stop. The taper keeps a little intensity 
+ while volume drops (Bosquet 2007).\n\nWeek 13 (TAPER). Not medical advice
+ \; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-17-bike1-sharpener-ride-4-x-2@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270217T063000
+DTEND:20270217T073500
+SUMMARY:[RW] Sharpener ride (4 x 2 min) (65 min)
+DESCRIPTION:12 min warm-up\; 25 min easy\; 4 x (2 min threshold + 3 min ea
+ sy)\; 8 min cool-down. Short and crisp\, then stop (taper: volume down\, 
+ intensity kept).\n\nWeek 13 (TAPER). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-18-run2-easy-run@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270218T063000
+DTEND:20270218T070000
+SUMMARY:[RW] Easy run (30 min)
+DESCRIPTION:5 min warm-up\; 20 min easy\; 5 min cool-down. Easy means RPE 
+ 2-3: you can talk in full sentences. Use your watch's easy heart-rate zon
+ e if you have one.\n\nWeek 13 (TAPER). Not medical advice\; pain that cha
+ nges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-20-activation-activation-20-min-ea@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270220T090000
+DTEND:20270220T092000
+SUMMARY:[RW] Activation (20 min easy run + 3 short pickups) (20 min)
+DESCRIPTION:20 min easy with 3 pickups of 15 s at race effort. Pack your k
+ it\, check your gear\, eat normally\, sleep.\n\nWeek 13 (TAPER). Not medi
+ cal advice\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-21-race-race-day-standard-du@rampwise
+DTSTAMP:20261117T003912Z
+DTSTART:20270221T080000
+DTEND:20270221T090000
+SUMMARY:[RW] RACE DAY: Standard duathlon (run\, ride\, run)
+DESCRIPTION:Run the first kilometre about 5 % slower than your planned pac
+ e (Walsh 2019\, one elite study). Start easier than feels necessary for t
+ he first third. Eat and drink as practised\, nothing new. It is a day to 
+ enjoy the work you did\; no plan can promise a time.\n\nWeek 13 (RACE). N
+ ot medical advice\; pain that changes how you move means stop.\nrampwise-
+ plan
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

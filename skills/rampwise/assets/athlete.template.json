@@ -48,6 +48,7 @@
       "variety": "rotate",
       "max_minutes": 35
     },
+    "output_dir": null,
     "units": {
       "run": "pace",
       "bike": "kmh"
@@ -82,5 +83,7 @@
   },
   "workouts": {},
   "tests": {},
-  "checkins": []
+  "checkins": [],
+  "manual_baseline": {},
+  "event": {}
 }

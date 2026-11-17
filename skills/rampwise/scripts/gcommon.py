@@ -36,6 +36,44 @@ def _data_dir():
 
 
 DATA_DIR = _data_dir()
+
+
+def out_root():
+    """Where generated files go (plans, reports, exports, workouts, dashboard): RAMPWISE_OUT, else preferences.output_dir in athlete.json, else ~/rampwise-coach.
+    The value "cwd" (or "here") means a rampwise-coach folder inside the folder the session was started in. Your data (athlete.json) is NOT here: changing the output
+    folder never moves or hides your data, and old outputs stay where they were."""
+    v = os.environ.get("RAMPWISE_OUT")
+    if not v:
+        try:
+            v = ((json.loads((DATA_DIR / "athlete.json").read_text(encoding="utf-8")).get("preferences") or {}).get("output_dir"))
+        except Exception:
+            v = None
+    if v in ("cwd", "here", "."):
+        return Path.cwd() / "rampwise-coach"
+    return Path(v).expanduser() if v else Path.home() / "rampwise-coach"
+
+
+def out_dir(*parts):
+    """A subfolder of the output root (created): out_dir("plans", "olympic-tri-2027-06-20"), out_dir("reports"), out_dir("workouts"), out_dir("dashboard")."""
+    p = out_root().joinpath(*parts)
+    p.mkdir(parents=True, exist_ok=True)
+    return p
+
+
+def plan_files(pattern="plan-*.json"):
+    """Saved plans, newest name last: the output folder first, then the older place inside the data folder."""
+    found = []
+    for base in (out_root() / "plans", DATA_DIR / "plans"):
+        if base.exists():
+            found += list(base.glob(pattern)) + list(base.glob("*/" + pattern))
+    return sorted(found, key=lambda x: x.name)
+
+
+def apply_here_flag():
+    """`--here` on the command line: write into a rampwise-coach folder in the current directory instead of the usual output folder."""
+    if "--here" in sys.argv:
+        sys.argv.remove("--here")
+        os.environ["RAMPWISE_OUT"] = "cwd"
 ATHLETE_PATH = DATA_DIR / "athlete.json"
 FIT_SUBDIR = "coach"                      # the server only accepts folders inside ~/Downloads/garmin
 SERVER_TIMEOUT_S = 180
@@ -134,10 +172,13 @@ class Garmin:
 RUN_KEYS = ("running",)
 BIKE_KEYS = ("cycling", "biking", "bike", "ride", "gravel", "virtual_ride")
 STRENGTH_KEYS = ("strength", "hiit", "fitness_equipment")
+SWIM_KEYS = ("swim",)                       # lap_swimming, open_water_swimming
 
 
 def sport_of(type_key):
     k = (type_key or "").lower()
+    if any(x in k for x in SWIM_KEYS):
+        return "swim"
     if any(x in k for x in RUN_KEYS):
         return "run"
     if any(x in k for x in BIKE_KEYS):

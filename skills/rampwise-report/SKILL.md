@@ -3,7 +3,7 @@ name: rampwise-report
 description: Daily, weekly and monthly training reports from the user's own Garmin data, as Markdown with figures and as an interactive single-file HTML page (works offline, light and dark mode, period buttons, hover tooltips). Use for "give me a report", "daily/weekly/monthly summary", "show my progress", "dashboard", "how did my week go", "how am I doing against my goal", and for sharing or archiving a training review. Includes recovery, week-over-week comparison, injury-risk watch, plan against what was done, pace/speed/efficiency trends, strength logs, goal meters and tomorrow's adapted session. Goals and units follow the user's own settings; nothing is compared with other people. Uses rampwise-analyze, rampwise-adapt and rampwise-recovery for the numbers.
 ---
 
-> **Paths.** `<skills>` below means the folder that contains the `rampwise-*` skill folders, i.e. the parent of this skill's own folder. Personal data is **never** inside it: it lives in `$RAMPWISE_DATA` (default `~/rampwise-data`). Reports are written there, never into the plugin folder.
+> **Paths.** `<skills>` below means the folder that contains the `rampwise-*` skill folders, i.e. the parent of this skill's own folder. Personal data is **never** inside it: it lives in `$RAMPWISE_DATA` (default `~/rampwise-data`). Reports are written to the output folder, never into the plugin folder.
 
 # Garmin Report (daily, weekly, monthly)
 
@@ -18,7 +18,7 @@ python -X utf8 "<skills>/rampwise-report/scripts/report.py" monthly --format htm
 ```
 Options: `--date YYYY-MM-DD` (report as of that day), `--format md|html|both` (default both), `--out DIR`, `--no-deep` (skip the FIT-file analysis of the latest activity), `--no-adapt` (skip tomorrow's adaptation). A weekly report takes about half a minute because it reads Garmin live.
 
-Output: `$RAMPWISE_DATA/reports/<date>-<mode>/` with
+Output: `~/rampwise-coach/reports/<date>-<mode>/` (the output folder; `--here` uses `./rampwise-coach`, `preferences.output_dir` or `RAMPWISE_OUT` change it) with
 - `report.md` plus `figures/*.svg` (Markdown with real figures; the SVGs carry their own colours and dark-mode rules),
 - `report.html` (single file, no network, no scripts: period buttons are pure CSS, charts show values on hover, collapsible sections, prints cleanly),
 - `reports/latest-<mode>.html`, always the newest one (bookmark it).
@@ -34,6 +34,7 @@ Tell the user where the files are; if they want to see the HTML in the chat, pub
 | This week against last week (rolling 7 days; calendar week from Wednesday) | yes | yes | yes |
 | Minutes per day by sport | 14 or 28 days | 14 or 28 days | 14 or 28 days |
 | Latest activity against the last similar one, aerobic reading | yes | | |
+| Recent activities table (14 days), each against the last similar one | | yes | yes |
 | Tomorrow, adapted (`rampwise-adapt`) | yes | | |
 | Minutes per week by sport; consistency heatmap | | 4/8/12 weeks | 12 weeks, heatmap |
 | Running pace, run efficiency, longest run; riding speed, longest ride | | 4/8/12 weeks | 4/8/12 weeks |

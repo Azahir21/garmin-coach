@@ -1,0 +1,1961 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rampwise//Event plan//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Ultra-distance ride (300 km) plan
+BEGIN:VEVENT
+UID:2026-11-23-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261123T183000
+DTEND:20261123T190500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (35 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 1 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261124T063000
+DTEND:20261124T071000
+SUMMARY:[RW] Ride with cadence drills (40 min)
+DESCRIPTION:10 min warm-up\; 6 x (0.5 min steady + 2.5 min easy)\; 8 min c
+ ool-down. Six short high-cadence spins (about 100 rpm\, smooth)\, easy be
+ tween. Skill\, not strength. Do not do this right before a run: high cade
+ nce raises the cost of the run that follows (Walsh 2019).\n\nWeek 1 (BASE
+ ). Not medical advice\; pain that changes how you move means stop.\nrampw
+ ise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-25-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261125T063000
+DTEND:20261125T071000
+SUMMARY:[RW] Easy ride (40 min)
+DESCRIPTION:10 min warm-up\; 22 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261126T063000
+DTEND:20261126T071000
+SUMMARY:[RW] Easy ride (40 min)
+DESCRIPTION:10 min warm-up\; 22 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261126T183000
+DTEND:20261126T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 1 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261127T063000
+DTEND:20261127T071000
+SUMMARY:[RW] Easy ride (40 min)
+DESCRIPTION:10 min warm-up\; 22 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261128T063000
+DTEND:20261128T100000
+SUMMARY:[RW] Long ride (210 min)
+DESCRIPTION:10 min warm-up\; 190 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-29-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261129T063000
+DTEND:20261129T071000
+SUMMARY:[RW] Easy ride (40 min)
+DESCRIPTION:10 min warm-up\; 22 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 1 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-30-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261130T183000
+DTEND:20261130T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 2 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261201T063000
+DTEND:20261201T071500
+SUMMARY:[RW] Ride with cadence drills (45 min)
+DESCRIPTION:10 min warm-up\; 9 min easy\; 6 x (0.5 min steady + 2.5 min ea
+ sy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smoo
+ th)\, easy between. Skill\, not strength. Do not do this right before a r
+ un: high cadence raises the cost of the run that follows (Walsh 2019).\n\
+ nWeek 2 (BASE). Not medical advice\; pain that changes how you move means
+  stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-02-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261202T063000
+DTEND:20261202T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261203T063000
+DTEND:20261203T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261203T183000
+DTEND:20261203T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 2 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261204T063000
+DTEND:20261204T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261205T063000
+DTEND:20261205T102000
+SUMMARY:[RW] Long ride (230 min)
+DESCRIPTION:10 min warm-up\; 210 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-06-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261206T063000
+DTEND:20261206T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 2 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-07-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261207T183000
+DTEND:20261207T190000
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 3 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261208T063000
+DTEND:20261208T072000
+SUMMARY:[RW] Ride with cadence drills (50 min)
+DESCRIPTION:10 min warm-up\; 14 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 3 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-09-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261209T063000
+DTEND:20261209T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261210T063000
+DTEND:20261210T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261210T183000
+DTEND:20261210T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 3 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261211T063000
+DTEND:20261211T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261212T063000
+DTEND:20261212T104500
+SUMMARY:[RW] Long ride (255 min)
+DESCRIPTION:10 min warm-up\; 235 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261213T063000
+DTEND:20261213T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 3 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261214T183000
+DTEND:20261214T185000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (light) (2
+ 0 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 4 (RECOVERY). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261215T063000
+DTEND:20261215T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261216T063000
+DTEND:20261216T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261217T063000
+DTEND:20261217T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261217T183000
+DTEND:20261217T185000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (light) (20 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 4 (RECOVERY). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261219T063000
+DTEND:20261219T094000
+SUMMARY:[RW] Long ride (190 min)
+DESCRIPTION:10 min warm-up\; 170 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain t
+ hat changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261220T063000
+DTEND:20261220T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 4 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261221T183000
+DTEND:20261221T190500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (35 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 5 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261222T063000
+DTEND:20261222T072500
+SUMMARY:[RW] Ride with cadence drills (55 min)
+DESCRIPTION:10 min warm-up\; 19 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 5 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261223T063000
+DTEND:20261223T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261224T063000
+DTEND:20261224T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261224T183000
+DTEND:20261224T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 5 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261225T063000
+DTEND:20261225T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261226T063000
+DTEND:20261226T111000
+SUMMARY:[RW] Long ride (280 min)
+DESCRIPTION:10 min warm-up\; 260 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261227T063000
+DTEND:20261227T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 5 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261228T183000
+DTEND:20261228T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 6 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261229T063000
+DTEND:20261229T073000
+SUMMARY:[RW] Ride with cadence drills (60 min)
+DESCRIPTION:10 min warm-up\; 24 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 6 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261230T063000
+DTEND:20261230T073000
+SUMMARY:[RW] Easy ride (60 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 6 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261231T063000
+DTEND:20261231T073000
+SUMMARY:[RW] Easy ride (60 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 6 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20261231T183000
+DTEND:20261231T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 6 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-01-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270101T063000
+DTEND:20270101T073000
+SUMMARY:[RW] Easy ride (60 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 6 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-02-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270102T063000
+DTEND:20270102T113500
+SUMMARY:[RW] Long ride (305 min)
+DESCRIPTION:10 min warm-up\; 285 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 6 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-03-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270103T063000
+DTEND:20270103T073000
+SUMMARY:[RW] Easy ride (60 min)
+DESCRIPTION:10 min warm-up\; 42 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 6 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-04-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270104T183000
+DTEND:20270104T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 7 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-05-bike1-ride-with-cadence-dr@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270105T063000
+DTEND:20270105T074000
+SUMMARY:[RW] Ride with cadence drills (70 min)
+DESCRIPTION:10 min warm-up\; 34 min easy\; 6 x (0.5 min steady + 2.5 min e
+ asy)\; 8 min cool-down. Six short high-cadence spins (about 100 rpm\, smo
+ oth)\, easy between. Skill\, not strength. Do not do this right before a 
+ run: high cadence raises the cost of the run that follows (Walsh 2019).\n
+ \nWeek 7 (BASE). Not medical advice\; pain that changes how you move mean
+ s stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-06-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270106T063000
+DTEND:20270106T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 7 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270107T063000
+DTEND:20270107T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 7 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-07-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270107T183000
+DTEND:20270107T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 7 (BASE). Not medical advice\; pain that changes how you move 
+ means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-08-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270108T063000
+DTEND:20270108T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 7 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-09-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270109T063000
+DTEND:20270109T121000
+SUMMARY:[RW] Long ride (340 min)
+DESCRIPTION:10 min warm-up\; 320 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 7 (BASE). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-10-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270110T063000
+DTEND:20270110T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 7 (BASE). Not medical advice\; pain that ch
+ anges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-11-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270111T183000
+DTEND:20270111T185500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (light) (25 mi
+ n)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 8 (RECOVERY). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-12-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270112T063000
+DTEND:20270112T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-13-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270113T063000
+DTEND:20270113T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270114T063000
+DTEND:20270114T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-14-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270114T183000
+DTEND:20270114T185000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (light) (20 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 8 (RECOVERY). Not medical advice\; pain that changes how you m
+ ove means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-15-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270115T063000
+DTEND:20270115T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-16-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270116T063000
+DTEND:20270116T104500
+SUMMARY:[RW] Long ride (255 min)
+DESCRIPTION:10 min warm-up\; 235 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain t
+ hat changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270117T063000
+DTEND:20270117T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 8 (RECOVERY). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-18-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270118T183000
+DTEND:20270118T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-19-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270119T063000
+DTEND:20270119T074000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (70 min)
+DESCRIPTION:12 min warm-up\; 14 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 9 (BUILD). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-20-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270120T063000
+DTEND:20270120T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270121T063000
+DTEND:20270121T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-21-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270121T183000
+DTEND:20270121T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 9 (BUILD). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-22-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270122T063000
+DTEND:20270122T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-23-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270123T063000
+DTEND:20270123T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 226 min easy\; 3 x (30 min steady + 8 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 9 (BUILD).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-24-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270124T063000
+DTEND:20270124T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 9 (BUILD). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-25-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270125T183000
+DTEND:20270125T190500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (35 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 10 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-26-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270126T063000
+DTEND:20270126T074000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (70 min)
+DESCRIPTION:12 min warm-up\; 14 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 10 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-27-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270127T063000
+DTEND:20270127T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 10 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270128T063000
+DTEND:20270128T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 10 (BUILD). Not medical advice\; pain that changes how you
+  move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-28-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270128T183000
+DTEND:20270128T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 10 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-29-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270129T063000
+DTEND:20270129T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 10 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-30-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270130T063000
+DTEND:20270130T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 226 min easy\; 3 x (30 min steady + 8 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 10 (BUILD)
+ . Not medical advice\; pain that changes how you move means stop.\nrampwi
+ se-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-31-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270131T063000
+DTEND:20270131T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 10 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-01-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270201T183000
+DTEND:20270201T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 11 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-02-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270202T063000
+DTEND:20270202T074000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (70 min)
+DESCRIPTION:12 min warm-up\; 14 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 11 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-03-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270203T063000
+DTEND:20270203T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 11 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270204T063000
+DTEND:20270204T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 11 (BUILD). Not medical advice\; pain that changes how you
+  move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-04-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270204T183000
+DTEND:20270204T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 11 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-05-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270205T063000
+DTEND:20270205T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 11 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-06-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270206T063000
+DTEND:20270206T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 226 min easy\; 3 x (30 min steady + 8 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 11 (BUILD)
+ . Not medical advice\; pain that changes how you move means stop.\nrampwi
+ se-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-07-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270207T063000
+DTEND:20270207T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 11 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-08-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270208T183000
+DTEND:20270208T185500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (light) (25 mi
+ n)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 12 (RECOVERY). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-09-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270209T063000
+DTEND:20270209T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-10-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270210T063000
+DTEND:20270210T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-11-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270211T063000
+DTEND:20270211T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-11-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270211T183000
+DTEND:20270211T185000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (light) (20 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 12 (RECOVERY). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-12-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270212T063000
+DTEND:20270212T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-13-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270213T063000
+DTEND:20270213T110000
+SUMMARY:[RW] Long ride (270 min)
+DESCRIPTION:10 min warm-up\; 250 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-14-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270214T063000
+DTEND:20270214T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 12 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-15-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270215T183000
+DTEND:20270215T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 13 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-16-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270216T063000
+DTEND:20270216T074000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (70 min)
+DESCRIPTION:12 min warm-up\; 14 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 13 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-17-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270217T063000
+DTEND:20270217T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 13 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-18-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270218T063000
+DTEND:20270218T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 13 (BUILD). Not medical advice\; pain that changes how you
+  move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-18-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270218T183000
+DTEND:20270218T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 13 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-19-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270219T063000
+DTEND:20270219T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 13 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-20-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270220T063000
+DTEND:20270220T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 226 min easy\; 3 x (30 min steady + 8 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 13 (BUILD)
+ . Not medical advice\; pain that changes how you move means stop.\nrampwi
+ se-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-21-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270221T063000
+DTEND:20270221T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 13 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-22-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270222T183000
+DTEND:20270222T190500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (35 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 14 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-23-bike1-tempo-ride-3-x-8-min@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270223T063000
+DTEND:20270223T074000
+SUMMARY:[RW] Tempo ride (3 x 8 min) (70 min)
+DESCRIPTION:12 min warm-up\; 14 min easy\; 3 x (8 min tempo + 4 min easy)\
+ ; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of FT
+ P). Even power\, seated.\n\nWeek 14 (BUILD). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-24-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270224T063000
+DTEND:20270224T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 14 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-25-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270225T063000
+DTEND:20270225T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 14 (BUILD). Not medical advice\; pain that changes how you
+  move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-25-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270225T183000
+DTEND:20270225T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 14 (BUILD). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-26-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270226T063000
+DTEND:20270226T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 14 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-27-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270227T063000
+DTEND:20270227T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 226 min easy\; 3 x (30 min steady + 8 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 14 (BUILD)
+ . Not medical advice\; pain that changes how you move means stop.\nrampwi
+ se-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-28-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270228T063000
+DTEND:20270228T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 14 (BUILD). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-01-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270301T183000
+DTEND:20270301T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 15 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-02-bike1-race-effort-ride-2-x@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270302T063000
+DTEND:20270302T074000
+SUMMARY:[RW] Race-effort ride (2 x 20 min) (70 min)
+DESCRIPTION:12 min warm-up\; 2 x (20 min tempo + 6 min easy)\; 8 min cool-
+ down. Hold the effort you plan to ride on race day (RPE 5-6)\; practise f
+ uelling.\n\nWeek 15 (PEAK). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-03-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270303T063000
+DTEND:20270303T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 15 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-04-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270304T063000
+DTEND:20270304T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 15 (PEAK). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-04-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270304T183000
+DTEND:20270304T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 15 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-05-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270305T063000
+DTEND:20270305T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 15 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-06-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270306T063000
+DTEND:20270306T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 235 min easy\; 3 x (30 min steady + 5 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 15 (PEAK).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-07-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270307T063000
+DTEND:20270307T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 15 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-08-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270308T183000
+DTEND:20270308T185500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (light) (25 mi
+ n)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 16 (RECOVERY). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-09-bike1-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270309T063000
+DTEND:20270309T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-10-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270310T063000
+DTEND:20270310T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-11-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270311T063000
+DTEND:20270311T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-11-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270311T183000
+DTEND:20270311T185000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (light) (20 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 16 (RECOVERY). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-12-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270312T063000
+DTEND:20270312T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-13-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270313T063000
+DTEND:20270313T110000
+SUMMARY:[RW] Long ride (270 min)
+DESCRIPTION:10 min warm-up\; 250 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain 
+ that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-14-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270314T063000
+DTEND:20270314T072500
+SUMMARY:[RW] Easy ride (55 min)
+DESCRIPTION:10 min warm-up\; 37 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 16 (RECOVERY). Not medical advice\; pain th
+ at changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-15-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270315T183000
+DTEND:20270315T190000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 17 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-16-bike1-race-effort-ride-2-x@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270316T063000
+DTEND:20270316T074000
+SUMMARY:[RW] Race-effort ride (2 x 20 min) (70 min)
+DESCRIPTION:12 min warm-up\; 2 x (20 min tempo + 6 min easy)\; 8 min cool-
+ down. Hold the effort you plan to ride on race day (RPE 5-6)\; practise f
+ uelling.\n\nWeek 17 (PEAK). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-17-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270317T063000
+DTEND:20270317T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 17 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-18-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270318T063000
+DTEND:20270318T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 17 (PEAK). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-18-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270318T183000
+DTEND:20270318T185500
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (hips and upper ba
+ ck) (25 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 17 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-19-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270319T063000
+DTEND:20270319T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 17 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-20-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270320T063000
+DTEND:20270320T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 235 min easy\; 3 x (30 min steady + 5 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 17 (PEAK).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-21-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270321T063000
+DTEND:20270321T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 17 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-22-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270322T183000
+DTEND:20270322T190500
+SUMMARY:[RW] Strength: lower body\, heavy (squat and hinge) (35 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 18 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-23-bike1-race-effort-ride-2-x@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270323T063000
+DTEND:20270323T074000
+SUMMARY:[RW] Race-effort ride (2 x 20 min) (70 min)
+DESCRIPTION:12 min warm-up\; 2 x (20 min tempo + 6 min easy)\; 8 min cool-
+ down. Hold the effort you plan to ride on race day (RPE 5-6)\; practise f
+ uelling.\n\nWeek 18 (PEAK). Not medical advice\; pain that changes how yo
+ u move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-24-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270324T063000
+DTEND:20270324T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 18 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-25-bike2-steady-tempo-ride-2-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270325T063000
+DTEND:20270325T074000
+SUMMARY:[RW] Steady-tempo ride (2 x 14 min) (70 min)
+DESCRIPTION:12 min warm-up\; 12 min easy\; 2 x (14 min tempo + 5 min easy)
+ \; 8 min cool-down. Tempo is comfortably hard (RPE 6\, about 76-90 % of F
+ TP). Even power\, seated. Practise your race fuelling on rides over 90 mi
+ nutes.\n\nWeek 18 (PEAK). Not medical advice\; pain that changes how you 
+ move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-25-str2-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270325T183000
+DTEND:20270325T190000
+SUMMARY:[RW] Strength: lower body\, explosive and trunk (jumps and hinge) 
+ (30 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 18 (PEAK). Not medical advice\; pain that changes how you move
+  means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-26-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270326T063000
+DTEND:20270326T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 18 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-27-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270327T063000
+DTEND:20270327T123000
+SUMMARY:[RW] Long ride (360 min)
+DESCRIPTION:10 min warm-up\; 235 min easy\; 3 x (30 min steady + 5 min eas
+ y)\; 10 min cool-down. Mostly steady endurance (RPE 2-3\, 56-75 % of FTP 
+ if you use power). Eat and drink on rides over 90 minutes. Race-effort bl
+ ocks (RPE 4-5): practise your race nutrition on these.\n\nWeek 18 (PEAK).
+  Not medical advice\; pain that changes how you move means stop.\nrampwis
+ e-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-28-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270328T063000
+DTEND:20270328T074000
+SUMMARY:[RW] Easy ride (70 min)
+DESCRIPTION:10 min warm-up\; 52 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 18 (PEAK). Not medical advice\; pain that c
+ hanges how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-29-str1-strength-lower-body-@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270329T183000
+DTEND:20270329T185000
+SUMMARY:[RW] Strength: lower body\, heavy (single-leg and hips) (light) (2
+ 0 min)
+DESCRIPTION:Cyclist\, road endurance (sportive\, gran fondo\, time trial):
+  more power at the same effort. Lift with 2-3 reps in reserve\, stop a se
+ t if form breaks. Strength starts at least 3 hours after cardio (practice
+ ).\n\nWeek 19 (TAPER). Not medical advice\; pain that changes how you mov
+ e means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-30-bike1-sharpener-ride-4-x-2@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270330T063000
+DTEND:20270330T072000
+SUMMARY:[RW] Sharpener ride (4 x 2 min) (50 min)
+DESCRIPTION:12 min warm-up\; 10 min easy\; 4 x (2 min threshold + 3 min ea
+ sy)\; 8 min cool-down. Short and crisp\, then stop (taper: volume down\, 
+ intensity kept).\n\nWeek 19 (TAPER). Not medical advice\; pain that chang
+ es how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-31-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270331T063000
+DTEND:20270331T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 19 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-01-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270401T063000
+DTEND:20270401T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 19 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-02-bike5-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270402T063000
+DTEND:20270402T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 19 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-03-bike_long-long-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270403T063000
+DTEND:20270403T104000
+SUMMARY:[RW] Long ride (250 min)
+DESCRIPTION:10 min warm-up\; 230 min easy\; 10 min cool-down. Mostly stead
+ y endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on
+  rides over 90 minutes.\n\nWeek 19 (TAPER). Not medical advice\; pain tha
+ t changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-04-bike4-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270404T063000
+DTEND:20270404T072000
+SUMMARY:[RW] Easy ride (50 min)
+DESCRIPTION:10 min warm-up\; 32 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 19 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-06-bike1-sharpener-ride-4-x-2@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270406T063000
+DTEND:20270406T071500
+SUMMARY:[RW] Sharpener ride (4 x 2 min) (45 min)
+DESCRIPTION:12 min warm-up\; 5 min easy\; 4 x (2 min threshold + 3 min eas
+ y)\; 8 min cool-down. Short and crisp\, then stop (taper: volume down\, i
+ ntensity kept).\n\nWeek 20 (TAPER). Not medical advice\; pain that change
+ s how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-07-bike3-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270407T063000
+DTEND:20270407T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 20 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-08-bike2-easy-ride@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270408T063000
+DTEND:20270408T071500
+SUMMARY:[RW] Easy ride (45 min)
+DESCRIPTION:10 min warm-up\; 27 min easy\; 8 min cool-down. Mostly steady 
+ endurance (RPE 2-3\, 56-75 % of FTP if you use power). Eat and drink on r
+ ides over 90 minutes.\n\nWeek 20 (TAPER). Not medical advice\; pain that 
+ changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-10-activation-activation-20-min-ea@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270410T090000
+DTEND:20270410T092000
+SUMMARY:[RW] Activation (20 min easy spin + 3 short pickups) (20 min)
+DESCRIPTION:20 min easy with 3 pickups of 15 s at race effort. Pack your k
+ it\, check your gear\, eat normally\, sleep.\n\nWeek 20 (TAPER). Not medi
+ cal advice\; pain that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-11-race-race-day-ultra-dista@rampwise
+DTSTAMP:20261117T003913Z
+DTSTART:20270411T080000
+DTEND:20270411T090000
+SUMMARY:[RW] RACE DAY: Ultra-distance ride (300 km)
+DESCRIPTION:Start easier than feels necessary for the first third. Eat and
+  drink as practised\, nothing new. It is a day to enjoy the work you did\
+ ; no plan can promise a time.\n\nWeek 20 (RACE). Not medical advice\; pai
+ n that changes how you move means stop.\nrampwise-plan
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

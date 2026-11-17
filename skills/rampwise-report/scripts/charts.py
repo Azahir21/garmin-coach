@@ -6,10 +6,10 @@ Sport colours are fixed everywhere: run = blue (--s1), bike = orange (--s2), str
 """
 from html import escape
 
-TOKENS = """:root{--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--all:#898781;--track:#cde2fb;--good:#0ca30c;--warn:#fab219;--crit:#d03b3b;--band:rgba(42,120,214,.12)}
-@media (prefers-color-scheme:dark){:root{--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--track:#184f95;--band:rgba(57,135,229,.18)}}"""
+TOKENS = """:root{--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--axis:#c3c2b7;--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#7c5cd6;--all:#898781;--track:#cde2fb;--good:#0ca30c;--warn:#fab219;--crit:#d03b3b;--band:rgba(42,120,214,.12)}
+@media (prefers-color-scheme:dark){:root{--ink:#f0efec;--ink2:#c3c2b7;--grid:#2c2c2a;--axis:#383835;--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#9b82e8;--track:#184f95;--band:rgba(57,135,229,.18)}}"""
 CSS = """.t{font:12px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink2)}.tt{font:600 13px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink)}
-.g{stroke:var(--grid);stroke-width:1}.a{stroke:var(--axis);stroke-width:1}.s1{fill:var(--s1);stroke:var(--s1)}.s2{fill:var(--s2);stroke:var(--s2)}.s3{fill:var(--s3);stroke:var(--s3)}.s0{fill:var(--all);stroke:var(--all)}
+.g{stroke:var(--grid);stroke-width:1}.a{stroke:var(--axis);stroke-width:1}.s1{fill:var(--s1);stroke:var(--s1)}.s2{fill:var(--s2);stroke:var(--s2)}.s3{fill:var(--s3);stroke:var(--s3)}.s4{fill:var(--s4);stroke:var(--s4)}.s0{fill:var(--all);stroke:var(--all)}
 .l{fill:none;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}.p{stroke:none}.band{fill:var(--band);stroke:none}.bar{stroke:none}.cell0{fill:var(--grid)}"""
 MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -60,7 +60,7 @@ def bars(labels, series, title, unit="min", stacked=True, height=230, standalone
     for k in range(steps + 1):
         v = ymax * k / steps
         y = T + ph - ph * k / steps
-        body.append(f'<line x1="{L}" x2="{W - R}" y1="{y:.1f}" y2="{y:.1f}" class="g"/><text x="{L - 6}" y="{y + 4:.1f}" class="t" text-anchor="end">{_fmt(v)}</text>')
+        body.append(f'<line x1="{L}" x2="{W - R}" y1="{y:.1f}" y2="{y:.1f}" class="g"/><text x="{L - 6}" y="{y + 4:.1f}" class="t" text-anchor="end">{_fmt(v, dec if (ymax / steps) % 1 else 0)}</text>')
     body.append(f'<text x="{W - R}" y="18" class="t" text-anchor="end">{escape(unit)}</text>')
     every = tick_every or max(1, round(n / 8))
     for i, lab in enumerate(labels):

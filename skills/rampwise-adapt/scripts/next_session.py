@@ -31,9 +31,9 @@ STATE = gc.DATA_DIR / "adapt_state.json"
 
 
 def latest_plan(path=None):
-    p = Path(path) if path else max((gc.DATA_DIR / "plans").glob("plan-*.json"), default=None, key=lambda x: x.name)
+    p = Path(path) if path else max(gc.plan_files("plan-*.json"), default=None, key=lambda x: x.name)
     if not p:
-        sys.exit(f"no saved plan in {gc.DATA_DIR / 'plans'}: build one first (build_plan.py --out ...)")
+        sys.exit(f"no saved plan in {gc.out_root() / 'plans'}: build one first (build_plan.py saves it there)")
     return json.loads(p.read_text(encoding="utf-8")), p
 
 
@@ -125,6 +125,7 @@ def main():
     ap.add_argument("--record", action="store_true")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--assume-readiness", choices=["GREEN", "AMBER", "RED"], help="testing: skip the readiness call")
+    gc.apply_here_flag()
     a = ap.parse_args()
     gc.utf8_stdout()
     today = date.today()
