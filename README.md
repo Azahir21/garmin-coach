@@ -1,19 +1,45 @@
+<p align="center"><img src="docs/img/logo.svg" width="96" height="96" alt="Rampwise logo"></p>
+
 # Rampwise: an AI coach for triathletes, runners, cyclists and swimmers
 
-**Evidence-labelled coaching for triathlon, duathlon, running, cycling and open-water swimming, for AI agents (Claude Code, Codex and other Agent Skills clients).** Race plans for 17 events (no Garmin needed), daily adaptation, an injury-risk watch and daily/weekly/monthly reports built from *your own* Garmin data or a few numbers you type, with specialists for recovery, load, heat, fueling and heart-rate zones. Free and open source (Apache-2.0).
+**Evidence-labelled coaching for triathlon, duathlon, running, cycling and open-water swimming, for AI agents (Claude Code, Codex, Cursor, Gemini CLI and 25+ other tools).** Race plans for 17 events (no Garmin needed), daily adaptation, an injury-risk watch and daily/weekly/monthly reports built from *your own* Garmin data or a few numbers you type, with specialists for recovery, load, heat, fueling and heart-rate zones. Free and open source (Apache-2.0).
 
 > Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. and is used here only to say which data the tool reads.
 
-Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, or as plain Agent Skills in other harnesses.
+Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training plan, injury prevention, Claude Code plugin, Agent Skills, MCP. Works as a Claude Code plugin, a Codex plugin, a Gemini CLI extension, an Antigravity or Cursor plugin, or as plain Agent Skills in other tools.
 
 > **Status: v0.6.2, experimental.** Built by one runner and cyclist for their own training, then generalised. It has **not** been tested on other people, other watches, or over a full training cycle. There is no promise it works for you. The first user tests it on their own body for three months and will publish an honest update ([docs/FIELD-TEST.md](docs/FIELD-TEST.md)). Read [DISCLAIMER.md](DISCLAIMER.md) first.
 
 [![Sample weekly report](docs/img/sample-weekly.png)](https://azahir21.github.io/rampwise/sample/)
 *A sample weekly report (synthetic data). [Open the interactive sample](https://azahir21.github.io/rampwise/sample/) or visit the [project page](https://azahir21.github.io/rampwise/).*
 
+## Install in a minute
+
+> [!IMPORTANT]
+> Rampwise runs **on your computer**: your AI tool must be able to run Python (3.10 or newer). A Garmin account (with the official Personal API) is only needed for *your own* training data; a plan from five numbers needs none.
+
+| Your tool | Install |
+|---|---|
+| **Claude Code** | `/plugin marketplace add Azahir21/rampwise` then `/plugin install rampwise@rampwise` |
+| **Codex** (not tested by us) | `codex plugin marketplace add Azahir21/rampwise`, then open `/plugins` and install *rampwise* |
+| **30 tools with one installer** (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules) | `git clone https://github.com/Azahir21/rampwise`, then `python rampwise/install.py --list`, then `python rampwise/install.py --tool codex` (or `cursor`, `zed`, `goose`, several at once: `--tool cursor,zed`; preview with `--tool all --dry-run`) |
+| **Vercel skills CLI** (tested: a real install of all 11 skills, skills 1.9.0, Linux, Node 22) | `npx skills add Azahir21/rampwise` |
+| **Gemini CLI** (not tried) | `gemini extensions install https://github.com/Azahir21/rampwise` |
+| **Antigravity CLI** (not tried) | `agy plugin install https://github.com/Azahir21/rampwise` |
+| **Cursor** (marketplace listing under review) | `python rampwise/install.py --tool cursor` or `npx skills add Azahir21/rampwise` |
+| **Hermes Agent** (listed; install not tried) | `hermes skills tap add Azahir21/rampwise` then `hermes skills install Azahir21/rampwise/skills/rampwise` |
+| **No git** | download `rampwise-skills.zip` from the [latest release](https://github.com/Azahir21/rampwise/releases/latest), unzip, and run `python install.py --tool claude-code` (or `--tool codex`, `--tool cursor` ...) |
+
+**Then, once:**
+1. `pip install fitdecode` (it reads FIT files).
+2. For your own Garmin data: install [uv](https://docs.astral.sh/uv/), then `uv tool install --python 3.12 garmin-personal-mcp` and `garmin-personal-mcp auth` (the server is [`garmin-personal-mcp`](https://github.com/Mason-Levyy/garmin-personal-mcp), MIT, by Mason Levy; follow its README for the key).
+3. Restart your tool and say: **"Set up my Rampwise coach."** It interviews you (goals, injuries, equipment, schedule) before it plans anything.
+
+Skills appear in Claude Code as `/rampwise:rampwise`, `/rampwise:rampwise-planner` and so on; subagents as `rampwise:coach-recovery`, etc. Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
+
 ## What it does
 - **Race plans for 17 events, with or without Garmin**: 5K to 50 km ultra, sprint to Ironman triathlon, sprint and standard duathlon, gran fondo to 300 km rides, 1.5 to 10 km open-water swims. Base, build, peak and taper, a lighter week every 4th week, +10 % weekly cap, swim/bike/run/strength sessions with brick runs. Give event, date, level, hours and days; it asks for anything missing. See the [example plans](https://azahir21.github.io/rampwise/#plans).
-- **Plan viewer and exports**: one interactive HTML page per plan; calendar (.ics), spreadsheet (.csv), Zwift (.zwo) and ERG/MRC ride files. (Import into Zwift/TrainerRoad is untested; Garmin .fit files come from the Garmin-history planner.)
+- **Plan viewer and exports**: one interactive HTML page per plan; calendar (.ics), spreadsheet (.csv), Zwift (.zwo) and ERG/MRC ride files. Garmin `.fit` workout files for runs and rides when your heart-rate data are known. (Import into Zwift/TrainerRoad is untested.)
 - **Plans**: rolling 4-week plans (easy, long, tempo, strides, intervals, climb and MAF-test sessions; rides; strength) from your last weeks of training, with reset and deload weeks and a +10 % step cap.
 - **Garmin workouts**: writes structured `.fit` workout files (warm-up, steady, intervals, rest, cool-down) with your watch's own heart-rate **zone** when one covers the band, otherwise a custom bpm range, and says which it used. Not verified on every watch.
 - **Specialists**: recovery (HRV, sleep, resting HR to a GREEN/AMBER/RED readiness), aerobic base (pace at a heart rate, drift), load and injury flags, heat and weather adjustment, fueling and sweat-rate maths, strength placement.
@@ -24,35 +50,6 @@ Keywords: Garmin, AI running coach, AI cycling coach, HRV, readiness, training p
 - **Memory**: goals, injuries, equipment and preferences persist in a file on your computer.
 - **Honesty**: every rule is tagged *research*, *practice* or *gap* in an evidence map; the papers are listed in [docs/PAPERS.md](docs/PAPERS.md). It asks instead of assuming (heart-rate data, equipment, starting weights) and falls back to your activity trend only if you do not answer.
 - Adaptive by design: quality sessions are on for everyone and locked only by *your* data (an active injury, a RED reset week, your own settings).
-
-## Requirements
-- A Garmin account with the official **Personal API** access, and the [`garmin-personal-mcp`](https://github.com/Mason-Levyy/garmin-personal-mcp) server (MIT, by Mason Levy). Install [uv](https://docs.astral.sh/uv/), then once: `uv tool install --python 3.12 garmin-personal-mcp` and `garmin-personal-mcp auth` (follow that project's README for the key).
-- Python 3.10 or newer, and `pip install fitdecode` (reads FIT files).
-- An AI agent harness that loads Agent Skills (Claude Code, Codex, others).
-
-## Install
-
-**Claude Code** (plugin marketplace):
-```text
-/plugin marketplace add Azahir21/rampwise
-/plugin install rampwise@rampwise
-```
-Skills appear as `/rampwise:rampwise`, `/rampwise:rampwise-planner` and so on; subagents as `rampwise:coach-recovery`, etc.
-
-**Codex** (per OpenAI's plugin docs; **not tested by us**):
-```text
-codex plugin marketplace add Azahir21/rampwise
-```
-then open `/plugins` and install *rampwise*. Codex plugins do not ship subagents: the skills work without them.
-
-**Any other AI coding tool**: one installer knows where 30 tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, and an instructions-file fallback for Aider, Continue, Amazon Q and Jules):
-```text
-git clone https://github.com/Azahir21/rampwise
-python rampwise/install.py --list                   # tools, folders, how well each was checked
-python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
-python rampwise/install.py --tool all --dry-run     # preview
-```
-Vercel's skills CLI also works: `npx skills add Azahir21/rampwise` (tested: a real install of all 11 skills with skills 1.9.0 on Linux, Node 22). Details, the official pages we read and the caveats per tool (cloud agents cannot reach your Garmin data; Trae is unverified; we ran only Claude Code ourselves): [docs/INSTALL.md](docs/INSTALL.md).
 
 ## What it sends or fetches
 Everything that leaves your computer, in one place (also in [PRIVACY.md](PRIVACY.md)):

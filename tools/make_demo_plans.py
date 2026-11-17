@@ -70,6 +70,8 @@ def main():
     html = page.read_text(encoding="utf-8")
     new = re.sub(r"<!--PLANS-->.*?<!--/PLANS-->", lambda m: "<!--PLANS-->\n" + gallery(index) + "\n    <!--/PLANS-->", html, flags=re.S)
     page.write_text(new, encoding="utf-8")
+    import brand_pages                              # logo favicon on every page, also after regenerating
+    brand_pages.run()
 
 
 if __name__ == "__main__":

@@ -58,4 +58,6 @@ html = html.replace("<main>", '<main><p><a href="../">Rampwise home</a> | <a hre
 latest = out.parent / "latest-weekly.html"
 if latest.exists():
     latest.unlink()
+import brand_pages                                  # logo favicon on every page, also after regenerating
+brand_pages.run()
 print("wrote", ROOT / "docs" / "sample" / "index.html", "and", out)

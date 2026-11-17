@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="img/logo.svg"><link rel="icon" type="image/png" sizes="192x192" href="img/logo-192.png"><link rel="apple-touch-icon" href="img/logo-180.png">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rampwise: free open-source AI coach for triathletes, runners, cyclists and swimmers</title>
 <meta name="description" content="Rampwise is a free, open-source AI coach for triathletes, runners, cyclists and swimmers. Evidence-labelled plans for 17 events (5K to Ironman, duathlon, cycling, open-water swimming), daily adaptation, an injury-risk watch and reports, from your own Garmin data or a few numbers you type. Not affiliated with Garmin.">
@@ -64,7 +64,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--ink);font:17px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
 a{color:var(--s1)}.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
 nav{position:sticky;top:0;z-index:5;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--page) 82%,transparent);border-bottom:1px solid var(--border)}nav .wrap{display:flex;align-items:center;gap:18px;height:56px}
-.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.3px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px}.mark{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--s4),var(--s1) 50%,var(--s2))}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.3px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px}.mark{width:26px;height:26px;display:block}
 nav .links{margin-left:auto;display:flex;gap:16px;font-size:.92rem}nav .links a{text-decoration:none;color:var(--ink2)}nav .links a:hover{color:var(--ink)}@media(max-width:700px){nav .links a:not(.gh){display:none}}
 .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1200px 500px at 85% -10%,rgba(235,104,52,.75),transparent 60%),radial-gradient(900px 500px at 0% 0%,rgba(124,92,214,.9),transparent 60%),linear-gradient(135deg,#27408b,#2a78d6)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;padding-top:58px;padding-bottom:64px}@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}}
@@ -87,7 +87,7 @@ section{padding:58px 0 8px}h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:
 .labels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:800px){.labels{grid-template-columns:1fr}}.lab{border-radius:18px;padding:16px 18px;border:1px solid var(--border);background:var(--surface)}.lab b{display:inline-block;padding:2px 12px;border-radius:999px;color:#fff;font-size:.82rem;margin-bottom:8px}.lab .r{background:var(--s3)}.lab .p{background:var(--s1)}.lab .g{background:var(--muted)}.lab p{margin:0;font-size:.93rem;color:var(--ink2)}
 pre{background:#0f1424;color:#e8ecff;border-radius:14px;padding:14px 16px;overflow:auto;font:.88rem/1.5 ui-monospace,Consolas,monospace;margin:10px 0}
 .tabs>input{position:absolute;opacity:0}.tabs>label{display:inline-block;padding:7px 16px;border-radius:999px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-weight:600;font-size:.9rem;margin:0 8px 10px 0;color:var(--ink2)}
-.tabs>input:checked+label{background:var(--ink);color:var(--page);border-color:var(--ink)}.tabs .pane{display:none}#t1:checked~.p1,#t2:checked~.p2,#t3:checked~.p3{display:block}.tabs>input:focus-visible+label{outline:2px solid var(--s1);outline-offset:2px}
+.tabs>input:checked+label{background:var(--ink);color:var(--page);border-color:var(--ink)}.tabs .pane{display:none}#t1:checked~.p1,#t2:checked~.p2,#t3:checked~.p3,#t4:checked~.p4{display:block}.tabs>input:focus-visible+label{outline:2px solid var(--s1);outline-offset:2px}
 details{border-bottom:1px solid var(--border);padding:12px 0}summary{cursor:pointer;font-weight:650}details p{color:var(--ink2);margin:.5em 0 0}
 .note{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--s2);border-radius:12px;padding:12px 16px;color:var(--ink2);font-size:.93rem}
 footer{margin-top:54px;border-top:1px solid var(--border);padding:26px 0 50px;color:var(--muted);font-size:.88rem}footer a{color:var(--ink2)}
@@ -95,7 +95,7 @@ code{font:.88em ui-monospace,Consolas,monospace;background:color-mix(in srgb,var
 </style>
 </head>
 <body>
-<nav><div class="wrap"><a class="logo" href="#"><span class="mark"></span>Rampwise</a><div class="links"><a href="#plans">Plans</a><a href="#how">How it works</a><a href="#evidence">Evidence</a><a href="#install">Install</a><a href="#faq">FAQ</a><a class="gh" href="https://github.com/Azahir21/rampwise">GitHub</a></div></div></nav>
+<nav><div class="wrap"><a class="logo" href="#"><img class="mark" src="img/logo.svg" width="26" height="26" alt="">Rampwise</a><div class="links"><a href="#plans">Plans</a><a href="#how">How it works</a><a href="#evidence">Evidence</a><a href="#install">Install</a><a href="#faq">FAQ</a><a class="gh" href="https://github.com/Azahir21/rampwise">GitHub</a></div></div></nav>
 
 <header class="hero"><div class="wrap">
   <div>
@@ -203,19 +203,29 @@ python export_plan.py PLAN.json --format all   # .ics  .csv  .zwo  .mrc, and Gar
   <p class="sub">Free to use. You need an AI agent client such as Claude Code. A Garmin account is optional.</p>
   <div class="tabs">
     <input type="radio" name="t" id="t1" checked><label for="t1">Claude Code</label>
-    <input type="radio" name="t" id="t2"><label for="t2">Other agents</label>
-    <input type="radio" name="t" id="t3"><label for="t3">Zip download</label>
+    <input type="radio" name="t" id="t2"><label for="t2">One installer, 30 tools</label>
+    <input type="radio" name="t" id="t3"><label for="t3">npx, Gemini, Antigravity, Cursor, Hermes</label>
+    <input type="radio" name="t" id="t4"><label for="t4">Zip download</label>
     <div class="pane p1"><pre><code>/plugin marketplace add Azahir21/rampwise
-/plugin install rampwise@rampwise</code></pre><p>Then ask: <em>"Set up my Rampwise coach."</em> It interviews you (goals, injuries, equipment, schedule) before it plans anything.</p></div>
+/plugin install rampwise@rampwise</code></pre><p>Codex (not tested by us): <code>codex plugin marketplace add Azahir21/rampwise</code>, then open <code>/plugins</code> and install <em>rampwise</em>.</p></div>
     <div class="pane p2"><pre><code>git clone https://github.com/Azahir21/rampwise
 python rampwise/install.py --list                   # tools, folders, how well each was checked
 python rampwise/install.py --tool codex             # or cursor, zed, goose, ... several at once: --tool cursor,zed
-python rampwise/install.py --tool all --dry-run     # preview
-# or with Vercel's skills CLI:
-npx skills add Azahir21/rampwise</code></pre><p>One installer knows where 30 AI coding tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules). Folders come from each tool's official documentation; we ran only Claude Code ourselves, plus a real install of all 11 skills through the skills CLI on Linux. Cloud-only agents cannot reach your Garmin data. <a href="https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md">Details and caveats per tool</a>.</p></div>
-    <div class="pane p3"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --tool claude-code</code> (or <code>--tool codex</code>, <code>--tool cursor</code> ... see <code>--list</code>).</p></div>
+python rampwise/install.py --tool all --dry-run     # preview</code></pre><p>One installer knows where 30 AI coding tools read their skills (Codex, Gemini CLI, Antigravity, Cursor, GitHub Copilot, Windsurf, Cline, OpenCode, Devin, Kilo Code, Goose, Zed, Amp, Augment, Kiro, Mistral Vibe, GitLab Duo, Qwen Code, Warp, Junie, Factory, Hermes, OpenClaw, Trae, Roo Code, plus an instructions-file fallback for Aider, Continue, Amazon Q and Jules). Folders come from each tool's official documentation; we ran only Claude Code ourselves, plus a real install of all 11 skills through the skills CLI on Linux. Cloud-only agents cannot reach your Garmin data. <a href="https://github.com/Azahir21/rampwise/blob/main/docs/INSTALL.md">Details and caveats per tool</a>.</p></div>
+    <div class="pane p3"><pre><code># Vercel skills CLI (tested: a real install of all 11 skills)
+npx skills add Azahir21/rampwise
+# Gemini CLI (not tried)
+gemini extensions install https://github.com/Azahir21/rampwise
+# Antigravity CLI (not tried)
+agy plugin install https://github.com/Azahir21/rampwise
+# Cursor (marketplace listing under review)
+python rampwise/install.py --tool cursor
+# Hermes Agent (listed; install not tried)
+hermes skills tap add Azahir21/rampwise
+hermes skills install Azahir21/rampwise/skills/rampwise</code></pre></div>
+    <div class="pane p4"><p>Download <a href="https://github.com/Azahir21/rampwise/releases/latest/download/rampwise-skills.zip">rampwise-skills.zip</a> from the latest release, unzip it, and run <code>python install.py --tool claude-code</code> (or <code>--tool codex</code>, <code>--tool cursor</code> ... see <code>--list</code>).</p></div>
   </div>
-  <p class="sub" style="margin-top:6px">Using Garmin data too? Install <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> (MIT, by Mason Levy), Python 3.10+, and <code>pip install fitdecode</code>.</p>
+  <p class="sub" style="margin-top:6px"><b>Then, once:</b> <code>pip install fitdecode</code>. For your own Garmin data also install <a href="https://github.com/Mason-Levyy/garmin-personal-mcp">garmin-personal-mcp</a> (MIT, by Mason Levy) with <a href="https://docs.astral.sh/uv/">uv</a> (<code>uv tool install --python 3.12 garmin-personal-mcp</code>, then <code>garmin-personal-mcp auth</code>). Restart your tool and say <em>"Set up my Rampwise coach."</em> It interviews you (goals, injuries, equipment, schedule) before it plans anything. A plan from five numbers needs no Garmin account.</p>
 </section>
 
 <section id="faq">
