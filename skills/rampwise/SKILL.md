@@ -47,7 +47,7 @@ The evidence maps say what a paper supports; the studies themselves are local fi
 Plans, plan pages, exports, reports, workouts and the dashboard go to `~/rampwise-coach/` (subfolders `plans/`, `reports/`, `workouts/`, `dashboard/`); athlete memory stays in `~/rampwise-data`. Tell the user where a file is. The user can change the folder without moving data (`athlete.py set preferences.output_dir '"<folder>"'`, env `RAMPWISE_OUT`, or `--here` on a command for `./rampwise-coach` in the session folder). Offer `--here` when they want files next to the project they are working in.
 
 ## Setup check (first use, or when a script fails)
-- `python -m pip install --user fitdecode` (FIT file reading).
+- the `fitdecode` package, added once with pip (`--user`), for FIT file reading.
 - `garmin-personal-mcp auth --check` must say "Connected to Garmin Connect". The scripts talk to that local server themselves. Never ask the athlete to paste a Garmin key into chat.
 - Downloads: FIT files are cached in `~/Downloads/garmin/coach`. They contain GPS; never copy them into a project, note or artifact.
 

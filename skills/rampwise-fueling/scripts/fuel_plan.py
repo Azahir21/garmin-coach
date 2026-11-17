@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Carbohydrate-per-hour plan for a long session or event, straight from the guideline tiers of Jeukendrup 2014
-(Sports Med 44 Suppl 1:S25-33; full text in ../references/papers/).
+(Sports Med 44 Suppl 1:S25-33; full text in references/papers/).
 
 Usage:
   fuel_plan.py --hours 7 [--intensity low|moderate|high] [--gut-now 40] [--weeks 6]

@@ -24,7 +24,7 @@ try:
     import fitdecode
     import fitdecode.profile as FP
 except ImportError:                                   # pragma: no cover
-    sys.exit("fitdecode is needed: pip install --user fitdecode")
+    sys.exit("the fitdecode package is needed: add it once with pip (README, Setup)")
 
 CAT = FP.FIELD_TYPES["exercise_category"].enum
 

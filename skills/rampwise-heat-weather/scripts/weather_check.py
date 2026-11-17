@@ -8,7 +8,7 @@ Usage:
 Consent gate: without --approved (or env RAMPWISE_WEATHER_OK=1) nothing is sent anywhere.
 Heat adjustment: `weather.heat_pct` from tomasstankovic/running-coach (MIT): above 15 C air temperature,
 1-2 % slower per 5 C, the upper end when dew point >= 15 C. It is a coaching estimate, not a validated
-formula; see ../references/sources.md for what the papers do and do not support (air temperature is the
+formula; see references/sources.md for what the papers do and do not support (air temperature is the
 dominant parameter in El Helou 2012; dew point/humidity showed no significant effect in that dataset).
 For heart-rate-led training the useful reading is: expect HR to run higher at the same pace in the heat,
 so hold HR and let pace/speed fall.

@@ -9,7 +9,7 @@ What it does
     allows the folder ~/Downloads/garmin/coach) and reads the per-second records.
 
 Needs: Python 3.10+, the garmin-personal-mcp program with a saved key (`garmin-personal-mcp auth`),
-and for FIT reading `python -m pip install --user fitdecode`.
+and, for FIT reading, the `fitdecode` package (README, Setup).
 
 Privacy: reads only your own Garmin data through your own server. GPS positions from FIT files are
 never kept: only the start coordinates that Garmin already returns in the activity summary are used,
@@ -88,19 +88,15 @@ def utf8_stdout():
 
 
 def find_exe():
-    """The command that starts the Garmin MCP server, as a list: GARMIN_MCP_EXE, the installed program, or uvx / uv tool run (no install needed)."""
+    """The command that starts the Garmin MCP server, as a list: GARMIN_MCP_EXE or the program the user installed once. Nothing is downloaded here."""
     cand = [os.environ.get("GARMIN_MCP_EXE"), shutil.which("garmin-personal-mcp"),
             str(Path.home() / ".local" / "bin" / "garmin-personal-mcp.exe"),
             str(Path.home() / ".local" / "bin" / "garmin-personal-mcp")]
     for c in cand:
         if c and Path(c).exists():
             return [c]
-    if shutil.which("uvx"):
-        return ["uvx", "--python", "3.12", "garmin-personal-mcp@0.3.0"]
-    if shutil.which("uv"):
-        return ["uv", "tool", "run", "--python", "3.12", "garmin-personal-mcp@0.3.0"]
-    raise SystemExit("garmin-personal-mcp not found. Install uv (https://docs.astral.sh/uv/) and run: uv tool install --python 3.12 garmin-personal-mcp "
-                     "then: garmin-personal-mcp auth. Or set GARMIN_MCP_EXE to the program's full path.")
+    raise SystemExit("garmin-personal-mcp is not installed. Set it up once as the README (Setup) describes, then run: garmin-personal-mcp auth. "
+                     "Or set GARMIN_MCP_EXE to the program's full path. This script never downloads anything by itself.")
 
 
 class GarminError(RuntimeError):
@@ -302,7 +298,7 @@ def read_fit(zip_path, with_laps=False):
     try:
         import fitdecode
     except ImportError:
-        raise SystemExit("fitdecode is missing: run  python -m pip install --user fitdecode")
+        raise SystemExit("the fitdecode package is missing: add it once with pip (README, Setup)")
     data = fit_bytes(zip_path)
     recs, t0, laps = [], None, []
     with fitdecode.FitReader(io.BytesIO(data)) as fr:

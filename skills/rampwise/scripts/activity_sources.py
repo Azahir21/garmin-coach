@@ -34,7 +34,7 @@ def read_messages(data, kinds=("file_id", "session", "lap", "record", "activity"
     try:
         import fitdecode
     except ImportError:
-        raise SystemExit("fitdecode is missing: run  python -m pip install --user fitdecode")
+        raise SystemExit("the fitdecode package is missing: add it once with pip (README, Setup)")
     out = {k: [] for k in kinds}
     try:
         with fitdecode.FitReader(io.BytesIO(data), error_handling=fitdecode.ErrorHandling.IGNORE) as fr:

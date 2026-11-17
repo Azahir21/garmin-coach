@@ -12,7 +12,7 @@ Inputs come from the flags, else from athlete.json ("manual_baseline" and "event
 what it needs (current weekly hours, hours available, days a week, level) instead of guessing. Garmin data are NOT required; if you have them, the
 Garmin-history planner (build_plan.py) builds rolling plans from your real training instead.
 
-Shape of the plan (rules and their labels: ../references/evidence-map.md, section "Event plans"):
+Shape of the plan (rules and their labels: references/evidence-map.md, section "Event plans"):
   base -> build -> peak -> taper, a recovery week every 4th week, weekly volume +10 % at most, long sessions capped, about 70-80 % easy,
   a taper that cuts volume and keeps some intensity (2 weeks for most events), a swim/bike/run split for triathlon, strength twice a week.
 The plan never promises a result. If the weeks you have cannot reach the volume the event usually needs at +10 % a week, it says so and peaks lower.

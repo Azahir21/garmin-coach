@@ -5,7 +5,7 @@ Every run and ride is a structured Garmin workout (warm-up, steady / interval / 
 built with workout.py, with a plain-language "why it matters" note (why.py). The user's own layout is the unit:
 session sizes (warm-up, steady block, cool-down, long run) come from athlete.json preferences.easy_run and preferences.easy_ride.
 
-Design rules (see ../references/evidence-map.md for what is research and what is practice):
+Design rules (see references/evidence-map.md for what is research and what is practice):
   * Aerobic base first, but quality sessions (tempo, strides, time trial, interval run, ride intervals) are ON by default. They are locked for a user ONLY
     when that user's own data says so: an ACTIVE injury note (athlete.json), the reset week (RED readiness, long streak, load jump), the optional
     preferences.quality.requires_gate (an optional rule the user can set), or a type listed in preferences.quality.locked. Nothing about one athlete is hard-wired.

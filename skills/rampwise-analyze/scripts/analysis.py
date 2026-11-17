@@ -4,7 +4,7 @@ Activity rows are the dicts made by rampwise/scripts/gcommon.py `normalize` (dat
 Readiness rows come from rampwise-recovery/scripts/readiness_check.py `build_rows` (date, hrv, rhr, sleep_h).
 
 Honesty: these are RISK FLAGS from data, not diagnoses. Watch data cannot see an injury. Every flag carries its evidence label (research / practice / gap)
-and the rules are explained in ../references/evidence-map.md.
+and the rules are explained in references/evidence-map.md.
 """
 from datetime import date, timedelta
 from statistics import mean
