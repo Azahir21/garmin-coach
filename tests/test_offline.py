@@ -543,6 +543,64 @@ check("installer: reinstalling keeps the user's local paper files (references/pa
 r_u = run(INST, "--tool", "codex", "--uninstall", env=env2)
 check("installer: uninstall removes the skills but keeps the local paper files and says so", (pap / "Some-paper_2025.md").exists() and not (inst_home2 / ".agents" / "skills" / "rampwise-planner" / "SKILL.md").exists() and "kept 1 local paper files" in r_u.stdout, r_u.stdout[-300:])
 
+# ---------------------------------------------------------------- on-demand paper fetch (Europe PMC mocked: no network in tests)
+import importlib.util as _ilu2
+_sp = _ilu2.spec_from_file_location("rw_paper_fetch", SK / "rampwise" / "scripts" / "paper_fetch.py")
+pf = _ilu2.module_from_spec(_sp)
+_sp.loader.exec_module(pf)
+proot = TMP / "paper_root"
+(proot / "rampwise-testskill" / "references").mkdir(parents=True, exist_ok=True)
+(proot / "rampwise-testskill" / "references" / "library.md").write_text(
+    "| # | Paper | DOI | PMID | Status |" + chr(10) + "|---|---|---|---|---|" + chr(10)
+    + "| 1 | Open A. A free study of drift. *J Test* 2024 | https://doi.org/10.1000/open | 11111111 | full text |" + chr(10)
+    + "| 2 | Locked B. A paywalled study. *J Test* 2023 | https://doi.org/10.1000/locked | 22222222 | abstract only |" + chr(10), encoding="utf-8")
+JATS = b"<article><front><article-meta><abstract><p>The abstract.</p></abstract></article-meta></front><body><sec><title>Methods</title><p>We measured drift in 12 runners.</p></sec></body></article>"
+RECS = {"11111111": {"pmid": "11111111", "pmcid": "PMC1", "license": "cc by", "title": "A free study of drift", "authorString": "Open A", "pubYear": "2024", "doi": "10.1000/open", "abstractText": "The abstract."},
+        "22222222": {"pmid": "22222222", "title": "A paywalled study", "authorString": "Locked B", "pubYear": "2023", "doi": "10.1000/locked", "abstractText": "Only this abstract."}}
+state_ = {"down": False}
+
+
+def fake_json(url):
+    if state_["down"]:
+        raise OSError("network down")
+    for k, v in RECS.items():
+        if k in url:
+            return {"resultList": {"result": [v]}}
+    return {"resultList": {"result": []}}
+
+
+pf.get_json = fake_json
+pf.get_bytes = lambda url: JATS
+pdir = proot / "rampwise-testskill" / "references" / "papers"
+r1 = pf.fetch_paper(proot, "11111111", "10.1000/open", "Open A", ["rampwise-testskill"], sleep=0)
+f1 = list(pdir.glob("Open_2024*"))
+check("paper fetch: an open-access paper is saved as full text with licence, body text and read depth", r1["state"] == "saved" and f1 and "Read depth: full text" in f1[0].read_text(encoding="utf-8") and "We measured drift in 12 runners" in f1[0].read_text(encoding="utf-8") and "cc by" in f1[0].read_text(encoding="utf-8"))
+r2 = pf.fetch_paper(proot, "22222222", "10.1000/locked", "Locked B", ["rampwise-testskill"], sleep=0)
+f2 = list(pdir.glob("Locked_2023*"))
+check("paper fetch: a paywalled paper gets only its abstract, named ABSTRACT-ONLY, and the result says it is not open access", r2["state"] == "abstract" and f2 and f2[0].name.endswith("_ABSTRACT-ONLY.md") and "NOT open access" in r2["note"] and "Read depth: abstract only" in f2[0].read_text(encoding="utf-8"))
+r3 = pf.fetch_paper(proot, "11111111", "10.1000/open", "Open A", ["rampwise-testskill"], sleep=0)
+check("paper fetch: asking again for a paper already on disk as full text does nothing", r3["state"] == "have")
+idx = (pdir / "INDEX.md").read_text(encoding="utf-8")
+check("paper fetch: INDEX.md lists both files with their read depth", "full text" in idx and "abstract only" in idx)
+for f in f1:
+    f.unlink()
+seed = pdir / "Open_2024_A-free-study_ABSTRACT-ONLY.md"
+seed.write_text("# A free study" + chr(10) + chr(10) + "- DOI: https://doi.org/10.1000/open" + chr(10) + "- PMID: 11111111 | PMCID: PMC1" + chr(10) + "- **Read depth: abstract only**" + chr(10), encoding="utf-8")
+r4 = pf.fetch_paper(proot, "11111111", "10.1000/open", "Open A", ["rampwise-testskill"], sleep=0)
+check("paper fetch: an old abstract-only file is replaced when the full text is available", r4["state"] == "upgraded" and not seed.exists() and any("full text" in f.read_text(encoding="utf-8")[:900] for f in pdir.glob("Open_2024*")))
+for f in pdir.glob("Open_2024*"):
+    f.unlink()
+state_["down"] = True
+r5 = pf.fetch_paper(proot, "11111111", "10.1000/open", "Open A", ["rampwise-testskill"], sleep=0)
+check("paper fetch: a network failure is reported and changes nothing", r5["state"] == "error" and "could not reach Europe PMC" in r5["note"] and not list(pdir.glob("Open_2024*")))
+state_["down"] = False
+st = pf.status(proot)["rampwise-testskill"]
+check("paper fetch: --status counts files by read depth without the network", st.get("abstract only") == 1 and st.get("missing") == 1, str(st))
+rc = pf.main(["--root", str(proot), "Locked", "2023"])
+check("paper fetch: words from the citation find the paper (all words must match)", rc == 0)
+rc2 = pf.main(["--root", str(proot), "Nobody", "1999"])
+check("paper fetch: no match is reported, not guessed", rc2 == 1)
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

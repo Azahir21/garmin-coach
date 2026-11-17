@@ -64,3 +64,6 @@ Fixed colours per sport (run blue, ride orange, strength green, neutral grey), t
 - Charts are as good as the data: missing nights leave gaps, a watch without heart-rate data has no efficiency chart.
 - The report states "not medical advice"; flags come from data and the user's own reports.
 - Strength top sets need sets saved on the watch (`strength_history.py` reads them).
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

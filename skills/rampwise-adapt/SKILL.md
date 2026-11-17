@@ -60,3 +60,6 @@ FOR_COACH: one-line change summary
 - It reads the saved plan; no plan, nothing to adapt (run `rampwise-planner` first).
 - Readiness is only as good as last night's watch data. Wrist heart rate and sleep staging are estimates.
 - The thresholds are conventions (practice) unless the evidence map says research. They are conservative defaults, not individual truths.
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

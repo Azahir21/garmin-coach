@@ -60,3 +60,6 @@ FOR_ADAPT: flag ids (rampwise-adapt reads them)
 - Elapsed time includes pauses for some devices; weekly numbers are approximate. Strength is counted in sessions, not load.
 - Pace and speed depend on route, weather and the easy/hard mix; compare similar sessions and say so.
 - Efficiency needs a heart-rate signal; wrist heart rate can drift. Never rank the user against anyone else.
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

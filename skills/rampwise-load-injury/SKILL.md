@@ -52,3 +52,6 @@ FOR_STRENGTH: heavy lower-body today? yes/no (if two or more flags, no)
 - Cycling: control load (moderate evidence); bike-fit measures are not shown to prevent overuse pain (Visentini 2022).
 - Swimming: shoulder pain is common (about 20 to 38 % in the studies read) but **no risk-factor rule is supported** (McKenzie 2023). Ask about shoulder pain, treat pain that interferes as a stop sign, and raise swim volume gradually (practice).
 - The analysis scripts therefore ask sport-specific pain questions (shoulder for swimmers, knee and back for riders, lower leg for runners) and record answers with `athlete.py check-in`.
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

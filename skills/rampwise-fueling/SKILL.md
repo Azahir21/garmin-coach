@@ -46,3 +46,6 @@ REFER: dietitian for sodium, medical issues, low energy availability
 
 ## Across sports (read before advising a triathlete, swimmer, cyclist or runner)
 Dehydration over about 2 % of body mass and large electrolyte shifts are the common targets (ACSM 2007, Jeukendrup 2011); carbohydrate use rises in the heat and when dehydrated (Mougin 2025). There is **no source read** for triathlon-specific targets (bike versus run), swim fuelling or duathlon, and the skill gives no sodium numbers: say so, use the general long-session guidance, and have the athlete practise the plan in training. For triathletes, water quality and heat are illness risks too (Guevara 2024).
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

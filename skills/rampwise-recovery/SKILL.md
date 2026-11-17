@@ -50,3 +50,6 @@ FOR_LOAD: do not add volume | normal
 - AMBER with one flag is a prompt to ask how the athlete feels, not to cancel training.
 - Never diagnose. Chest pain, fainting, or an unusually high heart-rate response: stop and see a doctor.
 - Do not pull menstrual-cycle tools unless the athlete asks (privacy; no evidence in this library for cycle-based periodisation).
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

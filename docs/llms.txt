@@ -13,6 +13,7 @@
 ## Evidence
 - [Paper list](https://github.com/Azahir21/rampwise/blob/main/docs/PAPERS.md): every paper behind the rules, with DOI
 - Each skill folder has `references/evidence-map.md`, where every rule is labelled research, practice or gap
+- `skills/rampwise/scripts/paper_fetch.py`: the coach fetches the full text of open-access papers on demand (Europe PMC); paywalled papers stay abstract-only and are labelled so
 
 ## Optional
 - [Changelog](https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md)

@@ -60,3 +60,6 @@ The planner builds strength sessions from data, not from fixed A/B lists: a **go
 
 ## User constraints (always apply)
 Run `athlete.py show` first: it lists equipment, banned exercises and injuries. Only the equipment listed in `equipment.tags` is assumed; confirm anything else before offering it (a band anchor, a bench, a box, a sled, somewhere to hook the heels for Nordics). 
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

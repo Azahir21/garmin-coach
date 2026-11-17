@@ -23,69 +23,9 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from fetch_papers import BASE, UA, render, text_of  # noqa: E402
-
-
-def get_json(url):
-    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40))
-
-
-def lookup(pmid, doi):
-    for q in ([f"EXT_ID:{pmid} AND SRC:MED"] if pmid else []) + ([f'DOI:"{doi}"'] if doi else []):
-        r = get_json(BASE + "/search?" + urllib.parse.urlencode({"query": q, "format": "json", "resultType": "core"}))["resultList"]["result"]
-        if r:
-            return r[0]
-    return None
-
-
-def ascii_slug(s, n=60):
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
-    return re.sub(r"[^A-Za-z0-9]+", "-", s).strip("-")[:n] or "paper"
-
-
-def clean(t):
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t or "")).strip()
-
-
-def header(m, depth, extra=""):
-    ji = (m.get("journalInfo") or {}).get("journal", {}).get("title") or m.get("journalTitle") or ""
-    return [f"# {clean(m.get('title'))}\n", f"- Authors: {m.get('authorString')}", f"- Journal: {ji} ({m.get('pubYear')}) {m.get('pageInfo') or ''}".rstrip(),
-            f"- DOI: https://doi.org/{m.get('doi')}" if m.get("doi") else "- DOI: not recorded", f"- PMID: {m.get('pmid') or m.get('id')} | PMCID: {m.get('pmcid') or 'none'}",
-            f"- Licence: {m.get('license') or 'not an open licence (abstract is reproduced only for your private reading)'}",
-            f"- **Read depth: {depth}**{extra}", f"- Retrieved {date.today()} from the Europe PMC REST API. Local use only; cite the DOI, not this file.\n"]
-
-
-def full_text(m):
-    xml = urllib.request.urlopen(urllib.request.Request(f"{BASE}/{m['pmcid']}/fullTextXML", headers=UA), timeout=120).read()
-    root = ET.fromstring(xml)
-    out = header(m, "full text", " (figures and the reference list are omitted)")
-    a = root.find(".//front//abstract")
-    if a is not None:
-        out += ["\n## Abstract\n", text_of(a) + "\n"]
-    body = root.find(".//body")
-    n = 0
-    if body is not None:
-        for ch in body:
-            if ch.tag == "sec":
-                render(ch, 2, out)
-                n += 1
-            elif ch.tag == "p":
-                out.append(text_of(ch) + "\n")
-                n += 1
-    return out if n else None
-
-
-def rows_of(lib):
-    for ln in lib.read_text(encoding="utf-8").splitlines():
-        if not re.match(r"^\| \d+ \|", ln):
-            continue
-        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
-        if len(cells) < 4:
-            continue
-        doi = next((re.search(r"10\.\d{4,9}/\S+", c).group(0).rstrip(").,;") for c in cells if re.search(r"10\.\d{4,9}/\S+", c)), None)
-        pm = next((c for c in cells[2:] if re.fullmatch(r"\d{6,9}", c)), None)
-        yield cells[1], doi, pm
+sys.path.insert(0, str(ROOT / "skills" / "rampwise" / "scripts"))
+# one implementation, shared with the on-demand fetch the coach runs (skills/rampwise/scripts/paper_fetch.py)
+from paper_fetch import BASE, UA, ascii_slug, clean, full_text, get_json, header, lookup, render, rows_of, text_of, write_index  # noqa: E402,F401
 
 
 def existing_ids(folder):
@@ -95,21 +35,6 @@ def existing_ids(folder):
         ids |= set(re.findall(r"PMID: (\d{6,9})", head))
         ids |= {d.lower().rstrip("/") for d in re.findall(r"doi\.org/(10\.\S+)", head)}
     return ids
-
-
-def write_index(folder, skill):
-    lines = [f"# Papers for {skill}", "",
-             "One file per paper in `../library.md`. **Read depth** says how much of the paper the coach can actually read: `full text` (open access), `abstract only` (paywalled: the claim strength is capped by what the abstract says), or `title only`.",
-             "A rule in `../evidence-map.md` must never claim more than its file here shows. To close a gap, put the paper's PDF in this folder and ask the coach to read it and update the evidence map.", "",
-             "| File | Read depth | Paper |", "|---|---|---|"]
-    for f in sorted(folder.glob("*.md")):
-        if f.name == "INDEX.md":
-            continue
-        head = f.read_text(encoding="utf-8", errors="ignore")[:2500]
-        title = (re.match(r"# (.+)", head) or [None, f.stem])[1][:110]
-        depth = (re.search(r"Read depth: ([a-z ]+)", head) or [None, "full text (older file)" if "Abstract" in head else "unknown"])[1].strip()
-        lines.append(f"| `{f.name}` | {depth} | {title} |")
-    (folder / "INDEX.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main():

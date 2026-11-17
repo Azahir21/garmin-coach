@@ -82,3 +82,6 @@ For "plan my marathon / Olympic triathlon / gran fondo / 5 km swim" use `scripts
 
 ## Files
 `scripts/`: `build_plan.py`, `run_gate.py`, `ride_check.py`, `cycling_power.py`, `gearing.py` (speed from cadence and gear, or the cadence a speed needs; wheel size assumed unless given), `calendar_events.py`. `plans/` holds saved plans (local only). `references/`: `evidence-map.md`, `library.md`, `papers/` (open-access full texts).
+
+## Papers
+The studies behind this skill are in `references/papers/` (`INDEX.md` lists the read depth). Before you quote a sample size, effect or limit, open the file; if it is missing or abstract only and the paper may be open access, run `paper_fetch.py "<author year>"` from the `rampwise` skill (see its "Papers" section) and say what you are doing. Paywalled papers stay abstract only: say so and claim no more.

@@ -8,5 +8,5 @@
 - **Optional online services, only with your consent:**
   - Weather: Open-Meteo (coordinates of your start point or home town; see CREDITS.md).
   - Calendar: your own calendar connector, only if you ask for the plan to be written there.
-  - Papers: Europe PMC when you run `tools/fetch_papers.py`.
+  - Papers: Europe PMC when you or the coach fetch an open-access paper (`paper_fetch.py`, `tools/fetch_papers.py`, `tools/build_paper_files.py`). Only the paper's ID or DOI is sent, never your data; the coach says so before it fetches.
 - **Do not publish** your `athlete.json`, plans or `.fit` files. The repository's `.gitignore` and `tests/check_repo.py` guard against it.

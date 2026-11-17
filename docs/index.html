@@ -27,7 +27,7 @@
       "description": "A free, open-source AI coach for triathletes, runners and cyclists. It builds evidence-labelled plans for events from 5 km to Ironman, adapts the next session to how you are doing, watches for injury-risk signals and writes reports. It works from your own Garmin data or from a few numbers you type. Independent project, not affiliated with Garmin.",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "Windows, macOS, Linux (runs inside an AI agent such as Claude Code)",
-      "softwareVersion": "0.6.0",
+      "softwareVersion": "0.6.1",
       "dateModified": "2026-11-17",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "url": "https://azahir21.github.io/rampwise/",
@@ -52,7 +52,7 @@
         {"@type": "Question", "name": "Is Rampwise affiliated with Garmin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read."}},
         {"@type": "Question", "name": "Does my data leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent."}},
         {"@type": "Question", "name": "Does it replace a coach or a doctor?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician."}},
-        {"@type": "Question", "name": "How are its training rules chosen?", "acceptedAnswer": {"@type": "Answer", "text": "Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the repository. It asks you for your numbers instead of assuming them."}}
+        {"@type": "Question", "name": "How are its training rules chosen?", "acceptedAnswer": {"@type": "Answer", "text": "Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the repository. The coach reads the study itself before it quotes a number: open-access papers are fetched in full on demand, paywalled ones stay abstract-only and are labelled that way. It asks you for your numbers instead of assuming them."}}
       ]
     }
   ]
@@ -187,6 +187,7 @@ python export_plan.py PLAN.json --format all   # .ics  .csv  .zwo  .mrc, and Gar
   </div>
   <h3 style="margin-top:22px">How the labels work</h3>
   <p>Every rule in a Rampwise plan or check carries one of three labels. <b>Research</b> means a published study supports the direction of the rule, and the reference says whether the full text or only the abstract was read. <b>Practice</b> means a coaching convention with no study behind it, such as a lighter week every fourth week. <b>Gap</b> means nothing read supports it, and the plan says so. A rule never claims more than its source: observational studies are called observational, and where studies disagree the rule is marked weak.</p>
+  <p>The studies are not only cited. When the coach needs a detail (a sample size, an effect, the authors' limits) it opens the paper's local file, and if only the abstract is there it fetches the full text of an open-access paper from Europe PMC. A paywalled paper stays abstract-only, and any claim from it is capped at what the abstract says. The paper files stay on your computer and are not published with the code.</p>
   <p>Papers read in full, among others:</p>
   <ul>
     <li>Frandsen et al. 2025, <em>British Journal of Sports Medicine</em>: in about 5,200 runners, running far beyond the longest run of the last 30 days went with more overuse injuries, while week-to-week jumps did not (<a href="https://doi.org/10.1136/bjsports-2024-109380">doi</a>). Observational.</li>
@@ -226,10 +227,10 @@ python rampwise/install.py --tool all --dry-run     # preview</code></pre><p>One
   <details><summary>Is Rampwise affiliated with Garmin?</summary><p>No. It is an independent project. Garmin is a trademark of Garmin Ltd. and is used only to say which data the tool can read.</p></details>
   <details><summary>Does my data leave my computer?</summary><p>Your athlete file, plans and reports are stored on your machine. The AI model provider you use sees whatever the coach prints during a session. Garmin access runs through a local server and your own key. Weather lookups are optional and only run with your consent. See the <a href="https://github.com/Azahir21/rampwise/blob/main/PRIVACY.md">privacy notes</a>.</p></details>
   <details><summary>Does it replace a coach or a doctor?</summary><p>No. It is experimental software, not medical advice, and no plan can promise a result. Its injury-risk flags are prompts to look closer, not a diagnosis. Pain that changes how you move or lasts more than a few days needs a clinician.</p></details>
-  <details><summary>How are its training rules chosen?</summary><p>Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the <a href="https://github.com/Azahir21/rampwise/blob/main/docs/PAPERS.md">paper list</a>. It asks you for your numbers instead of assuming them.</p></details>
+  <details><summary>How are its training rules chosen?</summary><p>Every rule is labelled research (a paper supports the direction), practice (a coaching convention) or gap (nothing supports it), and the papers are listed in the <a href="https://github.com/Azahir21/rampwise/blob/main/docs/PAPERS.md">paper list</a>. The coach reads the study itself before it quotes a number: open-access papers are fetched in full on demand, paywalled ones stay abstract-only and are labelled that way. It asks you for your numbers instead of assuming them.</p></details>
 </section>
 </div>
 
-<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. Last updated 2026-11-17 (v0.6.0). <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
+<footer><div class="wrap">Rampwise is made by Kei (<a href="https://github.com/Azahir21">Azahir21</a>) and contributors. Apache-2.0. Last updated 2026-11-17 (v0.6.1). <a href="https://github.com/Azahir21/rampwise">Source</a> · <a href="https://github.com/Azahir21/rampwise/releases">Releases</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CHANGELOG.md">Changelog</a> · <a href="sample/">Sample report</a> · <a href="https://github.com/Azahir21/rampwise/blob/main/CREDITS.md">Credits</a>.<br>Independent open-source project. Not affiliated with, endorsed by or sponsored by Garmin Ltd. Garmin is a trademark of Garmin Ltd. Example plans use made-up numbers and are not medical advice.</div></footer>
 </body>
 </html>

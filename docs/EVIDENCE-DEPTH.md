@@ -4,6 +4,7 @@ Reading only an abstract can hide the sample, the effect size and the limits. Th
 
 - **Full text read**: the whole paper was read; the evidence map can quote sample sizes, effects and limits.
 - **Abstract only**: only the abstract was read (the paper is paywalled, or the free record returned no text). The evidence map then says so and claims no more than the abstract does.
+- **Getting more**: open-access papers can be fetched in full on demand (`skills/rampwise/scripts/paper_fetch.py "Author year"`, which the coach runs when it needs the detail). Paywalled papers cannot be fetched legally: put your own PDF in the skill's `references/papers/` folder and ask the coach to read it.
 
 | Paper | Used for | Read |
 |---|---|---|

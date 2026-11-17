@@ -18,31 +18,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest"
 UA = {"User-Agent": "rampwise-paper-fetcher/1.0 (open-access full texts via Europe PMC REST API)"}
+sys.path.insert(0, str(ROOT / "skills" / "rampwise" / "scripts"))
+from paper_fetch import render, text_of  # noqa: E402  (shared with the on-demand fetch)
 
 
-def text_of(el):
-    return re.sub(r"\s+", " ", "".join(el.itertext())).strip()
-
-
-def render(sec, level, out):
-    t = sec.find("title")
-    if t is not None and text_of(t):
-        out.append("\n" + "#" * min(level, 6) + " " + text_of(t) + "\n")
-    for ch in sec:
-        if ch.tag == "p":
-            out.append(text_of(ch) + "\n")
-        elif ch.tag == "sec":
-            render(ch, level + 1, out)
-        elif ch.tag == "table-wrap":
-            cap = ch.find("caption")
-            out.append("\n**Table** " + (text_of(cap) if cap is not None else "") + "\n")
-            for tr in ch.iter("tr"):
-                cells = [text_of(c) for c in tr if c.tag in ("td", "th")]
-                if cells:
-                    out.append("| " + " | ".join(cells) + " |")
-        elif ch.tag == "list":
-            for li in ch.iter("list-item"):
-                out.append("- " + text_of(li))
 
 
 def fetch(pmid, dest):

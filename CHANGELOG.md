@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 - the coach can fetch papers on demand
+- **The coach can fetch papers on demand.** `skills/rampwise/scripts/paper_fetch.py "Walsh 2019"` (or `--pmid`, `--doi`, `--status`) downloads the full text of an open-access paper from Europe PMC into the skill's `references/papers/`, replaces an old abstract-only file, and for a paywalled paper saves only the abstract and says so. The head coach and every specialist skill now tell the coach to open the paper's file before quoting it, to fetch it when it is missing or abstract only, and never to claim more than the file shows. Only the paper's ID or DOI is sent; nothing about the athlete.
+- The installer keeps your local paper files when it reinstalls or uninstalls.
+
 ## 0.6.0 - FIT files from any watch brand, Strava draft
 - **Other watch brands:** `analyze_activity.py --fit-file FILE` analyses a `.fit` file (or the Garmin `.zip`) from any maker: efficiency, drift and durability for runs and rides, pace per 100 m and drift for pool swims, the legs of multisport files. The reader is tolerant of what each brand leaves out (speed worked out from distance, missing ascent, UTC times, no heart rate) and says so. Tested on synthetic files only.
 - **Strava (draft):** `--strava-json FILE` reads Strava API activity and streams saved as JSON, following Strava's documented field names (three stream shapes accepted). Never run against a live account; Strava needs a subscription to create an API app and its agreement restricts how the data may be used: see `docs/OTHER-WATCHES.md`.
