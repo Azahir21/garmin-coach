@@ -23,5 +23,6 @@
     "triathlon",
     "swimming",
     "duathlon"
-  ]
+  ],
+  "logo": "docs/img/logo.svg"
 }

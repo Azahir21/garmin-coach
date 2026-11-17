@@ -31,5 +31,6 @@
     "Set up my Rampwise coach.",
     "Plan my Olympic triathlon on 2027-06-20: intermediate, 6 hours a week now, up to 9, 6 days a week.",
     "Analyze this .fit file from my watch."
-  ]
+  ],
+  "logo": "docs/img/logo.svg"
 }
