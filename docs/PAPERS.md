@@ -41,12 +41,30 @@ Generated from `skills/*/references/library.md`. A paper listed here was looked 
 
 ## rampwise-fueling
 
-- Jeukendrup A A step towards personalized sports nutrition: carbohydrate intake during exercise. *Sports medicine (Auckland, N.Z.)* 2014;44 Suppl 1:S25-33 https://doi.org/10.1007/s40279-014-0148-z (PMID 24791914; full text (cc by))
-- Podlogar T et al. New Horizons in Carbohydrate Research and Application for Endurance Athletes. *Sports medicine (Auckland, N.Z.)* 2022;52(Suppl 1):5-23 https://doi.org/10.1007/s40279-022-01757-1 (PMID 36173597; full text (cc by))
-- Jeukendrup AE Periodized Nutrition for Athletes. *Sports medicine (Auckland, N.Z.)* 2017;47(Suppl 1):51-63 https://doi.org/10.1007/s40279-017-0694-2 (PMID 28332115; full text (cc by))
-- Thomas DT et al. Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance. *Journal of the Academy of Nutrition and Dietetics* 2016;116(3):501-528 https://doi.org/10.1016/j.jand.2015.12.006 (PMID 26920240; abstract verified (paywalled))
-- American College of Sports Medicine et al. American College of Sports Medicine position stand. Exercise and fluid replacement. *Medicine and science in sports and exercise* 2007;39(2):377-390 https://doi.org/10.1249/mss.0b013e31802ca597 (PMID 17277604; abstract verified (paywalled))
-- Hew-Butler T et al. Statement of the Third International Exercise-Associated Hyponatremia Consensus Development Conference, Carlsbad, California, 2015. *Clinical journal of sport medicine : official journal of the Canadian Academy of Sport Medicine* 2015;25(4):303-320 https://doi.org/10.1097/jsm.0000000000000221 (PMID 26102445; title only (no abstract; not used))
+- Jeukendrup A A step towards personalized sports nutrition: carbohydrate intake during exercise. *Sports medicine (Auckland, N.Z.)* 2014;44 Suppl 1:S25-33 https://doi.org/10.1007/s40279-014-0148-z
+- Podlogar T et al. New Horizons in Carbohydrate Research and Application for Endurance Athletes. *Sports medicine (Auckland, N.Z.)* 2022;52(Suppl 1):5-23 https://doi.org/10.1007/s40279-022-01757-1
+- Jeukendrup AE Periodized Nutrition for Athletes. *Sports medicine (Auckland, N.Z.)* 2017;47(Suppl 1):51-63 https://doi.org/10.1007/s40279-017-0694-2
+- Thomas DT et al. Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance. *Journal of the Academy of Nutrition and Dietetics* 2016;116(3):501-528 https://doi.org/10.1016/j.jand.2015.12.006
+- American College of Sports Medicine et al. American College of Sports Medicine position stand. Exercise and fluid replacement. *Medicine and science in sports and exercise* 2007;39(2):377-390 https://doi.org/10.1249/mss.0b013e31802ca597
+- Hew-Butler T et al. Statement of the Third International Exercise-Associated Hyponatremia Consensus Development Conference, Carlsbad, California, 2015. *Clinical journal of sport medicine : official journal of the Canadian Academy of Sport Medicine* 2015;25(4):303-320 https://doi.org/10.1097/jsm.0000000000000221
+- Jeukendrup AE. et al. Nutrition for endurance sports: marathon, triathlon, and road cycling. *Journal of sports sciences* 2011 https://doi.org/10.1080/02640414.2011.610348
+- Mougin L et al. The Effect of Heat Stress and Dehydration on Carbohydrate Use During Endurance Exercise: A Systematic Review and Meta-Analysis. *Sports medicine (Auckland, N.Z.)* 2025 https://doi.org/10.1007/s40279-025-02294-3
+- Mifflin MD et al. A new predictive equation for resting energy expenditure in healthy individuals. *American journal of clinical nutrition* 1990;51(2):241-247 https://doi.org/10.1093/ajcn/51.2.241
+- Frankenfield D et al. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. *Journal of the American Dietetic Association* 2005;105(5):775-789 https://doi.org/10.1016/j.jada.2005.02.005
+- Helms ER et al. Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. *Journal of the International Society of Sports Nutrition* 2014;11:20 https://doi.org/10.1186/1550-2783-11-20
+- Garthe I et al. Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. *International journal of sport nutrition and exercise metabolism* 2011;21(2):97-104 https://doi.org/10.1123/ijsnem.21.2.97
+- Iraki J et al. Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review. *Sports (Basel)* 2019;7(7):154 https://doi.org/10.3390/sports7070154
+- Slater GJ et al. Is an Energy Surplus Required to Maximize Skeletal Muscle Hypertrophy Associated With Resistance Training. *Frontiers in nutrition* 2019;6:131 https://doi.org/10.3389/fnut.2019.00131
+- Morton RW et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. *British journal of sports medicine* 2018;52(6):376-384 https://doi.org/10.1136/bjsports-2017-097608
+- Jager R et al. International Society of Sports Nutrition Position Stand: protein and exercise. *Journal of the International Society of Sports Nutrition* 2017;14:20 https://doi.org/10.1186/s12970-017-0177-8
+- Schoenfeld BJ and Aragon AA. How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution. *Journal of the International Society of Sports Nutrition* 2018;15:10 https://doi.org/10.1186/s12970-018-0215-1
+- Kerksick CM et al. International society of sports nutrition position stand: nutrient timing. *Journal of the International Society of Sports Nutrition* 2017;14:33 https://doi.org/10.1186/s12970-017-0189-4
+- Kerksick CM et al. ISSN exercise & sports nutrition review update: research & recommendations. *Journal of the International Society of Sports Nutrition* 2018;15:38 https://doi.org/10.1186/s12970-018-0242-y
+- Burke LM et al. Carbohydrates for training and competition. *Journal of sports sciences* 2011;29 Suppl 1:S17-27 https://doi.org/10.1080/02640414.2011.585473
+- Mountjoy M et al. 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). *British journal of sports medicine* 2023;57(17):1073-1097 https://doi.org/10.1136/bjsports-2023-106994
+- Jeukendrup AE et al. Does Relative Energy Deficiency in Sport (REDs) Syndrome Exist? *Sports medicine (Auckland, N.Z.)* 2024;54(11):2793-2816 https://doi.org/10.1007/s40279-024-02108-y
+- Hall KD et al. Quantification of the effect of energy imbalance on bodyweight. *Lancet* 2011;378(9793):826-837 https://doi.org/10.1016/S0140-6736(11)60812-X
+- Byrne NM et al. Intermittent energy restriction improves weight loss efficiency in obese men: the MATADOR study. *International journal of obesity* 2018;42(2):129-138 https://doi.org/10.1038/ijo.2017.206
 
 ## rampwise-heat-weather
 

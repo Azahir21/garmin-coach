@@ -235,6 +235,7 @@ def normalize(a):
         "avg_hr": a.get("averageHR"), "max_hr": a.get("maxHR"),
         "gain_m": float(a.get("elevationGain") or 0),
         "te_aerobic": a.get("aerobicTrainingEffect"), "te_anaerobic": a.get("anaerobicTrainingEffect"),
+        "kcal": a.get("calories"),                             # the watch's energy estimate for the activity (used by the fueling skill)
         "load": a.get("activityTrainingLoad"),                 # Garmin's own training load for the activity (from the watch)
         "lat": a.get("startLatitude"), "lon": a.get("startLongitude"),
     }

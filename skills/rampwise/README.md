@@ -10,7 +10,8 @@ One head coach, ten specialist skills (nine have a subagent), calculation script
   rampwise-heat-weather/   observed weather, heat adjustment, acclimation      (weather_check.py, acclimation_decay.py)
   rampwise-load-injury/    spikes, ramp, rest days, hard-day spacing           (load_check.py)
   rampwise-strength/       strength timing/frequency next to cardio            (strength_check.py)
-  rampwise-fueling/        carbs per hour, sweat rate                          (fuel_plan.py, sweat_rate.py)
+  rampwise-fueling/        cut/bulk targets, meal plans, race-day fuelling,    (nutrition_targets.py, meal_plan.py, weight_trend.py,
+                           carbs per hour, sweat rate                           race_day.py, foods.py, fuel_plan.py, sweat_rate.py)
   rampwise-planner/        plan, optional run gate, goal tracking, calendar (build_plan.py, run_gate.py, ride_check.py, cycling_power.py, calendar_events.py)
   rampwise-analyze/        week-over-week, latest activity vs last similar, injury-risk watch (week_compare.py, latest_activity.py, injury_watch.py)
   rampwise-adapt/          adapt the next session to today's state, calendar payload (next_session.py)

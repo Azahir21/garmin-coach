@@ -617,6 +617,102 @@ check("report: with Garmin load values the weekly report shows the training-load
 _rn = rp.build("weekly", T0, big, rrows, athr, plan_f, None, rdy, injr, cmpr, None, None)
 check("report: without load values the section is left out instead of showing zeros", not any(blk == ("h2", "Training load (context)") for blk in _rn["blocks"]))
 
+# ---------------------------------------------------------------- nutrition: targets, safeguards, meal plan, weight trend, race day
+sys.path.insert(0, str(SK / "rampwise-fueling" / "scripts"))
+import nutri as nu  # noqa: E402
+import weight_trend as wt  # noqa: E402
+import race_day as rdy_  # noqa: E402
+
+_G = dict(adult=True, pregnant_or_breastfeeding=False, eating_disorder=False, medical_diet=False)
+_P = dict(sex="male", age=22, cm=183, kg=85, goal="cut", rate_pct=0.5, gates=_G, lifestyle="light")
+_H = [0, 1, 1.5, 0, 1, 2.5, 3]
+check("nutrition: Mifflin-St Jeor for 85 kg, 183 cm, 22 y man is 10*85 + 6.25*183 - 5*22 + 5 = 1889", round(nu.ree_mifflin("male", 85, 183, 22)) == 1889)
+check("nutrition: the equation for a woman subtracts 161 instead of adding 5", nu.ree_mifflin("female", 60, 165, 30) == 10 * 60 + 6.25 * 165 - 5 * 30 - 161)
+for _bad, _why in (({"adult": False}, "adult"), ({"pregnant_or_breastfeeding": True}, "pregnant"), ({"eating_disorder": True}, "eating"), ({"medical_diet": True}, "medical")):
+    _r = nu.plan_targets({**_P, "gates": {**_G, **_bad}}, _H)
+    check(f"nutrition: a no-go gate answer ({_why}) refuses the plan and refers", _r["status"] == "refer" and not _r["days"])
+_r = nu.plan_targets({**_P, "gates": {"adult": True}}, _H)
+check("nutrition: unanswered gates stop the plan and list the questions to ask", _r["status"] == "needs-info" and "eating disorder" in _r["reasons"][0])
+_r = nu.plan_targets({**_P, "kg": 62, "cm": 180}, _H)
+check("nutrition: no cut under BMI 20", _r["status"] == "no-cut")
+_r = nu.plan_targets({**_P, "body_fat_pct": 9}, _H)
+check("nutrition: no cut at very low body fat", _r["status"] == "no-cut")
+_cut = nu.plan_targets(_P, _H)
+_avg = sum(d["E"] for d in _cut["days"]) / 7
+check("nutrition: a 0.5 %/week cut is about 0.5 % x 85 kg x 7700 / 7 = 467 kcal under maintenance", abs((_cut["maintenance_avg"] - _avg) - 467) < 25, f"{_cut['maintenance_avg']} {_avg}")
+check("nutrition: protein on a cut without body fat is 2.0 g/kg and the same on every day", _cut["protein_g_per_kg"] == 2.0 and {d["P"] for d in _cut["days"]} == {170})
+check("nutrition: the hard days keep more carbohydrate than the rest days", max(d["C"] for d in _cut["days"] if d["type"] == "hard") > max(d["C"] for d in _cut["days"] if d["type"] == "rest"))
+check("nutrition: no day is planned under resting energy", all(d["E"] >= _cut["ree"] for d in _cut["days"]))
+_fast = nu.plan_targets({**_P, "rate_pct": 1.5}, _H)
+check("nutrition: a rate over 1 %/week is capped at 1 % with a flag", _fast["rate_pct"] <= 1.0 and any("capped" in f for f in _fast["flags"]))
+_fast2 = nu.plan_targets({**_P, "rate_pct": 1.0, "kg": 100, "cm": 183}, [0, 0, 0, 0, 0, 0, 0])
+check("nutrition: the deficit never exceeds 25 % of estimated maintenance", (_fast2["maintenance_avg"] - _fast2["avg_target"]) <= 0.25 * _fast2["maintenance_avg"] + 5)
+_ea = nu.plan_targets({**_P, "body_fat_pct": 18}, _H)
+check("nutrition: with body fat given, energy availability is reported", _ea["energy_availability"] is not None)
+_bulk = nu.plan_targets({**_P, "goal": "bulk", "rate_pct": None, "experience": "advanced"}, _H)
+check("nutrition: an advanced bulk surplus is at most 300 kcal a day and protein 1.8 g/kg", _bulk["avg_target"] - _bulk["maintenance_avg"] <= 305 and _bulk["protein_g_per_kg"] == 1.8)
+_main = nu.plan_targets({**_P, "goal": "maintain"}, _H)
+check("nutrition: maintenance sits at estimated maintenance with 1.6 g/kg protein", abs(_main["avg_target"] - _main["maintenance_avg"]) < 5 and _main["protein_g_per_kg"] == 1.6)
+
+_foods = nu.load_foods(False)
+check("foods: the shipped list has USDA IDs and per-100 g values for every food", len(_foods) >= 120 and all(f["fdc_id"] and f["per100g"]["kcal"] >= 0 for f in _foods.values()))
+check("foods: a Bahasa alias finds the food (tempe -> tempeh, nasi -> rice)", any(f["key"] == "tempeh" for f in nu.search_foods(_foods, "tempe")) and any(f["key"] == "rice_white" for f in nu.search_foods(_foods, "nasi")))
+check("foods: energy follows the Atwater factors within 12 % for the staples used", all(abs(f["per100g"]["kcal"] - (4 * f["per100g"]["protein"] + 4 * f["per100g"]["carb"] + 9 * f["per100g"]["fat"])) <= 0.12 * max(f["per100g"]["kcal"], 40) + 12 for f in _foods.values() if f["group"] in ("protein", "carb", "legume", "fat", "veg", "fruit")),
+      str([f["key"] for f in _foods.values() if f["group"] in ("protein", "carb", "legume", "fat", "veg", "fruit") and abs(f["per100g"]["kcal"] - (4 * f["per100g"]["protein"] + 4 * f["per100g"]["carb"] + 9 * f["per100g"]["fat"])) > 0.12 * max(f["per100g"]["kcal"], 40) + 12]))
+for _diet, _banned in (("vegan", {"poultry", "beef", "pork", "fish", "shellfish", "egg", "dairy"}), ("halal", {"pork"}), ("vegetarian", {"poultry", "beef", "pork", "fish", "shellfish"})):
+    _al = nu.allowed_foods(_foods, _diet)
+    check(f"foods: the {_diet} filter removes every tagged food", not any(_banned & set(f["tags"]) for f in _al.values()))
+_nopb = nu.allowed_foods(_foods, "omnivore", ["peanut"])
+check("foods: an allergen exclusion removes the tagged foods", "peanut_butter" not in _nopb and "rice_white" in _nopb)
+
+_day = _cut["days"][6]
+for _cu, _diet in (("seasian", "halal"), ("global", "vegan"), ("mixed", "omnivore")):
+    _al = nu.allowed_foods(_foods, _diet, ["peanut"])
+    _ms = nu.plan_day(_day, _al, 4, _cu, {}, {"start": 8, "hours": 3}, 85)
+    _t = nu.day_totals(_ms)
+    check(f"meal plan ({_cu}, {_diet}, no peanut): every meal is built and the day lands within 10 % of the energy target", all(m["result"] for m in _ms) and abs(_t["kcal"] - _day["E"]) <= 0.10 * _day["E"], f"{_t['kcal']:.0f} vs {_day['E']}")
+    check(f"meal plan ({_cu}, {_diet}): protein within 10 % of target and no excluded food appears", abs(_t["protein"] - _day["P"]) <= 0.10 * _day["P"] and not any(it["food"]["key"] in ("peanut_butter", "peanuts") for m in _ms for it in m["result"]["items"]))
+_vg = [it["food"]["tags"] for m in nu.plan_day(_day, nu.allowed_foods(_foods, "vegan"), 4, "mixed", {}, None, 85) for it in m["result"]["items"]]
+check("meal plan: a vegan plan contains no animal-tagged food", not any({"egg", "dairy", "fish", "poultry", "beef", "pork", "shellfish"} & set(t) for t in _vg))
+_sp = nu.slot_split(_day, 4, {"start": 8, "hours": 3}, 85)
+check("meal plan: protein is spread evenly over the meals and the carbohydrate shares add up to the day", len({round(s["protein"]) for s in _sp}) == 1 and abs(sum(s["carb"] for s in _sp) - _day["C"]) < 2)
+check("meal plan: the meal after a morning session is marked as the post-training meal", any(s["role"] == "post" for s in _sp))
+_rm = run(SK / "rampwise-fueling" / "scripts" / "meal_plan.py", "--sex", "male", "--age", "22", "--height-cm", "183", "--weight-kg", "85", "--goal", "maintain", "--hours-by-day", "0,1,1.5,0,1,2.5,3",
+          "--adult", "yes", "--pregnant", "no", "--eating-disorder", "no", "--medical-diet", "no", "--days", "2", "--start", "2026-11-23", "--meals", "4")
+check("meal plan script: writes the Markdown plan with a shopping list", _rm.returncode == 0 and (TMP / "out" / "nutrition" / "2026-11-23-maintain" / "meal-plan.md").exists() and "Shopping list" in (TMP / "out" / "nutrition" / "2026-11-23-maintain" / "meal-plan.md").read_text(encoding="utf-8"), _rm.stdout[-300:] + _rm.stderr[-300:])
+_rn = run(SK / "rampwise-fueling" / "scripts" / "nutrition_targets.py", "--sex", "male", "--age", "22", "--height-cm", "183", "--weight-kg", "85", "--goal", "cut", "--hours-week", "8")
+check("targets script: without the four answers it asks and exits non-zero, it does not plan", _rn.returncode == 2 and "not asked yet" in _rn.stdout)
+_rf = run(SK / "rampwise-fueling" / "scripts" / "foods.py", "add", "--key", "my_dish", "--name", "My dish", "--kcal", "200", "--protein", "20", "--carb", "10", "--fat", "8", "--alias", "mydish", "--tags", "beef")
+check("foods script: a custom food is stored in the data folder and found by search", _rf.returncode == 0 and any(f["key"] == "my_dish" for f in nu.load_foods().values()) and (TMP / "foods.json").exists())
+_rfx = run(SK / "rampwise-fueling" / "scripts" / "foods.py", "add", "--key", "rice_white", "--name", "x", "--kcal", "1", "--protein", "1", "--carb", "1", "--fat", "1")
+check("foods script: a custom food cannot overwrite a USDA key", _rfx.returncode == 2)
+
+_d = date(2026, 11, 25)
+_e = lambda days, kg: [{"date": str(_d - _td(days=i)), "kg": kg(i)} for i in days]
+_flat = _e(range(14), lambda i: 85.0)
+check("weight trend: a flat week on a cut for two weeks means lower by 100 kcal after checking adherence", wt.advise(_flat, "cut", 0.5, today=_d)["action"] == "lower")
+_on = _e(range(14), lambda i: 85.0 + (0.425 if i >= 7 else 0.0))
+check("weight trend: losing at the planned rate holds", wt.advise(_on, "cut", 0.5, today=_d)["action"] == "hold")
+_fastl = _e(range(14), lambda i: 85.0 + (1.3 if i >= 7 else 0.0))
+check("weight trend: losing over 1 %/week raises intake by 150 kcal", wt.advise(_fastl, "cut", 0.5, today=_d)["action"] == "raise")
+check("weight trend: too few weigh-ins asks for more data and changes nothing", wt.advise(_e([0, 1], lambda i: 85.0), "cut", 0.5, today=_d)["action"] == "more-data")
+check("weight trend: preoccupation with food stops the cut and refers", wt.advise(_on, "cut", 0.5, today=_d, symptoms=["preoccupation"])["action"] == "stop")
+check("weight trend: two warning symptoms stop the cut", wt.advise(_on, "cut", 0.5, today=_d, symptoms=["fatigue", "illness"])["action"] == "stop")
+check("weight trend: a RED recovery holds the deficit", wt.advise(_on, "cut", 0.5, today=_d, recovery="RED")["action"] == "hold")
+_gain = _e(range(14), lambda i: 85.0 + (0.9 if i < 7 else 0.0))
+check("weight trend: gaining over 0.5 %/week on a bulk lowers intake", wt.advise(_gain, "bulk", 0.35, today=_d)["action"] == "lower")
+
+_steps, _notes = rdy_.plan("06:30", 5.5, 85, 60, "04:30", 24)
+_lab = [s["label"] for s in _steps]
+check("race day: the timeline has the pre-race meal, a last-solid-food time, in-race fuelling and a recovery meal in clock order", "Main pre-race meal" in _lab and "Last solid food by here" in _lab and any(l.startswith("Start fuelling") for l in _lab) and _lab[-1].startswith("Recovery"))
+_clock = [s["time"] for s in _steps if len(s["time"]) == 5 and s["time"][2] == ":"]
+check("race day: clock times are in order", _clock == sorted(_clock), str(_clock))
+_s5 = rdy_.plan("08:00", 0.75, 70)[0]
+check("race day: a 45-minute race has no carbohydrate-loading step and no g/h schedule", not any("Taper" in s["label"] for s in _s5) and not any(s["label"].startswith("Start fuelling") for s in _s5))
+check("race day: a late wake-up shortens the pre-race meal and says so", any("wake" in n for n in _notes))
+check("race day: every step names its source or label", all(s["source"] for s in _steps))
+check("race day: the intake per interval is the planned g/h times the interval", any("15 g carbohydrate" in s["detail"] for s in _steps if s["label"].startswith("Start fuelling")))
+
 print()
 print("ALL OK" if not failed else f"{len(failed)} FAILED: {failed}")
 sys.exit(1 if failed else 0)

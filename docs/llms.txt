@@ -1,6 +1,6 @@
 # Rampwise
 
-> Rampwise is a free, open-source (Apache-2.0) set of AI agent skills that coaches a runner or cyclist from their own Garmin data: evidence-labelled training plans, daily adaptation of the next session, an injury-risk watch, chronic/acute training load (CTL, ATL, TSB) as context, and daily/weekly/monthly reports. It runs inside an AI agent such as Claude Code. Independent project, not affiliated with Garmin Ltd. Experimental: built and tested on one person's data.
+> Rampwise is a free, open-source (Apache-2.0) set of AI agent skills that coaches a runner or cyclist from their own Garmin data: evidence-labelled training plans, daily adaptation of the next session, an injury-risk watch, chronic/acute training load (CTL, ATL, TSB) as context, nutrition (calories and macros to cut, bulk or maintain, day-by-day meal plans, race-day fuelling times) and daily/weekly/monthly reports. It runs inside an AI agent such as Claude Code. Independent project, not affiliated with Garmin Ltd. Experimental: built and tested on one person's data.
 
 ## Start here
 - [README](https://github.com/Azahir21/rampwise/blob/main/README.md): what it does, requirements, install, first run

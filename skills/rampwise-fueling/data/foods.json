@@ -1,0 +1,2866 @@
+{
+ "source": "USDA FoodData Central, SR Legacy (April 2018), public domain (CC0), https://fdc.nal.usda.gov",
+ "note": "Values per 100 g of the food in the state named (cooked foods are cooked weights). Names and aliases are the project's own and only help search.",
+ "foods": [
+  {
+   "key": "chicken_breast",
+   "name": "Chicken breast, cooked, no skin",
+   "group": "protein",
+   "tags": [
+    "poultry"
+   ],
+   "aliases": [
+    "ayam",
+    "dada ayam",
+    "chicken"
+   ],
+   "fdc_id": 171477,
+   "usda": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "per100g": {
+    "kcal": 165.0,
+    "protein": 31.02,
+    "carb": 0.0,
+    "fat": 3.57,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 breast, bone and skin removed",
+    "g": 172.0
+   }
+  },
+  {
+   "key": "chicken_thigh",
+   "name": "Chicken thigh, cooked, no skin",
+   "group": "protein",
+   "tags": [
+    "poultry"
+   ],
+   "aliases": [
+    "ayam",
+    "paha ayam"
+   ],
+   "fdc_id": 172388,
+   "usda": "Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
+   "per100g": {
+    "kcal": 179.0,
+    "protein": 24.76,
+    "carb": 0.0,
+    "fat": 8.15,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 thigh without skin",
+    "g": 116.0
+   }
+  },
+  {
+   "key": "turkey_mince",
+   "name": "Turkey mince (fat free), cooked",
+   "group": "protein",
+   "tags": [
+    "poultry"
+   ],
+   "aliases": [
+    "kalkun"
+   ],
+   "fdc_id": 172848,
+   "usda": "Turkey, ground, fat free, pan-broiled crumbles",
+   "per100g": {
+    "kcal": 151.0,
+    "protein": 31.69,
+    "carb": 0.0,
+    "fat": 2.71,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "beef_lean_mince",
+   "name": "Lean beef mince (95/5), cooked",
+   "group": "protein",
+   "tags": [
+    "beef"
+   ],
+   "aliases": [
+    "daging sapi",
+    "sapi",
+    "beef"
+   ],
+   "fdc_id": 174028,
+   "usda": "Beef, ground, 95% lean meat / 5% fat, crumbles, cooked, pan-browned",
+   "per100g": {
+    "kcal": 193.0,
+    "protein": 29.17,
+    "carb": 0.0,
+    "fat": 7.58,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "beef_round",
+   "name": "Beef top round, lean, braised",
+   "group": "protein",
+   "tags": [
+    "beef"
+   ],
+   "aliases": [
+    "daging sapi",
+    "sapi"
+   ],
+   "fdc_id": 170235,
+   "usda": "Beef, round, top round, separable lean only, trimmed to 0\" fat, choice, cooked, braised",
+   "per100g": {
+    "kcal": 207.0,
+    "protein": 36.12,
+    "carb": 0.0,
+    "fat": 5.8,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "pork_loin",
+   "name": "Pork loin, lean, roasted",
+   "group": "protein",
+   "tags": [
+    "pork"
+   ],
+   "aliases": [
+    "babi",
+    "pork"
+   ],
+   "fdc_id": 168233,
+   "usda": "Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+   "per100g": {
+    "kcal": 209.0,
+    "protein": 28.62,
+    "carb": 0.0,
+    "fat": 9.63,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "egg_boiled",
+   "name": "Egg, hard-boiled",
+   "group": "protein",
+   "tags": [
+    "egg"
+   ],
+   "aliases": [
+    "telur",
+    "telur rebus",
+    "egg"
+   ],
+   "fdc_id": 173424,
+   "usda": "Egg, whole, cooked, hard-boiled",
+   "per100g": {
+    "kcal": 155.0,
+    "protein": 12.58,
+    "carb": 1.12,
+    "fat": 10.61,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 large",
+    "g": 50.0
+   }
+  },
+  {
+   "key": "egg_scrambled",
+   "name": "Egg, scrambled",
+   "group": "protein",
+   "tags": [
+    "egg",
+    "dairy"
+   ],
+   "aliases": [
+    "telur dadar",
+    "telur orak-arik"
+   ],
+   "fdc_id": 172187,
+   "usda": "Egg, whole, cooked, scrambled",
+   "per100g": {
+    "kcal": 149.0,
+    "protein": 9.99,
+    "carb": 1.61,
+    "fat": 10.98,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "egg_white",
+   "name": "Egg white, raw",
+   "group": "protein",
+   "tags": [
+    "egg"
+   ],
+   "aliases": [
+    "putih telur"
+   ],
+   "fdc_id": 172183,
+   "usda": "Egg, white, raw, fresh",
+   "per100g": {
+    "kcal": 52.0,
+    "protein": 10.9,
+    "carb": 0.73,
+    "fat": 0.17,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 large",
+    "g": 33.0
+   }
+  },
+  {
+   "key": "tuna_canned",
+   "name": "Tuna, light, canned in water",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "tuna",
+    "ikan tuna kaleng"
+   ],
+   "fdc_id": 173709,
+   "usda": "Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 86.0,
+    "protein": 19.44,
+    "carb": 0.0,
+    "fat": 0.96,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "salmon",
+   "name": "Salmon, farmed, cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "salmon"
+   ],
+   "fdc_id": 175168,
+   "usda": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+   "per100g": {
+    "kcal": 206.0,
+    "protein": 22.1,
+    "carb": 0.0,
+    "fat": 12.35,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "cod",
+   "name": "Cod, cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "ikan kod"
+   ],
+   "fdc_id": 171956,
+   "usda": "Fish, cod, Atlantic, cooked, dry heat",
+   "per100g": {
+    "kcal": 105.0,
+    "protein": 22.83,
+    "carb": 0.0,
+    "fat": 0.86,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "tilapia",
+   "name": "Tilapia, cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "nila",
+    "ikan nila",
+    "ikan"
+   ],
+   "fdc_id": 175177,
+   "usda": "Fish, tilapia, cooked, dry heat",
+   "per100g": {
+    "kcal": 128.0,
+    "protein": 26.15,
+    "carb": 0.0,
+    "fat": 2.65,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "mackerel",
+   "name": "Mackerel (Pacific/jack), cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "kembung",
+    "ikan kembung",
+    "makerel"
+   ],
+   "fdc_id": 171994,
+   "usda": "Fish, mackerel, Pacific and jack, mixed species, cooked, dry heat",
+   "per100g": {
+    "kcal": 201.0,
+    "protein": 25.73,
+    "carb": 0.0,
+    "fat": 10.12,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "milkfish",
+   "name": "Milkfish, cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "bandeng",
+    "ikan bandeng"
+   ],
+   "fdc_id": 171995,
+   "usda": "Fish, milkfish, cooked, dry heat",
+   "per100g": {
+    "kcal": 190.0,
+    "protein": 26.32,
+    "carb": 0.0,
+    "fat": 8.63,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "catfish",
+   "name": "Catfish (farmed), cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "lele",
+    "ikan lele"
+   ],
+   "fdc_id": 175166,
+   "usda": "Fish, catfish, channel, farmed, cooked, dry heat",
+   "per100g": {
+    "kcal": 144.0,
+    "protein": 18.44,
+    "carb": 0.0,
+    "fat": 7.19,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "snapper",
+   "name": "Snapper, cooked",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "kakap",
+    "ikan kakap"
+   ],
+   "fdc_id": 173699,
+   "usda": "Fish, snapper, mixed species, cooked, dry heat",
+   "per100g": {
+    "kcal": 128.0,
+    "protein": 26.3,
+    "carb": 0.0,
+    "fat": 1.72,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "sardine_canned",
+   "name": "Sardines, canned in oil, drained",
+   "group": "protein",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "sarden"
+   ],
+   "fdc_id": 175139,
+   "usda": "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
+   "per100g": {
+    "kcal": 208.0,
+    "protein": 24.62,
+    "carb": 0.0,
+    "fat": 11.45,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "shrimp",
+   "name": "Shrimp, cooked",
+   "group": "protein",
+   "tags": [
+    "shellfish"
+   ],
+   "aliases": [
+    "udang",
+    "prawn"
+   ],
+   "fdc_id": 171971,
+   "usda": "Crustaceans, shrimp, mixed species, cooked, moist heat (may contain additives to retain moisture)",
+   "per100g": {
+    "kcal": 119.0,
+    "protein": 22.78,
+    "carb": 1.52,
+    "fat": 1.7,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "tofu_firm",
+   "name": "Tofu, firm",
+   "group": "protein",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "tahu",
+    "tofu"
+   ],
+   "fdc_id": 172448,
+   "usda": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+   "per100g": {
+    "kcal": 78.0,
+    "protein": 9.04,
+    "carb": 2.85,
+    "fat": 4.17,
+    "fiber": 0.9
+   },
+   "unit": null
+  },
+  {
+   "key": "tempeh",
+   "name": "Tempeh, cooked",
+   "group": "protein",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "tempe",
+    "tempeh"
+   ],
+   "fdc_id": 172467,
+   "usda": "Tempeh, cooked",
+   "per100g": {
+    "kcal": 195.0,
+    "protein": 19.91,
+    "carb": 7.62,
+    "fat": 11.38,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "whey_protein",
+   "name": "Whey protein powder",
+   "group": "protein",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "whey",
+    "protein powder"
+   ],
+   "fdc_id": 173180,
+   "usda": "Beverages, Protein powder whey based",
+   "per100g": {
+    "kcal": 352.0,
+    "protein": 78.13,
+    "carb": 6.25,
+    "fat": 1.56,
+    "fiber": 3.1
+   },
+   "unit": null
+  },
+  {
+   "key": "soy_protein_powder",
+   "name": "Soy protein powder",
+   "group": "protein",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "protein kedelai",
+    "soy protein"
+   ],
+   "fdc_id": 173181,
+   "usda": "Beverages, Protein powder soy based",
+   "per100g": {
+    "kcal": 388.0,
+    "protein": 55.56,
+    "carb": 28.89,
+    "fat": 5.56,
+    "fiber": 6.7
+   },
+   "unit": null
+  },
+  {
+   "key": "milk_lowfat",
+   "name": "Milk, 1 % fat",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "susu",
+    "susu rendah lemak"
+   ],
+   "fdc_id": 170872,
+   "usda": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+   "per100g": {
+    "kcal": 42.0,
+    "protein": 3.37,
+    "carb": 4.99,
+    "fat": 0.97,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 244.0
+   }
+  },
+  {
+   "key": "milk_whole",
+   "name": "Milk, whole",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "susu",
+    "susu full cream"
+   ],
+   "fdc_id": 171265,
+   "usda": "Milk, whole, 3.25% milkfat, with added vitamin D",
+   "per100g": {
+    "kcal": 61.0,
+    "protein": 3.15,
+    "carb": 4.8,
+    "fat": 3.25,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 244.0
+   }
+  },
+  {
+   "key": "yogurt_greek",
+   "name": "Greek yoghurt, plain, non-fat",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "yogurt",
+    "yoghurt",
+    "greek yogurt"
+   ],
+   "fdc_id": 170894,
+   "usda": "Yogurt, Greek, plain, nonfat (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 59.0,
+    "protein": 10.19,
+    "carb": 3.6,
+    "fat": 0.39,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "yogurt_plain",
+   "name": "Yoghurt, plain, low-fat",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "yogurt",
+    "yoghurt"
+   ],
+   "fdc_id": 170886,
+   "usda": "Yogurt, plain, low fat",
+   "per100g": {
+    "kcal": 63.0,
+    "protein": 5.25,
+    "carb": 7.04,
+    "fat": 1.55,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "cottage_cheese",
+   "name": "Cottage cheese, low-fat",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "keju cottage"
+   ],
+   "fdc_id": 168114,
+   "usda": "Cheese, cottage, lowfat, 1% milkfat, no sodium added",
+   "per100g": {
+    "kcal": 72.0,
+    "protein": 12.4,
+    "carb": 2.7,
+    "fat": 1.0,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "cheese_mozzarella",
+   "name": "Mozzarella, part skim",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "keju"
+   ],
+   "fdc_id": 170847,
+   "usda": "Cheese, mozzarella, part skim milk",
+   "per100g": {
+    "kcal": 254.0,
+    "protein": 24.26,
+    "carb": 2.77,
+    "fat": 15.92,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "cheese_cheddar",
+   "name": "Cheddar cheese",
+   "group": "dairy",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "keju"
+   ],
+   "fdc_id": 173414,
+   "usda": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 403.0,
+    "protein": 22.87,
+    "carb": 3.37,
+    "fat": 33.31,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "soymilk",
+   "name": "Soy milk, unsweetened",
+   "group": "dairy",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "susu kedelai",
+    "susu soya"
+   ],
+   "fdc_id": 172446,
+   "usda": "Soymilk, original and vanilla, unfortified",
+   "per100g": {
+    "kcal": 54.0,
+    "protein": 3.27,
+    "carb": 6.28,
+    "fat": 1.75,
+    "fiber": 0.6
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 243.0
+   }
+  },
+  {
+   "key": "lentils",
+   "name": "Lentils, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "lentil",
+    "dal"
+   ],
+   "fdc_id": 172421,
+   "usda": "Lentils, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 116.0,
+    "protein": 9.02,
+    "carb": 20.13,
+    "fat": 0.38,
+    "fiber": 7.9
+   },
+   "unit": null
+  },
+  {
+   "key": "chickpeas",
+   "name": "Chickpeas, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "kacang arab",
+    "garbanzo"
+   ],
+   "fdc_id": 173757,
+   "usda": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 164.0,
+    "protein": 8.86,
+    "carb": 27.42,
+    "fat": 2.59,
+    "fiber": 7.6
+   },
+   "unit": null
+  },
+  {
+   "key": "black_beans",
+   "name": "Black beans, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "kacang hitam"
+   ],
+   "fdc_id": 173735,
+   "usda": "Beans, black, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 132.0,
+    "protein": 8.86,
+    "carb": 23.71,
+    "fat": 0.54,
+    "fiber": 8.7
+   },
+   "unit": null
+  },
+  {
+   "key": "kidney_beans",
+   "name": "Kidney beans, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "kacang merah"
+   ],
+   "fdc_id": 173740,
+   "usda": "Beans, kidney, all types, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 127.0,
+    "protein": 8.67,
+    "carb": 22.8,
+    "fat": 0.5,
+    "fiber": 6.4
+   },
+   "unit": null
+  },
+  {
+   "key": "white_beans",
+   "name": "White beans, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "kacang putih"
+   ],
+   "fdc_id": 175203,
+   "usda": "Beans, white, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 139.0,
+    "protein": 9.73,
+    "carb": 25.09,
+    "fat": 0.35,
+    "fiber": 6.3
+   },
+   "unit": null
+  },
+  {
+   "key": "mung_beans",
+   "name": "Mung beans, boiled",
+   "group": "legume",
+   "tags": [],
+   "aliases": [
+    "kacang hijau"
+   ],
+   "fdc_id": 174257,
+   "usda": "Mung beans, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 105.0,
+    "protein": 7.02,
+    "carb": 19.15,
+    "fat": 0.38,
+    "fiber": 7.6
+   },
+   "unit": null
+  },
+  {
+   "key": "edamame",
+   "name": "Edamame, prepared",
+   "group": "legume",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "edamame",
+    "kedelai muda"
+   ],
+   "fdc_id": 168411,
+   "usda": "Edamame, frozen, prepared",
+   "per100g": {
+    "kcal": 121.0,
+    "protein": 11.91,
+    "carb": 8.91,
+    "fat": 5.2,
+    "fiber": 5.2
+   },
+   "unit": null
+  },
+  {
+   "key": "soybeans",
+   "name": "Soybeans, boiled",
+   "group": "legume",
+   "tags": [
+    "soy"
+   ],
+   "aliases": [
+    "kedelai",
+    "kacang kedelai"
+   ],
+   "fdc_id": 174271,
+   "usda": "Soybeans, mature cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 172.0,
+    "protein": 18.21,
+    "carb": 8.36,
+    "fat": 8.97,
+    "fiber": 6.0
+   },
+   "unit": null
+  },
+  {
+   "key": "rice_white",
+   "name": "White rice, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "nasi",
+    "nasi putih",
+    "beras",
+    "rice"
+   ],
+   "fdc_id": 168878,
+   "usda": "Rice, white, long-grain, regular, enriched, cooked",
+   "per100g": {
+    "kcal": 130.0,
+    "protein": 2.69,
+    "carb": 28.17,
+    "fat": 0.28,
+    "fiber": 0.4
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 158.0
+   }
+  },
+  {
+   "key": "rice_brown",
+   "name": "Brown rice, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "nasi merah",
+    "nasi beras merah",
+    "beras merah"
+   ],
+   "fdc_id": 169704,
+   "usda": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 123.0,
+    "protein": 2.74,
+    "carb": 25.58,
+    "fat": 0.97,
+    "fiber": 1.6
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 202.0
+   }
+  },
+  {
+   "key": "rice_sticky",
+   "name": "Sticky (glutinous) rice, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "ketan",
+    "beras ketan",
+    "nasi ketan"
+   ],
+   "fdc_id": 169711,
+   "usda": "Rice, white, glutinous, unenriched, cooked",
+   "per100g": {
+    "kcal": 97.0,
+    "protein": 2.02,
+    "carb": 21.09,
+    "fat": 0.19,
+    "fiber": 1.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 174.0
+   }
+  },
+  {
+   "key": "rice_noodles",
+   "name": "Rice noodles, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "bihun",
+    "kwetiau",
+    "mi beras",
+    "vermicelli"
+   ],
+   "fdc_id": 168914,
+   "usda": "Rice noodles, cooked",
+   "per100g": {
+    "kcal": 108.0,
+    "protein": 1.79,
+    "carb": 24.01,
+    "fat": 0.2,
+    "fiber": 1.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 176.0
+   }
+  },
+  {
+   "key": "egg_noodles",
+   "name": "Egg noodles, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten",
+    "egg"
+   ],
+   "aliases": [
+    "mie",
+    "mie telur"
+   ],
+   "fdc_id": 168919,
+   "usda": "Noodles, egg, cooked, enriched, with added salt",
+   "per100g": {
+    "kcal": 138.0,
+    "protein": 4.54,
+    "carb": 25.16,
+    "fat": 2.07,
+    "fiber": 1.2
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 160.0
+   }
+  },
+  {
+   "key": "pasta",
+   "name": "Pasta, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "pasta",
+    "spaghetti",
+    "makaroni"
+   ],
+   "fdc_id": 169737,
+   "usda": "Pasta, cooked, enriched, without added salt",
+   "per100g": {
+    "kcal": 158.0,
+    "protein": 5.8,
+    "carb": 30.86,
+    "fat": 0.93,
+    "fiber": 1.8
+   },
+   "unit": {
+    "label": "1 cup spaghetti not packed",
+    "g": 124.0
+   }
+  },
+  {
+   "key": "pasta_whole",
+   "name": "Whole-wheat pasta, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "pasta gandum"
+   ],
+   "fdc_id": 168910,
+   "usda": "Pasta, whole-wheat, cooked (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 149.0,
+    "protein": 5.99,
+    "carb": 30.07,
+    "fat": 1.71,
+    "fiber": 3.9
+   },
+   "unit": {
+    "label": "1 cup spaghetti not packed",
+    "g": 117.0
+   }
+  },
+  {
+   "key": "oats",
+   "name": "Rolled oats, dry",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "oat",
+    "oatmeal",
+    "havermut",
+    "gandum"
+   ],
+   "fdc_id": 173904,
+   "usda": "Cereals, oats, regular and quick, not fortified, dry",
+   "per100g": {
+    "kcal": 379.0,
+    "protein": 13.15,
+    "carb": 67.7,
+    "fat": 6.52,
+    "fiber": 10.1
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 81.0
+   }
+  },
+  {
+   "key": "bread_whole",
+   "name": "Whole-wheat bread",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "roti gandum",
+    "roti"
+   ],
+   "fdc_id": 172688,
+   "usda": "Bread, whole-wheat, commercially prepared",
+   "per100g": {
+    "kcal": 252.0,
+    "protein": 12.45,
+    "carb": 42.71,
+    "fat": 3.5,
+    "fiber": 6.0
+   },
+   "unit": {
+    "label": "1 slice",
+    "g": 32.0
+   }
+  },
+  {
+   "key": "bread_white",
+   "name": "White bread",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "roti tawar",
+    "roti putih",
+    "roti"
+   ],
+   "fdc_id": 174924,
+   "usda": "Bread, white, commercially prepared (includes soft bread crumbs)",
+   "per100g": {
+    "kcal": 266.0,
+    "protein": 8.85,
+    "carb": 49.42,
+    "fat": 3.33,
+    "fiber": 2.7
+   },
+   "unit": {
+    "label": "1 slice",
+    "g": 29.0
+   }
+  },
+  {
+   "key": "potato",
+   "name": "Potato, boiled",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "kentang"
+   ],
+   "fdc_id": 170438,
+   "usda": "Potatoes, boiled, cooked in skin, flesh, without salt",
+   "per100g": {
+    "kcal": 87.0,
+    "protein": 1.87,
+    "carb": 20.13,
+    "fat": 0.1,
+    "fiber": 1.8
+   },
+   "unit": null
+  },
+  {
+   "key": "sweet_potato",
+   "name": "Sweet potato, baked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "ubi",
+    "ubi jalar",
+    "ubi manis"
+   ],
+   "fdc_id": 168483,
+   "usda": "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "per100g": {
+    "kcal": 90.0,
+    "protein": 2.01,
+    "carb": 20.71,
+    "fat": 0.15,
+    "fiber": 3.3
+   },
+   "unit": {
+    "label": "1 medium (2\" dia, 5\" long, raw)",
+    "g": 114.0
+   }
+  },
+  {
+   "key": "cassava",
+   "name": "Cassava, RAW weight",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "singkong",
+    "ubi kayu",
+    "ketela pohon"
+   ],
+   "fdc_id": 169985,
+   "usda": "Cassava, raw",
+   "per100g": {
+    "kcal": 160.0,
+    "protein": 1.36,
+    "carb": 38.06,
+    "fat": 0.28,
+    "fiber": 1.8
+   },
+   "unit": null
+  },
+  {
+   "key": "taro",
+   "name": "Taro, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "talas",
+    "keladi"
+   ],
+   "fdc_id": 168486,
+   "usda": "Taro, cooked, without salt",
+   "per100g": {
+    "kcal": 142.0,
+    "protein": 0.52,
+    "carb": 34.6,
+    "fat": 0.11,
+    "fiber": 5.1
+   },
+   "unit": null
+  },
+  {
+   "key": "plantain_green",
+   "name": "Plantain, green, boiled",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "pisang kepok rebus",
+    "pisang tanduk",
+    "plantain"
+   ],
+   "fdc_id": 168216,
+   "usda": "Plantains, green, boiled",
+   "per100g": {
+    "kcal": 121.0,
+    "protein": 1.09,
+    "carb": 29.15,
+    "fat": 0.08,
+    "fiber": 2.6
+   },
+   "unit": null
+  },
+  {
+   "key": "plantain_yellow",
+   "name": "Plantain, ripe, baked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "pisang kepok",
+    "pisang tanduk"
+   ],
+   "fdc_id": 169131,
+   "usda": "Plantains, yellow, baked",
+   "per100g": {
+    "kcal": 155.0,
+    "protein": 1.52,
+    "carb": 41.37,
+    "fat": 0.16,
+    "fiber": 2.2
+   },
+   "unit": null
+  },
+  {
+   "key": "couscous",
+   "name": "Couscous, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "couscous"
+   ],
+   "fdc_id": 169700,
+   "usda": "Couscous, cooked",
+   "per100g": {
+    "kcal": 112.0,
+    "protein": 3.79,
+    "carb": 23.22,
+    "fat": 0.16,
+    "fiber": 1.4
+   },
+   "unit": {
+    "label": "1 cup, cooked",
+    "g": 157.0
+   }
+  },
+  {
+   "key": "quinoa",
+   "name": "Quinoa, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "quinoa"
+   ],
+   "fdc_id": 168917,
+   "usda": "Quinoa, cooked",
+   "per100g": {
+    "kcal": 120.0,
+    "protein": 4.4,
+    "carb": 21.3,
+    "fat": 1.92,
+    "fiber": 2.8
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 185.0
+   }
+  },
+  {
+   "key": "barley",
+   "name": "Pearl barley, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "jelai",
+    "barley"
+   ],
+   "fdc_id": 170285,
+   "usda": "Barley, pearled, cooked",
+   "per100g": {
+    "kcal": 123.0,
+    "protein": 2.26,
+    "carb": 28.22,
+    "fat": 0.44,
+    "fiber": 3.8
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 157.0
+   }
+  },
+  {
+   "key": "bulgur",
+   "name": "Bulgur, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "bulgur"
+   ],
+   "fdc_id": 170287,
+   "usda": "Bulgur, cooked",
+   "per100g": {
+    "kcal": 83.0,
+    "protein": 3.08,
+    "carb": 18.58,
+    "fat": 0.24,
+    "fiber": 4.5
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 182.0
+   }
+  },
+  {
+   "key": "millet",
+   "name": "Millet, cooked",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "jawawut",
+    "millet"
+   ],
+   "fdc_id": 168871,
+   "usda": "Millet, cooked",
+   "per100g": {
+    "kcal": 119.0,
+    "protein": 3.51,
+    "carb": 23.67,
+    "fat": 1.0,
+    "fiber": 1.3
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 174.0
+   }
+  },
+  {
+   "key": "soba",
+   "name": "Soba noodles, cooked",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "soba"
+   ],
+   "fdc_id": 168907,
+   "usda": "Noodles, japanese, soba, cooked",
+   "per100g": {
+    "kcal": 99.0,
+    "protein": 5.06,
+    "carb": 21.44,
+    "fat": 0.1,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 114.0
+   }
+  },
+  {
+   "key": "corn_cooked",
+   "name": "Sweet corn, boiled",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "jagung",
+    "jagung rebus"
+   ],
+   "fdc_id": 169999,
+   "usda": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 96.0,
+    "protein": 3.41,
+    "carb": 20.98,
+    "fat": 1.5,
+    "fiber": 2.4
+   },
+   "unit": {
+    "label": "1 cup cut",
+    "g": 149.0
+   }
+  },
+  {
+   "key": "corn_tortilla",
+   "name": "Corn tortilla",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "tortilla jagung"
+   ],
+   "fdc_id": 175036,
+   "usda": "Tortillas, ready-to-bake or -fry, corn",
+   "per100g": {
+    "kcal": 218.0,
+    "protein": 5.7,
+    "carb": 44.64,
+    "fat": 2.85,
+    "fiber": 6.3
+   },
+   "unit": null
+  },
+  {
+   "key": "pita_whole",
+   "name": "Whole-wheat pita",
+   "group": "carb",
+   "tags": [
+    "gluten"
+   ],
+   "aliases": [
+    "pita"
+   ],
+   "fdc_id": 174916,
+   "usda": "Bread, pita, whole-wheat",
+   "per100g": {
+    "kcal": 262.0,
+    "protein": 9.8,
+    "carb": 55.89,
+    "fat": 1.71,
+    "fiber": 6.1
+   },
+   "unit": null
+  },
+  {
+   "key": "naan",
+   "name": "Naan",
+   "group": "carb",
+   "tags": [
+    "gluten",
+    "dairy"
+   ],
+   "aliases": [
+    "naan"
+   ],
+   "fdc_id": 171845,
+   "usda": "Bread, naan, plain, commercially prepared, refrigerated",
+   "per100g": {
+    "kcal": 291.0,
+    "protein": 9.62,
+    "carb": 50.43,
+    "fat": 5.65,
+    "fiber": 2.2
+   },
+   "unit": null
+  },
+  {
+   "key": "rice_cake",
+   "name": "Rice cake (cracker)",
+   "group": "carb",
+   "tags": [],
+   "aliases": [
+    "kerupuk beras",
+    "rice cake"
+   ],
+   "fdc_id": 168107,
+   "usda": "Rice cake, cracker (include hain mini rice cakes)",
+   "per100g": {
+    "kcal": 392.0,
+    "protein": 7.1,
+    "carb": 81.1,
+    "fat": 4.3,
+    "fiber": 4.2
+   },
+   "unit": null
+  },
+  {
+   "key": "granola",
+   "name": "Granola, homemade",
+   "group": "carb",
+   "tags": [
+    "gluten",
+    "treenut"
+   ],
+   "aliases": [
+    "granola"
+   ],
+   "fdc_id": 171646,
+   "usda": "Cereals ready-to-eat, granola, homemade",
+   "per100g": {
+    "kcal": 489.0,
+    "protein": 13.67,
+    "carb": 53.88,
+    "fat": 24.31,
+    "fiber": 8.9
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 122.0
+   }
+  },
+  {
+   "key": "banana",
+   "name": "Banana",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "pisang",
+    "banana"
+   ],
+   "fdc_id": 173944,
+   "usda": "Bananas, raw",
+   "per100g": {
+    "kcal": 89.0,
+    "protein": 1.09,
+    "carb": 22.84,
+    "fat": 0.33,
+    "fiber": 2.6
+   },
+   "unit": {
+    "label": "1 medium (7\" to 7-7/8\" long)",
+    "g": 118.0
+   }
+  },
+  {
+   "key": "apple",
+   "name": "Apple",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "apel"
+   ],
+   "fdc_id": 171688,
+   "usda": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 52.0,
+    "protein": 0.26,
+    "carb": 13.81,
+    "fat": 0.17,
+    "fiber": 2.4
+   },
+   "unit": {
+    "label": "1 medium (3\" dia)",
+    "g": 182.0
+   }
+  },
+  {
+   "key": "orange",
+   "name": "Orange",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "jeruk"
+   ],
+   "fdc_id": 169097,
+   "usda": "Oranges, raw, all commercial varieties",
+   "per100g": {
+    "kcal": 47.0,
+    "protein": 0.94,
+    "carb": 11.75,
+    "fat": 0.12,
+    "fiber": 2.4
+   },
+   "unit": {
+    "label": "1 fruit (2-5/8\" dia)",
+    "g": 131.0
+   }
+  },
+  {
+   "key": "mango",
+   "name": "Mango",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "mangga"
+   ],
+   "fdc_id": 169910,
+   "usda": "Mangos, raw",
+   "per100g": {
+    "kcal": 60.0,
+    "protein": 0.82,
+    "carb": 14.98,
+    "fat": 0.38,
+    "fiber": 1.6
+   },
+   "unit": null
+  },
+  {
+   "key": "papaya",
+   "name": "Papaya",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "pepaya"
+   ],
+   "fdc_id": 169926,
+   "usda": "Papayas, raw",
+   "per100g": {
+    "kcal": 43.0,
+    "protein": 0.47,
+    "carb": 10.82,
+    "fat": 0.26,
+    "fiber": 1.7
+   },
+   "unit": null
+  },
+  {
+   "key": "pineapple",
+   "name": "Pineapple",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "nanas"
+   ],
+   "fdc_id": 169124,
+   "usda": "Pineapple, raw, all varieties",
+   "per100g": {
+    "kcal": 50.0,
+    "protein": 0.54,
+    "carb": 13.12,
+    "fat": 0.12,
+    "fiber": 1.4
+   },
+   "unit": null
+  },
+  {
+   "key": "watermelon",
+   "name": "Watermelon",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "semangka"
+   ],
+   "fdc_id": 167765,
+   "usda": "Watermelon, raw",
+   "per100g": {
+    "kcal": 30.0,
+    "protein": 0.61,
+    "carb": 7.55,
+    "fat": 0.15,
+    "fiber": 0.4
+   },
+   "unit": null
+  },
+  {
+   "key": "strawberries",
+   "name": "Strawberries",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "stroberi"
+   ],
+   "fdc_id": 167762,
+   "usda": "Strawberries, raw",
+   "per100g": {
+    "kcal": 32.0,
+    "protein": 0.67,
+    "carb": 7.68,
+    "fat": 0.3,
+    "fiber": 2.0
+   },
+   "unit": null
+  },
+  {
+   "key": "grapes",
+   "name": "Grapes",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "anggur"
+   ],
+   "fdc_id": 174683,
+   "usda": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "per100g": {
+    "kcal": 69.0,
+    "protein": 0.72,
+    "carb": 18.1,
+    "fat": 0.16,
+    "fiber": 0.9
+   },
+   "unit": null
+  },
+  {
+   "key": "kiwi",
+   "name": "Kiwifruit",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "kiwi"
+   ],
+   "fdc_id": 168153,
+   "usda": "Kiwifruit, green, raw",
+   "per100g": {
+    "kcal": 61.0,
+    "protein": 1.14,
+    "carb": 14.66,
+    "fat": 0.52,
+    "fiber": 3.0
+   },
+   "unit": null
+  },
+  {
+   "key": "pear",
+   "name": "Pear",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "pir"
+   ],
+   "fdc_id": 167776,
+   "usda": "Pears, raw, bartlett (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 63.0,
+    "protein": 0.39,
+    "carb": 15.01,
+    "fat": 0.16,
+    "fiber": 3.1
+   },
+   "unit": null
+  },
+  {
+   "key": "jackfruit",
+   "name": "Jackfruit",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "nangka",
+    "cempedak"
+   ],
+   "fdc_id": 174687,
+   "usda": "Jackfruit, raw",
+   "per100g": {
+    "kcal": 95.0,
+    "protein": 1.72,
+    "carb": 23.25,
+    "fat": 0.64,
+    "fiber": 1.5
+   },
+   "unit": null
+  },
+  {
+   "key": "durian",
+   "name": "Durian",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "durian"
+   ],
+   "fdc_id": 168192,
+   "usda": "Durian, raw or frozen",
+   "per100g": {
+    "kcal": 147.0,
+    "protein": 1.47,
+    "carb": 27.09,
+    "fat": 5.33,
+    "fiber": 3.8
+   },
+   "unit": null
+  },
+  {
+   "key": "passion_fruit",
+   "name": "Passion fruit",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "markisa"
+   ],
+   "fdc_id": 169108,
+   "usda": "Passion-fruit, (granadilla), purple, raw",
+   "per100g": {
+    "kcal": 97.0,
+    "protein": 2.2,
+    "carb": 23.38,
+    "fat": 0.7,
+    "fiber": 10.4
+   },
+   "unit": null
+  },
+  {
+   "key": "pomegranate",
+   "name": "Pomegranate",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "delima"
+   ],
+   "fdc_id": 169134,
+   "usda": "Pomegranates, raw",
+   "per100g": {
+    "kcal": 83.0,
+    "protein": 1.67,
+    "carb": 18.7,
+    "fat": 1.17,
+    "fiber": 4.0
+   },
+   "unit": null
+  },
+  {
+   "key": "dates",
+   "name": "Dates (medjool)",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "kurma",
+    "dates"
+   ],
+   "fdc_id": 168191,
+   "usda": "Dates, medjool",
+   "per100g": {
+    "kcal": 277.0,
+    "protein": 1.81,
+    "carb": 74.97,
+    "fat": 0.15,
+    "fiber": 6.7
+   },
+   "unit": null
+  },
+  {
+   "key": "raisins",
+   "name": "Raisins",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "kismis",
+    "raisin"
+   ],
+   "fdc_id": 168165,
+   "usda": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 299.0,
+    "protein": 3.3,
+    "carb": 79.32,
+    "fat": 0.25,
+    "fiber": 4.5
+   },
+   "unit": null
+  },
+  {
+   "key": "orange_juice",
+   "name": "Orange juice",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "jus jeruk",
+    "air jeruk"
+   ],
+   "fdc_id": 169098,
+   "usda": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 45.0,
+    "protein": 0.7,
+    "carb": 10.4,
+    "fat": 0.2,
+    "fiber": 0.2
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 248.0
+   }
+  },
+  {
+   "key": "coconut_water",
+   "name": "Coconut water",
+   "group": "fruit",
+   "tags": [],
+   "aliases": [
+    "air kelapa"
+   ],
+   "fdc_id": 174831,
+   "usda": "Beverages, Coconut water, ready-to-drink, unsweetened",
+   "per100g": {
+    "kcal": 18.0,
+    "protein": 0.22,
+    "carb": 4.24,
+    "fat": 0.0,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 cup",
+    "g": 245.0
+   }
+  },
+  {
+   "key": "broccoli",
+   "name": "Broccoli, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "brokoli"
+   ],
+   "fdc_id": 169967,
+   "usda": "Broccoli, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 2.38,
+    "carb": 7.18,
+    "fat": 0.41,
+    "fiber": 3.3
+   },
+   "unit": null
+  },
+  {
+   "key": "spinach",
+   "name": "Spinach, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "bayam"
+   ],
+   "fdc_id": 168462,
+   "usda": "Spinach, raw",
+   "per100g": {
+    "kcal": 23.0,
+    "protein": 2.86,
+    "carb": 3.63,
+    "fat": 0.39,
+    "fiber": 2.2
+   },
+   "unit": null
+  },
+  {
+   "key": "kale",
+   "name": "Kale, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "kale"
+   ],
+   "fdc_id": 168421,
+   "usda": "Kale, raw",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 2.92,
+    "carb": 4.42,
+    "fat": 1.49,
+    "fiber": 4.1
+   },
+   "unit": null
+  },
+  {
+   "key": "pak_choi",
+   "name": "Pak choi, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "sawi",
+    "pakcoy",
+    "sawi putih",
+    "bok choy"
+   ],
+   "fdc_id": 170390,
+   "usda": "Cabbage, chinese (pak-choi), raw",
+   "per100g": {
+    "kcal": 13.0,
+    "protein": 1.5,
+    "carb": 2.18,
+    "fat": 0.2,
+    "fiber": 1.0
+   },
+   "unit": null
+  },
+  {
+   "key": "cabbage",
+   "name": "Cabbage, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "kol",
+    "kubis"
+   ],
+   "fdc_id": 169975,
+   "usda": "Cabbage, raw",
+   "per100g": {
+    "kcal": 25.0,
+    "protein": 1.28,
+    "carb": 5.8,
+    "fat": 0.1,
+    "fiber": 2.5
+   },
+   "unit": null
+  },
+  {
+   "key": "carrot",
+   "name": "Carrot, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "wortel"
+   ],
+   "fdc_id": 170393,
+   "usda": "Carrots, raw",
+   "per100g": {
+    "kcal": 41.0,
+    "protein": 0.93,
+    "carb": 9.58,
+    "fat": 0.24,
+    "fiber": 2.8
+   },
+   "unit": {
+    "label": "1 medium",
+    "g": 61.0
+   }
+  },
+  {
+   "key": "tomato",
+   "name": "Tomato, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "tomat"
+   ],
+   "fdc_id": 170457,
+   "usda": "Tomatoes, red, ripe, raw, year round average",
+   "per100g": {
+    "kcal": 18.0,
+    "protein": 0.88,
+    "carb": 3.89,
+    "fat": 0.2,
+    "fiber": 1.2
+   },
+   "unit": {
+    "label": "1 medium whole (2-3/5\" dia)",
+    "g": 123.0
+   }
+  },
+  {
+   "key": "cucumber",
+   "name": "Cucumber, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "timun",
+    "mentimun"
+   ],
+   "fdc_id": 168409,
+   "usda": "Cucumber, with peel, raw",
+   "per100g": {
+    "kcal": 15.0,
+    "protein": 0.65,
+    "carb": 3.63,
+    "fat": 0.11,
+    "fiber": 0.5
+   },
+   "unit": null
+  },
+  {
+   "key": "green_beans",
+   "name": "Green beans, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "buncis"
+   ],
+   "fdc_id": 169141,
+   "usda": "Beans, snap, green, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 1.89,
+    "carb": 7.88,
+    "fat": 0.28,
+    "fiber": 3.2
+   },
+   "unit": null
+  },
+  {
+   "key": "yardlong_bean",
+   "name": "Yardlong bean, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "kacang panjang"
+   ],
+   "fdc_id": 169223,
+   "usda": "Yardlong bean, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 47.0,
+    "protein": 2.53,
+    "carb": 9.18,
+    "fat": 0.1,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "bean_sprouts",
+   "name": "Mung bean sprouts, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "tauge",
+    "kecambah"
+   ],
+   "fdc_id": 169957,
+   "usda": "Mung beans, mature seeds, sprouted, raw",
+   "per100g": {
+    "kcal": 30.0,
+    "protein": 3.04,
+    "carb": 5.94,
+    "fat": 0.18,
+    "fiber": 1.8
+   },
+   "unit": null
+  },
+  {
+   "key": "bell_pepper",
+   "name": "Red bell pepper, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "paprika",
+    "cabai besar"
+   ],
+   "fdc_id": 170108,
+   "usda": "Peppers, sweet, red, raw",
+   "per100g": {
+    "kcal": 26.0,
+    "protein": 0.99,
+    "carb": 6.03,
+    "fat": 0.3,
+    "fiber": 2.1
+   },
+   "unit": null
+  },
+  {
+   "key": "mushrooms",
+   "name": "Mushrooms, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "jamur"
+   ],
+   "fdc_id": 169251,
+   "usda": "Mushrooms, white, raw",
+   "per100g": {
+    "kcal": 22.0,
+    "protein": 3.09,
+    "carb": 3.26,
+    "fat": 0.34,
+    "fiber": 1.0
+   },
+   "unit": null
+  },
+  {
+   "key": "pumpkin",
+   "name": "Pumpkin, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "labu",
+    "labu kuning"
+   ],
+   "fdc_id": 168449,
+   "usda": "Pumpkin, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 20.0,
+    "protein": 0.72,
+    "carb": 4.9,
+    "fat": 0.07,
+    "fiber": 1.1
+   },
+   "unit": null
+  },
+  {
+   "key": "eggplant",
+   "name": "Eggplant, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "terong"
+   ],
+   "fdc_id": 169229,
+   "usda": "Eggplant, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 0.83,
+    "carb": 8.73,
+    "fat": 0.23,
+    "fiber": 2.5
+   },
+   "unit": null
+  },
+  {
+   "key": "okra",
+   "name": "Okra, boiled",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "okra"
+   ],
+   "fdc_id": 169261,
+   "usda": "Okra, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 22.0,
+    "protein": 1.87,
+    "carb": 4.51,
+    "fat": 0.21,
+    "fiber": 2.5
+   },
+   "unit": null
+  },
+  {
+   "key": "cauliflower",
+   "name": "Cauliflower, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "kembang kol"
+   ],
+   "fdc_id": 169986,
+   "usda": "Cauliflower, raw",
+   "per100g": {
+    "kcal": 25.0,
+    "protein": 1.92,
+    "carb": 4.97,
+    "fat": 0.28,
+    "fiber": 2.0
+   },
+   "unit": null
+  },
+  {
+   "key": "zucchini",
+   "name": "Zucchini, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "zukini"
+   ],
+   "fdc_id": 169291,
+   "usda": "Squash, summer, zucchini, includes skin, raw",
+   "per100g": {
+    "kcal": 17.0,
+    "protein": 1.21,
+    "carb": 3.11,
+    "fat": 0.32,
+    "fiber": 1.0
+   },
+   "unit": null
+  },
+  {
+   "key": "chayote",
+   "name": "Chayote, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "labu siam"
+   ],
+   "fdc_id": 170402,
+   "usda": "Chayote, fruit, raw",
+   "per100g": {
+    "kcal": 19.0,
+    "protein": 0.82,
+    "carb": 4.51,
+    "fat": 0.13,
+    "fiber": 1.7
+   },
+   "unit": null
+  },
+  {
+   "key": "bamboo_shoots",
+   "name": "Bamboo shoots, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "rebung"
+   ],
+   "fdc_id": 169210,
+   "usda": "Bamboo shoots, raw",
+   "per100g": {
+    "kcal": 27.0,
+    "protein": 2.6,
+    "carb": 5.2,
+    "fat": 0.3,
+    "fiber": 2.2
+   },
+   "unit": null
+  },
+  {
+   "key": "onion",
+   "name": "Onion, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "bawang bombay",
+    "bawang merah",
+    "bawang"
+   ],
+   "fdc_id": 170000,
+   "usda": "Onions, raw",
+   "per100g": {
+    "kcal": 40.0,
+    "protein": 1.1,
+    "carb": 9.34,
+    "fat": 0.1,
+    "fiber": 1.7
+   },
+   "unit": null
+  },
+  {
+   "key": "garlic",
+   "name": "Garlic, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "bawang putih"
+   ],
+   "fdc_id": 169230,
+   "usda": "Garlic, raw",
+   "per100g": {
+    "kcal": 149.0,
+    "protein": 6.36,
+    "carb": 33.06,
+    "fat": 0.5,
+    "fiber": 2.1
+   },
+   "unit": null
+  },
+  {
+   "key": "lettuce",
+   "name": "Romaine lettuce, raw",
+   "group": "veg",
+   "tags": [],
+   "aliases": [
+    "selada"
+   ],
+   "fdc_id": 169247,
+   "usda": "Lettuce, cos or romaine, raw",
+   "per100g": {
+    "kcal": 17.0,
+    "protein": 1.23,
+    "carb": 3.29,
+    "fat": 0.3,
+    "fiber": 2.1
+   },
+   "unit": null
+  },
+  {
+   "key": "olive_oil",
+   "name": "Olive oil",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "minyak zaitun"
+   ],
+   "fdc_id": 171413,
+   "usda": "Oil, olive, salad or cooking",
+   "per100g": {
+    "kcal": 884.0,
+    "protein": 0.0,
+    "carb": 0.0,
+    "fat": 100.0,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tablespoon",
+    "g": 13.5
+   }
+  },
+  {
+   "key": "canola_oil",
+   "name": "Canola oil",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "minyak canola"
+   ],
+   "fdc_id": 172336,
+   "usda": "Oil, canola",
+   "per100g": {
+    "kcal": 884.0,
+    "protein": 0.0,
+    "carb": 0.0,
+    "fat": 100.0,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 14.0
+   }
+  },
+  {
+   "key": "coconut_oil",
+   "name": "Coconut oil",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "minyak kelapa"
+   ],
+   "fdc_id": 171412,
+   "usda": "Oil, coconut",
+   "per100g": {
+    "kcal": 892.0,
+    "protein": 0.0,
+    "carb": 0.0,
+    "fat": 99.06,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 13.6
+   }
+  },
+  {
+   "key": "palm_oil",
+   "name": "Palm oil",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "minyak sawit",
+    "minyak goreng"
+   ],
+   "fdc_id": 171015,
+   "usda": "Oil, palm",
+   "per100g": {
+    "kcal": 884.0,
+    "protein": 0.0,
+    "carb": 0.0,
+    "fat": 100.0,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 13.6
+   }
+  },
+  {
+   "key": "butter",
+   "name": "Butter",
+   "group": "fat",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "mentega"
+   ],
+   "fdc_id": 173430,
+   "usda": "Butter, without salt",
+   "per100g": {
+    "kcal": 717.0,
+    "protein": 0.85,
+    "carb": 0.06,
+    "fat": 81.11,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 14.2
+   }
+  },
+  {
+   "key": "peanut_butter",
+   "name": "Peanut butter",
+   "group": "fat",
+   "tags": [
+    "peanut"
+   ],
+   "aliases": [
+    "selai kacang",
+    "kacang tanah"
+   ],
+   "fdc_id": 174294,
+   "usda": "Peanut Butter, smooth (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 588.0,
+    "protein": 21.93,
+    "carb": 23.98,
+    "fat": 49.54,
+    "fiber": 5.7
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 16.0
+   }
+  },
+  {
+   "key": "peanuts",
+   "name": "Peanuts, dry-roasted",
+   "group": "fat",
+   "tags": [
+    "peanut"
+   ],
+   "aliases": [
+    "kacang tanah",
+    "kacang"
+   ],
+   "fdc_id": 173806,
+   "usda": "Peanuts, all types, dry-roasted, without salt",
+   "per100g": {
+    "kcal": 587.0,
+    "protein": 24.35,
+    "carb": 21.26,
+    "fat": 49.66,
+    "fiber": 8.4
+   },
+   "unit": null
+  },
+  {
+   "key": "almonds",
+   "name": "Almonds",
+   "group": "fat",
+   "tags": [
+    "treenut"
+   ],
+   "aliases": [
+    "almond"
+   ],
+   "fdc_id": 170567,
+   "usda": "Nuts, almonds",
+   "per100g": {
+    "kcal": 579.0,
+    "protein": 21.15,
+    "carb": 21.55,
+    "fat": 49.93,
+    "fiber": 12.5
+   },
+   "unit": null
+  },
+  {
+   "key": "walnuts",
+   "name": "Walnuts",
+   "group": "fat",
+   "tags": [
+    "treenut"
+   ],
+   "aliases": [
+    "kenari"
+   ],
+   "fdc_id": 170187,
+   "usda": "Nuts, walnuts, english",
+   "per100g": {
+    "kcal": 654.0,
+    "protein": 15.23,
+    "carb": 13.71,
+    "fat": 65.21,
+    "fiber": 6.7
+   },
+   "unit": null
+  },
+  {
+   "key": "cashews",
+   "name": "Cashews, raw",
+   "group": "fat",
+   "tags": [
+    "treenut"
+   ],
+   "aliases": [
+    "mete",
+    "kacang mete"
+   ],
+   "fdc_id": 170162,
+   "usda": "Nuts, cashew nuts, raw",
+   "per100g": {
+    "kcal": 553.0,
+    "protein": 18.22,
+    "carb": 30.19,
+    "fat": 43.85,
+    "fiber": 3.3
+   },
+   "unit": null
+  },
+  {
+   "key": "avocado",
+   "name": "Avocado",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "alpukat",
+    "avokad"
+   ],
+   "fdc_id": 171705,
+   "usda": "Avocados, raw, all commercial varieties",
+   "per100g": {
+    "kcal": 160.0,
+    "protein": 2.0,
+    "carb": 8.53,
+    "fat": 14.66,
+    "fiber": 6.7
+   },
+   "unit": null
+  },
+  {
+   "key": "coconut_milk",
+   "name": "Coconut milk, canned",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "santan"
+   ],
+   "fdc_id": 170173,
+   "usda": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+   "per100g": {
+    "kcal": 197.0,
+    "protein": 2.02,
+    "carb": 2.81,
+    "fat": 21.33,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "coconut_meat",
+   "name": "Coconut meat, raw",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "kelapa",
+    "kelapa parut"
+   ],
+   "fdc_id": 170169,
+   "usda": "Nuts, coconut meat, raw",
+   "per100g": {
+    "kcal": 354.0,
+    "protein": 3.33,
+    "carb": 15.23,
+    "fat": 33.49,
+    "fiber": 9.0
+   },
+   "unit": null
+  },
+  {
+   "key": "chia",
+   "name": "Chia seeds",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "chia"
+   ],
+   "fdc_id": 170554,
+   "usda": "Seeds, chia seeds, dried",
+   "per100g": {
+    "kcal": 486.0,
+    "protein": 16.54,
+    "carb": 42.12,
+    "fat": 30.74,
+    "fiber": 34.4
+   },
+   "unit": null
+  },
+  {
+   "key": "flax",
+   "name": "Flaxseed",
+   "group": "fat",
+   "tags": [],
+   "aliases": [
+    "biji rami"
+   ],
+   "fdc_id": 169414,
+   "usda": "Seeds, flaxseed",
+   "per100g": {
+    "kcal": 534.0,
+    "protein": 18.29,
+    "carb": 28.88,
+    "fat": 42.16,
+    "fiber": 27.3
+   },
+   "unit": null
+  },
+  {
+   "key": "sesame",
+   "name": "Sesame seeds",
+   "group": "fat",
+   "tags": [
+    "sesame"
+   ],
+   "aliases": [
+    "wijen"
+   ],
+   "fdc_id": 170150,
+   "usda": "Seeds, sesame seeds, whole, dried",
+   "per100g": {
+    "kcal": 573.0,
+    "protein": 17.73,
+    "carb": 23.45,
+    "fat": 49.67,
+    "fiber": 11.8
+   },
+   "unit": null
+  },
+  {
+   "key": "tahini",
+   "name": "Tahini",
+   "group": "fat",
+   "tags": [
+    "sesame"
+   ],
+   "aliases": [
+    "tahini"
+   ],
+   "fdc_id": 170189,
+   "usda": "Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",
+   "per100g": {
+    "kcal": 595.0,
+    "protein": 17.0,
+    "carb": 21.19,
+    "fat": 53.76,
+    "fiber": 9.3
+   },
+   "unit": null
+  },
+  {
+   "key": "hummus",
+   "name": "Hummus",
+   "group": "fat",
+   "tags": [
+    "sesame"
+   ],
+   "aliases": [
+    "hummus"
+   ],
+   "fdc_id": 174289,
+   "usda": "Hummus, commercial",
+   "per100g": {
+    "kcal": 237.0,
+    "protein": 7.78,
+    "carb": 15.0,
+    "fat": 17.82,
+    "fiber": 5.5
+   },
+   "unit": null
+  },
+  {
+   "key": "honey",
+   "name": "Honey",
+   "group": "sugar",
+   "tags": [],
+   "aliases": [
+    "madu"
+   ],
+   "fdc_id": 169640,
+   "usda": "Honey",
+   "per100g": {
+    "kcal": 304.0,
+    "protein": 0.3,
+    "carb": 82.4,
+    "fat": 0.0,
+    "fiber": 0.2
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 21.0
+   }
+  },
+  {
+   "key": "sugar",
+   "name": "Sugar",
+   "group": "sugar",
+   "tags": [],
+   "aliases": [
+    "gula"
+   ],
+   "fdc_id": 169655,
+   "usda": "Sugars, granulated",
+   "per100g": {
+    "kcal": 387.0,
+    "protein": 0.0,
+    "carb": 99.98,
+    "fat": 0.0,
+    "fiber": 0.0
+   },
+   "unit": null
+  },
+  {
+   "key": "jam",
+   "name": "Jam",
+   "group": "sugar",
+   "tags": [],
+   "aliases": [
+    "selai"
+   ],
+   "fdc_id": 169641,
+   "usda": "Jams and preserves",
+   "per100g": {
+    "kcal": 278.0,
+    "protein": 0.37,
+    "carb": 68.86,
+    "fat": 0.07,
+    "fiber": 1.1
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 20.0
+   }
+  },
+  {
+   "key": "dark_chocolate",
+   "name": "Dark chocolate (70-85 %)",
+   "group": "sugar",
+   "tags": [
+    "dairy"
+   ],
+   "aliases": [
+    "coklat hitam"
+   ],
+   "fdc_id": 170273,
+   "usda": "Chocolate, dark, 70-85% cacao solids",
+   "per100g": {
+    "kcal": 598.0,
+    "protein": 7.79,
+    "carb": 45.9,
+    "fat": 42.63,
+    "fiber": 10.9
+   },
+   "unit": null
+  },
+  {
+   "key": "soy_sauce",
+   "name": "Soy sauce",
+   "group": "extra",
+   "tags": [
+    "soy",
+    "gluten"
+   ],
+   "aliases": [
+    "kecap asin"
+   ],
+   "fdc_id": 174277,
+   "usda": "Soy sauce made from soy and wheat (shoyu)",
+   "per100g": {
+    "kcal": 53.0,
+    "protein": 8.14,
+    "carb": 4.93,
+    "fat": 0.57,
+    "fiber": 0.8
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 16.0
+   }
+  },
+  {
+   "key": "fish_sauce",
+   "name": "Fish sauce",
+   "group": "extra",
+   "tags": [
+    "fish"
+   ],
+   "aliases": [
+    "kecap ikan"
+   ],
+   "fdc_id": 174531,
+   "usda": "Sauce, fish, ready-to-serve",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 5.06,
+    "carb": 3.64,
+    "fat": 0.01,
+    "fiber": 0.0
+   },
+   "unit": {
+    "label": "1 tbsp",
+    "g": 18.0
+   }
+  }
+ ]
+}

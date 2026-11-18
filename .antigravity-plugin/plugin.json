@@ -3,7 +3,7 @@
   "name": "rampwise",
   "displayName": "Rampwise",
   "description": "AI coach for triathletes, runners, cyclists and swimmers: evidence-labelled plans, daily adaptation, injury-risk watch, reports. Not affiliated with Garmin.",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "author": {
     "name": "Kei",
     "url": "https://github.com/Azahir21"

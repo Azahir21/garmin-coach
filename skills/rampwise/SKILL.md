@@ -26,7 +26,7 @@ Targets (a 10 km time, a ride speed, a race) are checked, not promised: no verif
 | `rampwise-load-injury` | `coach-load` | `load_check.py` | Spikes, volume ramp, rest days |
 | `rampwise-aerobic-base` | `coach-aerobic` | `analyze_activity.py`, `aerobic_trend.py`, `hold_check.py` | Is the aerobic engine improving? EF, decoupling, durability; how long a pace is held under the easy HR ceiling |
 | `rampwise-strength` | `coach-strength` | `strength_check.py` | Strength timing/frequency, tonight's session |
-| `rampwise-fueling` | `coach-fueling` | `fuel_plan.py`, `sweat_rate.py` | Carbs per hour, sweat rate, hydration |
+| `rampwise-fueling` | `coach-fueling` | `nutrition_targets.py`, `meal_plan.py`, `weight_trend.py`, `race_day.py`, `foods.py`, `fuel_plan.py`, `sweat_rate.py` | Calories and macros to cut, bulk or maintain (after four safety questions the athlete answers), meal plans, weight trend, race-day fuelling times, carbs per hour, sweat rate, hydration |
 | `rampwise-planner` | `coach-planner` | `build_plan.py`, `run_gate.py`, `ride_check.py`, `cycling_power.py`, `calendar_events.py` | Plan, optional run gate, goal progress, calendar payload |
 | `rampwise-analyze` | `coach-analyze` | `week_compare.py`, `latest_activity.py`, `injury_watch.py` | What changed against last week, latest session vs the last similar one, injury-risk flags |
 | `rampwise-adapt` | `coach-adapt` | `next_session.py` | Keep / progress / easier / shorter / rest for the next planned session, calendar update payload |

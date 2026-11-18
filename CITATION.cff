@@ -7,8 +7,8 @@ authors:
 repository-code: "https://github.com/Azahir21/rampwise"
 url: "https://azahir21.github.io/rampwise/"
 license: Apache-2.0
-version: 0.6.3
-date-released: 2026-11-17
+version: 0.7.0
+date-released: 2026-11-18
 abstract: "Free, open-source AI agent skills that coach a runner or cyclist from their own Garmin data, with evidence-labelled training rules, daily adaptation, an injury-risk watch and reports. Experimental; not medical advice."
 keywords:
   - endurance training

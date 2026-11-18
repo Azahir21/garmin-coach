@@ -10,6 +10,7 @@ This project stands on other people's work. Thank you.
 | [fitdecode](https://github.com/polyvertex/fitdecode) | Jean-Charles Lefebvre | MIT | Reads Garmin FIT files; its bundled FIT profile was used to check the workout-file encoder |
 | Garmin FIT file format | Garmin Ltd. | Garmin FIT SDK terms | The workout writer follows the published format and Garmin's "Workout Files" article; verified only by decoding our own files, not on every watch |
 | [Open-Meteo](https://open-meteo.com) | Open-Meteo.com | Data CC BY 4.0; free API for non-commercial use | Optional weather lookups (heat adjustment); attribution required, commercial use needs their licence |
+| [USDA FoodData Central](https://fdc.nal.usda.gov) (SR Legacy) | U.S. Department of Agriculture | Public domain (CC0) | Nutrient values per 100 g in `skills/rampwise-fueling/data/foods.json`, each food with its USDA ID; built by `tools/build_foods.py` |
 | [Europe PMC](https://europepmc.org) | EMBL-EBI | Open access API | Literature search and open-access full texts used to build the evidence maps |
 | Agent Skills format | Anthropic and community ([agentskills.io](https://agentskills.io)) | Open standard | The skills follow the `SKILL.md` layout so several agent harnesses can load them |
 
